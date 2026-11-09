@@ -92,3 +92,27 @@ Game-data entries: still **none verified** (audit C not started). F-026 lists 32
 | New player's first save | **Incorrect** (F-012: unprefixed defaults uploaded) | H2, M1 and M2 |
 
 Production safety (session 4): the live artifact was read only with `get_artifact` and `list_files` (version `1794245267-84a7`, index.html sha256 `d9f96a34…16a9ac`, unchanged). The production database was **not read** this session (no `db_get`), at the owner's instruction, and not written. No publish.
+
+
+## Game-data verification (session 5, 2026-11-09)
+
+| Area | Status | Evidence / note |
+|---|---|---|
+| Token count, all versions (100) and hearts (36) | **Verified** | C4 |
+| Switch 2 token counts per region group | **Verified** against Questfern (one source) | C5 |
+| N64/3DS night tags, 100 tokens | **Verified** against randomizer logic | C2 |
+| N64/3DS age tags, tokens and 17 hearts | **Verified** against randomizer logic | C3, C7 |
+| F-026 text/tool pairs (32) | **Resolved**: 1 defect, rest not defects | C6, F-034 |
+| Light Medallion source and gate | **Incorrect** | F-029 |
+| GAN-1 gate | **Incorrect** | F-030 |
+| DMT-1, HF-2, HC-2, IC-3, HP-15 requirements | **Incorrect** (missing tool) | F-031 |
+| ZR-1, GV-3, GF-2, CL-2 requirements (n64/3ds) | **Incorrect** (over-locked) | F-032 |
+| Remaining 91 token requirement sets, N64 | Read in full; no mismatch found in the cases checked against the randomizer's region rules; not a full formal comparison | F-036 |
+| Heart Piece tools, other than HP-15 | **Unverified** | F-036 |
+| Side-quest and item rows (names, rewards, order) | Read in full; consistent with the dependency map; not source-checked | F-036 |
+| Dungeon walkthrough steps (180) | **Unverified** | F-036 |
+| Main-quest order and gives | Read in full; consistent with F-018 | — |
+| Switch 2 overrides | **Unverified** beyond counts; sources are secondary guides; 8 rows disputed | F-035 |
+| 3DS differences | Unverified (assumed same as N64 as the tracker states) | — |
+
+Production safety (session 5): the live artifact was not touched; no database read or write; nothing published. All work ran on the audit copy and on public web pages. Q5 (test artifact) was approved by the owner but not exercised in this session.

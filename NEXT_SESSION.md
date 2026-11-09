@@ -1,4 +1,4 @@
-# NEXT_SESSION.md — handoff for Session 5
+# NEXT_SESSION.md — handoff (updated end of Session 5)
 
 Written 2026-11-09, at the end of Session 4. A new conversation cannot see earlier chats or their workspaces. Everything needed is in the GitHub repo **`zhrpo/oot-tracker`** (private). From Session 5 on, the repo replaces the handoff zips. Attach it, clone it, and follow `CLAUDE.md`.
 
@@ -47,22 +47,26 @@ Written 2026-11-09, at the end of Session 4. A new conversation cannot see earli
   - Database not read or written in s4. The last known version is 1521 (s3 read). The owner plays, so it may rise; a higher version does not mean the audit wrote to it.
   - Live artifact unchanged.
 
-## Open owner decisions (needed before implementation)
-- Q3 sync conflict policy ("latest intent per row wins").
-- Q4 F-012 cleanup of the four unprefixed defaults.
-- Q5 approval to publish a separate test artifact for real-provider sync tests (D1 conditions).
-- Q2 (from s1) whether `index.html`/`themed.html` are still wanted.
+## Owner decisions (as of end of Session 5)
+- Q3, Q4, Q5: **answered** (details in AUDIT_PROGRESS.md "Owner decisions recorded in session 5" and REMEDIATION_PLAN.md §7). Q5 allows a separate test artifact only under the D1 isolation conditions, with a stop if isolation cannot be proved. Not exercised yet.
+- Q2: whether `index.html` / `themed.html` are still wanted: still open.
+- Owner process: finish the remaining audit areas, then one consolidated remediation plan, then implementation (explicit authorization needed).
 
 ## Rules that still apply
 - No production DB writes.
 - Do not read the owner's progress into tests. Use synthetic data only.
 - Do not publish anything, and do not modify the live artifact. Exception: only if the owner explicitly approves Q5, publish a *new* test artifact; never the production slug.
 - Implement no fixes during audit sessions. Fixes start only when the owner opens an implementation session.
-- Preserve finding IDs; next new ID is **F-029**. Item IDs never renumber. DG/TR ids are append-only; DG-1..41 are retired.
+- Preserve finding IDs; next new ID is **F-037**. Item IDs never renumber. DG/TR ids are append-only; DG-1..41 are retired.
 - Every test must have a pass/fail result and a nonzero exit code on failure.
 - Test harness seeding: guard on "no save exists", not on `sessionStorage` (AUDIT_TESTS.md §7.3, L-3).
 
-## Recommended Session 5 objectives (the owner chooses)
+## State at end of Session 5
+- Session 5 did audit C part 1 only (see AUDIT_PROGRESS.md). New script `scripts/data_audit_s5.py`: exit 1, 7/16 pass (expected while F-029…F-032 are open). Other scripts unchanged: same expected exit codes as the table above.
+- New findings F-029…F-036 (data defects are Medium/Low; none is release-blocking by itself). The release-blocking list is unchanged (F-013, F-022, F-009, F-019, F-012, gate F-021).
+- Remaining before the consolidated remediation plan: C part 2 (F-036), F UX/accessibility, G test evaluation + runner, Security, remaining data modules.
+
+## (older) Recommended Session 5 objectives (the owner chooses)
 - **Option A — start implementation** (separate implementation session, on a git repository per F-004): follow REMEDIATION_PLAN.md §5.
   1. F-011 + F-009 (data), re-run all suites.
   2. F-012.

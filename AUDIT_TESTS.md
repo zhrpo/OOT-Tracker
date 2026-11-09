@@ -196,3 +196,40 @@ Harness bug found and fixed in this session: P4 first failed on 3ds/sw2 in some 
 
 ### 7.6 Not tested in session 4
 Real-provider sync (blocked: needs an owner-approved isolated test artifact, Q5); game-data accuracy (audit C; F-026 is input for it); UI/accessibility (audit F); the existing 27-script suite was not re-run, because the sources are byte-identical to session 3 (sha256), so the session 1 results stand.
+
+
+## 8. Session 5 tests (2026-11-09) — game-data accuracy
+
+`scripts/data_audit_s5.py [audit_dir]` reads `out/themed2.html` (the shipped data payload) and `testlogs/s5_rando_extract.json`, writes `testlogs/data_audit_s5.json` and exits 1 if any check fails. Result on unchanged sources: **16 checks, 7 pass, 9 fail, exit 1** (expected while F-029…F-032 are open). It reads no production data and touches no network.
+
+| Check | What it tests | Result | Finding |
+|---|---|---|---|
+| C1 | Each of the 100 N64 token rows maps to one distinct randomizer location | PASS | — |
+| C2 | N64/3DS night-only tags equal the randomizer `at_night` rule (100 × 2 versions) | PASS | — |
+| C3 | N64/3DS age tag matches the randomizer rule where the rule fixes an age | PASS | — |
+| C4 | 100 tokens, 36 hearts in each version | PASS | — |
+| C5 | Switch 2 counts per region group equal Questfern's list (9 groups) | PASS | — |
+| C6 | All 32 F-026 pairs have a recorded verdict | PASS | F-034 |
+| C7 | N64/3DS heart age tags vs randomizer rules (17 rows) | PASS | — |
+| D1 | Light Medallion given at the Master Sword step | FAIL ×3 | F-029 |
+| D2 | GAN-1 does not need the Rainbow Bridge | FAIL ×3 | F-030 |
+| D3 | DMT-1 lists a boulder-clearing item | FAIL n64/3ds (sw2 pass) | F-031 |
+| D4 | HF-2 lists Boomerang/Hookshot | FAIL n64/3ds | F-031 |
+| D8 | HP-15 does not accept the plain Hookshot alone | FAIL n64/3ds | F-031 |
+| D9 | HC-2 lists the Boomerang (n64/3ds) | FAIL | F-031 |
+| D10 | IC-3 lists a bottle | FAIL ×3 | F-031 |
+| D5 | ZR-1 needs no bombs (n64/3ds) | FAIL | F-032 |
+| D6 | GV-3, GF-2, CL-2 accept the plain Hookshot (n64/3ds) | FAIL | F-032 |
+
+Requirement checks (D3–D10) test **explicit** requirement options, following the project policy that every row lists the tools it truly needs even when a story step implies them. D1 and D2 use the full ancestor closure (with the Master Sword added to adult rows, as `reqOf` does).
+
+### 8.1 Checks written and dropped during triage (not tests of the product)
+Two first-draft checks were wrong and removed: a "KAK-1 not night on Switch 2" check (the night-first policy is documented) and an "ST-4/SP-5 need no Scarecrow's Song" check (the randomizer itself needs the Longshot for ST-4; SP-5 is a source conflict). A first age heuristic produced three false positives (FT-1, DC-1, SP-5) and was replaced by a conservative rule.
+
+### 8.2 Limitations added in session 5
+- The randomizer extract is glitchless logic for the **N64** game. It says nothing about the 3DS or the Switch 2.
+- Web sources came from search results and fetched pages; several sites were not reachable from this workspace (VGC, Respec, Zelda Dungeon's main pages), so some evidence is from search snippets only. Each finding names its sources.
+- Source agreement is not the same as game truth; where sources disagree the finding says so.
+
+### 8.3 Not tested in session 5
+The 180 dungeon steps' text; prices and timers; sync and UI (no change since s4).

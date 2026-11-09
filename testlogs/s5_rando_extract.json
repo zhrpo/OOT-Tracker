@@ -1,0 +1,921 @@
+{
+ "source": {
+  "repo": "https://github.com/OoTRandomizer/OoT-Randomizer",
+  "commit": "526b4c8d81b7c4023ef4573ffbaf39344e270d5b",
+  "version": "9.1.40",
+  "files": "data/World/*.json (non-MQ)",
+  "license": "MIT",
+  "note": "Extract of glitchless logic strings for the mapped locations only. The randomizer models the N64 game; tricks (logic_*) are off in glitchless."
+ },
+ "locations": {
+  "Bottom of the Well GS West Inner Room": {
+   "region": "Bottom of the Well Behind Locked Doors",
+   "rule": "Boomerang"
+  },
+  "Bottom of the Well GS East Inner Room": {
+   "region": "Bottom of the Well Behind Locked Doors",
+   "rule": "Boomerang"
+  },
+  "Bottom of the Well GS Like Like Cage": {
+   "region": "Bottom of the Well Behind Locked Doors",
+   "rule": "Boomerang"
+  },
+  "Deku Tree GS Compass Room": {
+   "region": "Deku Tree Lobby",
+   "rule": "is_adult or can_child_attack"
+  },
+  "Deku Tree GS Basement Gate": {
+   "region": "Deku Tree Basement",
+   "rule": "is_adult or can_child_attack"
+  },
+  "Deku Tree GS Basement Vines": {
+   "region": "Deku Tree Basement",
+   "rule": "can_use_projectile or can_use(Dins_Fire) or (logic_deku_basement_gs and (is_adult or Sticks or Kokiri_Sword))"
+  },
+  "Deku Tree GS Basement Back Room": {
+   "region": "Deku Tree Basement Back Room",
+   "rule": "here(has_fire_source_with_torch or can_use(Bow)) and here(can_blast_or_smash) and (can_use(Boomerang) or can_use(Hookshot))"
+  },
+  "Dodongos Cavern GS Side Room Near Lower Lizalfos": {
+   "region": "Dodongos Cavern Lower Right Side",
+   "rule": "is_adult or has_explosives or Sticks or Slingshot or Boomerang or Kokiri_Sword"
+  },
+  "Dodongos Cavern GS Scarecrow": {
+   "region": "Dodongos Cavern Lower Right Side",
+   "rule": "can_use(Scarecrow) or can_use(Longshot) or (logic_dc_scarecrow_gs and (is_adult or can_child_attack))"
+  },
+  "Dodongos Cavern GS Vines Above Stairs": {
+   "region": "Dodongos Cavern Staircase Room",
+   "rule": "at('Dodongos Cavern Climb', True) or (logic_dc_vines_gs and can_use(Longshot))"
+  },
+  "Dodongos Cavern GS Alcove Above Stairs": {
+   "region": "Dodongos Cavern Far Bridge",
+   "rule": "can_use(Hookshot) or can_use(Boomerang)"
+  },
+  "Dodongos Cavern GS Back Room": {
+   "region": "Dodongos Cavern Mouth",
+   "rule": "can_blast_or_smash"
+  },
+  "Fire Temple GS Boss Key Loop": {
+   "region": "Fire Temple Lower Locked Door",
+   "rule": "True"
+  },
+  "Fire Temple GS Song of Time Room": {
+   "region": "Fire Temple Big Lava Room",
+   "rule": "is_adult and (can_play(Song_of_Time) or logic_fire_song_of_time)"
+  },
+  "Fire Temple GS Boulder Maze": {
+   "region": "Fire Temple Boulder Maze Lower",
+   "rule": "has_explosives"
+  },
+  "Fire Temple GS Scarecrow Climb": {
+   "region": "Fire Temple Boulder Maze Upper",
+   "rule": "can_use(Scarecrow) or (logic_fire_scarecrow and Longshot)"
+  },
+  "Fire Temple GS Scarecrow Top": {
+   "region": "Fire Temple Boulder Maze Upper",
+   "rule": "can_use(Scarecrow) or (logic_fire_scarecrow and Longshot)"
+  },
+  "Forest Temple GS First Room": {
+   "region": "Forest Temple Lobby",
+   "rule": "(is_adult and (Hookshot or Bow or Bombs)) or (is_child and (Boomerang or Slingshot)) or has_bombchus or can_use(Dins_Fire) or (logic_forest_first_gs and (Bombs or can_jumpslash))"
+  },
+  "Forest Temple GS Lobby": {
+   "region": "Forest Temple Central Area",
+   "rule": "can_use(Hookshot) or can_use(Boomerang)"
+  },
+  "Forest Temple GS Level Island Courtyard": {
+   "region": "Forest Temple NW Outdoors",
+   "rule": "can_use(Longshot) or at('Forest Temple Outside Upper Ledge', can_use(Hookshot) or can_use(Boomerang))"
+  },
+  "Forest Temple GS Raised Island Courtyard": {
+   "region": "Forest Temple NE Outdoors",
+   "rule": "can_use(Hookshot) or (logic_forest_outdoor_east_gs and can_use(Boomerang)) or at('Forest Temple Falling Room', can_use(Bow) or can_use(Dins_Fire) or has_explosives)"
+  },
+  "Forest Temple GS Basement": {
+   "region": "Forest Temple Basement",
+   "rule": "can_use(Hookshot) or can_use(Boomerang)"
+  },
+  "Ice Cavern GS Spinning Scythe Room": {
+   "region": "Ice Cavern Spinning Scythe Room",
+   "rule": "can_use(Hookshot) or can_use(Boomerang)"
+  },
+  "Ice Cavern Freestanding PoH": {
+   "region": "Ice Cavern Behind Ice Walls",
+   "rule": "True"
+  },
+  "Ice Cavern GS Heart Piece Room": {
+   "region": "Ice Cavern Behind Ice Walls",
+   "rule": "can_use(Hookshot) or can_use(Boomerang)"
+  },
+  "Ice Cavern GS Push Block Room": {
+   "region": "Ice Cavern Behind Ice Walls",
+   "rule": "can_use(Hookshot) or can_use(Boomerang) or (logic_ice_block_gs and can_use(Hover_Boots))"
+  },
+  "Jabu Jabus Belly GS Water Switch Room": {
+   "region": "Jabu Jabus Belly Main",
+   "rule": "True"
+  },
+  "Jabu Jabus Belly GS Lobby Basement Lower": {
+   "region": "Jabu Jabus Belly Main",
+   "rule": "can_use(Boomerang) or can_use(Hookshot)"
+  },
+  "Jabu Jabus Belly GS Lobby Basement Upper": {
+   "region": "Jabu Jabus Belly Main",
+   "rule": "can_use(Boomerang) or can_use(Hookshot)"
+  },
+  "Jabu Jabus Belly GS Near Boss": {
+   "region": "Jabu Jabus Belly Before Boss",
+   "rule": "can_use_projectile or can_use(Dins_Fire)"
+  },
+  "KF GS Know It All House": {
+   "region": "Kokiri Forest",
+   "rule": "is_child and can_child_attack and (at_night or gold_skulls_ignore_daytime) and (had_night_start or can_leave_forest or can_play(Suns_Song) or gold_skulls_ignore_daytime)"
+  },
+  "KF GS Bean Patch": {
+   "region": "Kokiri Forest",
+   "rule": "can_plant_bugs and can_child_attack"
+  },
+  "KF GS House of Twins": {
+   "region": "Kokiri Forest",
+   "rule": "is_adult and (at_night or gold_skulls_ignore_daytime) and (Hookshot or (logic_adult_kokiri_gs_hovers and Hover_Boots) or logic_adult_kokiri_gs_nothing)"
+  },
+  "LW GS Bean Patch Near Bridge": {
+   "region": "Lost Woods",
+   "rule": "can_plant_bugs and can_child_attack"
+  },
+  "LW GS Above Theater": {
+   "region": "LW Beyond Mido",
+   "rule": "is_adult and (at_night or gold_skulls_ignore_daytime) and (here(can_plant_bean) or (logic_lost_woods_gs_bean and Hookshot and (Longshot or Bow or has_bombchus or can_use(Dins_Fire))))"
+  },
+  "LW GS Bean Patch Near Theater": {
+   "region": "LW Beyond Mido",
+   "rule": "can_plant_bugs and (can_child_attack or (shuffle_scrubs == 'off' and Deku_Shield))"
+  },
+  "Song from Saria": {
+   "region": "Sacred Forest Meadow",
+   "rule": "is_child and at('HC Garden Skippable Locations', is_child)"
+  },
+  "SFM GS": {
+   "region": "Sacred Forest Meadow",
+   "rule": "can_use(Hookshot) and (at_night or gold_skulls_ignore_daytime)"
+  },
+  "LH Freestanding PoH": {
+   "region": "Lake Hylia",
+   "rule": "is_adult and (can_use(Scarecrow) or here(can_plant_bean))"
+  },
+  "LH GS Bean Patch": {
+   "region": "Lake Hylia",
+   "rule": "can_plant_bugs and can_child_attack"
+  },
+  "LH GS Lab Wall": {
+   "region": "Lake Hylia",
+   "rule": "is_child and (at_night or gold_skulls_ignore_daytime) and (Boomerang or (logic_lab_wall_gs and (Sticks or Kokiri_Sword)))"
+  },
+  "LH GS Small Island": {
+   "region": "Lake Hylia",
+   "rule": "is_child and can_child_attack and (at_night or gold_skulls_ignore_daytime)"
+  },
+  "LH GS Tree": {
+   "region": "Lake Hylia",
+   "rule": "can_use(Longshot) and (at_night or gold_skulls_ignore_daytime)"
+  },
+  "LH GS Lab Crate": {
+   "region": "LH Lab",
+   "rule": "Iron_Boots and can_use(Hookshot) and (deadly_bonks != 'ohko' or Fairy or (can_use(Nayrus_Love) and not shuffle_interior_entrances))"
+  },
+  "GV GS Small Bridge": {
+   "region": "Gerudo Valley",
+   "rule": "can_use(Boomerang) and (at_night or gold_skulls_ignore_daytime)"
+  },
+  "GV Waterfall Freestanding PoH": {
+   "region": "GV Upper Stream",
+   "rule": "True"
+  },
+  "GV GS Bean Patch": {
+   "region": "GV Upper Stream",
+   "rule": "can_plant_bugs and can_child_attack"
+  },
+  "GV Crate Freestanding PoH": {
+   "region": "GV Crate Ledge",
+   "rule": "can_break_crate"
+  },
+  "GV Freestanding PoH Crate": {
+   "region": "GV Crate Ledge",
+   "rule": "can_break_crate"
+  },
+  "GV GS Behind Tent": {
+   "region": "GV Fortress Side",
+   "rule": "can_use(Hookshot) and (at_night or gold_skulls_ignore_daytime)"
+  },
+  "GV GS Pillar": {
+   "region": "GV Fortress Side",
+   "rule": "can_use(Hookshot) and (at_night or gold_skulls_ignore_daytime)"
+  },
+  "GF HBA 1000 Points": {
+   "region": "Gerudo Fortress",
+   "rule": "Gerudo_Membership_Card and can_ride_epona and Bow and at_day"
+  },
+  "GF GS Archery Range": {
+   "region": "Gerudo Fortress",
+   "rule": "can_use(Hookshot) and Gerudo_Membership_Card and (at_night or gold_skulls_ignore_daytime)"
+  },
+  "GF Chest": {
+   "region": "GF Chest Roof",
+   "rule": "True"
+  },
+  "GF GS Top Floor": {
+   "region": "GF Roof Gold Skulltula",
+   "rule": "is_adult and (at_night or gold_skulls_ignore_daytime)"
+  },
+  "GF Freestanding PoH": {
+   "region": "GF Above Jail Child Locations",
+   "rule": "True"
+  },
+  "Wasteland GS": {
+   "region": "Haunted Wasteland",
+   "rule": "can_use(Hookshot) or can_use(Boomerang)"
+  },
+  "Colossus Freestanding PoH": {
+   "region": "Desert Colossus",
+   "rule": "is_adult and here(can_plant_bean)"
+  },
+  "Colossus GS Bean Patch": {
+   "region": "Desert Colossus",
+   "rule": "can_plant_bugs and can_child_attack"
+  },
+  "Colossus GS Tree": {
+   "region": "Desert Colossus",
+   "rule": "can_use(Hookshot) and (at_night or gold_skulls_ignore_daytime)"
+  },
+  "Colossus GS Hill": {
+   "region": "Desert Colossus",
+   "rule": "is_adult and (at_night or gold_skulls_ignore_daytime) and (here(can_plant_bean) or Longshot or (logic_colossus_gs and Hookshot))"
+  },
+  "HC GS Tree": {
+   "region": "Hyrule Castle Grounds",
+   "rule": "can_child_attack and can_bonk"
+  },
+  "OGC GS": {
+   "region": "Ganons Castle Grounds",
+   "rule": "True"
+  },
+  "Market GS Guard House": {
+   "region": "Market Guard House",
+   "rule": "is_child and can_break_crate"
+  },
+  "Market Treasure Chest Game Reward": {
+   "region": "Market Treasure Chest Game",
+   "rule": "(Small_Key_Treasure_Chest_Game, 6)"
+  },
+  "Kak GS House Under Construction": {
+   "region": "Kakariko Village",
+   "rule": "is_child and (at_night or gold_skulls_ignore_daytime)"
+  },
+  "Kak GS Skulltula House": {
+   "region": "Kakariko Village",
+   "rule": "is_child and (at_night or gold_skulls_ignore_daytime)"
+  },
+  "Kak GS Near Gate Guard": {
+   "region": "Kakariko Village",
+   "rule": "is_child and (at_night or gold_skulls_ignore_daytime)"
+  },
+  "Kak GS Tree": {
+   "region": "Kakariko Village",
+   "rule": "is_child and (at_night or gold_skulls_ignore_daytime) and can_bonk"
+  },
+  "Kak GS Watchtower": {
+   "region": "Kakariko Village",
+   "rule": "is_child and (at_night or gold_skulls_ignore_daytime) and (Slingshot or has_bombchus or (logic_kakariko_tower_gs and (Sticks or Kokiri_Sword)))"
+  },
+  "Kak GS Above Impas House": {
+   "region": "Kak Impas Rooftop",
+   "rule": "is_adult and (at_night or gold_skulls_ignore_daytime)"
+  },
+  "Kak Man on Roof": {
+   "region": "Kak Odd Medicine Rooftop",
+   "rule": "True"
+  },
+  "Kak Impas House Freestanding PoH": {
+   "region": "Kak Impas House Back",
+   "rule": "True"
+  },
+  "Kak Windmill Freestanding PoH": {
+   "region": "Kak Windmill",
+   "rule": "can_use(Boomerang) or (logic_windmill_poh and is_adult) or 'Dampes Windmill Access'"
+  },
+  "Graveyard Freestanding PoH": {
+   "region": "Graveyard",
+   "rule": "(is_adult and can_break_crate and (here(can_plant_bean) or Longshot)) or (logic_graveyard_poh and can_use(Boomerang))"
+  },
+  "Graveyard Freestanding PoH Crate": {
+   "region": "Graveyard",
+   "rule": "(is_adult and can_break_crate and (here(can_plant_bean) or Longshot))"
+  },
+  "Graveyard GS Wall": {
+   "region": "Graveyard",
+   "rule": "can_use(Boomerang) and (at_night or gold_skulls_ignore_daytime)"
+  },
+  "Graveyard GS Bean Patch": {
+   "region": "Graveyard",
+   "rule": "can_plant_bugs and can_child_attack"
+  },
+  "Graveyard Shield Grave Chest": {
+   "region": "Graveyard Shield Grave",
+   "rule": "True"
+  },
+  "Graveyard Dampe Race Freestanding PoH": {
+   "region": "Graveyard Dampes Grave",
+   "rule": "is_adult or logic_child_dampe_race_poh"
+  },
+  "DMT Freestanding PoH": {
+   "region": "Death Mountain",
+   "rule": "can_take_damage or can_use(Hover_Boots) or (is_adult and here(can_plant_bean and (plant_beans or has_explosives or Progressive_Strength_Upgrade)))"
+  },
+  "DMT GS Bean Patch": {
+   "region": "Death Mountain",
+   "rule": "can_plant_bugs and can_child_attack and (has_explosives or Progressive_Strength_Upgrade or (logic_dmt_soil_gs and can_use(Boomerang)))"
+  },
+  "DMT GS Near Kak": {
+   "region": "Death Mountain",
+   "rule": "can_blast_or_smash"
+  },
+  "DMT GS Above Dodongos Cavern": {
+   "region": "Death Mountain",
+   "rule": "is_adult and (at_night or gold_skulls_ignore_daytime) and (Megaton_Hammer or logic_trail_gs_lower)"
+  },
+  "DMT GS Falling Rocks Path": {
+   "region": "Death Mountain Summit",
+   "rule": "is_adult and (at_night or gold_skulls_ignore_daytime) and (Megaton_Hammer or logic_trail_gs_upper)"
+  },
+  "GC GS Boulder Maze": {
+   "region": "Goron City",
+   "rule": "is_child and has_explosives"
+  },
+  "GC GS Center Platform": {
+   "region": "Goron City",
+   "rule": "is_adult"
+  },
+  "GC Pot Freestanding PoH": {
+   "region": "GC Spinning Pot",
+   "rule": "True"
+  },
+  "GC Spinning Pot PoH Drop Rupee 1": {
+   "region": "GC Spinning Pot",
+   "rule": "True"
+  },
+  "GC Spinning Pot PoH Drop Rupee 2": {
+   "region": "GC Spinning Pot",
+   "rule": "True"
+  },
+  "DMC Wall Freestanding PoH": {
+   "region": "DMC Upper Local",
+   "rule": "True"
+  },
+  "DMC GS Crate": {
+   "region": "DMC Upper Local",
+   "rule": "is_child and can_child_attack and can_break_heated_crate"
+  },
+  "DMC Volcano Freestanding PoH": {
+   "region": "DMC Central Nearby",
+   "rule": "is_adult and (here(can_plant_bean) or (logic_crater_bean_poh_with_hovers and Hover_Boots))"
+  },
+  "DMC GS Bean Patch": {
+   "region": "DMC Central Local",
+   "rule": "can_plant_bugs and can_child_attack"
+  },
+  "ZR GS Tree": {
+   "region": "ZR Front",
+   "rule": "is_child and can_child_attack and can_bonk"
+  },
+  "ZR Frogs Ocarina Game": {
+   "region": "Zora River",
+   "rule": "is_child and can_play(Zeldas_Lullaby) and can_play(Eponas_Song) and can_play(Sarias_Song) and can_play(Suns_Song) and can_play(Song_of_Time) and can_play(Song_of_Storms) and has_all_notes_for_song('ZR Frogs Ocarina Game')"
+  },
+  "ZR Near Open Grotto Freestanding PoH": {
+   "region": "Zora River",
+   "rule": "is_child or here(can_plant_bean) or Hover_Boots or logic_zora_river_lower"
+  },
+  "ZR Near Domain Freestanding PoH": {
+   "region": "Zora River",
+   "rule": "is_child or Hover_Boots or logic_zora_river_upper"
+  },
+  "ZR GS Ladder": {
+   "region": "Zora River",
+   "rule": "is_child and (at_night or gold_skulls_ignore_daytime) and can_child_attack"
+  },
+  "ZR GS Near Raised Grottos": {
+   "region": "Zora River",
+   "rule": "can_use(Hookshot) and (at_night or gold_skulls_ignore_daytime)"
+  },
+  "ZR GS Above Bridge": {
+   "region": "Zora River",
+   "rule": "can_use(Hookshot) and (at_night or gold_skulls_ignore_daytime)"
+  },
+  "ZD GS Frozen Waterfall": {
+   "region": "Zoras Domain",
+   "rule": "is_adult and (at_night or gold_skulls_ignore_daytime) and (Hookshot or Bow or Magic_Meter or logic_domain_gs)"
+  },
+  "ZF Iceberg Freestanding PoH": {
+   "region": "Zoras Fountain",
+   "rule": "is_adult"
+  },
+  "ZF GS Tree": {
+   "region": "Zoras Fountain",
+   "rule": "is_child and can_bonk"
+  },
+  "ZF GS Above the Log": {
+   "region": "Zoras Fountain",
+   "rule": "can_use(Boomerang) and (at_night or gold_skulls_ignore_daytime)"
+  },
+  "ZF Bottom Freestanding PoH": {
+   "region": "ZF Underwater",
+   "rule": "True"
+  },
+  "ZF GS Hidden Cave": {
+   "region": "ZF Hidden Cave",
+   "rule": "Hookshot and (at_night or gold_skulls_ignore_daytime)"
+  },
+  "LLR GS Tree": {
+   "region": "Lon Lon Ranch",
+   "rule": "is_child and can_bonk"
+  },
+  "LLR GS Rain Shed": {
+   "region": "Lon Lon Ranch",
+   "rule": "is_child and (at_night or gold_skulls_ignore_daytime)"
+  },
+  "LLR GS House Window": {
+   "region": "Lon Lon Ranch",
+   "rule": "can_use(Boomerang) and (at_night or gold_skulls_ignore_daytime)"
+  },
+  "LLR GS Back Wall": {
+   "region": "Lon Lon Ranch",
+   "rule": "can_use(Boomerang) and (at_night or gold_skulls_ignore_daytime)"
+  },
+  "LLR Freestanding PoH": {
+   "region": "LLR Tower",
+   "rule": "is_child"
+  },
+  "HF GS Cow Grotto": {
+   "region": "HF Cow Grotto",
+   "rule": "has_fire_source and (can_use(Hookshot) or can_use(Boomerang))"
+  },
+  "HF GS Near Kak Grotto": {
+   "region": "HF Near Kak Grotto",
+   "rule": "can_use(Boomerang) or can_use(Hookshot)"
+  },
+  "HF Tektite Grotto Freestanding PoH": {
+   "region": "HF Tektite Grotto",
+   "rule": "(Progressive_Scale, 2) or can_use(Iron_Boots)"
+  },
+  "HC GS Storms Grotto": {
+   "region": "HC Storms Grotto",
+   "rule": "(can_blast_or_smash or (is_child and logic_castle_storms_gs)) and (can_use(Boomerang) or can_use(Hookshot))"
+  },
+  "Shadow Temple GS Invisible Blades Room": {
+   "region": "Shadow Temple Huge Pit",
+   "rule": "True"
+  },
+  "Shadow Temple GS Falling Spikes Room": {
+   "region": "Shadow Temple Falling Spikes",
+   "rule": "logic_shadow_umbrella_gs or Hookshot"
+  },
+  "Shadow Temple GS Near Ship": {
+   "region": "Shadow Temple Boat",
+   "rule": "Longshot"
+  },
+  "Spirit Temple GS Metal Fence": {
+   "region": "Child Spirit Temple Beyond Metal Bridges",
+   "rule": "Boomerang or (logic_spirit_fence_gs and Kokiri_Sword) or (((Silver_Rupee_Spirit_Temple_Child_Early_Torches, 5) or logic_spirit_fence_gs) and (Sticks or has_explosives or Slingshot or can_use(Dins_Fire)))"
+  },
+  "Spirit Temple GS Boulder Room": {
+   "region": "Spirit Temple Boulder Room",
+   "rule": "can_play(Song_of_Time)"
+  },
+  "Spirit Temple GS Sun on Floor Room": {
+   "region": "Child Spirit Temple Climb",
+   "rule": "(is_child and has_projectile(child) and (Small_Key_Spirit_Temple, 5)) or (is_adult and (has_projectile(adult) or can_take_damage) and ((Small_Key_Spirit_Temple, 3) or spirit_temple_shortcuts or ((Small_Key_Spirit_Temple, 2) and free_bombchu_drops))) or has_projectile(both) or can_use(Dins_Fire) or (can_take_damage and (Sticks or Kokiri_Sword or has_projectile(child)))"
+  },
+  "Spirit Temple GS Lobby": {
+   "region": "Spirit Temple Central Chamber",
+   "rule": "(is_child and logic_spirit_lobby_gs and Boomerang and (Small_Key_Spirit_Temple, 5)) or (is_adult and (Hookshot or Hover_Boots or logic_spirit_lobby_jump) and ((Small_Key_Spirit_Temple, 3) or spirit_temple_shortcuts)) or (logic_spirit_lobby_gs and Boomerang and (Hookshot or Hover_Boots or logic_spirit_lobby_jump) and (has_explosives or ((Small_Key_Spirit_Temple, 2) and free_bombchu_drops)))"
+  },
+  "Spirit Temple GS Hall After Sun Block Room": {
+   "region": "Spirit Temple Central Chamber",
+   "rule": "(is_child and Boomerang and (Small_Key_Spirit_Temple, 5)) or (is_adult and Hookshot and ((Small_Key_Spirit_Temple, 3) or spirit_temple_shortcuts)) or (Boomerang and Hookshot and (has_explosives or ((Small_Key_Spirit_Temple, 2) and free_bombchu_drops)))"
+  },
+  "Water Temple GS Central Pillar": {
+   "region": "Water Temple Lowered Water Levels",
+   "rule": "((Longshot or (logic_water_central_gs_fw and Hookshot and can_use(Farores_Wind))) and ((Small_Key_Water_Temple, 5) or Bow or can_use(Dins_Fire))) or (logic_water_central_gs_irons and Hookshot and Iron_Boots and (Bow or can_use(Dins_Fire))) or (logic_water_central_gs_fw and Child_Water_Temple and Boomerang and can_use(Farores_Wind) and Raise_Water_Level and ((Small_Key_Water_Temple, 5) or Sticks or can_use(Dins_Fire)))"
+  },
+  "Water Temple GS Behind Gate": {
+   "region": "Water Temple South Basement",
+   "rule": "True"
+  },
+  "Water Temple GS Near Boss Key Chest": {
+   "region": "Water Temple North Basement",
+   "rule": "True"
+  },
+  "Water Temple GS Falling Platform Room": {
+   "region": "Water Temple Falling Platform Room",
+   "rule": "can_use(Longshot) or (logic_water_falling_platform_gs_hookshot and can_use(Hookshot)) or (logic_water_falling_platform_gs_boomerang and can_use(Boomerang))"
+  },
+  "Water Temple GS River": {
+   "region": "Water Temple River",
+   "rule": "(Iron_Boots and (Zora_Tunic or logic_fewer_tunic_requirements)) or (logic_water_river_gs and Longshot and (Bow or has_bombchus))"
+  },
+  "Shadow Temple GS Single Giant Pot": {
+   "region": "Shadow Temple Invisible Spikes",
+   "rule": "(Silver_Rupee_Shadow_Temple_Invisible_Spikes, 5)"
+  },
+  "Shadow Temple GS Triple Giant Pot": {
+   "region": "Shadow Temple Beyond Boat",
+   "rule": "True"
+  },
+  "Graveyard Heart Piece Grave Chest": {
+   "region": "Graveyard Heart Piece Grave",
+   "rule": "can_play(Suns_Song)"
+  }
+ },
+ "entrances": {
+  "Bottom of the Well Behind Locked Doors": {
+   "Bottom of the Well Behind Fake Walls": "(Small_Key_Bottom_of_the_Well, 3)"
+  },
+  "Child Spirit Temple Beyond Metal Bridges": {
+   "Spirit Temple Lobby": "is_child and (Sticks or has_explosives or ((Nuts or Boomerang) and (Kokiri_Sword or Slingshot))) and (Boomerang or Slingshot or (has_bombchus and logic_spirit_child_bombchu) or (Silver_Rupee_Spirit_Temple_Child_Early_Torches, 5))"
+  },
+  "Child Spirit Temple Climb": {
+   "Child Spirit Before Locked Door": "(Small_Key_Spirit_Temple, 1)",
+   "Spirit Temple Central Chamber": "True"
+  },
+  "DMC Central Local": {
+   "Bolero of Fire Warp": "True",
+   "DMC Central Nearby": "can_use(Goron_Tunic)"
+  },
+  "DMC Central Nearby": {
+   "DMC Upper Local": "can_use(Goron_Tunic) and can_use(Longshot) and ((damage_multiplier != 'ohko' and damage_multiplier != 'quadruple') or can_use(Nayrus_Love))",
+   "DMC Lower Local": "is_adult and (Hover_Boots or Hookshot or (logic_crater_bolero_jump and Goron_Tunic and can_shield))",
+   "DMC Central Local": "True",
+   "DMC Fire Temple Entrance": "can_use(Goron_Tunic)"
+  },
+  "DMC Upper Local": {
+   "Death Mountain Summit": "True",
+   "DMC Upper Nearby": "can_use(Goron_Tunic)",
+   "DMC Upper Grotto": "True"
+  },
+  "Death Mountain": {
+   "Dodongos Cavern Beginning": "True",
+   "Kak Behind Gate": "True",
+   "Death Mountain Summit": "True",
+   "Goron City": "True",
+   "DMT Storms Grotto": "True"
+  },
+  "Death Mountain Summit": {
+   "Death Mountain": "here(can_blast_or_smash) or (is_adult and (here(can_plant_bean and Progressive_Strength_Upgrade) or plant_beans)) or (logic_dmt_climb_hovers and can_use(Hover_Boots))",
+   "DMC Upper Nearby": "True",
+   "DMT Great Fairy Fountain": "True",
+   "DMT Cow Grotto": "True"
+  },
+  "Deku Tree Basement": {
+   "Deku Tree Lobby": "deku_tree_shortcuts or here(is_adult or can_child_attack or Nuts)",
+   "Deku Tree Basement Ledge": "True"
+  },
+  "Deku Tree Basement Back Room": {
+   "Deku Tree Basement": "here(has_fire_source_with_torch or can_use(Bow)) and here(can_use(Slingshot) or can_use(Bow))",
+   "Deku Tree Basement Ledge": "is_child"
+  },
+  "Deku Tree Lobby": {
+   "Farores Wind Warp": "(is_child and at('Deku Tree Lobby', is_child)) or (is_adult and at('Deku Tree Lobby', is_adult))",
+   "KF Outside Deku Tree": "is_child or (shuffle_dungeon_entrances and (open_forest == 'open' or 'Showed Mido Sword & Shield'))"
+  },
+  "Desert Colossus": {
+   "Requiem of Spirit Warp": "True",
+   "Wasteland Near Colossus": "True",
+   "Desert Colossus From Spirit Lobby": "True",
+   "Desert Colossus Hands": "True",
+   "Colossus Great Fairy Fountain": "True",
+   "Colossus Grotto": "True"
+  },
+  "Dodongos Cavern Far Bridge": {
+   "Dodongos Cavern Lobby": "at('Dodongos Cavern Far Bridge', True)",
+   "Dodongos Cavern Climb": "is_adult and (logic_dc_jump or Hover_Boots or Longshot)",
+   "Dodongos Cavern Upper Lizalfos": "is_adult or Sticks or Slingshot or Bombs or Kokiri_Sword"
+  },
+  "Dodongos Cavern Lower Right Side": {
+   "Dodongos Cavern Lobby": "has_explosives or Progressive_Strength_Upgrade",
+   "Dodongos Cavern Torch Room": "True"
+  },
+  "Dodongos Cavern Mouth": {
+   "Dodongos Cavern Lobby": "dodongos_cavern_shortcuts or (logic_dc_chu_eyes and has_bombchus)",
+   "Dodongos Cavern Far Bridge": "has_explosives",
+   "Farores Wind Warp": "(is_child and at('Dodongos Cavern Mouth', is_child)) or (is_adult and at('Dodongos Cavern Mouth', is_adult))"
+  },
+  "Dodongos Cavern Staircase Room": {
+   "Dodongos Cavern Lobby": "at('Dodongos Cavern Torch Room', is_adult or Sticks or can_use(Dins_Fire))"
+  },
+  "Fire Temple Big Lava Room": {
+   "Fire Temple Lower": "(Small_Key_Fire_Temple, 2) and (logic_fewer_tunic_requirements or can_use(Goron_Tunic))"
+  },
+  "Fire Temple Boulder Maze Lower": {
+   "Fire Temple Elevator Room": "(Small_Key_Fire_Temple, 4) and (Progressive_Strength_Upgrade or logic_fire_strength) and (has_explosives or Bow or Hookshot)"
+  },
+  "Fire Temple Boulder Maze Upper": {
+   "Fire Temple Narrow Path Room": "(Small_Key_Fire_Temple, 6)"
+  },
+  "Fire Temple Lower Locked Door": {
+   "Fire Temple Lower": "((Small_Key_Fire_Temple, 8) or (not keysanity)) and can_use(Megaton_Hammer)"
+  },
+  "Forest Temple Basement": {
+   "Forest Temple Central Area": "(Forest_Temple_Jo_and_Beth and Forest_Temple_Amy_and_Meg) or forest_temple_shortcuts",
+   "Forest Temple Before Boss": "forest_temple_shortcuts"
+  },
+  "Forest Temple Central Area": {
+   "Forest Temple Lobby": "is_adult or can_child_attack or Nuts",
+   "Forest Temple Basement": "forest_temple_shortcuts"
+  },
+  "Forest Temple Lobby": {
+   "Farores Wind Warp": "(is_child and at('Forest Temple Lobby', is_child)) or (is_adult and at('Forest Temple Lobby', is_adult))",
+   "SFM Forest Temple Entrance Ledge": "True"
+  },
+  "Forest Temple NE Outdoors": {
+   "Forest Temple Central Area": "can_use(Bow) or can_use(Slingshot)",
+   "Forest Temple NW Outdoors": "(Progressive_Scale, 2)",
+   "Forest Temple Outdoors High Balconies": "True",
+   "Forest Temple Falling Room": "True"
+  },
+  "Forest Temple NW Outdoors": {
+   "Forest Temple Central Area": "can_play(Song_of_Time) or is_child",
+   "Forest Temple Outdoors High Balconies": "True",
+   "Forest Temple NE Outdoors": "can_use(Iron_Boots) or (Progressive_Scale, 2)",
+   "Forest Temple Outside Upper Ledge": "True"
+  },
+  "GC Spinning Pot": {
+   "Goron City": "is_child and 'Goron City Child Fire' and (Bombs or (Progressive_Strength_Upgrade and logic_goron_city_pot_with_strength) or (has_bombchus and logic_goron_city_pot))"
+  },
+  "GF Above Jail Child Locations": {
+   "Root": "shuffle_gerudo_fortress_heart_piece == 'remove' or not shuffle_hideout_entrances",
+   "GF Balcony": "is_child"
+  },
+  "GF Chest Roof": {
+   "GF Kitchen Roof Access": "is_adult and (Hover_Boots or can_use(Scarecrow) or Longshot)",
+   "GF Balcony": "can_use(Longshot)"
+  },
+  "GF Roof Gold Skulltula": {
+   "GF Kitchen Roof Access": "True",
+   "GF 3 Torches Jail Exterior": "can_use(Longshot)"
+  },
+  "GV Crate Ledge": {
+   "Gerudo Valley": "is_child or Longshot",
+   "GV Grotto Ledge": "can_use(Longshot)",
+   "GV Fortress Side": "logic_valley_crate_hovers and can_use(Hover_Boots) and (damage_multiplier != 'ohko' or can_use(Nayrus_Love) or (Fairy and (deadly_bonks != 'ohko' or can_blast_or_smash)))"
+  },
+  "GV Fortress Side": {
+   "Gerudo Valley": "is_adult and (can_ride_epona or Longshot or gerudo_fortress == 'open' or can_finish_GerudoFortress)",
+   "GV Carpenter Tent": "True",
+   "Gerudo Fortress": "True",
+   "GV Storms Grotto": "True"
+  },
+  "GV Upper Stream": {
+   "Gerudo Valley": "True",
+   "GV Fortress Side": "True"
+  },
+  "Ganons Castle Grounds": {
+   "Castle Grounds": "is_adult",
+   "Ganons Castle Ledge": "can_build_rainbow_bridge"
+  },
+  "Gerudo Fortress": {
+   "Gerudo Training Ground Lobby": "True",
+   "GV Fortress Side": "True",
+   "GF Entrances Behind Crates": "True",
+   "GF Break Room Entrance": "True",
+   "GF Balcony": "True",
+   "GF Outside Gate": "is_adult or 'GF Gate Open'",
+   "Hideout 1 Torch Jail": "True",
+   "Hideout 2 Torches Jail": "True",
+   "Hideout 4 Torches Jail": "True",
+   "Hideout Kitchen Hallway": "True"
+  },
+  "Gerudo Valley": {
+   "Hyrule Field": "True",
+   "GV Fortress Side": "is_child or can_ride_epona or Longshot or gerudo_fortress == 'open' or can_finish_GerudoFortress"
+  },
+  "Goron City": {
+   "Death Mountain": "True",
+   "GC Woods Warp": "can_leave_forest and 'GC Woods Warp Open'",
+   "GC Darunias Chamber": "True",
+   "GC Grotto Platform": "(damage_multiplier != 'ohko' and (damage_multiplier != 'quadruple' or can_use(Goron_Tunic))) or can_use(Nayrus_Love) or (can_play(Song_of_Time) and can_use(Longshot))",
+   "GC Shop": "True"
+  },
+  "Graveyard": {
+   "Kakariko Village": "True",
+   "Graveyard Shield Grave": "True",
+   "Graveyard Heart Piece Grave": "True",
+   "Graveyard Royal Familys Tomb": "True",
+   "Graveyard Dampes Grave": "True",
+   "Graveyard Dampes House": "True",
+   "Graveyard Warp Pad Region": "True"
+  },
+  "Graveyard Dampes Grave": {
+   "Graveyard": "is_adult"
+  },
+  "Graveyard Shield Grave": {
+   "Graveyard": "is_adult or at_night"
+  },
+  "HC Storms Grotto": {
+   "Hyrule Castle Grounds": "can_open_storm_grotto"
+  },
+  "HF Cow Grotto": {
+   "Hyrule Field": "(is_child or Megaton_Hammer) and can_open_bomb_grotto"
+  },
+  "HF Near Kak Grotto": {
+   "Hyrule Field": "can_open_bomb_grotto"
+  },
+  "HF Tektite Grotto": {
+   "Hyrule Field": "can_open_bomb_grotto"
+  },
+  "Haunted Wasteland": {
+   "Wasteland Near Fortress": "logic_wasteland_crossing or can_use(Hover_Boots) or can_use(Longshot)",
+   "Wasteland Near Crate": "True"
+  },
+  "Hyrule Castle Grounds": {
+   "Castle Grounds": "is_child",
+   "HC Garden": "True"
+  },
+  "Ice Cavern Behind Ice Walls": {
+   "Ice Cavern Spinning Scythe Room": "here(Blue_Fire)"
+  },
+  "Ice Cavern Spinning Scythe Room": {
+   "Ice Cavern Beginning": "here(is_adult or has_explosives or can_use(Dins_Fire))"
+  },
+  "Jabu Jabus Belly Before Boss": {
+   "Jabu Jabus Belly Main": "(logic_jabu_boss_hover and can_use(Hover_Boots)) or jabu_shortcuts or 'Jabu Jabus Belly Floor Lowered'",
+   "Farores Wind Warp": "(is_child and at('Jabu Jabus Belly Before Boss', is_child)) or (is_adult and at('Jabu Jabus Belly Before Boss', is_adult))"
+  },
+  "Jabu Jabus Belly Main": {
+   "Jabu Jabus Belly Beginning": "can_use_projectile",
+   "Jabu Jabus Belly Before Boss": "True"
+  },
+  "Kak Impas House Back": {
+   "Kak Impas Ledge": "True"
+  },
+  "Kak Impas Rooftop": {
+   "Kakariko Village": "can_use(Hookshot) or (logic_kakariko_rooftop_gs and can_use(Hover_Boots))",
+   "DMT Owl Flight": "True"
+  },
+  "Kak Odd Medicine Rooftop": {
+   "Kakariko Village": "can_use(Hookshot) or (logic_man_on_roof and (is_adult or (at_day and not gold_skulls_ignore_daytime) or Slingshot or has_bombchus or (logic_kakariko_tower_gs and (Sticks or Kokiri_Sword))))"
+  },
+  "Kak Windmill": {
+   "Kakariko Village": "True",
+   "Graveyard Dampes Grave": "is_adult and can_play(Song_of_Time)"
+  },
+  "Kakariko Village": {
+   "Bottom of the Well": "True",
+   "Hyrule Field": "True",
+   "Kak Impas Ledge": "True",
+   "Kak Impas Rooftop": "True",
+   "Kak Odd Medicine Rooftop": "True",
+   "Kak Backyard": "True",
+   "Kak Carpenter Boss House": "True",
+   "Kak House of Skulltula": "True",
+   "Kak Impas House": "True",
+   "Kak Windmill": "True",
+   "Kak Bazaar": "True",
+   "Kak Shooting Gallery": "True",
+   "Kak Potion Shop Front": "True",
+   "Graveyard": "True",
+   "Kak Behind Gate": "is_adult or logic_visible_collisions or 'Kakariko Village Gate Open' or open_kakariko == 'open'",
+   "Kak Redead Grotto": "True"
+  },
+  "Kokiri Forest": {
+   "KF Outside Deku Tree": "is_adult or open_forest == 'open' or 'Showed Mido Sword & Shield'",
+   "KF Links House": "True",
+   "KF Midos House": "True",
+   "KF Sarias House": "True",
+   "KF House of Twins": "True",
+   "KF Know It All House": "True",
+   "KF Kokiri Shop": "True",
+   "LW Forest Exit": "True",
+   "LW Bridge": "True",
+   "KF Storms Grotto": "True"
+  },
+  "LH Lab": {
+   "Lake Hylia": "True"
+  },
+  "LLR Tower": {
+   "Lon Lon Ranch": "True"
+  },
+  "LW Beyond Mido": {
+   "Lost Woods": "is_child or logic_mido_backflip or can_play(Sarias_Song)",
+   "SFM Entryway": "True",
+   "Deku Theater": "True",
+   "LW Scrubs Grotto": "True"
+  },
+  "Lake Hylia": {
+   "Serenade of Water Warp": "True",
+   "Hyrule Field": "True",
+   "LH Fishing Island": "True",
+   "LH Lab": "True",
+   "GV Lower Stream": "True",
+   "Zoras Domain": "is_child and can_dive",
+   "LH Grotto": "True",
+   "Water Temple Lobby": "True"
+  },
+  "Lon Lon Ranch": {
+   "Hyrule Field": "True",
+   "LLR Talons House": "True",
+   "LLR Stables": "True",
+   "LLR Tower": "True",
+   "LLR Grotto": "True"
+  },
+  "Lost Woods": {
+   "Kokiri Forest": "True",
+   "LW Beyond Mido": "is_child or can_play(Sarias_Song)",
+   "LW Underwater Entrance": "True",
+   "Lost Woods Mushroom Timeout": "True",
+   "LW Bridge": "can_use(Longshot)",
+   "GC Woods Warp": "True",
+   "LW Near Shortcuts Grotto": "True"
+  },
+  "Market Guard House": {
+   "Market Entrance": "True"
+  },
+  "Market Treasure Chest Game": {
+   "Market": "is_child and at_night"
+  },
+  "Sacred Forest Meadow": {
+   "Minuet of Forest Warp": "True",
+   "SFM Entryway": "is_adult or Slingshot or Sticks or Kokiri_Sword or can_use(Dins_Fire)",
+   "SFM Forest Temple Entrance Ledge": "True",
+   "SFM Fairy Grotto": "True",
+   "SFM Storms Grotto": "True"
+  },
+  "Shadow Temple Boat": {
+   "Shadow Temple First Beamos": "shadow_temple_shortcuts",
+   "Shadow Temple After Wind": "(Small_Key_Shadow_Temple, 4)"
+  },
+  "Shadow Temple Falling Spikes": {
+   "Shadow Temple Huge Pit": "(Silver_Rupee_Shadow_Temple_Huge_Pit, 5)"
+  },
+  "Shadow Temple Huge Pit": {
+   "Shadow Temple First Beamos": "has_explosives and (((Small_Key_Shadow_Temple, 1) and not shadow_temple_shortcuts) or (Small_Key_Shadow_Temple, 5) or ((Small_Key_Shadow_Temple, 4) and (logic_lens_shadow_platform or can_use(Lens_of_Truth))))",
+   "Shadow Temple Invisible Spikes": "logic_lens_shadow_platform or can_use(Lens_of_Truth)"
+  },
+  "Spirit Temple Boulder Room": {
+   "Early Adult Spirit Temple": "Bow or Hookshot or has_bombchus or (Bombs and logic_spirit_lower_adult_switch)"
+  },
+  "Spirit Temple Central Chamber": {
+   "Spirit Temple Lobby": "is_adult and spirit_temple_shortcuts",
+   "Early Adult Spirit Temple": "(Small_Key_Spirit_Temple, 1)",
+   "Child Spirit Temple Climb": "has_explosives"
+  },
+  "Water Temple Falling Platform Room": {
+   "Water Temple Lobby": "Raise_Water_Level and (Small_Key_Water_Temple, 4)"
+  },
+  "Water Temple Lowered Water Levels": {
+   "Water Temple Dive": "can_play(Zeldas_Lullaby)"
+  },
+  "Water Temple North Basement": {
+   "Water Temple Dive": "(Iron_Boots or can_play(Zeldas_Lullaby)) and (Longshot or (logic_water_north_basement and Hover_Boots)) and (Small_Key_Water_Temple, 4)"
+  },
+  "Water Temple River": {
+   "Water Temple Dark Link Region": "can_play(Song_of_Time)"
+  },
+  "Water Temple South Basement": {
+   "Water Temple Lowered Water Levels": "has_explosives and (Iron_Boots or can_dive) and (Hookshot or Hover_Boots)"
+  },
+  "ZF Hidden Cave": {
+   "Zoras Fountain": "can_use(Silver_Gauntlets) and can_blast_or_smash"
+  },
+  "ZF Underwater": {
+   "Zoras Fountain": "is_adult and Iron_Boots and (logic_fewer_tunic_requirements or Zora_Tunic)"
+  },
+  "ZR Front": {
+   "Hyrule Field": "True",
+   "Zora River": "True"
+  },
+  "Zora River": {
+   "Lost Woods": "can_leave_forest and (can_dive or can_use(Iron_Boots))",
+   "ZR Front": "is_adult or has_explosives",
+   "ZR Behind Waterfall": "True",
+   "ZR Top of Waterfall": "True",
+   "ZR Open Grotto": "True",
+   "ZR Fairy Grotto": "True",
+   "ZR Storms Grotto": "True"
+  },
+  "Zoras Domain": {
+   "Lake Hylia": "is_child and can_dive",
+   "ZR Behind Waterfall": "True",
+   "ZD Behind King Zora": "Deliver_Letter or zora_fountain == 'open' or (is_adult and zora_fountain == 'adult')",
+   "ZD Eyeball Frog Timeout": "True",
+   "ZD Shop": "True",
+   "ZD Storms Grotto": "True"
+  },
+  "Zoras Fountain": {
+   "Jabu Jabus Belly Beginning": "True",
+   "ZD Behind King Zora": "True",
+   "ZF Ice Ledge": "True",
+   "ZF Great Fairy Fountain": "True"
+  }
+ }
+}

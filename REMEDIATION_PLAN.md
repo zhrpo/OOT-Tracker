@@ -171,3 +171,36 @@ Depends on: F-013 (same code). Implement together.
 3. F-013/F-019/F-020/F-022 sync redesign on a branch, with regression suites 1.5 (1–10) green under both stand-in models.
 4. Real-provider verification in an owner-approved isolated test artifact (D1 conditions; needs a publish of a **test** artifact, which the audit rules so far forbid. Owner decision Q5).
 5. Release only when 1–4 are complete and the suite runner (F-002) gives one pass/fail result.
+
+
+## 6. Game-data defects F-029…F-033 (session 5, DRAFT, not implemented)
+
+One data batch, all in the source modules (`main.py`, `gate.py`, `fix4.py`, `links.py`, `vers.py`), no engine change:
+
+| Finding | Change | Save impact |
+|---|---|---|
+| F-029 | `MQ-17` gives `IT-2`,`IT-63`; `MQ-37` gives `IT-28` only; `IT-63` requires `MQ-17`; text "After the Master Sword" | Players past `MQ-17` gain `IT-63` through `normalize()` (correct) |
+| F-030 | `GAN-1` requires the Hookshot only | None |
+| F-031 | `DMT-1` + `(IT-29 \| IT-35)`; `HF-2` + `(IT-14 \| IT-16)` and Fire Arrows as an alternative to Din's Fire; `HC-2` (n64/3ds) + `IT-14`; `IC-3` + bottle; `HP-15` `(SQ-23 \| IT-17)` and text | None (ticked rows never lock) |
+| F-032 | `ZR-1` (n64/3ds) no bomb requirement; `GV-3` `IT-16 & (SQ-28 \| IT-17)`; `GF-2` Hookshot + card; `CL-2` Hookshot or Longshot; fix the Switch 2 note that says N64 needs the Longshot | None |
+| F-033 | Choose one Magic Meter rule for `IT-23`/`SQ-25`, `IT-25`/`SQ-40`, `IT-21`/`SQ-19`, `IT-22`/`SQ-20`; owner decision | None |
+
+Verification: re-run `data_audit_s5.py` (must reach 16/16), `build_audit.py`, `test_progression_s4.py`, `graph_check.py`, plus a rebuild diff showing only the intended rows changed (the F-009 probe method, `scripts/f009_probe.py`). Run this batch together with F-009/F-011 (§3) because both rebuild the data.
+
+## 7. Owner decisions of session 5 and their effect on §1–§4
+
+### 7.1 Q3 — latest intent per row wins, no blind trust in device clocks (applies to §1.2)
+§1.2 already specifies a per-key register map with tombstones; the clock is the open design point. Requirements: a tick and an untick on the same row from two devices resolve to the later intent on **both** devices, deterministically, regardless of delivery order; nothing is lost silently. Candidate mechanisms to evaluate in the implementation session, in order of preference:
+1. **Hybrid logical clock** per write (physical time + counter + device id), merged on every received snapshot (the receiver advances its clock to the maximum seen). A badly wrong device clock cannot rewrite history already seen, but a clock far in the future can win every conflict; mitigate by bounding accepted skew against the server's `updatedAt` and surfacing the case.
+2. **Server-assigned revision** (compare-and-set on the document version, retry with merge), if the platform exposes it. Requires `describe_capabilities`/provider documentation; not verified.
+3. Pure device timestamps: rejected.
+The regression suite §1.5 gains: tick-then-untick from A then B, simultaneous untick/tick, out-of-order snapshot, A's clock +1 h and −1 h, restart with pending writes.
+
+### 7.2 Q4 — removing the four unprefixed defaults (applies to §4)
+The owner authorizes removal only where the four ids can be **confidently** identified as tracker defaults. A save that holds `DT-1`, `DT-2`, `DT-3`, `MKT-1` cannot, by content alone, be told from a genuine pre-version save that holds exactly those four (the limitation recorded in F-012). Rule for the implementation: migrate **only** when the unprefixed ids present are exactly a subset of the four defaults, there are no version-prefixed ids and no other unprefixed ids, and no setting beyond the defaults was ever stored; in every other case leave the entries untouched and show the existing prompt. Steps: (1) write a full backup of the original save under a new key (local) and a `backup` field (account document) before changing anything; (2) remove only those ids, nothing else, and record a migration marker; (3) provide a restore path that puts the backup back (reversible); (4) new players start with `defaults = []`. The audit must not read the owner's save to decide: the rule is tested on synthetic saves covering each branch. If the owner wants the ambiguous case decided, that is their call, not the migration's.
+
+### 7.3 Q5 — separate test artifact (applies to §5 step 4, the F-021 gate)
+Approved only under isolation proof. Procedure for the implementation or sync-verification session: (a) publish a new artifact with a new ID; never the production slug; (b) before any write, show that the test page's database paths resolve inside the test artifact, that a read of the production path through it returns nothing, and record the production document's `version` and `updatedAt`; (c) synthetic progress only; (d) exercise the §1.5 scenarios; (e) re-check production metadata unchanged; (f) if (b) cannot be shown, stop and keep sync "Unverified". Cross-account isolation remains **unverified** unless two genuinely independent authenticated accounts are available.
+
+### 7.4 Consolidated plan
+Deferred by the owner until the remaining audit areas are complete (C part 2, F, G, Security). Sections 1–4 and 6 are the inputs.

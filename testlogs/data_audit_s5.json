@@ -1,0 +1,697 @@
+{
+ "randomizer": {
+  "repo": "https://github.com/OoTRandomizer/OoT-Randomizer",
+  "commit": "526b4c8d81b7c4023ef4573ffbaf39344e270d5b",
+  "version": "9.1.40",
+  "files": "data/World/*.json (non-MQ)",
+  "license": "MIT",
+  "note": "Extract of glitchless logic strings for the mapped locations only. The randomizer models the N64 game; tricks (logic_*) are off in glitchless."
+ },
+ "results": [
+  {
+   "id": "C1",
+   "name": "every N64 Skulltula row maps to one distinct randomizer location (100)",
+   "result": "PASS",
+   "finding": null,
+   "detail": {
+    "count": 100,
+    "unmapped": [],
+    "unknown": []
+   }
+  },
+  {
+   "id": "C2",
+   "name": "N64/3DS night-only tags equal the randomizer at_night rule for all 100 tokens",
+   "result": "PASS",
+   "finding": null,
+   "detail": []
+  },
+  {
+   "id": "C3",
+   "name": "N64/3DS age tag agrees with the randomizer rule where the rule fixes an age",
+   "result": "PASS",
+   "finding": null,
+   "detail": []
+  },
+  {
+   "id": "C4",
+   "name": "100 tokens and 36 Pieces of Heart in every version",
+   "result": "PASS",
+   "finding": null,
+   "detail": {
+    "tokens": {
+     "n64": 100,
+     "3ds": 100,
+     "sw2": 100
+    },
+    "hearts": {
+     "n64": 36,
+     "3ds": 36,
+     "sw2": 36
+    }
+   }
+  },
+  {
+   "id": "C5",
+   "name": "Switch 2 token counts per region group equal Questfern's Switch 2 list (9 groups)",
+   "result": "PASS",
+   "finding": null,
+   "detail": {
+    "Child dungeons": 16,
+    "Kakariko + Graveyard": 8,
+    "Field, Town, Castle, Ranch": 10,
+    "Kokiri, Lost Woods, Meadow": 7,
+    "Death Mountain": 8,
+    "Zora + Ice Cavern": 11,
+    "Lake Hylia": 5,
+    "Gerudo + desert": 10,
+    "Adult temples": 25
+   }
+  },
+  {
+   "id": "D1",
+   "name": "Light Medallion (IT-63) comes from Rauru right after the Master Sword (MQ-17), not from the Light Arrows step",
+   "result": "FAIL",
+   "finding": "F-029",
+   "detail": {
+    "per_version": {
+     "n64": false,
+     "3ds": false,
+     "sw2": false
+    },
+    "source": "Zelda Dungeon wiki \"Light Medallion\"/\"Medallion\" (given by Rauru after the Master Sword); Zelda Wiki \"Light Medallion\"; tracker MQ-17 reward text says the same"
+   }
+  },
+  {
+   "id": "D2",
+   "name": "GAN-1 (arch outside Ganon's Castle) does not need the Rainbow Bridge step",
+   "result": "FAIL",
+   "finding": "F-030",
+   "detail": {
+    "per_version": {
+     "n64": false,
+     "3ds": false,
+     "sw2": false
+    },
+    "source": "randomizer: OGC GS in Ganons Castle Grounds (is_adult); StrategyWiki: Any/Adult/Hookshot; Questfern + Game8 (Switch 2): Adult, Hookshot"
+   }
+  },
+  {
+   "id": "D3",
+   "name": "DMT-1 (soil at Dodongo's Cavern) needs the boulder cleared: Goron's Bracelet or bombs",
+   "result": "FAIL",
+   "finding": "F-031",
+   "detail": {
+    "per_version": {
+     "n64": false,
+     "3ds": false,
+     "sw2": true
+    },
+    "source": "randomizer: DMT GS Bean Patch = bugs and (explosives or strength); tracker sw2 note (Game8); RPG Site sw2 #15"
+   }
+  },
+  {
+   "id": "D4",
+   "name": "HF-2 on N64/3DS (web grotto near Gerudo Valley) needs the Boomerang or Hookshot for the token",
+   "result": "FAIL",
+   "finding": "F-031",
+   "detail": {
+    "per_version": {
+     "n64": false,
+     "3ds": false
+    },
+    "source": "randomizer: HF GS Cow Grotto = fire source and (Hookshot or Boomerang); CyricZ N64 guide; Zelda Dungeon"
+   }
+  },
+  {
+   "id": "D5",
+   "name": "ZR-1 on N64/3DS (tree at the river entrance) is before the boulders: no bombs",
+   "result": "FAIL",
+   "finding": "F-032",
+   "detail": {
+    "per_version": {
+     "n64": false,
+     "3ds": false
+    },
+    "source": "randomizer: ZR GS Tree in region ZR Front (Hyrule Field -> ZR Front: True)"
+   }
+  },
+  {
+   "id": "D6",
+   "name": "GV-3, GF-2 and CL-2 on N64/3DS accept the plain Hookshot",
+   "result": "FAIL",
+   "finding": "F-032",
+   "detail": {
+    "per_version": {
+     "n64": false,
+     "3ds": false
+    },
+    "source": "randomizer: GV GS Behind Tent / GF GS Archery Range / Colossus GS Tree = can_use(Hookshot)"
+   }
+  },
+  {
+   "id": "D8",
+   "name": "HP-15 (graveyard crate) shortcut needs the Longshot, not the Hookshot",
+   "result": "FAIL",
+   "finding": "F-031",
+   "detail": {
+    "per_version": {
+     "n64": false,
+     "3ds": false
+    },
+    "source": "randomizer: Graveyard Freestanding PoH = adult and (bean or Longshot)"
+   }
+  },
+  {
+   "id": "D9",
+   "name": "HC-2 on N64/3DS requires the Boomerang to fetch the token (child, after the Song of Storms grotto)",
+   "result": "FAIL",
+   "finding": "F-031",
+   "detail": {
+    "per_version": {
+     "n64": false,
+     "3ds": false
+    },
+    "source": "randomizer: HC GS Storms Grotto needs Boomerang or Hookshot; FinalBoss N64 guide (\"Bombs and Boomerang\"); Zelda Central"
+   }
+  },
+  {
+   "id": "D10",
+   "name": "IC-3 (push-block room) requires a bottle for Blue Fire, like IC-2",
+   "result": "FAIL",
+   "finding": "F-031",
+   "detail": {
+    "per_version": {
+     "n64": false,
+     "3ds": false,
+     "sw2": false
+    },
+    "source": "randomizer: Ice Cavern GS Push Block Room is in region Ice Cavern Behind Ice Walls (Blue Fire); Questfern sw2 #71 \"Blue Fire, Hookshot\"; tracker DG-136 mentions red ice in this room"
+   }
+  },
+  {
+   "id": "C7",
+   "name": "N64/3DS Heart Piece age tags agree with the randomizer rules (17 rows)",
+   "result": "PASS",
+   "finding": null,
+   "detail": []
+  },
+  {
+   "id": "C6",
+   "name": "every F-026 row/tool pair has a recorded verdict (32)",
+   "result": "PASS",
+   "finding": null,
+   "detail": {
+    "pairs": 32,
+    "without_verdict": []
+   }
+  }
+ ],
+ "info": {
+  "C3_age_not_derivable": [
+   "CL-2",
+   "DC-1",
+   "DC-2",
+   "DC-3",
+   "DC-4",
+   "DC-5",
+   "DMT-1",
+   "DMT-2",
+   "FIRE-2",
+   "FIRE-3",
+   "FIRE-4",
+   "FIRE-5",
+   "FT-1",
+   "FT-2",
+   "FT-3",
+   "FT-4",
+   "FT-5",
+   "GAN-1",
+   "GF-2",
+   "GV-1",
+   "GV-3",
+   "GV-4",
+   "GY-2",
+   "HF-1",
+   "HF-2",
+   "HW-1",
+   "IC-1",
+   "IC-2",
+   "IC-3",
+   "LH-4",
+   "LH-5",
+   "LLR-3",
+   "LLR-4",
+   "SFM-1",
+   "SP-1",
+   "SP-2",
+   "SP-3",
+   "SP-4",
+   "SP-5",
+   "ST-1",
+   "ST-2",
+   "ST-3",
+   "ST-4",
+   "ST-5",
+   "WT-1",
+   "WT-2",
+   "WT-3",
+   "WT-4",
+   "WT-5",
+   "ZF-2",
+   "ZF-3",
+   "ZR-3",
+   "ZR-4"
+  ],
+  "F026_verdicts": [
+   {
+    "id": "CL-1",
+    "word": "Magic Bean",
+    "verdict": "tip for CL-3, not a requirement"
+   },
+   {
+    "id": "DC-2",
+    "word": "Bomb",
+    "verdict": "Bomb Flowers (IT-29) or in-dungeon Bomb Bag"
+   },
+   {
+    "id": "DC-3",
+    "word": "Bomb",
+    "verdict": "Bomb Flowers (IT-29) or in-dungeon Bomb Bag"
+   },
+   {
+    "id": "FT-1",
+    "word": "Hookshot",
+    "verdict": "implied by MQ-18"
+   },
+   {
+    "id": "FT-2",
+    "word": "Hookshot",
+    "verdict": "implied by MQ-18"
+   },
+   {
+    "id": "FT-3",
+    "word": "Hookshot",
+    "verdict": "implied by MQ-18"
+   },
+   {
+    "id": "FT-4",
+    "word": "Hookshot",
+    "verdict": "implied by MQ-18"
+   },
+   {
+    "id": "HP-10",
+    "word": "Hookshot",
+    "verdict": "prize of SQ-27, which is required"
+   },
+   {
+    "id": "HP-11",
+    "word": "Hookshot",
+    "verdict": "adult alternative to the child Cucco route"
+   },
+   {
+    "id": "HP-11",
+    "word": "Longshot",
+    "verdict": "alternative"
+   },
+   {
+    "id": "HP-15",
+    "word": "Longshot",
+    "verdict": "DEFECT F-031: shortcut needs Longshot, requirement accepts Hookshot"
+   },
+   {
+    "id": "HP-16",
+    "word": "Longshot",
+    "verdict": "tip"
+   },
+   {
+    "id": "HP-17",
+    "word": "Hover Boots",
+    "verdict": "alternative"
+   },
+   {
+    "id": "HP-17",
+    "word": "Magic Bean",
+    "verdict": "alternative"
+   },
+   {
+    "id": "HP-18",
+    "word": "Bomb",
+    "verdict": "alternative to Bomb Flower"
+   },
+   {
+    "id": "HP-21",
+    "word": "Boomerang",
+    "verdict": "alternative"
+   },
+   {
+    "id": "HP-21",
+    "word": "Hover Boots",
+    "verdict": "alternative"
+   },
+   {
+    "id": "HP-22",
+    "word": "Boomerang",
+    "verdict": "alternative"
+   },
+   {
+    "id": "HP-22",
+    "word": "Hover Boots",
+    "verdict": "alternative"
+   },
+   {
+    "id": "HP-27",
+    "word": "Iron Boots",
+    "verdict": "negative mention"
+   },
+   {
+    "id": "HP-33",
+    "word": "Longshot",
+    "verdict": "adult alternative"
+   },
+   {
+    "id": "HP-4",
+    "word": "Bombchu",
+    "verdict": "supplied by the game"
+   },
+   {
+    "id": "HP-5",
+    "word": "Lens of Truth",
+    "verdict": "optional aid (1 in 32 without); design choice"
+   },
+   {
+    "id": "KAK-5",
+    "word": "Bombchu",
+    "verdict": "alternative (untracked item)"
+   },
+   {
+    "id": "KF-1",
+    "word": "Slingshot",
+    "verdict": "alternative"
+   },
+   {
+    "id": "SP-2",
+    "word": "Bombchu",
+    "verdict": "n64/3ds: place name. sw2: real need, Bombchus untracked (limitation)"
+   },
+   {
+    "id": "ST-1",
+    "word": "Lens of Truth",
+    "verdict": "implied by MQ-30"
+   },
+   {
+    "id": "ST-2",
+    "word": "Lens of Truth",
+    "verdict": "implied by MQ-30"
+   },
+   {
+    "id": "WT-1",
+    "word": "Bomb",
+    "verdict": "implied by story (MQ-10)"
+   },
+   {
+    "id": "ZR-1",
+    "word": "Magic Bean",
+    "verdict": "place name"
+   },
+   {
+    "id": "ZR-3",
+    "word": "Longshot",
+    "verdict": "alternative"
+   },
+   {
+    "id": "ZR-4",
+    "word": "Longshot",
+    "verdict": "alternative"
+   }
+  ],
+  "full_link_prize_needs_more_than_quest": [
+   {
+    "ver": "n64",
+    "prize": "HP-16",
+    "quest": "SQ-27",
+    "prize_only": [
+     "IT-16"
+    ]
+   },
+   {
+    "ver": "n64",
+    "prize": "IT-23",
+    "quest": "SQ-25",
+    "prize_only": [
+     "IT-21"
+    ]
+   },
+   {
+    "ver": "n64",
+    "prize": "IT-24",
+    "quest": "SQ-42",
+    "prize_only": [
+     "IT-10",
+     "IT-16",
+     "IT-17",
+     "IT-21",
+     "IT-60",
+     "IT-73",
+     "IT-9",
+     "MQ-18",
+     "MQ-26",
+     "MQ-27",
+     "MQ-28",
+     "MQ-30",
+     "MQ-32",
+     "SQ-36"
+    ]
+   },
+   {
+    "ver": "n64",
+    "prize": "IT-25",
+    "quest": "SQ-40",
+    "prize_only": [
+     "IT-21"
+    ]
+   },
+   {
+    "ver": "n64",
+    "prize": "IT-4",
+    "quest": "SQ-29",
+    "prize_only": [
+     "IT-9",
+     "MQ-27",
+     "TR-10",
+     "TR-11",
+     "TR-12",
+     "TR-13",
+     "TR-14",
+     "TR-15",
+     "TR-16",
+     "TR-6",
+     "TR-7",
+     "TR-8",
+     "TR-9"
+    ]
+   },
+   {
+    "ver": "n64",
+    "prize": "IT-49",
+    "quest": "SQ-5",
+    "prize_only": [
+     "MQ-4"
+    ]
+   },
+   {
+    "ver": "n64",
+    "prize": "IT-69",
+    "quest": "SQ-12",
+    "prize_only": [
+     "MQ-4"
+    ]
+   },
+   {
+    "ver": "3ds",
+    "prize": "HP-16",
+    "quest": "SQ-27",
+    "prize_only": [
+     "IT-16"
+    ]
+   },
+   {
+    "ver": "3ds",
+    "prize": "IT-23",
+    "quest": "SQ-25",
+    "prize_only": [
+     "IT-21"
+    ]
+   },
+   {
+    "ver": "3ds",
+    "prize": "IT-24",
+    "quest": "SQ-42",
+    "prize_only": [
+     "IT-10",
+     "IT-16",
+     "IT-17",
+     "IT-21",
+     "IT-60",
+     "IT-73",
+     "IT-9",
+     "MQ-18",
+     "MQ-26",
+     "MQ-27",
+     "MQ-28",
+     "MQ-30",
+     "MQ-32",
+     "SQ-36"
+    ]
+   },
+   {
+    "ver": "3ds",
+    "prize": "IT-25",
+    "quest": "SQ-40",
+    "prize_only": [
+     "IT-21"
+    ]
+   },
+   {
+    "ver": "3ds",
+    "prize": "IT-4",
+    "quest": "SQ-29",
+    "prize_only": [
+     "IT-9",
+     "MQ-27",
+     "TR-10",
+     "TR-11",
+     "TR-12",
+     "TR-13",
+     "TR-14",
+     "TR-15",
+     "TR-16",
+     "TR-6",
+     "TR-7",
+     "TR-8",
+     "TR-9"
+    ]
+   },
+   {
+    "ver": "3ds",
+    "prize": "IT-49",
+    "quest": "SQ-5",
+    "prize_only": [
+     "MQ-4"
+    ]
+   },
+   {
+    "ver": "3ds",
+    "prize": "IT-69",
+    "quest": "SQ-12",
+    "prize_only": [
+     "MQ-4"
+    ]
+   },
+   {
+    "ver": "sw2",
+    "prize": "HP-16",
+    "quest": "SQ-27",
+    "prize_only": [
+     "IT-16"
+    ]
+   },
+   {
+    "ver": "sw2",
+    "prize": "IT-23",
+    "quest": "SQ-25",
+    "prize_only": [
+     "IT-21"
+    ]
+   },
+   {
+    "ver": "sw2",
+    "prize": "IT-24",
+    "quest": "SQ-42",
+    "prize_only": [
+     "IT-10",
+     "IT-16",
+     "IT-17",
+     "IT-21",
+     "IT-60",
+     "IT-73",
+     "IT-9",
+     "MQ-18",
+     "MQ-26",
+     "MQ-27",
+     "MQ-28",
+     "MQ-30",
+     "MQ-32",
+     "SQ-36"
+    ]
+   },
+   {
+    "ver": "sw2",
+    "prize": "IT-25",
+    "quest": "SQ-40",
+    "prize_only": [
+     "IT-21"
+    ]
+   },
+   {
+    "ver": "sw2",
+    "prize": "IT-4",
+    "quest": "SQ-29",
+    "prize_only": [
+     "IT-9",
+     "MQ-27",
+     "TR-10",
+     "TR-11",
+     "TR-12",
+     "TR-13",
+     "TR-14",
+     "TR-15",
+     "TR-16",
+     "TR-6",
+     "TR-7",
+     "TR-8",
+     "TR-9"
+    ]
+   },
+   {
+    "ver": "sw2",
+    "prize": "IT-49",
+    "quest": "SQ-5",
+    "prize_only": [
+     "MQ-4"
+    ]
+   },
+   {
+    "ver": "sw2",
+    "prize": "IT-52",
+    "quest": "SQ-44",
+    "prize_only": [
+     "MQ-4"
+    ]
+   },
+   {
+    "ver": "sw2",
+    "prize": "IT-69",
+    "quest": "SQ-12",
+    "prize_only": [
+     "MQ-4"
+    ]
+   }
+  ],
+  "sw2_rows_with_source_disagreement_text": [
+   "BW-2",
+   "HC-1",
+   "HF-1",
+   "HP-13",
+   "HP-19",
+   "HP-21",
+   "HP-4",
+   "ZR-2"
+  ],
+  "not_defects": {
+   "KAK-1 sw2 night": "documented night-first policy (vnotes.skull.sw2); N64 randomizer rule is at_night; Game8 says Any for sw2",
+   "ST-4 n64/3ds Longshot": "randomizer: Shadow Temple GS Near Ship = Longshot. sw2 override (Hookshot or Longshot) follows VGC/RPG Site",
+   "SP-5 Scarecrow": "randomizer logic needs no Scarecrow, but Game8, RPG Site and Questfern all list it; left as is (source conflict)"
+  }
+ }
+}

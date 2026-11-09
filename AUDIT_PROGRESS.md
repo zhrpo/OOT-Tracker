@@ -72,6 +72,27 @@ Done:
 
 Session 4 counts: files read in full 6 (+ app.js consumer paths re-read); tests created 5 scripts (+1 dump helper); executed: 8 static checks, 7 mutations, 27 runtime tests, 6 sync runs, 1 probe; passed 8 + 7 (caught) + 27 + 0; failed 0 + 0 + 0 + 6 (all mapped to F-022/F-012/F-019).
 
+### Session 5 — 2026-11-09 (resumed after a usage-limit interruption) — game-data accuracy, audit C part 1 (status: **partial**, see below)
+Start: repo cloned from `zhrpo/oot-tracker` (read-only clone), `proj/` rebuilt, sha256 `d9f96a34…16a9ac` = Session 4. Owner decisions Q3–Q5 received at the start (recorded below). On resume the only uncommitted work was the first draft of `scripts/data_audit_s5.py`, its log and the randomizer extract; nothing was in the docs. The interrupted task was triaging that script's first run (11 failures).
+
+Done:
+1. Dumped the shipped data per version (`out/themed2.html` payload) and read all 100 tokens (N64 in full, Switch 2 overrides), 36 hearts (N64 and Switch 2 overrides), all 44 side quests, all 77 items/songs, and all 40 main steps with the dungeon walkthrough text.
+2. Cross-checked N64 tokens and hearts against OoT Randomizer glitchless logic (vendored extract), and Switch 2 against web guides (Game8, RPG Site, Questfern, Respec/VGC via search, TheGamer, Nintendo Life). Web sources named per finding.
+3. Wrote `scripts/data_audit_s5.py` (16 checks, 7 pass / 9 fail, exit 1). Triage dropped three of its own false positives (§8.1 of AUDIT_TESTS.md).
+4. Findings F-029…F-036; F-026 resolved (32 pairs).
+5. Documentation and the draft data-remediation section (REMEDIATION_PLAN.md §6) and the owner decisions (§7).
+
+Not done (still open in audit C): the 180 dungeon steps and side-quest/trade text were not checked against a source; Heart Piece tools beyond HP-15; prices/timers (F-036). Audits F (UX/accessibility), G (per-script evaluation, suite runner) and Security were not started, and the consolidated remediation plan the owner asked for is **not yet written**: it waits for those audits.
+No fix implemented; `proj/` unchanged. Production: live artifact, database and the owner's save untouched. Q5 not exercised.
+
+Session 5 counts: sources read: 3 repo doc sets, ~14 web pages; tests: 1 script, 16 checks, 7 pass, 9 fail; findings 8 new.
+
+#### Owner decisions recorded in session 5 (2026-11-09 16:11 CT message)
+- **Q3** — approved: the most recent intentional tick or untick on a row wins across devices, **without trusting device clocks**: use a hybrid logical clock or a per-document revision, deterministic under concurrent and out-of-order updates; no silent loss of ticks or unticks. (Design implication: REMEDIATION_PLAN.md §7.1.)
+- **Q4** — approved with conditions: remove the four unprefixed defaults (`DT-1`, `DT-2`, `DT-3`, `MKT-1`) only where they can be confidently identified as tracker defaults; never touch legitimate progress or unrelated settings; back up the original save first; reversible; otherwise leave them and document the limitation; new players must not receive them. (§7.2.)
+- **Q5** — approved with conditions: a separate test artifact (unique ID, separate database document or namespace) may be published for sync tests only if complete isolation is demonstrated **before any database write**: test copy cannot read or write the production save, synthetic data only, production metadata unchanged, never publish over the live tracker, **stop immediately** if isolation cannot be guaranteed. Cross-account isolation stays **unverified** unless tested with genuinely independent authenticated accounts. (§7.3.) Not exercised in session 5.
+- Process: finish the remaining audit areas before broad implementation; then a **consolidated remediation plan**; no implementation yet.
+
 ## Inventory
 
 Total files in project directory: **322**
@@ -121,7 +142,7 @@ Backups (70), screenshots (143), scratch/diagnostic scripts (`dbg*.py`, `diag_ja
 |---|---|
 | A Architecture & code quality | app.js (s2) and the requirement compiler (s4) read; theme2.js, scenes3.js, data modules (main, data, side, extra, dungeons, vers, vnew) not read in full |
 | B Progression / dependency engine | **Complete** (s2 engine, s4 compiler + OR + day/night + runtime = generated). Open defect: F-009 |
-| C Game-data accuracy | Not started. Input list: F-026 |
+| C Game-data accuracy | **Partial (s5).** F-026 resolved; tokens/hearts cross-checked (F-029…F-035); dungeon/side/trade text and prices unverified (F-036) |
 | D Version-specific correctness | Logic verified for all three versions (s2 S17, s4 B1–B8, P1–P5). Version game data not verified (part of C) |
 | E Saving / sync / integrity | App-side logic tested against stand-in (s3 + s4 H-scenarios): F-013, F-019, F-020, F-022. Remediation designed (REMEDIATION_PLAN.md). Real provider + cross-account unverified (F-021) |
 | F UX & accessibility | Not started (F-028 noted) |
@@ -146,11 +167,15 @@ Backups (70), screenshots (143), scratch/diagnostic scripts (`dbg*.py`, `diag_ja
 ## Unresolved questions
 - Q1. Resolved by D1 (test tracker approved, with isolation preconditions).
 - Q2. Are `index.html` / `themed.html` still wanted? If not, they can be dropped from the build (F-003).
+- Q3–Q5: **answered in session 5** (see Session 5 log). Original text kept below.
 - Q3 (s4). Sync conflict policy: is "the latest intent per row wins across devices" (an untick made later beats an earlier tick, and vice versa) the behavior you want? See REMEDIATION_PLAN.md §1.2.
 - Q4 (s4). F-012 cleanup: may the fix remove the four unprefixed default ids (DT-1, DT-2, DT-3, MKT-1) from saves and account documents when they are the only legacy ids present? A genuine pre-version save with exactly those four would lose them.
 - Q5 (s4). Real-provider sync verification needs a separate **test** artifact (D1). That requires publishing a test build, which the audit sessions so far forbid. Approve a test publish (new artifact, never the production slug) for Session 5 or later?
 
-## Next recommended action (session 5)
+## Next recommended action (session 6, if the owner opens one)
+Finish the remaining audit areas, then write the consolidated remediation plan: C part 2 (F-036: dungeon steps, side/trade text, heart tools), F UX/accessibility, G per-script test evaluation and a single suite runner (F-002), Security/privacy, remaining data modules. Then the consolidated plan over F-009…F-036 (REMEDIATION_PLAN.md §6–§7 are the starting drafts).
+
+## (superseded) Next recommended action (session 5)
 See NEXT_SESSION.md. In short: owner answers Q3–Q5; then either begin implementation following REMEDIATION_PLAN.md §5 (F-011 + F-009 → F-012 → sync redesign), or continue audit categories C (game data, starting with F-026), F (UX/accessibility) and G (per-script evaluation, suite runner).
 
 ## (superseded) Next recommended action (session 4)

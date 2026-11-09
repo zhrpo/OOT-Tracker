@@ -265,3 +265,82 @@ Order: release-blocking first, then by severity. "Blocks release" is the audit's
 | 28 | F-008 | Clean load | Verified correct (limited) | Info | No | — |
 
 By classification: Confirmed defects: F-001, F-002, F-009, F-010, F-011, F-012, F-013, F-019, F-022, F-024. Suspected: F-020. Unverified: F-021, F-026. Recommended improvements: F-003, F-004, F-005, F-006, F-014, F-016, F-023, F-025, F-028. Verified correct: F-007, F-008, F-015, F-017, F-018, F-027. No finding was removed, downgraded or merged in session 4.
+
+
+---
+## Session 5 findings (2026-11-09) — game-data accuracy (audit C), part 1
+
+Method and limits are in AUDIT_TESTS.md §8 and AUDIT_VERIFICATION.md. Sources at sha256 `d9f96a34…16a9ac` (rebuilt, unchanged). Evidence: `scripts/data_audit_s5.py` → `testlogs/data_audit_s5.json` / `.log`. Reference for the N64 game: OoT Randomizer glitchless logic (MIT, commit 526b4c8d, extract vendored in `testlogs/s5_rando_extract.json`), plus the web sources named per finding. The randomizer models the N64 game only; where a finding says "n64/3ds" the 3DS is assumed identical because the tracker itself says the 3DS list is the same (not independently verified). No fix is implemented.
+
+### F-029 — The Light Medallion is gated on the last two temples and handed out by the Light Arrows step
+- Category: C · Severity: **Medium** · Classification: Confirmed defect · Confidence: High · Versions: all three
+- Data: `IT-63` requires `MQ-31 & MQ-35`; its text says "After all five temples … from Rauru"; `MQ-37` (Light Arrows) `gives` `IT-63`. But `MQ-17` (pull the Master Sword) says in its own reward text that Rauru gives the Light Medallion then.
+- Evidence: `data_audit_s5.py` D1 (FAIL ×3). Sources: Zelda Dungeon wiki "Light Medallion" and "Medallion", Zelda Wiki "Light Medallion": Rauru gives it after the Master Sword is pulled, in the Chamber of Sages.
+- Impact: with Locks on a player who has the medallion cannot tick `IT-63` until `MQ-31` and `MQ-35` are ticked; ticking `MQ-37` ticks it. The row's text is wrong.
+- Remediation (not applied): `MQ-17` gives `IT-2` and `IT-63`; remove `IT-63` from `MQ-37`; `IT-63` requires `MQ-17`; fix the item text. Save impact: players past `MQ-17` gain `IT-63` through `normalize()` (correct).
+
+### F-030 — The token on the arch outside Ganon's Castle waits for the Rainbow Bridge
+- Category: C · Severity: Low · Classification: Confirmed defect · Confidence: High · Versions: all three
+- Data: `GAN-1` requires `MQ-38 & IT-16`; `MQ-38` is "Cross the Rainbow Bridge".
+- Evidence: D2 (FAIL ×3). The randomizer puts `OGC GS` in region Ganons Castle Grounds, reachable as adult with no bridge. StrategyWiki: behind the ruined gate, any time, adult, Hookshot. RPG Site's Switch 2 route takes it before entering the castle; Questfern and Game8: adult, Hookshot.
+- Impact: row stays locked after the player can already collect it; "Locks on" hides it until the endgame.
+- Remediation (not applied): `GAN-1` requires only the Hookshot (adult is implied); drop `MQ-38`.
+
+### F-031 — Five rows unlock earlier than the game allows or hide a needed tool
+- Category: C / B · Severity: Low · Classification: Confirmed defect · Confidence: High (DMT-1, HF-2, IC-3, HP-15), Medium (HC-2, single N64 guide family plus randomizer)
+- Rows and evidence (D3, D4, D8, D9, D10):
+  - `DMT-1` (n64/3ds) requires only the Kakariko guard step and a bottle. The soil sits at the Dodongo's Cavern entrance, behind the boulders: randomizer `DMT GS Bean Patch` needs explosives or the Goron's Bracelet. The Switch 2 override already requires the Bracelet (Game8). Bombs also work per the randomizer, so the option is `IT-29 | IT-35`.
+  - `HF-2` (n64/3ds) requires Bomb Bag and Din's Fire but not a tool to fetch the token: randomizer `HF GS Cow Grotto` needs a fire source **and** Boomerang or Hookshot (CyricZ N64 guide, Zelda Dungeon agree). Fire Arrows are also a fire source (the row lists only Din's Fire).
+  - `HC-2` (n64/3ds) lacks the Boomerang: randomizer `HC GS Storms Grotto`, FinalBoss N64 guide ("Bombs and Boomerang") and Zelda Central. On Switch 2 TheGamer lists it, Game8 does not (see F-035).
+  - `IC-3` (all versions) lacks the bottle for Blue Fire, while `IC-2` has it: randomizer region "Ice Cavern Behind Ice Walls" needs Blue Fire; Questfern Switch 2 #71 "Blue Fire, Hookshot"; the tracker's own `DG-136` mentions red ice in this room.
+  - `HP-15` (n64/3ds; Switch 2 inherits it, unverified) accepts the plain Hookshot (`SQ-23 | IT-16`) and the row text says "Hookshot or Longshot the crate from the second grave". Zelda Dungeon (Graveyard page), GameWith, Mythras and the randomizer all say bean sprout **or Longshot**. No source found supports the Hookshot for this piece.
+- Impact: the rows can be ticked "ready" before the player has the tool; text is wrong for HP-15.
+- Remediation (not applied): add the missing requirement option to each row; HP-15 → `(SQ-23 | IT-17)` and fix the text.
+
+### F-032 — Four tokens on N64/3DS are locked behind an item they do not need
+- Category: C / B · Severity: **Medium** · Classification: Confirmed defect · Confidence: High (ZR-1, GV-3), Medium (GF-2, CL-2; randomizer is the main source)
+- Rows and evidence (D5, D6):
+  - `ZR-1` requires the Bomb Bag. The token is the tree at the start of the river, before the boulders: randomizer `ZR GS Tree` is in region ZR Front, which Hyrule Field enters with no condition.
+  - `GV-3` requires the Longshot. Randomizer `GV GS Behind Tent` needs the Hookshot, and the area is reached with Epona or the Longshot. The sibling token `GV-4` on the same side already accepts `IT-16 & (SQ-28 | IT-17)`. The Switch 2 note on `GV-3` says "N64 needs the Longshot", which the randomizer contradicts.
+  - `GF-2` requires the Longshot (+ Gerudo card). Randomizer `GF GS Archery Range`: Hookshot + card.
+  - `CL-2` requires the Longshot. Randomizer `Colossus GS Tree`: Hookshot. (The Switch 2 override already accepts either.)
+- Impact: with Locks on, a player holding the Hookshot cannot tick these tokens; ZR-1 stays locked until bombs.
+- Remediation (not applied): relax the four rows as above (GV-3 as `IT-16 & (SQ-28 | IT-17)`). Keep the Longshot text as an alternative where helpful.
+
+### F-033 — Twin prize and quest rows disagree on the Magic Meter
+- Category: C / B · Severity: Low · Classification: Recommended improvement (design inconsistency) · Confidence: High
+- `IT-23` (Farore's Wind) and `IT-25` (Double Magic) require `IT-21` (Magic Meter); their linked fairy quests `SQ-25` and `SQ-40` do not. `SQ-20` / `IT-22` agree with each other. The randomizer needs no Magic Meter to receive a fairy's gift; the tracker's text on `SQ-20` explains the order as practical (you need magic to cast the spell). Other prize/quest differences in `data_audit_s5.json` (`full_link_prize_needs_more_than_quest`) are artifacts of how requirements are written (story ancestors, trade-item sub-steps) and are not defects.
+- Remediation: pick one rule for all three Great Fairy spell pairs and state it in the help text.
+
+### F-034 — F-026 resolved: the 32 row/tool pairs were checked one by one
+- Category: C · Severity: Informational · Classification: Verified (with one defect and one limitation) · Confidence: High
+- Result: 31 of 32 pairs are not defects (alternatives, tools implied by a story step, place names, tips, prizes of a required quest, a negative mention). **One defect:** `HP-15` Longshot (F-031). **Limitation:** three pairs involve Bombchus (`KAK-5`, `SP-2`, `HP-4`), which the tracker does not track as an item; on Switch 2 `SP-2` genuinely needs a Bombchu. Full table: `testlogs/data_audit_s5.json` → `info.F026_verdicts` (check C6). F-026 stays in the register as Resolved.
+
+### F-035 — Switch 2 data rests on secondary guides, and eight rows carry unresolved disagreements
+- Category: C / D · Severity: Informational (risk) · Classification: Unverified · Confidence: n/a
+- The Switch 2 remake was released 2026-11-05; no source reachable here is the game itself. The 100-token count and the nine region-group counts match Questfern's Switch 2 list (check C5). Rows whose own note says the guides disagree: `BW-2`, `HC-1`, `HF-1`, `HP-13`, `HP-19`, `HP-21`, `HP-4`, `ZR-2`. Also noted, not defects: `KAK-1` is night-first on Switch 2 by documented policy (Game8 says any time); `SP-5` needs the Scarecrow's Song per Game8, RPG Site and Questfern although the randomizer logic does not; `ST-4` on N64 needs the Longshot (randomizer agrees).
+- Recommendation: keep the "trust the in-game map" notes; re-check these rows in a few weeks.
+
+### F-036 — Not verified in session 5
+- Category: C · Severity: Informational · Classification: Unverified
+- The 180 dungeon walkthrough steps (`DG-42`…`DG-221`) and the side-quest and trade-item guide text were read but not checked step by step against a source. Prices, rupee amounts and timers in text were not checked (a few Switch 2 values are cited in `vnotes`). Heart Piece requirements were checked only for age (check C7, 17 rows); their tools were not compared with the randomizer except HP-15. Main-quest `after`/`gives` order was read and is consistent with the dependency map (F-018) but not source-checked.
+
+### Updates to earlier findings (session 5)
+- F-026: Resolved by F-034.
+- F-012 and F-013: owner decisions recorded (see AUDIT_PROGRESS.md, REMEDIATION_PLAN.md §7). No change of classification.
+
+---
+## Session 5 register additions
+
+| ID | Title (short) | Classification | Severity | Blocks release | Why |
+|---|---|---|---|---|---|
+| F-029 | Light Medallion gated on last two temples | Confirmed defect | Medium | No (data fix batch) | Wrong lock and text; item cannot be ticked when held |
+| F-032 | 4 N64/3DS tokens over-locked (ZR-1, GV-3, GF-2, CL-2) | Confirmed defect | Medium | No (data fix batch) | Player holding the tool cannot tick the row (Locks on) |
+| F-030 | GAN-1 waits for the Rainbow Bridge | Confirmed defect | Low | No | Locked longer than needed |
+| F-031 | 5 rows missing a needed tool (DMT-1, HF-2, HC-2, IC-3, HP-15) | Confirmed defect | Low | No | Ready too early; HP-15 text wrong |
+| F-033 | Great Fairy prize/quest twins disagree on Magic Meter | Recommended improvement | Low | No | Consistency |
+| F-034 | F-026 resolved (32 pairs) | Verified | Info | No | — |
+| F-035 | Switch 2 data from secondary guides; 8 rows disputed | Unverified | Info (risk) | No | Re-check later |
+| F-036 | Dungeon/side/trade text not source-checked | Unverified | Info | No | Remaining audit C work |
+
+Next new ID: **F-037**.

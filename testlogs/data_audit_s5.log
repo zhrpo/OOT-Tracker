@@ -1,0 +1,17 @@
+PASS C1 every N64 Skulltula row maps to one distinct randomizer location (100) 
+PASS C2 N64/3DS night-only tags equal the randomizer at_night rule for all 100 tokens 
+PASS C3 N64/3DS age tag agrees with the randomizer rule where the rule fixes an age 
+PASS C4 100 tokens and 36 Pieces of Heart in every version 
+PASS C5 Switch 2 token counts per region group equal Questfern's Switch 2 list (9 groups) 
+FAIL D1 Light Medallion (IT-63) comes from Rauru right after the Master Sword (MQ-17), not from the Light Arrows step {"per_version": {"n64": false, "3ds": false, "sw2": false}, "source": "Zelda Dungeon wiki \"Light Medallion\"/\"Medallion\" (given by Rauru after the Master Sword); Zelda Wiki \"Light Medallion\"; tracker MQ-17 reward text says the same"}
+FAIL D2 GAN-1 (arch outside Ganon's Castle) does not need the Rainbow Bridge step {"per_version": {"n64": false, "3ds": false, "sw2": false}, "source": "randomizer: OGC GS in Ganons Castle Grounds (is_adult); StrategyWiki: Any/Adult/Hookshot; Questfern + Game8 (Switch 2): Adult, Hookshot"}
+FAIL D3 DMT-1 (soil at Dodongo's Cavern) needs the boulder cleared: Goron's Bracelet or bombs {"per_version": {"n64": false, "3ds": false, "sw2": true}, "source": "randomizer: DMT GS Bean Patch = bugs and (explosives or strength); tracker sw2 note (Game8); RPG Site sw2 #15"}
+FAIL D4 HF-2 on N64/3DS (web grotto near Gerudo Valley) needs the Boomerang or Hookshot for the token {"per_version": {"n64": false, "3ds": false}, "source": "randomizer: HF GS Cow Grotto = fire source and (Hookshot or Boomerang); CyricZ N64 guide; Zelda Dungeon"}
+FAIL D5 ZR-1 on N64/3DS (tree at the river entrance) is before the boulders: no bombs {"per_version": {"n64": false, "3ds": false}, "source": "randomizer: ZR GS Tree in region ZR Front (Hyrule Field -> ZR Front: True)"}
+FAIL D6 GV-3, GF-2 and CL-2 on N64/3DS accept the plain Hookshot {"per_version": {"n64": false, "3ds": false}, "source": "randomizer: GV GS Behind Tent / GF GS Archery Range / Colossus GS Tree = can_use(Hookshot)"}
+FAIL D8 HP-15 (graveyard crate) shortcut needs the Longshot, not the Hookshot {"per_version": {"n64": false, "3ds": false}, "source": "randomizer: Graveyard Freestanding PoH = adult and (bean or Longshot)"}
+FAIL D9 HC-2 on N64/3DS requires the Boomerang to fetch the token (child, after the Song of Storms grotto) {"per_version": {"n64": false, "3ds": false}, "source": "randomizer: HC GS Storms Grotto needs Boomerang or Hookshot; FinalBoss N64 guide (\"Bombs and Boomerang\"); Zelda Central"}
+FAIL D10 IC-3 (push-block room) requires a bottle for Blue Fire, like IC-2 {"per_version": {"n64": false, "3ds": false, "sw2": false}, "source": "randomizer: Ice Cavern GS Push Block Room is in region Ice Cavern Behind Ice Walls (Blue Fire); Questfern sw2 #71 \"Blue Fire, Hookshot\"; tracker DG-136 mentions red ice in this room"}
+PASS C7 N64/3DS Heart Piece age tags agree with the randomizer rules (17 rows) 
+PASS C6 every F-026 row/tool pair has a recorded verdict (32) 
+7/16 pass; full-link requirement differences (info): 22

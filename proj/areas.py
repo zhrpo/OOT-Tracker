@@ -1,0 +1,20 @@
+# Where each side quest starts, in a few words. Shown in bold on the row; the longer "start" text stays underneath.
+AREA = {
+    "SQ-1": "Lost Woods", "SQ-2": "Lost Woods", "SQ-3": "Lost Woods", "SQ-4": "Lost Woods (under the bridge)",
+    "SQ-5": "Kakariko Village", "SQ-6": "Hyrule Castle Town Market (Back Alley)",
+    "SQ-7": "Hyrule Castle Town Market (shooting gallery)", "SQ-8": "Lon Lon Ranch", "SQ-9": "Lon Lon Ranch",
+    "SQ-10": "Lake Hylia (fishing hole)", "SQ-11": "Kakariko Graveyard", "SQ-12": "Lake Hylia",
+    "SQ-13": "Hyrule Castle Town Market (Happy Mask Shop)", "SQ-14": "Lost Woods (Forest Stage)",
+    "SQ-15": "Lost Woods (Forest Stage)", "SQ-16": "Hyrule Castle Town Market (Treasure Chest Shop)",
+    "SQ-17": "Kakariko Village (House of Skulltula)", "SQ-18": "Lost Woods (outside Sacred Forest Meadow)",
+    "SQ-19": "Death Mountain Trail (summit)", "SQ-20": "Hyrule Castle grounds",
+    "SQ-21": "Hyrule Castle Town Market (Bombchu Bowling)", "SQ-22": "Goron City", "SQ-23": "Zora's River",
+    "SQ-24": "Zora's Domain", "SQ-25": "Zora's Fountain", "SQ-26": "Zora's River",
+    "SQ-27": "Kakariko Graveyard", "SQ-28": "Lon Lon Ranch", "SQ-29": "Kakariko Village",
+    "SQ-30": "Goron City", "SQ-31": "Goron City", "SQ-32": "Lake Hylia (fishing hole)",
+    "SQ-33": "Hyrule Castle Town ruins (Poe Collector)", "SQ-34": "Kakariko Village (shooting gallery)",
+    "SQ-35": "Lon Lon Ranch", "SQ-36": "Gerudo Valley, then Gerudo Fortress", "SQ-37": "Gerudo Fortress",
+    "SQ-38": "Gerudo Fortress", "SQ-39": "Gerudo Valley", "SQ-40": "Death Mountain Crater",
+    "SQ-41": "Lake Hylia", "SQ-42": "Desert Colossus", "SQ-43": "Ganon's Castle grounds",
+    "SQ-44": "Hyrule Castle Town Market (Potion Shop)",
+}

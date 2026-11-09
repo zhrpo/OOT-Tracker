@@ -1,0 +1,8 @@
+FAIL [M1] H1 no account document yet, device already has progress  lost=['KF-1', 'KF-2'] revived=[] device_lost={'A': [], 'B': ['KF-1', 'KF-2']}
+FAIL [M1] H1b no account document, device has progress, other device saves first  lost=['KF-1', 'KF-2'] revived=[] device_lost={'A': ['KF-1', 'KF-2'], 'B': ['KF-1', 'KF-2']}
+FAIL [M1] H2 new player: account receives only what was ticked  server=['DT-1', 'DT-2', 'DT-3', 'MKT-1', 'sw2:LW-1']
+FAIL [M2] H1 no account document yet, device already has progress  lost=['KF-1', 'KF-2'] revived=[] device_lost={'A': [], 'B': ['KF-1', 'KF-2']}
+FAIL [M2] H1b no account document, device has progress, other device saves first  lost=['KF-1', 'KF-2'] revived=[] device_lost={'A': ['KF-1', 'KF-2'], 'B': ['KF-1', 'KF-2']}
+FAIL [M2] H2 new player: account receives only what was ticked  server=['DT-1', 'DT-2', 'DT-3', 'MKT-1', 'sw2:LW-1']
+
+6 scenarios, 0 passed, 6 failed

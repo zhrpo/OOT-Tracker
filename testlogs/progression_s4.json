@@ -1,0 +1,444 @@
+[
+ {
+  "test": "P1a OR clause unmet with nothing ticked",
+  "ver": "n64",
+  "result": "PASS",
+  "counts": {
+   "clauses": 34,
+   "options": 110,
+   "not_isolable": 7
+  },
+  "detail": []
+ },
+ {
+  "test": "P1b each OR option alone satisfies its clause",
+  "ver": "n64",
+  "result": "PASS",
+  "counts": {
+   "clauses": 34,
+   "options": 110,
+   "not_isolable": 7
+  },
+  "detail": []
+ },
+ {
+  "test": "P1c options naming a row missing in this version never satisfy",
+  "ver": "n64",
+  "result": "PASS",
+  "counts": {},
+  "detail": []
+ },
+ {
+  "test": "P1d each OR option + other clauses unlocks the row",
+  "ver": "n64",
+  "result": "PASS",
+  "counts": {
+   "failures": 0
+  },
+  "detail": [],
+  "not_isolable": [
+   [
+    "HF-1",
+    1,
+    1,
+    [
+     0
+    ]
+   ],
+   [
+    "DC-4",
+    1,
+    1,
+    [
+     0
+    ]
+   ],
+   [
+    "HW-1",
+    1,
+    0,
+    [
+     1
+    ]
+   ],
+   [
+    "SP-5",
+    2,
+    1,
+    [
+     0
+    ]
+   ],
+   [
+    "HP-9",
+    1,
+    1,
+    [
+     0
+    ]
+   ],
+   [
+    "HP-10",
+    0,
+    1,
+    [
+     0
+    ]
+   ],
+   [
+    "SQ-42",
+    1,
+    0,
+    [
+     1
+    ]
+   ]
+  ]
+ },
+ {
+  "test": "P2 runtime requirements/age/time == generated data for the version",
+  "ver": "n64",
+  "result": "PASS",
+  "counts": {
+   "rows": 538
+  },
+  "detail": []
+ },
+ {
+  "test": "P3 day/night tags match the version's time label",
+  "ver": "n64",
+  "result": "PASS",
+  "counts": {},
+  "detail": []
+ },
+ {
+  "test": "P4 day/night filter on Quests tab; ignored elsewhere; persisted",
+  "ver": "n64",
+  "result": "PASS",
+  "counts": {
+   "Any": 30,
+   "Day": 8,
+   "Night": 3,
+   "Mixed": 2
+  },
+  "detail": []
+ },
+ {
+  "test": "P5 child half of a two-Link row waits for the Prelude while stuck as adult",
+  "ver": "n64",
+  "result": "PASS",
+  "counts": {},
+  "detail": {
+   "child": "HP-20.1",
+   "stuck": true,
+   "after": false
+  }
+ },
+ {
+  "test": "no page errors",
+  "ver": "n64",
+  "result": "PASS",
+  "counts": {},
+  "detail": []
+ },
+ {
+  "test": "P1a OR clause unmet with nothing ticked",
+  "ver": "3ds",
+  "result": "PASS",
+  "counts": {
+   "clauses": 34,
+   "options": 110,
+   "not_isolable": 7
+  },
+  "detail": []
+ },
+ {
+  "test": "P1b each OR option alone satisfies its clause",
+  "ver": "3ds",
+  "result": "PASS",
+  "counts": {
+   "clauses": 34,
+   "options": 110,
+   "not_isolable": 7
+  },
+  "detail": []
+ },
+ {
+  "test": "P1c options naming a row missing in this version never satisfy",
+  "ver": "3ds",
+  "result": "PASS",
+  "counts": {},
+  "detail": []
+ },
+ {
+  "test": "P1d each OR option + other clauses unlocks the row",
+  "ver": "3ds",
+  "result": "PASS",
+  "counts": {
+   "failures": 0
+  },
+  "detail": [],
+  "not_isolable": [
+   [
+    "HF-1",
+    1,
+    1,
+    [
+     0
+    ]
+   ],
+   [
+    "DC-4",
+    1,
+    1,
+    [
+     0
+    ]
+   ],
+   [
+    "HW-1",
+    1,
+    0,
+    [
+     1
+    ]
+   ],
+   [
+    "SP-5",
+    2,
+    1,
+    [
+     0
+    ]
+   ],
+   [
+    "HP-9",
+    1,
+    1,
+    [
+     0
+    ]
+   ],
+   [
+    "HP-10",
+    0,
+    1,
+    [
+     0
+    ]
+   ],
+   [
+    "SQ-42",
+    1,
+    0,
+    [
+     1
+    ]
+   ]
+  ]
+ },
+ {
+  "test": "P2 runtime requirements/age/time == generated data for the version",
+  "ver": "3ds",
+  "result": "PASS",
+  "counts": {
+   "rows": 538
+  },
+  "detail": []
+ },
+ {
+  "test": "P3 day/night tags match the version's time label",
+  "ver": "3ds",
+  "result": "PASS",
+  "counts": {},
+  "detail": []
+ },
+ {
+  "test": "P4 day/night filter on Quests tab; ignored elsewhere; persisted",
+  "ver": "3ds",
+  "result": "PASS",
+  "counts": {
+   "Any": 30,
+   "Day": 8,
+   "Night": 3,
+   "Mixed": 2
+  },
+  "detail": []
+ },
+ {
+  "test": "P5 child half of a two-Link row waits for the Prelude while stuck as adult",
+  "ver": "3ds",
+  "result": "PASS",
+  "counts": {},
+  "detail": {
+   "child": "HP-20.1",
+   "stuck": true,
+   "after": false
+  }
+ },
+ {
+  "test": "no page errors",
+  "ver": "3ds",
+  "result": "PASS",
+  "counts": {},
+  "detail": []
+ },
+ {
+  "test": "P1a OR clause unmet with nothing ticked",
+  "ver": "sw2",
+  "result": "PASS",
+  "counts": {
+   "clauses": 39,
+   "options": 122,
+   "not_isolable": 9
+  },
+  "detail": []
+ },
+ {
+  "test": "P1b each OR option alone satisfies its clause",
+  "ver": "sw2",
+  "result": "PASS",
+  "counts": {
+   "clauses": 39,
+   "options": 122,
+   "not_isolable": 9
+  },
+  "detail": []
+ },
+ {
+  "test": "P1c options naming a row missing in this version never satisfy",
+  "ver": "sw2",
+  "result": "PASS",
+  "counts": {},
+  "detail": []
+ },
+ {
+  "test": "P1d each OR option + other clauses unlocks the row",
+  "ver": "sw2",
+  "result": "PASS",
+  "counts": {
+   "failures": 0
+  },
+  "detail": [],
+  "not_isolable": [
+   [
+    "HF-3",
+    1,
+    0,
+    [
+     1
+    ]
+   ],
+   [
+    "KAK-5",
+    1,
+    0,
+    [
+     1
+    ]
+   ],
+   [
+    "ST-4",
+    3,
+    1,
+    [
+     0
+    ]
+   ],
+   [
+    "LH-2",
+    0,
+    0,
+    [
+     1
+    ]
+   ],
+   [
+    "HW-1",
+    1,
+    0,
+    [
+     1
+    ]
+   ],
+   [
+    "CL-2",
+    1,
+    1,
+    [
+     0
+    ]
+   ],
+   [
+    "SP-5",
+    2,
+    1,
+    [
+     0
+    ]
+   ],
+   [
+    "HP-9",
+    1,
+    1,
+    [
+     0
+    ]
+   ],
+   [
+    "SQ-42",
+    1,
+    0,
+    [
+     1
+    ]
+   ]
+  ]
+ },
+ {
+  "test": "P2 runtime requirements/age/time == generated data for the version",
+  "ver": "sw2",
+  "result": "PASS",
+  "counts": {
+   "rows": 548
+  },
+  "detail": []
+ },
+ {
+  "test": "P3 day/night tags match the version's time label",
+  "ver": "sw2",
+  "result": "PASS",
+  "counts": {},
+  "detail": []
+ },
+ {
+  "test": "P4 day/night filter on Quests tab; ignored elsewhere; persisted",
+  "ver": "sw2",
+  "result": "PASS",
+  "counts": {
+   "Any": 30,
+   "Day": 9,
+   "Night": 3,
+   "Mixed": 2
+  },
+  "detail": []
+ },
+ {
+  "test": "P5 child half of a two-Link row waits for the Prelude while stuck as adult",
+  "ver": "sw2",
+  "result": "PASS",
+  "counts": {},
+  "detail": {
+   "child": "HP-6.2",
+   "stuck": true,
+   "after": false
+  }
+ },
+ {
+  "test": "no page errors",
+  "ver": "sw2",
+  "result": "PASS",
+  "counts": {},
+  "detail": []
+ }
+]

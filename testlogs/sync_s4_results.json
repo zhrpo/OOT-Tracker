@@ -1,0 +1,263 @@
+[
+ {
+  "scenario": "H1 no account document yet, device already has progress",
+  "model": "M1",
+  "initial": "server: no document; A local: KF-1, KF-2",
+  "steps": [
+   "A opens",
+   "first snapshot: document missing",
+   "B opens on the same account"
+  ],
+  "server_writes": [],
+  "final_server": [],
+  "final_devices": {
+   "A": [
+    "KF-1",
+    "KF-2"
+   ],
+   "B": []
+  },
+  "expected_kept": [
+   "KF-1",
+   "KF-2"
+  ],
+  "expected_removed": [],
+  "lost_on_server": [
+   "KF-1",
+   "KF-2"
+  ],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [],
+   "B": [
+    "KF-1",
+    "KF-2"
+   ]
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account",
+   "B": "Saved to your account"
+  },
+  "notes": "saves sent by A after the first snapshot: 0; A status: 'Saved to your account'; server document exists: False",
+  "result": "FAIL",
+  "status_after_first_snapshot": "Saved to your account",
+  "saves_sent": 0,
+  "status_claims_saved_with_no_document": true
+ },
+ {
+  "scenario": "H1b no account document, device has progress, other device saves first",
+  "model": "M1",
+  "initial": "server: no document; A local: KF-1, KF-2",
+  "steps": [
+   "A opens (nothing sent)",
+   "B ticks LW-1 (creates document)",
+   "snapshot reaches A"
+  ],
+  "server_writes": [
+   [
+    "B",
+    [
+     "DT-1",
+     "DT-2",
+     "DT-3",
+     "MKT-1"
+    ]
+   ],
+   [
+    "B",
+    [
+     "DT-1",
+     "DT-2",
+     "DT-3",
+     "MKT-1",
+     "sw2:LW-1"
+    ]
+   ]
+  ],
+  "final_server": [
+   "LW-1"
+  ],
+  "final_devices": {
+   "A": [
+    "LW-1"
+   ],
+   "B": [
+    "LW-1"
+   ]
+  },
+  "expected_kept": [
+   "KF-1",
+   "KF-2",
+   "LW-1"
+  ],
+  "expected_removed": [],
+  "lost_on_server": [
+   "KF-1",
+   "KF-2"
+  ],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [
+    "KF-1",
+    "KF-2"
+   ],
+   "B": [
+    "KF-1",
+    "KF-2"
+   ]
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account",
+   "B": "Saved to your account"
+  },
+  "notes": "A local storage after: ['LW-1']",
+  "result": "FAIL"
+ },
+ {
+  "scenario": "H2 new player: account receives only what was ticked",
+  "model": "M1",
+  "server_keys": [
+   "DT-1",
+   "DT-2",
+   "DT-3",
+   "MKT-1",
+   "sw2:LW-1"
+  ],
+  "unprefixed_on_server": [
+   "DT-1",
+   "DT-2",
+   "DT-3",
+   "MKT-1"
+  ],
+  "legacy_banner_visible": true,
+  "result": "FAIL"
+ },
+ {
+  "scenario": "H1 no account document yet, device already has progress",
+  "model": "M2",
+  "initial": "server: no document; A local: KF-1, KF-2",
+  "steps": [
+   "A opens",
+   "first snapshot: document missing",
+   "B opens on the same account"
+  ],
+  "server_writes": [],
+  "final_server": [],
+  "final_devices": {
+   "A": [
+    "KF-1",
+    "KF-2"
+   ],
+   "B": []
+  },
+  "expected_kept": [
+   "KF-1",
+   "KF-2"
+  ],
+  "expected_removed": [],
+  "lost_on_server": [
+   "KF-1",
+   "KF-2"
+  ],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [],
+   "B": [
+    "KF-1",
+    "KF-2"
+   ]
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account",
+   "B": "Saved to your account"
+  },
+  "notes": "saves sent by A after the first snapshot: 0; A status: 'Saved to your account'; server document exists: False",
+  "result": "FAIL",
+  "status_after_first_snapshot": "Saved to your account",
+  "saves_sent": 0,
+  "status_claims_saved_with_no_document": true
+ },
+ {
+  "scenario": "H1b no account document, device has progress, other device saves first",
+  "model": "M2",
+  "initial": "server: no document; A local: KF-1, KF-2",
+  "steps": [
+   "A opens (nothing sent)",
+   "B ticks LW-1 (creates document)",
+   "snapshot reaches A"
+  ],
+  "server_writes": [
+   [
+    "B",
+    [
+     "DT-1",
+     "DT-2",
+     "DT-3",
+     "MKT-1",
+     "sw2:LW-1"
+    ]
+   ]
+  ],
+  "final_server": [
+   "LW-1"
+  ],
+  "final_devices": {
+   "A": [
+    "LW-1"
+   ],
+   "B": [
+    "LW-1"
+   ]
+  },
+  "expected_kept": [
+   "KF-1",
+   "KF-2",
+   "LW-1"
+  ],
+  "expected_removed": [],
+  "lost_on_server": [
+   "KF-1",
+   "KF-2"
+  ],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [
+    "KF-1",
+    "KF-2"
+   ],
+   "B": [
+    "KF-1",
+    "KF-2"
+   ]
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account",
+   "B": "Saved to your account"
+  },
+  "notes": "A local storage after: ['LW-1']",
+  "result": "FAIL"
+ },
+ {
+  "scenario": "H2 new player: account receives only what was ticked",
+  "model": "M2",
+  "server_keys": [
+   "DT-1",
+   "DT-2",
+   "DT-3",
+   "MKT-1",
+   "sw2:LW-1"
+  ],
+  "unprefixed_on_server": [
+   "DT-1",
+   "DT-2",
+   "DT-3",
+   "MKT-1"
+  ],
+  "legacy_banner_visible": true,
+  "result": "FAIL"
+ }
+]

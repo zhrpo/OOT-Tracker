@@ -1,0 +1,19 @@
+PASS no errors on any tab, console, scheme or size
+PASS Space on a later step opens the earlier-steps question
+PASS focus moves to the Yes button
+PASS Tab stays inside the question
+PASS Esc closes it and leaves the box empty
+PASS focus goes back to the checkbox
+PASS Space ticks the first step without a question
+PASS Undo appears after ticking several things
+PASS Undo puts everything back
+PASS rapid ticking: boxes on screen match saved state
+PASS no errors during rapid ticking
+PASS search finds skulltulas mentioning the Hookshot
+PASS search with no hits says so
+PASS Ready filter shows as many rows as the ready count
+PASS link to #items/n64 opens Items on N64
+PASS progress survives a reload
+PASS arrow keys move along the tabs
+PASS no errors
+FAILS: []

@@ -1,0 +1,29 @@
+PASS P1a OR clause unmet with nothing ticked [n64] {"clauses": 34, "options": 110, "not_isolable": 7}
+PASS P1b each OR option alone satisfies its clause [n64] {"clauses": 34, "options": 110, "not_isolable": 7}
+PASS P1c options naming a row missing in this version never satisfy [n64] {}
+PASS P1d each OR option + other clauses unlocks the row [n64] {"failures": 0}
+PASS P2 runtime requirements/age/time == generated data for the version [n64] {"rows": 538}
+PASS P3 day/night tags match the version's time label [n64] {}
+PASS P4 day/night filter on Quests tab; ignored elsewhere; persisted [n64] {"Any": 30, "Day": 8, "Night": 3, "Mixed": 2}
+PASS P5 child half of a two-Link row waits for the Prelude while stuck as adult [n64] {}
+PASS no page errors [n64] {}
+PASS P1a OR clause unmet with nothing ticked [3ds] {"clauses": 34, "options": 110, "not_isolable": 7}
+PASS P1b each OR option alone satisfies its clause [3ds] {"clauses": 34, "options": 110, "not_isolable": 7}
+PASS P1c options naming a row missing in this version never satisfy [3ds] {}
+PASS P1d each OR option + other clauses unlocks the row [3ds] {"failures": 0}
+PASS P2 runtime requirements/age/time == generated data for the version [3ds] {"rows": 538}
+PASS P3 day/night tags match the version's time label [3ds] {}
+PASS P4 day/night filter on Quests tab; ignored elsewhere; persisted [3ds] {"Any": 30, "Day": 8, "Night": 3, "Mixed": 2}
+PASS P5 child half of a two-Link row waits for the Prelude while stuck as adult [3ds] {}
+PASS no page errors [3ds] {}
+PASS P1a OR clause unmet with nothing ticked [sw2] {"clauses": 39, "options": 122, "not_isolable": 9}
+PASS P1b each OR option alone satisfies its clause [sw2] {"clauses": 39, "options": 122, "not_isolable": 9}
+PASS P1c options naming a row missing in this version never satisfy [sw2] {}
+PASS P1d each OR option + other clauses unlocks the row [sw2] {"failures": 0}
+PASS P2 runtime requirements/age/time == generated data for the version [sw2] {"rows": 548}
+PASS P3 day/night tags match the version's time label [sw2] {}
+PASS P4 day/night filter on Quests tab; ignored elsewhere; persisted [sw2] {"Any": 30, "Day": 9, "Night": 3, "Mixed": 2}
+PASS P5 child half of a two-Link row waits for the Prelude while stuck as adult [sw2] {}
+PASS no page errors [sw2] {}
+
+27 tests, 27 passed, 0 failed

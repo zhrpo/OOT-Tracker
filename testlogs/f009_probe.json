@@ -1,0 +1,1343 @@
+{
+ "changed_rows": {
+  "n64": {
+   "MQ-30": {
+    "before": {
+     "q": null,
+     "after": [
+      "MQ-19"
+     ],
+     "age": "Child",
+     "ages": null
+    },
+    "after": {
+     "q": null,
+     "after": [
+      "MQ-19",
+      "MQ-22"
+     ],
+     "age": "Child",
+     "ages": null
+    }
+   },
+   "DG-157": {
+    "before": {
+     "q": null,
+     "after": [
+      "MQ-19"
+     ],
+     "age": "Child"
+    },
+    "after": {
+     "q": null,
+     "after": [
+      "MQ-19",
+      "MQ-22"
+     ],
+     "age": "Child"
+    }
+   },
+   "BW-1": {
+    "before": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ]
+     ],
+     "after": null,
+     "age": "Both",
+     "ages": "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one."
+    },
+    "after": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "MQ-22"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ]
+     ],
+     "after": null,
+     "age": "Both",
+     "ages": "Adult first: learn the Song of Storms (Kakariko Village windmill) and learn the Prelude of Light (The Temple of Time). Child second: come back as child Link to collect this one."
+    }
+   },
+   "BW-1.2": {
+    "before": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ],
+      [
+       [
+        "BW-1.1"
+       ]
+      ]
+     ],
+     "after": [
+      "BW-1.1"
+     ],
+     "age": "Child"
+    },
+    "after": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "MQ-22"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ],
+      [
+       [
+        "BW-1.1"
+       ]
+      ]
+     ],
+     "after": [
+      "BW-1.1"
+     ],
+     "age": "Child"
+    }
+   },
+   "BW-2": {
+    "before": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ]
+     ],
+     "after": null,
+     "age": "Both",
+     "ages": "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one."
+    },
+    "after": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "MQ-22"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ]
+     ],
+     "after": null,
+     "age": "Both",
+     "ages": "Adult first: learn the Song of Storms (Kakariko Village windmill) and learn the Prelude of Light (The Temple of Time). Child second: come back as child Link to collect this one."
+    }
+   },
+   "BW-2.2": {
+    "before": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ],
+      [
+       [
+        "BW-2.1"
+       ]
+      ]
+     ],
+     "after": [
+      "BW-2.1"
+     ],
+     "age": "Child"
+    },
+    "after": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "MQ-22"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ],
+      [
+       [
+        "BW-2.1"
+       ]
+      ]
+     ],
+     "after": [
+      "BW-2.1"
+     ],
+     "age": "Child"
+    }
+   },
+   "BW-3": {
+    "before": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ]
+     ],
+     "after": null,
+     "age": "Both",
+     "ages": "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one."
+    },
+    "after": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "MQ-22"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ]
+     ],
+     "after": null,
+     "age": "Both",
+     "ages": "Adult first: learn the Song of Storms (Kakariko Village windmill) and learn the Prelude of Light (The Temple of Time). Child second: come back as child Link to collect this one."
+    }
+   },
+   "BW-3.2": {
+    "before": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ],
+      [
+       [
+        "BW-3.1"
+       ]
+      ]
+     ],
+     "after": [
+      "BW-3.1"
+     ],
+     "age": "Child"
+    },
+    "after": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "MQ-22"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ],
+      [
+       [
+        "BW-3.1"
+       ]
+      ]
+     ],
+     "after": [
+      "BW-3.1"
+     ],
+     "age": "Child"
+    }
+   },
+   "IT-18": {
+    "before": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ]
+     ],
+     "after": null,
+     "age": "Both",
+     "ages": "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: you collect this one as child Link."
+    },
+    "after": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "MQ-22"
+       ]
+      ]
+     ],
+     "after": null,
+     "age": "Both",
+     "ages": "Adult first: learn the Song of Storms (Kakariko Village windmill) and learn the Prelude of Light (The Temple of Time). Child second: you collect this one as child Link."
+    }
+   },
+   "IT-18.2": {
+    "before": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "IT-18.1"
+       ]
+      ]
+     ],
+     "after": [
+      "IT-18.1"
+     ],
+     "age": "Child"
+    },
+    "after": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "MQ-22"
+       ]
+      ],
+      [
+       [
+        "IT-18.1"
+       ]
+      ]
+     ],
+     "after": [
+      "IT-18.1"
+     ],
+     "age": "Child"
+    }
+   }
+  },
+  "3ds": {
+   "MQ-30": {
+    "before": {
+     "q": null,
+     "after": [
+      "MQ-19"
+     ],
+     "age": "Child",
+     "ages": null
+    },
+    "after": {
+     "q": null,
+     "after": [
+      "MQ-19",
+      "MQ-22"
+     ],
+     "age": "Child",
+     "ages": null
+    }
+   },
+   "DG-157": {
+    "before": {
+     "q": null,
+     "after": [
+      "MQ-19"
+     ],
+     "age": "Child"
+    },
+    "after": {
+     "q": null,
+     "after": [
+      "MQ-19",
+      "MQ-22"
+     ],
+     "age": "Child"
+    }
+   },
+   "BW-1": {
+    "before": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ]
+     ],
+     "after": null,
+     "age": "Both",
+     "ages": "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one."
+    },
+    "after": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "MQ-22"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ]
+     ],
+     "after": null,
+     "age": "Both",
+     "ages": "Adult first: learn the Song of Storms (Kakariko Village windmill) and learn the Prelude of Light (The Temple of Time). Child second: come back as child Link to collect this one."
+    }
+   },
+   "BW-1.2": {
+    "before": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ],
+      [
+       [
+        "BW-1.1"
+       ]
+      ]
+     ],
+     "after": [
+      "BW-1.1"
+     ],
+     "age": "Child"
+    },
+    "after": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "MQ-22"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ],
+      [
+       [
+        "BW-1.1"
+       ]
+      ]
+     ],
+     "after": [
+      "BW-1.1"
+     ],
+     "age": "Child"
+    }
+   },
+   "BW-2": {
+    "before": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ]
+     ],
+     "after": null,
+     "age": "Both",
+     "ages": "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one."
+    },
+    "after": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "MQ-22"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ]
+     ],
+     "after": null,
+     "age": "Both",
+     "ages": "Adult first: learn the Song of Storms (Kakariko Village windmill) and learn the Prelude of Light (The Temple of Time). Child second: come back as child Link to collect this one."
+    }
+   },
+   "BW-2.2": {
+    "before": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ],
+      [
+       [
+        "BW-2.1"
+       ]
+      ]
+     ],
+     "after": [
+      "BW-2.1"
+     ],
+     "age": "Child"
+    },
+    "after": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "MQ-22"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ],
+      [
+       [
+        "BW-2.1"
+       ]
+      ]
+     ],
+     "after": [
+      "BW-2.1"
+     ],
+     "age": "Child"
+    }
+   },
+   "BW-3": {
+    "before": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ]
+     ],
+     "after": null,
+     "age": "Both",
+     "ages": "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one."
+    },
+    "after": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "MQ-22"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ]
+     ],
+     "after": null,
+     "age": "Both",
+     "ages": "Adult first: learn the Song of Storms (Kakariko Village windmill) and learn the Prelude of Light (The Temple of Time). Child second: come back as child Link to collect this one."
+    }
+   },
+   "BW-3.2": {
+    "before": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ],
+      [
+       [
+        "BW-3.1"
+       ]
+      ]
+     ],
+     "after": [
+      "BW-3.1"
+     ],
+     "age": "Child"
+    },
+    "after": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "MQ-22"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ],
+      [
+       [
+        "BW-3.1"
+       ]
+      ]
+     ],
+     "after": [
+      "BW-3.1"
+     ],
+     "age": "Child"
+    }
+   },
+   "IT-18": {
+    "before": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ]
+     ],
+     "after": null,
+     "age": "Both",
+     "ages": "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: you collect this one as child Link."
+    },
+    "after": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "MQ-22"
+       ]
+      ]
+     ],
+     "after": null,
+     "age": "Both",
+     "ages": "Adult first: learn the Song of Storms (Kakariko Village windmill) and learn the Prelude of Light (The Temple of Time). Child second: you collect this one as child Link."
+    }
+   },
+   "IT-18.2": {
+    "before": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "IT-18.1"
+       ]
+      ]
+     ],
+     "after": [
+      "IT-18.1"
+     ],
+     "age": "Child"
+    },
+    "after": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "MQ-22"
+       ]
+      ],
+      [
+       [
+        "IT-18.1"
+       ]
+      ]
+     ],
+     "after": [
+      "IT-18.1"
+     ],
+     "age": "Child"
+    }
+   }
+  },
+  "sw2": {
+   "MQ-30": {
+    "before": {
+     "q": null,
+     "after": [
+      "MQ-19"
+     ],
+     "age": "Child",
+     "ages": null
+    },
+    "after": {
+     "q": null,
+     "after": [
+      "MQ-19",
+      "MQ-22"
+     ],
+     "age": "Child",
+     "ages": null
+    }
+   },
+   "DG-157": {
+    "before": {
+     "q": null,
+     "after": [
+      "MQ-19"
+     ],
+     "age": "Child"
+    },
+    "after": {
+     "q": null,
+     "after": [
+      "MQ-19",
+      "MQ-22"
+     ],
+     "age": "Child"
+    }
+   },
+   "BW-1": {
+    "before": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ]
+     ],
+     "after": null,
+     "age": "Both",
+     "ages": "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one."
+    },
+    "after": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "MQ-22"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ]
+     ],
+     "after": null,
+     "age": "Both",
+     "ages": "Adult first: learn the Song of Storms (Kakariko Village windmill) and learn the Prelude of Light (The Temple of Time). Child second: come back as child Link to collect this one."
+    }
+   },
+   "BW-1.2": {
+    "before": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "BW-1.1"
+       ]
+      ]
+     ],
+     "after": [
+      "BW-1.1"
+     ],
+     "age": "Child"
+    },
+    "after": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "MQ-22"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "BW-1.1"
+       ]
+      ]
+     ],
+     "after": [
+      "BW-1.1"
+     ],
+     "age": "Child"
+    }
+   },
+   "BW-2": {
+    "before": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ]
+     ],
+     "after": null,
+     "age": "Both",
+     "ages": "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one."
+    },
+    "after": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "MQ-22"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ]
+     ],
+     "after": null,
+     "age": "Both",
+     "ages": "Adult first: learn the Song of Storms (Kakariko Village windmill) and learn the Prelude of Light (The Temple of Time). Child second: come back as child Link to collect this one."
+    }
+   },
+   "BW-2.2": {
+    "before": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "BW-2.1"
+       ]
+      ]
+     ],
+     "after": [
+      "BW-2.1"
+     ],
+     "age": "Child"
+    },
+    "after": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "MQ-22"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "BW-2.1"
+       ]
+      ]
+     ],
+     "after": [
+      "BW-2.1"
+     ],
+     "age": "Child"
+    }
+   },
+   "BW-3": {
+    "before": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ]
+     ],
+     "after": null,
+     "age": "Both",
+     "ages": "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one."
+    },
+    "after": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "MQ-22"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ]
+     ],
+     "after": null,
+     "age": "Both",
+     "ages": "Adult first: learn the Song of Storms (Kakariko Village windmill) and learn the Prelude of Light (The Temple of Time). Child second: come back as child Link to collect this one."
+    }
+   },
+   "BW-3.2": {
+    "before": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ],
+      [
+       [
+        "BW-3.1"
+       ]
+      ]
+     ],
+     "after": [
+      "BW-3.1"
+     ],
+     "age": "Child"
+    },
+    "after": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "MQ-22"
+       ]
+      ],
+      [
+       [
+        "IT-18"
+       ]
+      ],
+      [
+       [
+        "IT-14"
+       ]
+      ],
+      [
+       [
+        "BW-3.1"
+       ]
+      ]
+     ],
+     "after": [
+      "BW-3.1"
+     ],
+     "age": "Child"
+    }
+   },
+   "IT-18": {
+    "before": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ]
+     ],
+     "after": null,
+     "age": "Both",
+     "ages": "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: you collect this one as child Link."
+    },
+    "after": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "MQ-22"
+       ]
+      ]
+     ],
+     "after": null,
+     "age": "Both",
+     "ages": "Adult first: learn the Song of Storms (Kakariko Village windmill) and learn the Prelude of Light (The Temple of Time). Child second: you collect this one as child Link."
+    }
+   },
+   "IT-18.2": {
+    "before": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "IT-18.1"
+       ]
+      ]
+     ],
+     "after": [
+      "IT-18.1"
+     ],
+     "age": "Child"
+    },
+    "after": {
+     "q": [
+      [
+       [
+        "MQ-19"
+       ]
+      ],
+      [
+       [
+        "MQ-22"
+       ]
+      ],
+      [
+       [
+        "IT-18.1"
+       ]
+      ]
+     ],
+     "after": [
+      "IT-18.1"
+     ],
+     "age": "Child"
+    }
+   }
+  }
+ },
+ "steps_now_after_prelude": [
+  "MQ-30",
+  "MQ-31",
+  "MQ-33",
+  "MQ-34",
+  "MQ-35",
+  "MQ-37",
+  "MQ-38",
+  "MQ-39",
+  "MQ-40",
+  "MQ-41"
+ ],
+ "build_stdout": [
+  "two-Link checklists: 26 ['LW-3', 'HF-2', 'HC-2', 'BW-1', 'BW-2', 'BW-3', 'DMC-2', 'CL-1', 'CL-3', 'SP-1', 'SP-2', 'SP-3', 'HP-6', 'HP-7', 'HP-15', 'HP-17', 'HP-20', 'HP-23', 'HP-24', 'HP-28', 'HP-36', 'SQ-26', 'SQ-12', 'IT-18', 'IT-30', 'IT-69']",
+  "no automatic source: ['IT-6 Hylian Shield', \"IT-67 Sun's Song\"]",
+  "ok {'main': 40, 'skull': 101, 'heart': 37, 'side': 44, 'items': 77} {'n64': 326, '3ds': 326, 'sw2': 328} {'index.html': 417053, 'themed.html': 478505, 'themed2.html': 744490}"
+ ]
+}

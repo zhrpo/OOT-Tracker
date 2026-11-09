@@ -1,0 +1,13 @@
+PASS B1 skull/heart/side requirements == source (base + per version)
+PASS B2 item/song requirements == source (base + per version)
+PASS B3 every GATE_V / BOTH_V / BOTH entry reaches the generated data
+PASS B4 every requirement leaf has a label
+PASS B5 no requirement clause is made only of rows missing in the version
+PASS B6 child half of a two-Link row never needs adult-only gear
+PASS B7 version-aware fixpoint: every row and checklist step completable
+PASS B8 every override/requirement table key names an existing row and version
+INFO I1 OV age overwritten: [{'id': 'HP-6', 'ver': 'sw2', 'ov_age': 'Child', 'final_age': 'Both', 'overwritten_by': 'BOTH_V'}, {'id': 'HP-7', 'ver': 'sw2', 'ov_age': 'Child', 'final_age': 'Both', 'overwritten_by': 'BOTH_V'}, {'id': 'HP-17', 'ver': 'sw2', 'ov_age': 'Adult', 'final_age': 'Both', 'overwritten_by': 'BOTH_V'}]
+INFO I2 text names tool not required: {'n64': 28, '3ds': 28, 'sw2': 25}
+INFO I3 time differs by version: [{'id': 'HF-1', 'tab': 'skull', 'times': {'n64': 'Any', '3ds': 'Any', 'sw2': 'Night'}}, {'id': 'HC-1', 'tab': 'skull', 'times': {'n64': 'Any', '3ds': 'Any', 'sw2': 'Night'}}, {'id': 'LH-3', 'tab': 'skull', 'times': {'n64': 'Night', '3ds': 'Night', 'sw2': 'Any'}}]
+INFO I3 checklist steps with Mixed time: []
+8 checks, 8 pass, 0 fail

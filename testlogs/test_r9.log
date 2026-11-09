@@ -1,0 +1,15 @@
+PASS retired MQ-14 dropped from a saved game
+PASS 40 story steps, numbers kept (13 and 15 still there)
+PASS Shadow Temple lists what it needs
+PASS Shadow Temple guide says where Din's Fire comes from
+PASS n64 page: 3DS console tab uses the 3DS hover
+PASS n64 page: N64 console tab uses the N64 hop
+PASS sw2 page: 3DS console tab uses the 3DS hover
+PASS sw2 page: N64 console tab uses the N64 hop
+PASS Switch 2 tab art wiggles on hover
+PASS 3DS tab art gets the 3D tilt on hover
+PASS no page errors
+PASS N64 forest has no wind
+PASS 3DS forest sways but has no fluttering branches
+PASS Switch 2 forest has the most going on
+FAILS: []

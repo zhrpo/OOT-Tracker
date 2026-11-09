@@ -1,0 +1,47 @@
+
+/* =============== tab icons and layout, one block for all three consoles =============== */
+.tab .tic svg .twk{animation:twk 3.4s ease-in-out infinite}
+.tab .tic svg .twk.t2{animation-delay:-1.7s}
+@keyframes twk{0%,100%{opacity:.25}50%{opacity:1}}
+@media (prefers-reduced-motion: reduce){ .tab .tic svg *{animation:none !important} body .tab,body .tab::before{animation:none !important} }
+.tab small .of{font-weight:inherit}
+
+/* N64: chamfered plates, the sprite sits above the name */
+body[data-ver="n64"] .tab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;text-align:center;padding:5px 4px 5px}
+body[data-ver="n64"] .tab .tic{display:block;width:26px;height:26px}
+body[data-ver="n64"] .tab .tic svg{display:block;width:100%;height:100%}
+body[data-ver="n64"] .tab .tn{font-weight:800;font-size:12px;line-height:1.1}
+body[data-ver="n64"] .tab small{font-size:10.5px;font-weight:700}
+
+/* phones: the count becomes a badge, and on the console skins only the picked tile spells out its name */
+@media (max-width:560px){
+  .tab{min-width:0}
+  .tab small{position:absolute;z-index:2;line-height:1;white-space:nowrap}
+  .tab small .of{display:none}
+  body[data-ver="n64"] .tab small{top:3px;right:5px;font-size:10px;padding:1px 3px;background:var(--soft);color:var(--ink)}
+  body[data-ver="3ds"] .tab small,body[data-ver="sw2"] .tab small{top:-7px;right:-4px;min-width:20px;height:18px;padding:0 5px;border-radius:99px;background:var(--accent);color:var(--on);opacity:1;font:800 10.5px/18px system-ui,sans-serif;text-align:center;box-shadow:0 0 0 2px var(--bg)}
+  body[data-ver="3ds"] .tab:not([aria-selected="true"]) .tn,body[data-ver="sw2"] .tab:not([aria-selected="true"]) .tn{display:none}
+  body[data-ver="3ds"] .tab,body[data-ver="sw2"] .tab{padding:0 2px;gap:5px}
+  body[data-ver="3ds"] .tab .tic,body[data-ver="sw2"] .tab .tic{width:28px;height:28px}
+  body[data-ver="3ds"] .tab .tn,body[data-ver="sw2"] .tab .tn{font-size:12px}
+}
+
+/* tablets and desktops: tall tiles, icon over name over count */
+@media (min-width:561px){
+  body[data-ver="n64"] .tab{display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-areas:"ic tn" "ic sm";column-gap:8px;align-items:center;justify-items:start;text-align:left;padding:6px 12px}
+  body[data-ver="n64"] .tab .tic{grid-area:ic;width:32px;height:32px}
+  body[data-ver="n64"] .tab .tn{grid-area:tn;font-size:14px}
+  body[data-ver="n64"] .tab small{grid-area:sm;font-size:12.5px}
+  body[data-ver="3ds"] .tabs,body[data-ver="sw2"] .tabs{gap:12px}
+  body[data-ver="3ds"] .tab,body[data-ver="sw2"] .tab{display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-areas:"ic tn" "ic sm";column-gap:9px;align-items:center;justify-items:start;text-align:left;flex:1 1 0;max-width:180px;height:auto;min-height:56px;padding:7px 12px 7px 9px}
+  body[data-ver="3ds"] .tab[aria-selected="true"],body[data-ver="sw2"] .tab[aria-selected="true"]{flex-grow:1}
+  body[data-ver="3ds"] .tab .tic,body[data-ver="sw2"] .tab .tic{grid-area:ic;width:38px;height:38px}
+  body[data-ver="3ds"] .tab .tn,body[data-ver="sw2"] .tab .tn{grid-area:tn;font-size:14px}
+  body[data-ver="3ds"] .tab small,body[data-ver="sw2"] .tab small{grid-area:sm;font-size:12.5px}
+  body[data-ver="sw2"] .tab::before{inset:-5px;border-radius:20px}
+}
+@media (min-width:1020px){
+  body[data-ver="sw2"] .hdr{grid-template-columns:minmax(0,820px);grid-template-areas:"tabs" "bar"}
+  body[data-ver="3ds"] .hdr{grid-template-columns:auto minmax(0,820px)}
+  body[data-ver="3ds"] .sysbar,body[data-ver="sw2"] .sysbar{width:calc(100% - 56px);max-width:1380px}
+}

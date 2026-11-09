@@ -1,0 +1,83 @@
+[
+ {
+  "mutation": "M1_gatev_on_item_row",
+  "code": "GATE_V[(\"sw2\", \"IT-13\")] = [\"i_hookshot\"]\n",
+  "build_exit": 0,
+  "build_caught": false,
+  "build_error": "  first = re.split(r\"(?<=[a-z\\)])\\.\\s\", start.strip(), 1)[0].rstrip(\".\")",
+  "audit_caught": true,
+  "audit_fail": [
+   "FAIL B3 every GATE_V / BOTH_V / BOTH entry reaches the generated data  -> [{\"key\": \"sw2|IT-13\", \"problem\": \"GATE_V names a row the build never applies GATE_V to\", \"tab\": \"items\"}]"
+  ],
+  "result": "PASS"
+ },
+ {
+  "mutation": "M2_gatev_typo_id",
+  "code": "GATE_V[(\"sw2\", \"HF-9\")] = [\"i_bombs\"]\n",
+  "build_exit": 0,
+  "build_caught": false,
+  "build_error": "  first = re.split(r\"(?<=[a-z\\)])\\.\\s\", start.strip(), 1)[0].rstrip(\".\")",
+  "audit_caught": true,
+  "audit_fail": [
+   "FAIL B3 every GATE_V / BOTH_V / BOTH entry reaches the generated data  -> [{\"key\": \"sw2|HF-9\", \"problem\": \"GATE_V names a row the build never applies GATE_V to\", \"tab\": null}]",
+   "FAIL B8 every override/requirement table key names an existing row and version  -> [{\"table\": \"GATE_V\", \"key\": \"sw2|HF-9\"}]"
+  ],
+  "result": "PASS"
+ },
+ {
+  "mutation": "M3_ov_typo_id",
+  "code": "ov(\"HF-9\", \"sw2\", how=\"mutated\")\n",
+  "build_exit": 0,
+  "build_caught": false,
+  "build_error": "  first = re.split(r\"(?<=[a-z\\)])\\.\\s\", start.strip(), 1)[0].rstrip(\".\")",
+  "audit_caught": true,
+  "audit_fail": [
+   "FAIL B8 every override/requirement table key names an existing row and version  -> [{\"table\": \"OV\", \"key\": \"HF-9\"}]"
+  ],
+  "result": "PASS"
+ },
+ {
+  "mutation": "M4_ov_version_typo",
+  "code": "ov(\"HF-1\", \"switch2\", how=\"mutated\")\n",
+  "build_exit": 1,
+  "build_caught": true,
+  "build_error": "AssertionError: ('HF-1', 'switch2')",
+  "audit_caught": null,
+  "audit_fail": [],
+  "result": "PASS"
+ },
+ {
+  "mutation": "M5_link_version_leak",
+  "code": "LINKS[:] = [l for l in LINKS if not (l[0] == \"i_spin\" and l[1] == \"SQ-20\")]\nimport extra as _x\nfor _g in list(_x.ITEMS) + list(_x.SONGS):\n    for _r in _g[2]:\n        if _r[\"key\"] == \"i_spin\":\n            _r.setdefault(\"v\", {}).setdefault(\"sw2\", {})[\"_req\"] = [\"i_spin\"]\n",
+  "build_exit": 0,
+  "build_caught": false,
+  "build_error": "  first = re.split(r\"(?<=[a-z\\)])\\.\\s\", start.strip(), 1)[0].rstrip(\".\")",
+  "audit_caught": true,
+  "audit_fail": [
+   "FAIL B7 version-aware fixpoint: every row and checklist step completable  -> {\"n64\": {\"rows\": 538, \"unreachable\": []}, \"3ds\": {\"rows\": 538, \"unreachable\": []}, \"sw2\": {\"rows\": 548, \"unreachable\": [\"IT-77\"]}}"
+  ],
+  "result": "PASS"
+ },
+ {
+  "mutation": "M6_ov_age_overwritten",
+  "code": "ov(\"HF-1\", \"sw2\", age=\"Adult\")\nBOTH_V[(\"sw2\", \"HF-1\")] = \"Child first: x. Adult second: y.\"\n",
+  "build_exit": 0,
+  "build_caught": false,
+  "build_error": "  first = re.split(r\"(?<=[a-z\\)])\\.\\s\", start.strip(), 1)[0].rstrip(\".\")",
+  "audit_caught": true,
+  "audit_fail": [
+   "INFO I1 OV age overwritten: [{'id': 'HP-6', 'ver': 'sw2', 'ov_age': 'Child', 'final_age': 'Both', 'overwritten_by': 'BOTH_V'}, {'id': 'HP-7', 'ver': 'sw2', 'ov_age': 'Child', 'final_age': 'Both', 'overwritten_by': 'BOTH_V'}, {'id': 'HP-17', 'ver': 'sw2', 'ov_age': 'Adult', 'final_age': 'Both', 'overwritten_by': 'BOTH_V'}, {'id': 'HF-1', 'ver': 'sw2', 'ov_age': 'Adult', 'final_age': 'Both', 'overwritten_by': 'BOTH_V'}]"
+  ],
+  "result": "PASS"
+ },
+ {
+  "mutation": "M7_unknown_token",
+  "code": "GATE[\"KF-1\"] = [\"i_swrod\"]\n",
+  "build_exit": 1,
+  "build_caught": true,
+  "build_error": "AssertionError: unknown requirement 'i_swrod'",
+  "audit_caught": null,
+  "audit_fail": [],
+  "result": "PASS"
+ }
+]

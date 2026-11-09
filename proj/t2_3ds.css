@@ -1,0 +1,52 @@
+
+/* =============== 3DS: HOME Menu ===============
+   A glossy light-grey shell: pill status bar on top, square app icons in a white frame, the picked one lit with a blue cursor,
+   and rounded gloss buttons along the bottom. */
+body[data-ver="3ds"] h1{font-size:17px;font-weight:800;text-shadow:0 1px 0 var(--hi)}
+body[data-ver="3ds"] .sysbar{display:flex;align-items:center;justify-content:space-between;gap:8px;height:24px;width:calc(100% - 24px);max-width:1040px;margin:8px auto 0;padding:0 14px;
+  font:700 12px/1 ui-rounded,"SF Pro Rounded","Segoe UI Variable","Segoe UI",system-ui,sans-serif;color:var(--mute);border-radius:99px;background:linear-gradient(var(--hi),var(--lo2));box-shadow:0 0 0 1px var(--line),inset 0 1px 0 var(--hi),0 3px 6px -4px rgba(20,45,80,.5)}
+body[data-ver="3ds"] .sb-l,body[data-ver="3ds"] .sb-r{display:inline-flex;align-items:center;gap:6px;min-width:76px}
+body[data-ver="3ds"] .sb-r{justify-content:flex-end}
+body[data-ver="3ds"] .sb-time{color:var(--ink);font-size:13px;letter-spacing:.02em}
+body[data-ver="3ds"] .sb-pc{font-size:11px}
+body[data-ver="3ds"] .top{background:linear-gradient(var(--hi),var(--soft));border-bottom:1px solid var(--line);box-shadow:0 8px 14px -10px rgba(25,50,80,.55)}
+body[data-ver="3ds"] .tabs{gap:7px;padding:5px 4px 9px;margin:0 -4px}
+body[data-ver="3ds"] .tab{position:relative;flex:1 1 0;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:6px;height:46px;padding:0 4px;text-align:center;color:var(--ink);
+  border:2px solid var(--hi);border-radius:11px;background:linear-gradient(var(--hi),var(--lo2));box-shadow:0 0 0 1px var(--edge),0 3px 0 var(--edge),0 9px 12px -8px rgba(20,40,70,.55);transition:transform .12s,flex-grow .18s}
+body[data-ver="3ds"] .tab::before{content:"";position:absolute;inset:0 0 54% 0;border-radius:9px 9px 45% 45%/9px 9px 12px 12px;background:linear-gradient(rgba(255,255,255,.7),rgba(255,255,255,.08));pointer-events:none}
+@media (prefers-color-scheme: dark){ body[data-ver="3ds"] .tab::before{background:linear-gradient(rgba(255,255,255,.16),rgba(255,255,255,.02))} }
+body[data-ver="3ds"] .tab .tic{display:block;width:30px;height:30px;flex:none}
+body[data-ver="3ds"] .tab .tic svg{display:block;width:100%;height:100%;filter:drop-shadow(0 1.5px 0 rgba(0,0,0,.22))}
+body[data-ver="3ds"] .tab .tn{font-weight:800;font-size:12.5px;line-height:1.1;color:var(--ink)}
+body[data-ver="3ds"] .tab small{font-size:11px;color:var(--mute);font-weight:700}
+body[data-ver="3ds"] .tab[aria-selected="true"]{flex-grow:2.2;transform:translateY(-2px);border-color:var(--hi);background:linear-gradient(var(--accent2),var(--hi));
+  box-shadow:0 0 0 2px var(--accent),0 0 0 5px color-mix(in srgb,var(--accent) 32%,transparent),0 10px 14px -7px rgba(28,116,189,.7);animation:cursor 1.3s ease-in-out infinite alternate}
+@keyframes cursor{from{box-shadow:0 0 0 2px var(--accent),0 0 0 4px color-mix(in srgb,var(--accent) 38%,transparent),0 10px 14px -7px rgba(28,116,189,.7)}to{box-shadow:0 0 0 2px var(--accent),0 0 0 7px color-mix(in srgb,var(--accent) 14%,transparent),0 10px 14px -7px rgba(28,116,189,.7)}}
+body[data-ver="3ds"] .tab:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+body[data-ver="3ds"] .tab:active{transform:translateY(1px)}
+body[data-ver="3ds"] .seg{border:0;background:none;border-radius:0;overflow:visible;gap:6px}
+body[data-ver="3ds"] :is(.seg button,.btn){position:relative;isolation:isolate;border:1px solid var(--line);border-radius:12px;background:linear-gradient(var(--hi),var(--lo2));color:var(--ink);box-shadow:inset 0 1px 0 var(--hi),0 2px 0 var(--edge),0 6px 10px -6px rgba(20,60,110,.45)}
+body[data-ver="3ds"] :is(.seg button,.btn)::before{content:"";position:absolute;inset:0 0 50% 0;z-index:-1;border-radius:11px 11px 40% 40%/11px 11px 14px 14px;background:linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.04))}
+body[data-ver="3ds"] .seg button+button{border-left:1px solid var(--line)}
+body[data-ver="3ds"] .seg button[aria-pressed="true"]{background:linear-gradient(#2b86c8,#17639f);border-color:#0f4a75;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 2px 0 #0b3a5d}
+@media (prefers-color-scheme: dark){ body[data-ver="3ds"] .seg button[aria-pressed="true"]{background:linear-gradient(#7cc8f6,#3d98d4);border-color:#a9defa;color:#04121c} }
+body[data-ver="3ds"] .seg button:active{transform:translateY(1px)}
+body[data-ver="3ds"] .pill{border-radius:12px;background:linear-gradient(var(--hi),var(--lo2));box-shadow:inset 0 1px 0 var(--hi),0 2px 0 var(--edge)}
+body[data-ver="3ds"] .pill[aria-pressed="true"]{background:linear-gradient(var(--accent2),var(--hi));border-color:var(--accent)}
+body[data-ver="3ds"] .field{border:1px solid var(--line);border-radius:12px;background:var(--card);box-shadow:inset 0 2px 4px rgba(20,60,110,.14)}
+body[data-ver="3ds"] .grp{background:var(--a2);border:1px solid var(--a3);border-radius:14px;box-shadow:0 3px 0 -1px var(--a3),0 16px 24px -18px rgba(20,60,110,.6)}
+body[data-ver="3ds"] .grp h2{background:linear-gradient(var(--hi),var(--a2))}
+body[data-ver="3ds"] .row{border:1px solid var(--a3);border-radius:12px;background:var(--card);box-shadow:0 2px 0 var(--a3),0 10px 16px -14px rgba(20,60,110,.55)}
+body[data-ver="3ds"] .row.diff{border-left:4px solid var(--either)}
+body[data-ver="3ds"] .tag{box-shadow:inset 0 1px 0 rgba(255,255,255,.5);font-weight:700}
+body[data-ver="3ds"] .bar{height:11px;border-radius:99px;background:var(--soft);box-shadow:inset 0 2px 3px rgba(20,60,110,.25)}
+body[data-ver="3ds"] .bar i{border-radius:99px;background:linear-gradient(#6fcbff,#1f7cc4);box-shadow:inset 0 1px 0 rgba(255,255,255,.6)}
+body[data-ver="3ds"] .chk input{appearance:none;-webkit-appearance:none;width:30px;height:30px;margin:0;border:1px solid var(--line);border-radius:10px;cursor:pointer;background:linear-gradient(var(--hi),var(--lo2));box-shadow:inset 0 1px 0 var(--hi),0 2px 0 var(--edge)}
+body[data-ver="3ds"] .chk input:checked{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpolyline points='5.5,12.5 10,17 18.5,7' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/22px no-repeat,linear-gradient(#2b86c8,#17639f);border-color:#0f4a75;box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 2px 0 #0b3a5d}
+body[data-ver="3ds"] .chk input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+@media (prefers-color-scheme: dark){
+  body[data-ver="3ds"] .chk input:checked{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpolyline points='5.5,12.5 10,17 18.5,7' fill='none' stroke='%2304121c' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/22px no-repeat,linear-gradient(#7cc8f6,#3d98d4);border-color:#a9defa}
+}
+body[data-ver="3ds"] :is(.vpanel,.xfer){border-radius:14px;box-shadow:0 2px 0 var(--edge)}
+body[data-ver="3ds"] .fab select{background:linear-gradient(#2b86c8,#17639f);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 3px 0 #0b3a5d,0 8px 14px -6px rgba(0,0,0,.5)}
+@media (prefers-color-scheme: dark){ body[data-ver="3ds"] .fab select{background:linear-gradient(#7cc8f6,#3d98d4);color:#04121c} }

@@ -1,0 +1,32 @@
+tab skull -> Skulls 0 of 100
+tab heart -> Hearts 0 of 36
+tab side -> Quests 0 of 44
+skull rows 4 pre-checked 0
+hash after click: #sidequests-sw2
+side rows 44 | 0 done · 44 to go · 0 ready
+status labels: ['All', 'To do', 'Ready']
+time seg visible: True
+guide text in innerText: False
+guide text in list DOM: False
+spoiler buttons: 67 revealed guides: 0
+search for guide-only text -> 0 rows (expect 0)
+search Epona -> 6 rows
+SQ-1 revealed: True | shows secret: True
+others still hidden: 66 (expect 42)
+after filter, SQ-1 still revealed: True
+SQ-1 re-hidden: True
+SQ-29 steps: 13 (expect 12)
+after 2 ticks: 2 done · 42 to go · 0 ready | Quests 2 of 44
+reload keeps tab via hash: True
+SQ-5 checked after reload: True | reveal state reset: False
+skull count unaffected: Skulls 0 of 100
+Done filter rows: 2 (expect 2)
+Remaining rows: 42 (expect 41)
+As adult rows: 20
+As child rows: 27
+Night rows: 35 (Day-only hidden)
+Day rows: 41 (Night-only hidden)
+jump options: 17
+time seg hidden on hearts: True | heart rows 36 (expect 36)
+status label on hearts: Ready
+errors: []

@@ -1,0 +1,43 @@
+PASS sw2 has 77 items
+PASS no trade, mask or consumable items
+PASS has Big Bomb Bag (holds 30)
+PASS has Biggest Bomb Bag (holds 40)
+PASS has Biggest Quiver (holds 50)
+PASS has Ice Arrows
+PASS has Forest Medallion
+PASS has Echo Gem
+PASS has Biggoron's Sword
+PASS has Kokiri's Emerald
+PASS subs exist in rowMap
+PASS side tab still 44
+PASS n64 has 76 items
+PASS n64 SQ-20 ticks Din's Fire
+PASS n64 SQ-20 does not tick the Spin Attack
+PASS n64 SQ-19 ticks Magic Meter and Spin Attack
+PASS first bomb bag quest gives the 30 bag only
+PASS second one gives the 40 bag
+PASS no false Jabu-Jabu claim
+PASS DT-4 is not ticked
+   inferred: []
+PASS fresh defaults claim nothing
+PASS slingshot (found mid-dungeon) does NOT finish the Deku Tree step
+PASS the Emerald finishes the step
+PASS Zora Tunic ticks its step but not the Ice Cavern
+PASS Hookshot step does not tick the Dampe heart or race
+PASS Hookshot item is ticked
+PASS mask quest has 5 steps
+PASS ticking step 3 ticks 1 and 2
+PASS quest not done yet
+PASS last step finishes the quest
+PASS unticking step 2 unticks later steps and the quest
+PASS ticking the quest ticks every step
+PASS unticking the quest unticks every step
+PASS Biggoron quest has 12 steps
+PASS last Biggoron step ticks the quest and the sword item
+PASS Bomb Bag points at Dodongo's Cavern
+PASS chip jumps to the story tab
+PASS DC-1 shows a Needs chip for Goron's Bracelet
+PASS Needs chip opens the item
+PASS quest shows item chips
+errors: []
+FAILS: []

@@ -1,0 +1,7 @@
+sync text: Saved to your account
+sync text after ticks: Saved to your account
+stored: {'v': 2, 'got': ['DT-1', 'DT-2', 'DT-3', 'MKT-1', 'sw2:KF-1', 'sw2:KF-2', 'sw2:LW-1'], 'ver': 'sw2', 'tab': 'skull'}
+writes: 3
+UI count: 3 collected · 97 to go · 0 ready
+after reload GY-1: False DT-1: False 3 collected · 97 to go · 0 ready
+errors: []

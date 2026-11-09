@@ -1,0 +1,8 @@
+PASS M1_gatev_on_item_row  build_caught=False audit_caught=True 
+PASS M2_gatev_typo_id  build_caught=False audit_caught=True 
+PASS M3_ov_typo_id  build_caught=False audit_caught=True 
+PASS M4_ov_version_typo  build_caught=True audit_caught=None AssertionError: ('HF-1', 'switch2')
+PASS M5_link_version_leak  build_caught=False audit_caught=True 
+PASS M6_ov_age_overwritten  build_caught=False audit_caught=True 
+PASS M7_unknown_token  build_caught=True audit_caught=None AssertionError: unknown requirement 'i_swrod'
+7 mutations, 5 silently accepted by build.py, 0 caught by neither

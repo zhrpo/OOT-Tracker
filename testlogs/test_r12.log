@@ -1,0 +1,40 @@
+PASS n64 the steps you can do now are shown
+PASS n64 later steps in the open chapter are covered
+PASS n64 covered text is hidden from screen readers
+PASS n64 tapping the cover shows the step
+PASS n64 showing it does not tick it
+PASS n64 its spoiler guide still opens on its own
+PASS n64 a shown step stays shown after a reload
+PASS n64 finishing a step uncovers the next one
+PASS n64 search results are never covered
+PASS n64 tapping a tab plays its console's motion
+PASS n64 the picked tab keeps its idle motion
+PASS n64 the 3DS console tab uses the 3DS tap motion
+PASS n64 no errors
+PASS 3ds the steps you can do now are shown
+PASS 3ds later steps in the open chapter are covered
+PASS 3ds covered text is hidden from screen readers
+PASS 3ds tapping the cover shows the step
+PASS 3ds showing it does not tick it
+PASS 3ds its spoiler guide still opens on its own
+PASS 3ds a shown step stays shown after a reload
+PASS 3ds finishing a step uncovers the next one
+PASS 3ds search results are never covered
+PASS 3ds tapping a tab plays its console's motion
+PASS 3ds the picked tab keeps its idle motion
+PASS 3ds the 3DS console tab uses the 3DS tap motion
+PASS 3ds no errors
+PASS sw2 the steps you can do now are shown
+PASS sw2 later steps in the open chapter are covered
+PASS sw2 covered text is hidden from screen readers
+PASS sw2 tapping the cover shows the step
+PASS sw2 showing it does not tick it
+PASS sw2 its spoiler guide still opens on its own
+PASS sw2 a shown step stays shown after a reload
+PASS sw2 finishing a step uncovers the next one
+PASS sw2 search results are never covered
+PASS sw2 tapping a tab plays its console's motion
+PASS sw2 the picked tab keeps its idle motion
+PASS sw2 the 3DS console tab uses the 3DS tap motion
+PASS sw2 no errors
+FAILS: []

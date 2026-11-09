@@ -1,0 +1,11 @@
+phone   light  overflow=False areanav=none header=109px
+phone   dark   overflow=False areanav=none header=109px
+tablet  light  overflow=False areanav=none header=143px
+tablet  dark   overflow=False areanav=none header=143px
+laptop  light  overflow=False areanav=flex header=86px
+laptop  dark   overflow=False areanav=flex header=86px
+desktop light  overflow=False areanav=flex header=86px
+desktop dark   overflow=False areanav=flex header=86px
+wide    light  overflow=False areanav=flex header=86px
+wide    dark   overflow=False areanav=flex header=86px
+errors: []

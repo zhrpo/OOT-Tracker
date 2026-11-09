@@ -1,0 +1,604 @@
+{
+ "results": [
+  {
+   "check": "B1 skull/heart/side requirements == source (base + per version)",
+   "result": "PASS",
+   "detail": []
+  },
+  {
+   "check": "B2 item/song requirements == source (base + per version)",
+   "result": "PASS",
+   "detail": []
+  },
+  {
+   "check": "B3 every GATE_V / BOTH_V / BOTH entry reaches the generated data",
+   "result": "PASS",
+   "detail": []
+  },
+  {
+   "check": "B4 every requirement leaf has a label",
+   "result": "PASS",
+   "detail": []
+  },
+  {
+   "check": "B5 no requirement clause is made only of rows missing in the version",
+   "result": "PASS",
+   "detail": []
+  },
+  {
+   "check": "B6 child half of a two-Link row never needs adult-only gear",
+   "result": "PASS",
+   "detail": []
+  },
+  {
+   "check": "B7 version-aware fixpoint: every row and checklist step completable",
+   "result": "PASS",
+   "detail": {
+    "n64": {
+     "rows": 538,
+     "unreachable": []
+    },
+    "3ds": {
+     "rows": 538,
+     "unreachable": []
+    },
+    "sw2": {
+     "rows": 548,
+     "unreachable": []
+    }
+   }
+  },
+  {
+   "check": "B8 every override/requirement table key names an existing row and version",
+   "result": "PASS",
+   "detail": []
+  }
+ ],
+ "info": {
+  "I1_ov_age_overwritten": [
+   {
+    "id": "HP-6",
+    "ver": "sw2",
+    "ov_age": "Child",
+    "final_age": "Both",
+    "overwritten_by": "BOTH_V"
+   },
+   {
+    "id": "HP-7",
+    "ver": "sw2",
+    "ov_age": "Child",
+    "final_age": "Both",
+    "overwritten_by": "BOTH_V"
+   },
+   {
+    "id": "HP-17",
+    "ver": "sw2",
+    "ov_age": "Adult",
+    "final_age": "Both",
+    "overwritten_by": "BOTH_V"
+   }
+  ],
+  "I2_text_tool_not_required": [
+   {
+    "ver": "n64",
+    "id": "KF-1",
+    "word": "Slingshot"
+   },
+   {
+    "ver": "n64",
+    "id": "FT-1",
+    "word": "Hookshot"
+   },
+   {
+    "ver": "n64",
+    "id": "FT-2",
+    "word": "Hookshot"
+   },
+   {
+    "ver": "n64",
+    "id": "FT-3",
+    "word": "Hookshot"
+   },
+   {
+    "ver": "n64",
+    "id": "KAK-5",
+    "word": "Bombchu"
+   },
+   {
+    "ver": "n64",
+    "id": "ST-1",
+    "word": "Lens of Truth"
+   },
+   {
+    "ver": "n64",
+    "id": "ST-2",
+    "word": "Lens of Truth"
+   },
+   {
+    "ver": "n64",
+    "id": "DC-2",
+    "word": "Bomb"
+   },
+   {
+    "ver": "n64",
+    "id": "DC-3",
+    "word": "Bomb"
+   },
+   {
+    "ver": "n64",
+    "id": "ZR-3",
+    "word": "Longshot"
+   },
+   {
+    "ver": "n64",
+    "id": "ZR-4",
+    "word": "Longshot"
+   },
+   {
+    "ver": "n64",
+    "id": "WT-1",
+    "word": "Bomb"
+   },
+   {
+    "ver": "n64",
+    "id": "CL-1",
+    "word": "Magic Bean"
+   },
+   {
+    "ver": "n64",
+    "id": "SP-2",
+    "word": "Bombchu"
+   },
+   {
+    "ver": "n64",
+    "id": "HP-4",
+    "word": "Bombchu"
+   },
+   {
+    "ver": "n64",
+    "id": "HP-5",
+    "word": "Lens of Truth"
+   },
+   {
+    "ver": "n64",
+    "id": "HP-11",
+    "word": "Longshot"
+   },
+   {
+    "ver": "n64",
+    "id": "HP-15",
+    "word": "Longshot"
+   },
+   {
+    "ver": "n64",
+    "id": "HP-16",
+    "word": "Longshot"
+   },
+   {
+    "ver": "n64",
+    "id": "HP-17",
+    "word": "Hover Boots"
+   },
+   {
+    "ver": "n64",
+    "id": "HP-17",
+    "word": "Magic Bean"
+   },
+   {
+    "ver": "n64",
+    "id": "HP-18",
+    "word": "Bomb"
+   },
+   {
+    "ver": "n64",
+    "id": "HP-21",
+    "word": "Boomerang"
+   },
+   {
+    "ver": "n64",
+    "id": "HP-21",
+    "word": "Hover Boots"
+   },
+   {
+    "ver": "n64",
+    "id": "HP-22",
+    "word": "Boomerang"
+   },
+   {
+    "ver": "n64",
+    "id": "HP-22",
+    "word": "Hover Boots"
+   },
+   {
+    "ver": "n64",
+    "id": "HP-27",
+    "word": "Iron Boots"
+   },
+   {
+    "ver": "n64",
+    "id": "HP-33",
+    "word": "Longshot"
+   },
+   {
+    "ver": "3ds",
+    "id": "KF-1",
+    "word": "Slingshot"
+   },
+   {
+    "ver": "3ds",
+    "id": "FT-1",
+    "word": "Hookshot"
+   },
+   {
+    "ver": "3ds",
+    "id": "FT-2",
+    "word": "Hookshot"
+   },
+   {
+    "ver": "3ds",
+    "id": "FT-3",
+    "word": "Hookshot"
+   },
+   {
+    "ver": "3ds",
+    "id": "KAK-5",
+    "word": "Bombchu"
+   },
+   {
+    "ver": "3ds",
+    "id": "ST-1",
+    "word": "Lens of Truth"
+   },
+   {
+    "ver": "3ds",
+    "id": "ST-2",
+    "word": "Lens of Truth"
+   },
+   {
+    "ver": "3ds",
+    "id": "DC-2",
+    "word": "Bomb"
+   },
+   {
+    "ver": "3ds",
+    "id": "DC-3",
+    "word": "Bomb"
+   },
+   {
+    "ver": "3ds",
+    "id": "ZR-3",
+    "word": "Longshot"
+   },
+   {
+    "ver": "3ds",
+    "id": "ZR-4",
+    "word": "Longshot"
+   },
+   {
+    "ver": "3ds",
+    "id": "WT-1",
+    "word": "Bomb"
+   },
+   {
+    "ver": "3ds",
+    "id": "CL-1",
+    "word": "Magic Bean"
+   },
+   {
+    "ver": "3ds",
+    "id": "SP-2",
+    "word": "Bombchu"
+   },
+   {
+    "ver": "3ds",
+    "id": "HP-4",
+    "word": "Bombchu"
+   },
+   {
+    "ver": "3ds",
+    "id": "HP-5",
+    "word": "Lens of Truth"
+   },
+   {
+    "ver": "3ds",
+    "id": "HP-11",
+    "word": "Longshot"
+   },
+   {
+    "ver": "3ds",
+    "id": "HP-15",
+    "word": "Longshot"
+   },
+   {
+    "ver": "3ds",
+    "id": "HP-16",
+    "word": "Longshot"
+   },
+   {
+    "ver": "3ds",
+    "id": "HP-17",
+    "word": "Hover Boots"
+   },
+   {
+    "ver": "3ds",
+    "id": "HP-17",
+    "word": "Magic Bean"
+   },
+   {
+    "ver": "3ds",
+    "id": "HP-18",
+    "word": "Bomb"
+   },
+   {
+    "ver": "3ds",
+    "id": "HP-21",
+    "word": "Boomerang"
+   },
+   {
+    "ver": "3ds",
+    "id": "HP-21",
+    "word": "Hover Boots"
+   },
+   {
+    "ver": "3ds",
+    "id": "HP-22",
+    "word": "Boomerang"
+   },
+   {
+    "ver": "3ds",
+    "id": "HP-22",
+    "word": "Hover Boots"
+   },
+   {
+    "ver": "3ds",
+    "id": "HP-27",
+    "word": "Iron Boots"
+   },
+   {
+    "ver": "3ds",
+    "id": "HP-33",
+    "word": "Longshot"
+   },
+   {
+    "ver": "sw2",
+    "id": "KF-1",
+    "word": "Slingshot"
+   },
+   {
+    "ver": "sw2",
+    "id": "FT-1",
+    "word": "Hookshot"
+   },
+   {
+    "ver": "sw2",
+    "id": "FT-2",
+    "word": "Hookshot"
+   },
+   {
+    "ver": "sw2",
+    "id": "FT-4",
+    "word": "Hookshot"
+   },
+   {
+    "ver": "sw2",
+    "id": "ST-1",
+    "word": "Lens of Truth"
+   },
+   {
+    "ver": "sw2",
+    "id": "ST-2",
+    "word": "Lens of Truth"
+   },
+   {
+    "ver": "sw2",
+    "id": "DC-2",
+    "word": "Bomb"
+   },
+   {
+    "ver": "sw2",
+    "id": "DC-3",
+    "word": "Bomb"
+   },
+   {
+    "ver": "sw2",
+    "id": "ZR-1",
+    "word": "Magic Bean"
+   },
+   {
+    "ver": "sw2",
+    "id": "ZR-3",
+    "word": "Longshot"
+   },
+   {
+    "ver": "sw2",
+    "id": "ZR-4",
+    "word": "Longshot"
+   },
+   {
+    "ver": "sw2",
+    "id": "CL-1",
+    "word": "Magic Bean"
+   },
+   {
+    "ver": "sw2",
+    "id": "SP-2",
+    "word": "Bombchu"
+   },
+   {
+    "ver": "sw2",
+    "id": "HP-4",
+    "word": "Bombchu"
+   },
+   {
+    "ver": "sw2",
+    "id": "HP-5",
+    "word": "Lens of Truth"
+   },
+   {
+    "ver": "sw2",
+    "id": "HP-10",
+    "word": "Hookshot"
+   },
+   {
+    "ver": "sw2",
+    "id": "HP-11",
+    "word": "Hookshot"
+   },
+   {
+    "ver": "sw2",
+    "id": "HP-11",
+    "word": "Longshot"
+   },
+   {
+    "ver": "sw2",
+    "id": "HP-15",
+    "word": "Longshot"
+   },
+   {
+    "ver": "sw2",
+    "id": "HP-16",
+    "word": "Longshot"
+   },
+   {
+    "ver": "sw2",
+    "id": "HP-18",
+    "word": "Bomb"
+   },
+   {
+    "ver": "sw2",
+    "id": "HP-21",
+    "word": "Hover Boots"
+   },
+   {
+    "ver": "sw2",
+    "id": "HP-22",
+    "word": "Hover Boots"
+   },
+   {
+    "ver": "sw2",
+    "id": "HP-27",
+    "word": "Iron Boots"
+   },
+   {
+    "ver": "sw2",
+    "id": "HP-33",
+    "word": "Longshot"
+   }
+  ],
+  "I2_count_by_version": {
+   "n64": 28,
+   "3ds": 28,
+   "sw2": 25
+  },
+  "I3_time_counts": {
+   "n64": {
+    "main": {
+     "Any": 39,
+     "Day": 1
+    },
+    "skull": {
+     "Night": 32,
+     "Any": 68
+    },
+    "heart": {
+     "Any": 30,
+     "Night": 3,
+     "Day": 3
+    },
+    "side": {
+     "Any": 30,
+     "Day": 8,
+     "Night": 3,
+     "Mixed": 2
+    },
+    "items": {
+     "Any": 72,
+     "Night": 1,
+     "Day": 3
+    }
+   },
+   "3ds": {
+    "main": {
+     "Any": 39,
+     "Day": 1
+    },
+    "skull": {
+     "Night": 32,
+     "Any": 68
+    },
+    "heart": {
+     "Any": 30,
+     "Night": 3,
+     "Day": 3
+    },
+    "side": {
+     "Any": 30,
+     "Day": 8,
+     "Night": 3,
+     "Mixed": 2
+    },
+    "items": {
+     "Any": 72,
+     "Night": 1,
+     "Day": 3
+    }
+   },
+   "sw2": {
+    "main": {
+     "Any": 39,
+     "Day": 1
+    },
+    "skull": {
+     "Night": 32,
+     "Any": 68
+    },
+    "heart": {
+     "Any": 30,
+     "Night": 3,
+     "Day": 3
+    },
+    "side": {
+     "Any": 30,
+     "Day": 9,
+     "Night": 3,
+     "Mixed": 2
+    },
+    "items": {
+     "Any": 72,
+     "Night": 1,
+     "Day": 4
+    }
+   }
+  },
+  "I3_time_differs_by_version": [
+   {
+    "id": "HF-1",
+    "tab": "skull",
+    "times": {
+     "n64": "Any",
+     "3ds": "Any",
+     "sw2": "Night"
+    }
+   },
+   {
+    "id": "HC-1",
+    "tab": "skull",
+    "times": {
+     "n64": "Any",
+     "3ds": "Any",
+     "sw2": "Night"
+    }
+   },
+   {
+    "id": "LH-3",
+    "tab": "skull",
+    "times": {
+     "n64": "Night",
+     "3ds": "Night",
+     "sw2": "Any"
+    }
+   }
+  ],
+  "I3_checklist_steps_with_Mixed_time": []
+ }
+}

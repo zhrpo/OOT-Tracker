@@ -1,0 +1,46 @@
+default hash/ver pressed: Switch 2
+vtabs: ['Nintendo 64', '3DS', 'Switch 2']
+legacy visible: True | 4 checkmarks are not tied to a game yet. They are the pre-ticked Skulltulas or ones you saved before game versions existed here. Which game are they from?
+tabs before claim: Skulls 0 of 100 | Hearts 0 of 36 | Quests 0 of 44
+after claim N64 -> Nintendo 64 | legacy visible: False
+tabs N64: Skulls 4 of 100 | Hearts 0 of 36 | Quests 0 of 43
+DT-1 checked on N64: True
+N64 skull rows: 100
+no panel on N64: 0
+3DS tabs: Skulls 0 of 100 | Hearts 0 of 36 | Quests 0 of 43
+3DS DT-1 checked (should be False): False
+3DS panel lead: 
+3DS hash: #skulltulas-3ds
+3DS side rows: 43 | SQ-17 note: Differs on 3DS. The 20-token prize is the Shard of Agony. It chimes and flashes on screen near secret grottos, so no Rumble Pak is needed.
+3DS SQ-17 reward has Shard: True
+3DS SQ-44 present (False): False
+SW2 side rows: 44 | tab Quests 0 of 44
+SQ-44 present: True | only tag: Only on Switch 2
+SQ-17 reward has Echo Gem: True
+spoiler hidden: Dampé follows you from spot True | in DOM html: False
+spoiler hidden: purple glowing lanterns True | in DOM html: False
+spoiler hidden: about 4 minutes instead of 3 True | in DOM html: False
+spoiler hidden: Follow his prompts to catch it True | in DOM html: False
+SQ-33 revealed has lantern step: True | steps: 5
+N64 SQ-33 (revealed state kept, no lantern step): True | steps: 5
+SW2 heart rows: 36 | HP-31 present (False): False | HP-37: True
+HP-6 vn: Differs on Switch 2. A new password shop (100 rupees) replaces the 10-rupee scrub in the f
+HP-6 where: Hyrule Field: grotto on the castle side of the moat, right of the castle gate, b
+HP-17 tag: 1 (adult tag)
+heart panel summary: Early data. What differs on Switch 2 (9)
+diff rows on sw2 hearts: 15
+sw2 hearts after tick: Hearts 1 of 36
+n64 hearts (should stay 0): Hearts 0 of 36 | HP-6 where: Fenced square near the Lake Hylia entrance, southwest corner
+N64 HP-31 present: True
+zora note on sw2: True
+zora note on n64 (False): False
+after reload ver: Switch 2 | hash: #skulltulas-sw2
+hash #hearts/3ds -> 3DS true
+LS keys sample: ['n64:DT-1', 'n64:DT-2', 'n64:DT-3', 'n64:MKT-1', 'sw2:HP-6', 'sw2:HP-6.1', 'sw2:HP-6.2'] ver: sw2
+DB legacy banner: 4 checkmarks are not tied to a game yet. They are the pre-ticked Skulltulas or ones you saved before game versions existed here. Which game are they from? | sync: Saved to your account
+DB after claim sw2: {'v': 2, 'got': ['sw2:DT-1', 'sw2:HP-3', 'sw2:KF-1', 'sw2:SQ-5'], 'ver': 'sw2', 'tab': 'skull'}
+DB sync: Saved to your account | tabs: Skulls 2 of 100 | Hearts 1 of 36 | Quests 1 of 44
+DB after switching to 3ds ver field: 3ds
+DB reload keeps ver: 3DS | legacy visible: True
+DB sw2 tabs after reload: Skulls 0 of 100 | Hearts 0 of 36 | Quests 0 of 44
+errors: []

@@ -1,0 +1,68 @@
+PASS n64 MQ-4 has earlier steps pending
+PASS n64 prompt shows
+PASS n64 box stays empty while asking
+PASS n64 prompt lists the earlier steps
+PASS n64 prompt closes on No
+PASS n64 No leaves everything unticked
+PASS n64 Esc closes the prompt
+PASS n64 Yes ticks the step and the earlier ones
+PASS n64 no prompt when earlier steps are done
+PASS n64 trading step TR-3 has earlier steps pending
+PASS n64 SQ-17 ticked -> HP-12 ticked (True)
+PASS n64 unticking SQ-17 clears HP-12
+PASS n64 SQ-21 ticked -> HP-4 ticked (False)
+PASS n64 unticking SQ-21 clears HP-4
+PASS n64 SQ-3 ticked -> IT-38 ticked (True)
+PASS n64 unticking SQ-3 clears IT-38
+PASS n64 round trip on HP-12 leaves nothing behind
+PASS n64 round trip on HP-4 leaves nothing behind
+PASS n64 untick via the checkbox reverts everything
+PASS n64 console typeface applied
+PASS n64 no page errors
+PASS 3ds MQ-4 has earlier steps pending
+PASS 3ds prompt shows
+PASS 3ds box stays empty while asking
+PASS 3ds prompt lists the earlier steps
+PASS 3ds prompt closes on No
+PASS 3ds No leaves everything unticked
+PASS 3ds Esc closes the prompt
+PASS 3ds Yes ticks the step and the earlier ones
+PASS 3ds no prompt when earlier steps are done
+PASS 3ds trading step TR-3 has earlier steps pending
+PASS 3ds SQ-17 ticked -> HP-12 ticked (True)
+PASS 3ds unticking SQ-17 clears HP-12
+PASS 3ds SQ-21 ticked -> HP-4 ticked (False)
+PASS 3ds unticking SQ-21 clears HP-4
+PASS 3ds SQ-3 ticked -> IT-38 ticked (True)
+PASS 3ds unticking SQ-3 clears IT-38
+PASS 3ds round trip on HP-12 leaves nothing behind
+PASS 3ds round trip on HP-4 leaves nothing behind
+PASS 3ds untick via the checkbox reverts everything
+PASS 3ds console typeface applied
+PASS 3ds no page errors
+PASS sw2 MQ-4 has earlier steps pending
+PASS sw2 prompt shows
+PASS sw2 box stays empty while asking
+PASS sw2 prompt lists the earlier steps
+PASS sw2 prompt closes on No
+PASS sw2 No leaves everything unticked
+PASS sw2 Esc closes the prompt
+PASS sw2 Yes ticks the step and the earlier ones
+PASS sw2 no prompt when earlier steps are done
+PASS sw2 trading step TR-3 has earlier steps pending
+PASS sw2 SQ-17 ticked -> HP-12 ticked (True)
+PASS sw2 unticking SQ-17 clears HP-12
+PASS sw2 SQ-21 ticked -> HP-4 ticked (False)
+PASS sw2 unticking SQ-21 clears HP-4
+PASS sw2 SQ-3 ticked -> IT-38 ticked (True)
+PASS sw2 unticking SQ-3 clears IT-38
+PASS sw2 round trip on HP-12 leaves nothing behind
+PASS sw2 round trip on HP-4 leaves nothing behind
+PASS sw2 untick via the checkbox reverts everything
+PASS sw2 console typeface applied
+PASS sw2 no page errors
+PASS n64 every card has its moving picture
+PASS 3ds every card has its moving picture
+PASS sw2 every card has its moving picture
+PASS OoT Serif font loads
+FAILS: []

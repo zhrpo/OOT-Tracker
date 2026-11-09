@@ -1,0 +1,37 @@
+PASS first visit lands on Main quest
+PASS first visit is the N64 game
+PASS main tab: the current chapter is open, the rest shut
+PASS last tab restored
+PASS last game restored
+PASS 31 skulltula areas
+PASS every area starts shut
+PASS no rows while shut
+PASS every shut card shows art
+PASS area order
+PASS hearts have no combined areas
+PASS shut card: title bar fills the card exactly
+PASS opening shows rows
+PASS open card keeps its art
+PASS aria-expanded flips
+PASS tap again shuts it
+PASS Expand all opens everything
+PASS Collapse all shuts everything
+PASS search shows matching rows
+PASS jump opens the area
+PASS open title strip stays under the header
+PASS locked row checkbox is disabled
+PASS clicking a locked row does nothing
+PASS a forced tick is refused
+PASS an area you opened stays open when you come back
+PASS unlocks once the sword is ticked
+PASS an unlocked row can be ticked
+PASS an area you opened stays open when you come back
+PASS ticked rows can still be unticked
+PASS Locks off enables every box
+PASS no console errors
+PASS no area falls back to the field scene by accident
+PASS each area name gets its own key
+PASS items groups never fall back to the field scene
+PASS sidequests groups never fall back to the field scene
+PASS hearts groups never fall back to the field scene
+FAILS: []

@@ -1,0 +1,6 @@
+/home/claude/audit/proj/build.py:78: DeprecationWarning: 'maxsplit' is passed as positional argument
+  first = re.split(r"(?<=[a-z\)])\.\s", start.strip(), 1)[0].rstrip(".")
+era-derived both-Link rows: ['BW-1', 'BW-2', 'BW-3', 'HC-2', 'HP-23', 'HP-24', 'IT-18', 'IT-30', 'SP-1', 'SP-2', 'SP-3', 'SQ-26']
+two-Link checklists: 26 ['LW-3', 'HF-2', 'HC-2', 'BW-1', 'BW-2', 'BW-3', 'DMC-2', 'CL-1', 'CL-3', 'SP-1', 'SP-2', 'SP-3', 'HP-6', 'HP-7', 'HP-15', 'HP-17', 'HP-20', 'HP-23', 'HP-24', 'HP-28', 'HP-36', 'SQ-26', 'SQ-12', 'IT-18', 'IT-30', 'IT-69']
+no automatic source: ['IT-6 Hylian Shield', "IT-67 Sun's Song"]
+ok {'main': 40, 'skull': 101, 'heart': 37, 'side': 44, 'items': 77} {'n64': 326, '3ds': 326, 'sw2': 328} {'index.html': 416034, 'themed.html': 477486, 'themed2.html': 743471}

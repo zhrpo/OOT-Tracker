@@ -1,0 +1,17 @@
+/* ----- the game buttons wear their own console's look, whichever game is open ----- */
+.vtab[data-ver="3ds"]{--v1:#ffffff;--v2:#dfe6ed;--vt:#17222d;border:1px solid #b6c2cf;border-radius:12px;background:linear-gradient(var(--v1),var(--v2));color:var(--vt);box-shadow:inset 0 1px 0 #fff,0 2px 0 #a3afbd,0 6px 10px -6px rgba(20,60,110,.45)}
+.vtab[data-ver="3ds"]::before{content:"";position:absolute;inset:0 0 50% 0;z-index:-1;border-radius:11px 11px 40% 40%/11px 11px 14px 14px;background:linear-gradient(rgba(255,255,255,.55),rgba(255,255,255,.05))}
+.vtab[data-ver="3ds"][aria-selected="true"]{--v1:#2b86c8;--v2:#17639f;--vt:#fff;border-color:#0f4a75;box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 2px 0 #0b3a5d,0 6px 12px -6px rgba(15,74,117,.7)}
+.vtab[data-ver="3ds"][aria-selected="true"]::before{background:linear-gradient(rgba(255,255,255,.28),rgba(255,255,255,0))}
+.vtab[data-ver="sw2"]{--vt:#202020;border:0;border-radius:99px;background:#fff;color:var(--vt);box-shadow:0 0 0 1px #d3d3d3,0 6px 12px -8px rgba(0,0,0,.45)}
+.vtab[data-ver="sw2"]::before{content:"";position:absolute;inset:-4px;border-radius:99px;padding:3px;pointer-events:none;opacity:0;transition:opacity .2s;z-index:-1;
+  background:conic-gradient(from var(--ang),#ff5f6d,#ffc371,#8ee27a,#4facfe,#b78cff,#ff5f6d);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
+.vtab[data-ver="sw2"][aria-selected="true"]::before{opacity:1;animation:ring 5s linear infinite}
+@media (prefers-color-scheme: dark){
+  .vtab[data-ver="3ds"]{--v1:#2a3947;--v2:#1c2630;--vt:#e7eef5;border-color:#3a4a5a;box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 2px 0 #0a0f14,0 6px 10px -6px rgba(0,0,0,.6)}
+  .vtab[data-ver="3ds"]::before{background:linear-gradient(rgba(255,255,255,.12),rgba(255,255,255,0))}
+  .vtab[data-ver="3ds"][aria-selected="true"]{--v1:#7cc8f6;--v2:#3d98d4;--vt:#04121c;border-color:#a9defa}
+  .vtab[data-ver="sw2"]{--vt:#f3f3f3;background:#383838;box-shadow:0 0 0 1px #4f4f4f,0 6px 12px -8px rgba(0,0,0,.7)}
+}
+@media (prefers-reduced-motion: reduce){ .vtab::before{animation:none !important} }

@@ -1,0 +1,1336 @@
+[
+ {
+  "scenario": "A normal: tick on A shows on B, untick propagates, survives reload",
+  "model": "M1",
+  "initial": "server empty",
+  "steps": [
+   "A ticks KF-1",
+   "save ok",
+   "snapshot to A,B",
+   "A unticks KF-1",
+   "save ok",
+   "snapshot",
+   "reload both"
+  ],
+  "server_writes": [
+   [
+    "A",
+    [
+     "sw2:KF-1"
+    ]
+   ],
+   [
+    "A",
+    []
+   ]
+  ],
+  "final_server": [],
+  "final_devices": {
+   "A": [],
+   "B": []
+  },
+  "expected_kept": [],
+  "expected_removed": [
+   "KF-1"
+  ],
+  "lost_on_server": [],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [],
+   "B": []
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account",
+   "B": "Saved to your account"
+  },
+  "notes": "KF-1 visible on B after first sync: True",
+  "result": "PASS"
+ },
+ {
+  "scenario": "B1 simultaneous edits, different rows (A lands first)",
+  "model": "M1",
+  "initial": "server empty",
+  "steps": [
+   "A ticks KF-1",
+   "B ticks LW-1",
+   "A save lands",
+   "B save lands",
+   "snapshots to both"
+  ],
+  "server_writes": [
+   [
+    "A",
+    []
+   ],
+   [
+    "B",
+    [
+     "sw2:LW-1"
+    ]
+   ],
+   [
+    "A",
+    [
+     "sw2:KF-1"
+    ]
+   ]
+  ],
+  "final_server": [
+   "KF-1"
+  ],
+  "final_devices": {
+   "A": [
+    "KF-1"
+   ],
+   "B": [
+    "KF-1"
+   ]
+  },
+  "expected_kept": [
+   "KF-1",
+   "LW-1"
+  ],
+  "expected_removed": [],
+  "lost_on_server": [
+   "LW-1"
+  ],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [
+    "LW-1"
+   ],
+   "B": [
+    "LW-1"
+   ]
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account",
+   "B": "Saved to your account"
+  },
+  "notes": "",
+  "result": "FAIL"
+ },
+ {
+  "scenario": "B2 simultaneous edits, different rows (B lands first)",
+  "model": "M1",
+  "initial": "server empty",
+  "steps": [
+   "A ticks KF-1",
+   "B ticks LW-1",
+   "B save lands",
+   "A save lands",
+   "snapshots to both"
+  ],
+  "server_writes": [
+   [
+    "B",
+    []
+   ],
+   [
+    "A",
+    [
+     "sw2:KF-1"
+    ]
+   ],
+   [
+    "B",
+    [
+     "sw2:LW-1"
+    ]
+   ]
+  ],
+  "final_server": [
+   "LW-1"
+  ],
+  "final_devices": {
+   "A": [
+    "LW-1"
+   ],
+   "B": [
+    "LW-1"
+   ]
+  },
+  "expected_kept": [
+   "KF-1",
+   "LW-1"
+  ],
+  "expected_removed": [],
+  "lost_on_server": [
+   "KF-1"
+  ],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [
+    "KF-1"
+   ],
+   "B": [
+    "KF-1"
+   ]
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account",
+   "B": "Saved to your account"
+  },
+  "notes": "",
+  "result": "FAIL"
+ },
+ {
+  "scenario": "B3 overlapping edits: A adds KF-2 while B removes KF-1",
+  "model": "M1",
+  "initial": "server: KF-1",
+  "steps": [
+   "A ticks KF-2",
+   "B unticks KF-1",
+   "A lands",
+   "B lands",
+   "snapshots"
+  ],
+  "server_writes": [
+   [
+    "A",
+    [
+     "sw2:KF-1",
+     "sw2:KF-2"
+    ]
+   ],
+   [
+    "B",
+    [
+     "sw2:KF-1"
+    ]
+   ],
+   [
+    "B",
+    []
+   ]
+  ],
+  "final_server": [],
+  "final_devices": {
+   "A": [],
+   "B": []
+  },
+  "expected_kept": [
+   "KF-2"
+  ],
+  "expected_removed": [
+   "KF-1"
+  ],
+  "lost_on_server": [
+   "KF-2"
+  ],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [
+    "KF-2"
+   ],
+   "B": [
+    "KF-2"
+   ]
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account",
+   "B": "Saved to your account"
+  },
+  "notes": "",
+  "result": "FAIL"
+ },
+ {
+  "scenario": "C offline progress on A, other progress on B, A reconnects",
+  "model": "M1",
+  "initial": "server: MKT-1",
+  "steps": [
+   "A offline ticks KF-1, KF-2",
+   "M1: A saves rejected / M2: queued",
+   "B ticks LW-1 (lands)",
+   "A reconnects",
+   "snapshots"
+  ],
+  "server_writes": [
+   [
+    "B",
+    [
+     "sw2:LW-1",
+     "sw2:MKT-1"
+    ]
+   ]
+  ],
+  "final_server": [
+   "LW-1",
+   "MKT-1"
+  ],
+  "final_devices": {
+   "A": [
+    "LW-1",
+    "MKT-1"
+   ],
+   "B": [
+    "LW-1",
+    "MKT-1"
+   ]
+  },
+  "expected_kept": [
+   "MKT-1",
+   "KF-1",
+   "KF-2",
+   "LW-1"
+  ],
+  "expected_removed": [],
+  "lost_on_server": [
+   "KF-1",
+   "KF-2"
+  ],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [
+    "KF-1",
+    "KF-2"
+   ],
+   "B": [
+    "KF-1",
+    "KF-2"
+   ]
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account",
+   "B": "Saved to your account"
+  },
+  "notes": "",
+  "result": "FAIL"
+ },
+ {
+  "scenario": "D1 failed save, then the page is reopened",
+  "model": "M1",
+  "initial": "server: MKT-1",
+  "steps": [
+   "A ticks KF-1",
+   "save rejected",
+   "status: Saved on this device only",
+   "A reopened",
+   "server snapshot delivered"
+  ],
+  "server_writes": [],
+  "final_server": [
+   "MKT-1"
+  ],
+  "final_devices": {
+   "A": [
+    "MKT-1"
+   ]
+  },
+  "expected_kept": [
+   "MKT-1",
+   "KF-1"
+  ],
+  "expected_removed": [],
+  "lost_on_server": [
+   "KF-1"
+  ],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [
+    "KF-1"
+   ]
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account"
+  },
+  "notes": "local save before reopening: ['KF-1', 'MKT-1']",
+  "result": "FAIL"
+ },
+ {
+  "scenario": "D2 failed save, then an unrelated save succeeds",
+  "model": "M1",
+  "initial": "server empty",
+  "steps": [
+   "A ticks KF-1 (save rejected)",
+   "A ticks KF-2 (save ok)",
+   "snapshots"
+  ],
+  "server_writes": [
+   [
+    "A",
+    [
+     "sw2:KF-1",
+     "sw2:KF-2"
+    ]
+   ]
+  ],
+  "final_server": [
+   "KF-1",
+   "KF-2"
+  ],
+  "final_devices": {
+   "A": [
+    "KF-1",
+    "KF-2"
+   ],
+   "B": [
+    "KF-1",
+    "KF-2"
+   ]
+  },
+  "expected_kept": [
+   "KF-1",
+   "KF-2"
+  ],
+  "expected_removed": [],
+  "lost_on_server": [],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [],
+   "B": []
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account",
+   "B": "Saved to your account"
+  },
+  "notes": "",
+  "result": "PASS"
+ },
+ {
+  "scenario": "D3 failed save on A, then B's update reaches A",
+  "model": "M1",
+  "initial": "server empty",
+  "steps": [
+   "A ticks KF-1 (save rejected)",
+   "B ticks LW-1 (ok)",
+   "snapshot reaches A"
+  ],
+  "server_writes": [
+   [
+    "B",
+    [
+     "sw2:LW-1"
+    ]
+   ]
+  ],
+  "final_server": [
+   "LW-1"
+  ],
+  "final_devices": {
+   "A": [
+    "LW-1"
+   ],
+   "B": [
+    "LW-1"
+   ]
+  },
+  "expected_kept": [
+   "KF-1",
+   "LW-1"
+  ],
+  "expected_removed": [],
+  "lost_on_server": [
+   "KF-1"
+  ],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [
+    "KF-1"
+   ],
+   "B": [
+    "KF-1"
+   ]
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account",
+   "B": "Saved to your account"
+  },
+  "notes": "",
+  "result": "FAIL"
+ },
+ {
+  "scenario": "E1 rapid changes while an earlier save is outstanding",
+  "model": "M1",
+  "initial": "server empty",
+  "steps": [
+   "A ticks KF-1 (save 1 out)",
+   "A ticks KF-2, LW-1",
+   "save 1 lands",
+   "follow-up save(s)"
+  ],
+  "server_writes": [
+   [
+    "A",
+    [
+     "sw2:KF-1"
+    ]
+   ],
+   [
+    "A",
+    [
+     "sw2:KF-1",
+     "sw2:KF-2",
+     "sw2:LW-1"
+    ]
+   ]
+  ],
+  "final_server": [
+   "KF-1",
+   "KF-2",
+   "LW-1"
+  ],
+  "final_devices": {
+   "A": [
+    "KF-1",
+    "KF-2",
+    "LW-1"
+   ],
+   "B": [
+    "KF-1",
+    "KF-2",
+    "LW-1"
+   ]
+  },
+  "expected_kept": [
+   "KF-1",
+   "KF-2",
+   "LW-1"
+  ],
+  "expected_removed": [],
+  "lost_on_server": [],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [],
+   "B": []
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account",
+   "B": "Saved to your account"
+  },
+  "notes": "requests from A: [('A', ['sw2:KF-1']), ('A', ['sw2:KF-1', 'sw2:KF-2', 'sw2:LW-1'])]",
+  "result": "PASS"
+ },
+ {
+  "scenario": "E2 late, out-of-date snapshot followed by another change",
+  "model": "M1",
+  "initial": "server empty",
+  "steps": [
+   "A ticks KF-1 (ok)",
+   "stale snapshot (empty) delivered late",
+   "A ticks KF-2 (ok)"
+  ],
+  "server_writes": [
+   [
+    "A",
+    [
+     "sw2:KF-1"
+    ]
+   ],
+   [
+    "A",
+    [
+     "sw2:KF-2"
+    ]
+   ]
+  ],
+  "final_server": [
+   "KF-2"
+  ],
+  "final_devices": {
+   "A": [
+    "KF-2"
+   ]
+  },
+  "expected_kept": [
+   "KF-1",
+   "KF-2"
+  ],
+  "expected_removed": [],
+  "lost_on_server": [
+   "KF-1"
+  ],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [
+    "KF-1"
+   ]
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account"
+  },
+  "notes": "depends on the provider delivering snapshots out of order, which Firestore-style listeners do not do",
+  "result": "FAIL"
+ },
+ {
+  "scenario": "F1 reload during an outstanding save",
+  "model": "M1",
+  "initial": "server: MKT-1",
+  "steps": [
+   "A ticks KF-1",
+   "save outstanding",
+   "page reloaded",
+   "server snapshot (without KF-1)"
+  ],
+  "server_writes": [],
+  "final_server": [
+   "MKT-1"
+  ],
+  "final_devices": {
+   "A": [
+    "MKT-1"
+   ]
+  },
+  "expected_kept": [
+   "MKT-1",
+   "KF-1"
+  ],
+  "expected_removed": [],
+  "lost_on_server": [
+   "KF-1"
+  ],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [
+    "KF-1"
+   ]
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account"
+  },
+  "notes": "with M2 a real provider might persist the queued write across reloads; the stand-in does not",
+  "result": "FAIL"
+ },
+ {
+  "scenario": "F2 offline-session progress in local storage, reopened online",
+  "model": "M1",
+  "initial": "server: MKT-1; device local: MKT-1, KF-1, KF-2",
+  "steps": [
+   "open page",
+   "server snapshot delivered"
+  ],
+  "server_writes": [],
+  "final_server": [
+   "MKT-1"
+  ],
+  "final_devices": {
+   "A": [
+    "MKT-1"
+   ]
+  },
+  "expected_kept": [
+   "MKT-1",
+   "KF-1",
+   "KF-2"
+  ],
+  "expected_removed": [],
+  "lost_on_server": [
+   "KF-1",
+   "KF-2"
+  ],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [
+    "KF-1",
+    "KF-2"
+   ]
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account"
+  },
+  "notes": "",
+  "result": "FAIL"
+ },
+ {
+  "scenario": "G1 versions stay separate through sync",
+  "model": "M1",
+  "server_keys": [
+   "n64:LW-1",
+   "sw2:KF-1"
+  ],
+  "device_B_keys": [
+   "n64:LW-1",
+   "sw2:KF-1"
+  ],
+  "result": "PASS"
+ },
+ {
+  "scenario": "A normal: tick on A shows on B, untick propagates, survives reload",
+  "model": "M2",
+  "initial": "server empty",
+  "steps": [
+   "A ticks KF-1",
+   "save ok",
+   "snapshot to A,B",
+   "A unticks KF-1",
+   "save ok",
+   "snapshot",
+   "reload both"
+  ],
+  "server_writes": [
+   [
+    "A",
+    [
+     "sw2:KF-1"
+    ]
+   ],
+   [
+    "A",
+    []
+   ]
+  ],
+  "final_server": [],
+  "final_devices": {
+   "A": [],
+   "B": []
+  },
+  "expected_kept": [],
+  "expected_removed": [
+   "KF-1"
+  ],
+  "lost_on_server": [],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [],
+   "B": []
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account",
+   "B": "Saved to your account"
+  },
+  "notes": "KF-1 visible on B after first sync: True",
+  "result": "PASS"
+ },
+ {
+  "scenario": "B1 simultaneous edits, different rows (A lands first)",
+  "model": "M2",
+  "initial": "server empty",
+  "steps": [
+   "A ticks KF-1",
+   "B ticks LW-1",
+   "A save lands",
+   "B save lands",
+   "snapshots to both"
+  ],
+  "server_writes": [
+   [
+    "A",
+    [
+     "sw2:KF-1"
+    ]
+   ],
+   [
+    "B",
+    [
+     "sw2:LW-1"
+    ]
+   ]
+  ],
+  "final_server": [
+   "LW-1"
+  ],
+  "final_devices": {
+   "A": [
+    "LW-1"
+   ],
+   "B": [
+    "LW-1"
+   ]
+  },
+  "expected_kept": [
+   "KF-1",
+   "LW-1"
+  ],
+  "expected_removed": [],
+  "lost_on_server": [
+   "KF-1"
+  ],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [
+    "KF-1"
+   ],
+   "B": [
+    "KF-1"
+   ]
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account",
+   "B": "Saved to your account"
+  },
+  "notes": "",
+  "result": "FAIL"
+ },
+ {
+  "scenario": "B2 simultaneous edits, different rows (B lands first)",
+  "model": "M2",
+  "initial": "server empty",
+  "steps": [
+   "A ticks KF-1",
+   "B ticks LW-1",
+   "B save lands",
+   "A save lands",
+   "snapshots to both"
+  ],
+  "server_writes": [
+   [
+    "B",
+    [
+     "sw2:LW-1"
+    ]
+   ],
+   [
+    "A",
+    [
+     "sw2:KF-1"
+    ]
+   ]
+  ],
+  "final_server": [
+   "KF-1"
+  ],
+  "final_devices": {
+   "A": [
+    "KF-1"
+   ],
+   "B": [
+    "KF-1"
+   ]
+  },
+  "expected_kept": [
+   "KF-1",
+   "LW-1"
+  ],
+  "expected_removed": [],
+  "lost_on_server": [
+   "LW-1"
+  ],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [
+    "LW-1"
+   ],
+   "B": [
+    "LW-1"
+   ]
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account",
+   "B": "Saved to your account"
+  },
+  "notes": "",
+  "result": "FAIL"
+ },
+ {
+  "scenario": "B3 overlapping edits: A adds KF-2 while B removes KF-1",
+  "model": "M2",
+  "initial": "server: KF-1",
+  "steps": [
+   "A ticks KF-2",
+   "B unticks KF-1",
+   "A lands",
+   "B lands",
+   "snapshots"
+  ],
+  "server_writes": [
+   [
+    "A",
+    [
+     "sw2:KF-1"
+    ]
+   ],
+   [
+    "B",
+    []
+   ],
+   [
+    "A",
+    [
+     "sw2:KF-1",
+     "sw2:KF-2"
+    ]
+   ]
+  ],
+  "final_server": [
+   "KF-1",
+   "KF-2"
+  ],
+  "final_devices": {
+   "A": [
+    "KF-1",
+    "KF-2"
+   ],
+   "B": [
+    "KF-1",
+    "KF-2"
+   ]
+  },
+  "expected_kept": [
+   "KF-2"
+  ],
+  "expected_removed": [
+   "KF-1"
+  ],
+  "lost_on_server": [],
+  "wrongly_present": [
+   "KF-1"
+  ],
+  "lost_on_device": {
+   "A": [],
+   "B": []
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account",
+   "B": "Saved to your account"
+  },
+  "notes": "",
+  "result": "FAIL"
+ },
+ {
+  "scenario": "C offline progress on A, other progress on B, A reconnects",
+  "model": "M2",
+  "initial": "server: MKT-1",
+  "steps": [
+   "A offline ticks KF-1, KF-2",
+   "M1: A saves rejected / M2: queued",
+   "B ticks LW-1 (lands)",
+   "A reconnects",
+   "snapshots"
+  ],
+  "server_writes": [
+   [
+    "B",
+    [
+     "sw2:LW-1",
+     "sw2:MKT-1"
+    ]
+   ],
+   [
+    "A",
+    [
+     "sw2:KF-1",
+     "sw2:MKT-1"
+    ]
+   ],
+   [
+    "A",
+    [
+     "sw2:KF-1",
+     "sw2:KF-2",
+     "sw2:MKT-1"
+    ]
+   ]
+  ],
+  "final_server": [
+   "KF-1",
+   "KF-2",
+   "MKT-1"
+  ],
+  "final_devices": {
+   "A": [
+    "KF-1",
+    "KF-2",
+    "MKT-1"
+   ],
+   "B": [
+    "KF-1",
+    "KF-2",
+    "MKT-1"
+   ]
+  },
+  "expected_kept": [
+   "MKT-1",
+   "KF-1",
+   "KF-2",
+   "LW-1"
+  ],
+  "expected_removed": [],
+  "lost_on_server": [
+   "LW-1"
+  ],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [
+    "LW-1"
+   ],
+   "B": [
+    "LW-1"
+   ]
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account",
+   "B": "Saved to your account"
+  },
+  "notes": "",
+  "result": "FAIL"
+ },
+ {
+  "scenario": "D1 failed save, then the page is reopened",
+  "model": "M2",
+  "initial": "server: MKT-1",
+  "steps": [
+   "A ticks KF-1",
+   "save rejected",
+   "status: Saved on this device only",
+   "A reopened",
+   "server snapshot delivered"
+  ],
+  "server_writes": [],
+  "final_server": [
+   "MKT-1"
+  ],
+  "final_devices": {
+   "A": [
+    "MKT-1"
+   ]
+  },
+  "expected_kept": [
+   "MKT-1",
+   "KF-1"
+  ],
+  "expected_removed": [],
+  "lost_on_server": [
+   "KF-1"
+  ],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [
+    "KF-1"
+   ]
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account"
+  },
+  "notes": "local save before reopening: ['KF-1', 'MKT-1']",
+  "result": "FAIL"
+ },
+ {
+  "scenario": "D2 failed save, then an unrelated save succeeds",
+  "model": "M2",
+  "initial": "server empty",
+  "steps": [
+   "A ticks KF-1 (save rejected)",
+   "A ticks KF-2 (save ok)",
+   "snapshots"
+  ],
+  "server_writes": [
+   [
+    "A",
+    [
+     "sw2:KF-1",
+     "sw2:KF-2"
+    ]
+   ]
+  ],
+  "final_server": [
+   "KF-1",
+   "KF-2"
+  ],
+  "final_devices": {
+   "A": [
+    "KF-1",
+    "KF-2"
+   ],
+   "B": [
+    "KF-1",
+    "KF-2"
+   ]
+  },
+  "expected_kept": [
+   "KF-1",
+   "KF-2"
+  ],
+  "expected_removed": [],
+  "lost_on_server": [],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [],
+   "B": []
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account",
+   "B": "Saved to your account"
+  },
+  "notes": "",
+  "result": "PASS"
+ },
+ {
+  "scenario": "D3 failed save on A, then B's update reaches A",
+  "model": "M2",
+  "initial": "server empty",
+  "steps": [
+   "A ticks KF-1 (save rejected)",
+   "B ticks LW-1 (ok)",
+   "snapshot reaches A"
+  ],
+  "server_writes": [
+   [
+    "B",
+    []
+   ],
+   [
+    "B",
+    [
+     "sw2:LW-1"
+    ]
+   ]
+  ],
+  "final_server": [
+   "LW-1"
+  ],
+  "final_devices": {
+   "A": [
+    "LW-1"
+   ],
+   "B": [
+    "LW-1"
+   ]
+  },
+  "expected_kept": [
+   "KF-1",
+   "LW-1"
+  ],
+  "expected_removed": [],
+  "lost_on_server": [
+   "KF-1"
+  ],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [
+    "KF-1"
+   ],
+   "B": [
+    "KF-1"
+   ]
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account",
+   "B": "Saved to your account"
+  },
+  "notes": "",
+  "result": "FAIL"
+ },
+ {
+  "scenario": "E1 rapid changes while an earlier save is outstanding",
+  "model": "M2",
+  "initial": "server empty",
+  "steps": [
+   "A ticks KF-1 (save 1 out)",
+   "A ticks KF-2, LW-1",
+   "save 1 lands",
+   "follow-up save(s)"
+  ],
+  "server_writes": [
+   [
+    "A",
+    [
+     "sw2:KF-1"
+    ]
+   ],
+   [
+    "A",
+    [
+     "sw2:KF-1",
+     "sw2:KF-2",
+     "sw2:LW-1"
+    ]
+   ]
+  ],
+  "final_server": [
+   "KF-1",
+   "KF-2",
+   "LW-1"
+  ],
+  "final_devices": {
+   "A": [
+    "KF-1",
+    "KF-2",
+    "LW-1"
+   ],
+   "B": [
+    "KF-1",
+    "KF-2",
+    "LW-1"
+   ]
+  },
+  "expected_kept": [
+   "KF-1",
+   "KF-2",
+   "LW-1"
+  ],
+  "expected_removed": [],
+  "lost_on_server": [],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [],
+   "B": []
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account",
+   "B": "Saved to your account"
+  },
+  "notes": "requests from A: [('A', ['sw2:KF-1']), ('A', ['sw2:KF-1', 'sw2:KF-2', 'sw2:LW-1'])]",
+  "result": "PASS"
+ },
+ {
+  "scenario": "E2 late, out-of-date snapshot followed by another change",
+  "model": "M2",
+  "initial": "server empty",
+  "steps": [
+   "A ticks KF-1 (ok)",
+   "stale snapshot (empty) delivered late",
+   "A ticks KF-2 (ok)"
+  ],
+  "server_writes": [
+   [
+    "A",
+    [
+     "sw2:KF-1"
+    ]
+   ],
+   [
+    "A",
+    []
+   ],
+   [
+    "A",
+    [
+     "sw2:KF-2"
+    ]
+   ]
+  ],
+  "final_server": [
+   "KF-2"
+  ],
+  "final_devices": {
+   "A": [
+    "KF-2"
+   ]
+  },
+  "expected_kept": [
+   "KF-1",
+   "KF-2"
+  ],
+  "expected_removed": [],
+  "lost_on_server": [
+   "KF-1"
+  ],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [
+    "KF-1"
+   ]
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account"
+  },
+  "notes": "depends on the provider delivering snapshots out of order, which Firestore-style listeners do not do",
+  "result": "FAIL"
+ },
+ {
+  "scenario": "F1 reload during an outstanding save",
+  "model": "M2",
+  "initial": "server: MKT-1",
+  "steps": [
+   "A ticks KF-1",
+   "save outstanding",
+   "page reloaded",
+   "server snapshot (without KF-1)"
+  ],
+  "server_writes": [],
+  "final_server": [
+   "MKT-1"
+  ],
+  "final_devices": {
+   "A": [
+    "MKT-1"
+   ]
+  },
+  "expected_kept": [
+   "MKT-1",
+   "KF-1"
+  ],
+  "expected_removed": [],
+  "lost_on_server": [
+   "KF-1"
+  ],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [
+    "KF-1"
+   ]
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account"
+  },
+  "notes": "with M2 a real provider might persist the queued write across reloads; the stand-in does not",
+  "result": "FAIL"
+ },
+ {
+  "scenario": "F2 offline-session progress in local storage, reopened online",
+  "model": "M2",
+  "initial": "server: MKT-1; device local: MKT-1, KF-1, KF-2",
+  "steps": [
+   "open page",
+   "server snapshot delivered"
+  ],
+  "server_writes": [],
+  "final_server": [
+   "MKT-1"
+  ],
+  "final_devices": {
+   "A": [
+    "MKT-1"
+   ]
+  },
+  "expected_kept": [
+   "MKT-1",
+   "KF-1",
+   "KF-2"
+  ],
+  "expected_removed": [],
+  "lost_on_server": [
+   "KF-1",
+   "KF-2"
+  ],
+  "wrongly_present": [],
+  "lost_on_device": {
+   "A": [
+    "KF-1",
+    "KF-2"
+   ]
+  },
+  "page_errors": [],
+  "status_text": {
+   "A": "Saved to your account"
+  },
+  "notes": "",
+  "result": "FAIL"
+ },
+ {
+  "scenario": "G1 versions stay separate through sync",
+  "model": "M2",
+  "server_keys": [
+   "n64:LW-1",
+   "sw2:KF-1"
+  ],
+  "device_B_keys": [
+   "n64:LW-1",
+   "sw2:KF-1"
+  ],
+  "result": "PASS"
+ }
+]

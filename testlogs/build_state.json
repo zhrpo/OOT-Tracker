@@ -1,0 +1,4943 @@
+{
+ "KEY2ID": {
+  "sword": "MQ-1",
+  "shield": "MQ-2",
+  "deku": "MQ-3",
+  "ocarina": "MQ-4",
+  "talon": "MQ-5",
+  "zelda": "MQ-6",
+  "saria": "MQ-7",
+  "gate": "MQ-8",
+  "bracelet": "MQ-9",
+  "dodongo": "MQ-10",
+  "zora": "MQ-11",
+  "letter": "MQ-12",
+  "king": "MQ-13",
+  "jabu": "MQ-15",
+  "time": "MQ-16",
+  "ms": "MQ-17",
+  "hookshot": "MQ-18",
+  "storms": "MQ-19",
+  "minuet": "MQ-20",
+  "forest": "MQ-21",
+  "prelude": "MQ-22",
+  "gorontunic": "MQ-23",
+  "bolero": "MQ-24",
+  "fire": "MQ-25",
+  "ice": "MQ-26",
+  "zoratunic": "MQ-27",
+  "water": "MQ-28",
+  "nocturne": "MQ-29",
+  "well": "MQ-30",
+  "shadow": "MQ-31",
+  "card": "MQ-32",
+  "colossus": "MQ-33",
+  "spiritchild": "MQ-34",
+  "spirit": "MQ-35",
+  "firearrows": "MQ-36",
+  "lightarrows": "MQ-37",
+  "castle": "MQ-38",
+  "trials": "MQ-39",
+  "tower": "MQ-40",
+  "ganon": "MQ-41",
+  "i_sword": "IT-1",
+  "i_mastersword": "IT-2",
+  "i_knife": "IT-3",
+  "i_biggoron": "IT-4",
+  "i_shield": "IT-5",
+  "i_hylian": "IT-6",
+  "i_mirror": "IT-7",
+  "i_goron": "IT-8",
+  "i_zora": "IT-9",
+  "i_ironboots": "IT-10",
+  "i_hover": "IT-11",
+  "i_sling": "IT-12",
+  "i_bow": "IT-13",
+  "i_boomerang": "IT-14",
+  "i_hammer": "IT-15",
+  "i_hookshot": "IT-16",
+  "i_longshot": "IT-17",
+  "i_lens": "IT-18",
+  "i_fairyoc": "IT-19",
+  "i_ocarinatime": "IT-20",
+  "i_magic": "IT-21",
+  "i_dins": "IT-22",
+  "i_farore": "IT-23",
+  "i_nayru": "IT-24",
+  "i_magic2": "IT-25",
+  "i_firearrows": "IT-26",
+  "i_icearrows": "IT-27",
+  "i_lightarrows": "IT-28",
+  "i_bracelet": "IT-29",
+  "i_silvergaunt": "IT-30",
+  "i_goldgaunt": "IT-31",
+  "i_silverscale": "IT-32",
+  "i_goldscale": "IT-33",
+  "i_defense": "IT-34",
+  "i_bombs": "IT-35",
+  "i_bomb2": "IT-36",
+  "i_bomb3": "IT-37",
+  "i_bullet2": "IT-38",
+  "i_bullet3": "IT-39",
+  "i_quiver2": "IT-40",
+  "i_quiver3": "IT-41",
+  "i_stick2": "IT-42",
+  "i_stick3": "IT-43",
+  "i_nut2": "IT-44",
+  "i_nut3": "IT-45",
+  "i_wallet2": "IT-46",
+  "i_wallet3": "IT-47",
+  "b_ruto": "IT-48",
+  "b_anju": "IT-49",
+  "b_talon": "IT-50",
+  "b_poe": "IT-51",
+  "b_potion": "IT-52",
+  "i_card": "IT-53",
+  "i_agony": "IT-54",
+  "k_emerald": "IT-55",
+  "k_ruby": "IT-56",
+  "k_sapphire": "IT-57",
+  "m_forest": "IT-58",
+  "m_fire": "IT-59",
+  "m_water": "IT-60",
+  "m_shadow": "IT-61",
+  "m_spirit": "IT-62",
+  "m_light": "IT-63",
+  "s_lullaby": "IT-64",
+  "s_saria": "IT-65",
+  "s_epona": "IT-66",
+  "s_sun": "IT-67",
+  "s_time": "IT-68",
+  "s_scare": "IT-69",
+  "s_storms": "IT-70",
+  "s_minuet": "IT-71",
+  "s_bolero": "IT-72",
+  "s_serenade": "IT-73",
+  "s_nocturne": "IT-74",
+  "s_requiem": "IT-75",
+  "s_prelude": "IT-76",
+  "i_spin": "IT-77",
+  "t_keaton": "TR-1",
+  "t_skull": "TR-2",
+  "t_spooky": "TR-3",
+  "t_bunny": "TR-4",
+  "t_truth": "TR-5",
+  "t_pegg": "TR-6",
+  "t_cucco": "TR-7",
+  "t_cojiro": "TR-8",
+  "t_mushroom": "TR-9",
+  "t_potion": "TR-10",
+  "t_saw": "TR-11",
+  "t_sword": "TR-12",
+  "t_prescription": "TR-13",
+  "t_frog": "TR-14",
+  "t_drops": "TR-15",
+  "t_claim": "TR-16",
+  "t_bigsword": "TR-17",
+  "hs10": "TR-18",
+  "hs20": "TR-19",
+  "hs20_3ds": "TR-20",
+  "hs20_sw": "TR-21",
+  "hs30": "TR-22",
+  "hs40": "TR-23",
+  "hs40_sw": "TR-24",
+  "hs50": "TR-25",
+  "hs100": "TR-26",
+  "hs100_sw": "TR-27",
+  "dg_dt_in": "DG-42",
+  "dg_dt_map": "DG-43",
+  "dg_dt_scrub1": "DG-44",
+  "dg_dt_sling": "DG-45",
+  "dg_dt_sling_sw": "DG-46",
+  "dg_dt_ladder": "DG-47",
+  "dg_dt_ladder_sw": "DG-48",
+  "dg_dt_climb": "DG-49",
+  "dg_dt_compass": "DG-50",
+  "dg_dt_drop": "DG-51",
+  "dg_dt_burn": "DG-52",
+  "dg_dt_scrub2": "DG-53",
+  "dg_dt_water": "DG-54",
+  "dg_dt_block": "DG-55",
+  "dg_dt_torches": "DG-56",
+  "dg_dt_floor": "DG-57",
+  "dg_dt_scrubs": "DG-58",
+  "dg_dt_boss": "DG-59",
+  "dg_dc_in": "DG-60",
+  "dg_dc_map": "DG-61",
+  "dg_dc_babies": "DG-62",
+  "dg_dc_statue": "DG-63",
+  "dg_dc_liz1": "DG-64",
+  "dg_dc_dodongos": "DG-65",
+  "dg_dc_stairs": "DG-66",
+  "dg_dc_compass": "DG-67",
+  "dg_dc_upper": "DG-68",
+  "dg_dc_bridge": "DG-69",
+  "dg_dc_liz2": "DG-70",
+  "dg_dc_bombs": "DG-71",
+  "dg_dc_eyes": "DG-72",
+  "dg_dc_skull": "DG-73",
+  "dg_dc_boss": "DG-74",
+  "dg_jj_in": "DG-75",
+  "dg_jj_door": "DG-76",
+  "dg_jj_ruto": "DG-77",
+  "dg_jj_carry": "DG-78",
+  "dg_jj_water": "DG-79",
+  "dg_jj_lift": "DG-80",
+  "dg_jj_switch": "DG-81",
+  "dg_jj_boom": "DG-82",
+  "dg_jj_tents": "DG-83",
+  "dg_jj_hole": "DG-84",
+  "dg_jj_stone": "DG-85",
+  "dg_jj_octo": "DG-86",
+  "dg_jj_up": "DG-87",
+  "dg_jj_boss": "DG-88",
+  "dg_ft_in": "DG-89",
+  "dg_ft_in_sw": "DG-90",
+  "dg_ft_key1": "DG-91",
+  "dg_ft_poes": "DG-92",
+  "dg_ft_stalfos": "DG-93",
+  "dg_ft_blue": "DG-94",
+  "dg_ft_map": "DG-95",
+  "dg_ft_drain": "DG-96",
+  "dg_ft_drain_sw": "DG-97",
+  "dg_ft_well": "DG-98",
+  "dg_ft_blocks": "DG-99",
+  "dg_ft_twist": "DG-100",
+  "dg_ft_bow": "DG-101",
+  "dg_ft_paint": "DG-102",
+  "dg_ft_bkey": "DG-103",
+  "dg_ft_retwist": "DG-104",
+  "dg_ft_frozen": "DG-105",
+  "dg_ft_ceiling": "DG-106",
+  "dg_ft_amy": "DG-107",
+  "dg_ft_meg": "DG-108",
+  "dg_ft_basement": "DG-109",
+  "dg_ft_boss": "DG-110",
+  "dg_fi_in": "DG-111",
+  "dg_fi_goron1": "DG-112",
+  "dg_fi_lava": "DG-113",
+  "dg_fi_goron23": "DG-114",
+  "dg_fi_lift": "DG-115",
+  "dg_fi_slug": "DG-116",
+  "dg_fi_maze": "DG-117",
+  "dg_fi_map": "DG-118",
+  "dg_fi_wall": "DG-119",
+  "dg_fi_upper": "DG-120",
+  "dg_fi_compass": "DG-121",
+  "dg_fi_false": "DG-122",
+  "dg_fi_dancer": "DG-123",
+  "dg_fi_hammer": "DG-124",
+  "dg_fi_down": "DG-125",
+  "dg_fi_pillar": "DG-126",
+  "dg_fi_bkey": "DG-127",
+  "dg_fi_boss": "DG-128",
+  "dg_ic_in": "DG-129",
+  "dg_ic_freeze": "DG-130",
+  "dg_ic_silver1": "DG-131",
+  "dg_ic_bluefire": "DG-132",
+  "dg_ic_map": "DG-133",
+  "dg_ic_compass": "DG-134",
+  "dg_ic_keese": "DG-135",
+  "dg_ic_push": "DG-136",
+  "dg_ic_wolfos": "DG-137",
+  "dg_ic_sheik": "DG-138",
+  "dg_wt_in": "DG-139",
+  "dg_wt_ruto": "DG-140",
+  "dg_wt_map": "DG-141",
+  "dg_wt_key1": "DG-142",
+  "dg_wt_key2": "DG-143",
+  "dg_wt_compass": "DG-144",
+  "dg_wt_mid": "DG-145",
+  "dg_wt_key3": "DG-146",
+  "dg_wt_key4": "DG-147",
+  "dg_wt_high": "DG-148",
+  "dg_wt_dragon": "DG-149",
+  "dg_wt_dark": "DG-150",
+  "dg_wt_long": "DG-151",
+  "dg_wt_key5": "DG-152",
+  "dg_wt_key6": "DG-153",
+  "dg_wt_bkey": "DG-154",
+  "dg_wt_up": "DG-155",
+  "dg_wt_boss": "DG-156",
+  "dg_bw_drain": "DG-157",
+  "dg_bw_in": "DG-158",
+  "dg_bw_lullaby": "DG-159",
+  "dg_bw_hand": "DG-160",
+  "dg_bw_lens": "DG-161",
+  "dg_bw_map": "DG-162",
+  "dg_bw_compass": "DG-163",
+  "dg_bw_keys": "DG-164",
+  "dg_bw_rest": "DG-165",
+  "dg_sh_in": "DG-166",
+  "dg_sh_boots": "DG-167",
+  "dg_sh_map": "DG-168",
+  "dg_sh_beak": "DG-169",
+  "dg_sh_hover": "DG-170",
+  "dg_sh_compass": "DG-171",
+  "dg_sh_scythe": "DG-172",
+  "dg_sh_guill": "DG-173",
+  "dg_sh_platforms": "DG-174",
+  "dg_sh_spikes": "DG-175",
+  "dg_sh_skull": "DG-176",
+  "dg_sh_fans": "DG-177",
+  "dg_sh_boat": "DG-178",
+  "dg_sh_bkey": "DG-179",
+  "dg_sh_bridge": "DG-180",
+  "dg_sh_boss": "DG-181",
+  "dg_spc_nab": "DG-182",
+  "dg_spc_armos": "DG-183",
+  "dg_spc_stalfos": "DG-184",
+  "dg_spc_anubis": "DG-185",
+  "dg_spc_sun": "DG-186",
+  "dg_spc_map": "DG-187",
+  "dg_spc_block": "DG-188",
+  "dg_spc_knuckle": "DG-189",
+  "dg_spc_gauntlets": "DG-190",
+  "dg_spa_block": "DG-191",
+  "dg_spa_compass": "DG-192",
+  "dg_spa_boulders": "DG-193",
+  "dg_spa_snake": "DG-194",
+  "dg_spa_hand": "DG-195",
+  "dg_spa_hammer": "DG-196",
+  "dg_spa_anubis": "DG-197",
+  "dg_spa_knuckle": "DG-198",
+  "dg_spa_mirror": "DG-199",
+  "dg_spa_sunface": "DG-200",
+  "dg_spa_wall": "DG-201",
+  "dg_spa_bkey": "DG-202",
+  "dg_spa_light": "DG-203",
+  "dg_spa_face": "DG-204",
+  "dg_spa_nabooru": "DG-205",
+  "dg_spa_boss": "DG-206",
+  "dg_gc_shadow": "DG-207",
+  "dg_gc_forest": "DG-208",
+  "dg_gc_water": "DG-209",
+  "dg_gc_fire": "DG-210",
+  "dg_gc_light": "DG-211",
+  "dg_gc_spirit": "DG-212",
+  "dg_gt_climb": "DG-213",
+  "dg_gt_dino": "DG-214",
+  "dg_gt_stalfos": "DG-215",
+  "dg_gt_knuckle": "DG-216",
+  "dg_gt_ganondorf": "DG-217",
+  "dg_gt_escape": "DG-218",
+  "dg_gn_ring": "DG-219",
+  "dg_gn_tail": "DG-220",
+  "dg_gn_end": "DG-221"
+ },
+ "STEP_AFTER": {
+  "sword": [],
+  "shield": [],
+  "deku": [
+   "sword",
+   "shield"
+  ],
+  "ocarina": [
+   "deku"
+  ],
+  "talon": [
+   "ocarina"
+  ],
+  "zelda": [
+   "talon"
+  ],
+  "saria": [
+   "zelda"
+  ],
+  "gate": [
+   "zelda"
+  ],
+  "bracelet": [
+   "gate",
+   "saria"
+  ],
+  "dodongo": [
+   "bracelet"
+  ],
+  "zora": [
+   "dodongo",
+   "zelda"
+  ],
+  "letter": [
+   "zora"
+  ],
+  "king": [
+   "letter"
+  ],
+  "jabu": [
+   "king"
+  ],
+  "time": [
+   "deku",
+   "dodongo",
+   "jabu"
+  ],
+  "ms": [
+   "time"
+  ],
+  "hookshot": [
+   "ms"
+  ],
+  "storms": [
+   "ms"
+  ],
+  "minuet": [
+   "ms",
+   "saria"
+  ],
+  "forest": [
+   "minuet",
+   "hookshot"
+  ],
+  "prelude": [
+   "forest"
+  ],
+  "gorontunic": [
+   "ms"
+  ],
+  "bolero": [
+   "gorontunic",
+   "hookshot"
+  ],
+  "fire": [
+   "bolero"
+  ],
+  "ice": [
+   "ms",
+   "king"
+  ],
+  "zoratunic": [
+   "ms",
+   "king"
+  ],
+  "water": [
+   "ice",
+   "zoratunic",
+   "hookshot"
+  ],
+  "nocturne": [
+   "forest",
+   "fire",
+   "water"
+  ],
+  "well": [
+   "storms"
+  ],
+  "shadow": [
+   "nocturne",
+   "well"
+  ],
+  "card": [
+   "ms"
+  ],
+  "colossus": [
+   "card",
+   "water",
+   "well"
+  ],
+  "spiritchild": [
+   "colossus"
+  ],
+  "spirit": [
+   "spiritchild"
+  ],
+  "firearrows": [
+   "water",
+   "forest"
+  ],
+  "lightarrows": [
+   "shadow",
+   "spirit"
+  ],
+  "castle": [
+   "lightarrows"
+  ],
+  "trials": [
+   "castle",
+   "firearrows"
+  ],
+  "tower": [
+   "trials"
+  ],
+  "ganon": [
+   "tower"
+  ]
+ },
+ "MQ": {
+  "sword": "MQ-1",
+  "shield": "MQ-2",
+  "deku": "MQ-3",
+  "ocarina": "MQ-4",
+  "talon": "MQ-5",
+  "zelda": "MQ-6",
+  "saria": "MQ-7",
+  "gate": "MQ-8",
+  "bracelet": "MQ-9",
+  "dodongo": "MQ-10",
+  "zora": "MQ-11",
+  "letter": "MQ-12",
+  "king": "MQ-13",
+  "jabu": "MQ-15",
+  "time": "MQ-16",
+  "ms": "MQ-17",
+  "hookshot": "MQ-18",
+  "storms": "MQ-19",
+  "minuet": "MQ-20",
+  "forest": "MQ-21",
+  "prelude": "MQ-22",
+  "gorontunic": "MQ-23",
+  "bolero": "MQ-24",
+  "fire": "MQ-25",
+  "ice": "MQ-26",
+  "zoratunic": "MQ-27",
+  "water": "MQ-28",
+  "nocturne": "MQ-29",
+  "well": "MQ-30",
+  "shadow": "MQ-31",
+  "card": "MQ-32",
+  "colossus": "MQ-33",
+  "spiritchild": "MQ-34",
+  "spirit": "MQ-35",
+  "firearrows": "MQ-36",
+  "lightarrows": "MQ-37",
+  "castle": "MQ-38",
+  "trials": "MQ-39",
+  "tower": "MQ-40",
+  "ganon": "MQ-41"
+ },
+ "ALIAS": {
+  "oc": "ocarina",
+  "brace": "bracelet",
+  "hook": "hookshot",
+  "ztunic": "zoratunic",
+  "gtunic": "gorontunic",
+  "farrow": "firearrows",
+  "larrow": "lightarrows",
+  "sgaunt": "spiritchild"
+ },
+ "BOTTLE": [
+  "b_ruto",
+  "b_anju",
+  "b_talon",
+  "b_poe",
+  "b_potion"
+ ],
+ "ADULT": "i_mastersword",
+ "GATE": {
+  "KF-1": [
+   "i_sword"
+  ],
+  "KF-2": [
+   "BOTTLE"
+  ],
+  "KF-3": [
+   "i_hookshot"
+  ],
+  "LW-1": [
+   "BOTTLE"
+  ],
+  "LW-2": [
+   "BOTTLE"
+  ],
+  "LW-3": [
+   "SQ-23"
+  ],
+  "SFM-1": [
+   "i_hookshot",
+   "s_saria"
+  ],
+  "HF-1": [
+   "i_bombs",
+   [
+    "i_boomerang",
+    "i_hookshot"
+   ]
+  ],
+  "HF-2": [
+   "i_bombs",
+   "i_dins"
+  ],
+  "HF-3": [
+   "i_bombs"
+  ],
+  "LLR-1": [
+   "i_fairyoc"
+  ],
+  "LLR-2": [
+   "i_fairyoc"
+  ],
+  "LLR-3": [
+   "i_boomerang"
+  ],
+  "LLR-4": [
+   "i_boomerang"
+  ],
+  "MKT-1": [
+   "i_fairyoc"
+  ],
+  "HC-1": [
+   "i_fairyoc"
+  ],
+  "HC-2": [
+   "s_storms",
+   "i_bombs"
+  ],
+  "GAN-1": [
+   "castle",
+   "i_hookshot"
+  ],
+  "KAK-1": [
+   "i_fairyoc"
+  ],
+  "KAK-2": [
+   "i_fairyoc"
+  ],
+  "KAK-3": [
+   "i_fairyoc"
+  ],
+  "KAK-4": [
+   "i_fairyoc"
+  ],
+  "KAK-5": [
+   "i_fairyoc",
+   "i_sling"
+  ],
+  "KAK-6": [
+   "i_hookshot"
+  ],
+  "GY-1": [
+   "i_fairyoc",
+   "BOTTLE"
+  ],
+  "GY-2": [
+   "i_boomerang"
+  ],
+  "DMT-1": [
+   "gate",
+   "BOTTLE"
+  ],
+  "DMT-2": [
+   "i_bombs"
+  ],
+  "DMT-3": [
+   "i_hammer"
+  ],
+  "DMT-4": [
+   "i_hammer"
+  ],
+  "GC-1": [
+   "i_bombs"
+  ],
+  "GC-2": [
+   "i_hookshot"
+  ],
+  "DMC-1": [
+   "i_bombs"
+  ],
+  "DMC-2": [
+   "s_bolero",
+   "BOTTLE"
+  ],
+  "ZR-1": [
+   "i_bombs"
+  ],
+  "ZR-2": [
+   "i_bombs",
+   "i_sling"
+  ],
+  "ZR-3": [
+   "i_hookshot"
+  ],
+  "ZR-4": [
+   "i_hookshot"
+  ],
+  "ZD-1": [
+   "i_hookshot"
+  ],
+  "ZF-1": [
+   "king"
+  ],
+  "ZF-2": [
+   "i_boomerang"
+  ],
+  "ZF-3": [
+   "i_silvergaunt",
+   "i_lens"
+  ],
+  "LH-1": [
+   "i_fairyoc",
+   "BOTTLE"
+  ],
+  "LH-2": [
+   "i_boomerang"
+  ],
+  "LH-3": [
+   "i_fairyoc"
+  ],
+  "LH-4": [
+   "i_zora",
+   "i_ironboots",
+   "i_hookshot"
+  ],
+  "LH-5": [
+   "i_longshot"
+  ],
+  "GV-1": [
+   "i_boomerang"
+  ],
+  "GV-2": [
+   "i_fairyoc",
+   "BOTTLE"
+  ],
+  "GV-3": [
+   "i_longshot"
+  ],
+  "GV-4": [
+   "i_hookshot",
+   [
+    "SQ-28",
+    "i_longshot"
+   ]
+  ],
+  "GF-1": [
+   "i_hookshot",
+   [
+    "SQ-28",
+    "i_longshot"
+   ]
+  ],
+  "GF-2": [
+   "i_longshot",
+   "i_card"
+  ],
+  "HW-1": [
+   "i_card",
+   [
+    "i_hover",
+    "i_longshot"
+   ],
+   "i_lens",
+   "i_hookshot"
+  ],
+  "CL-1": [
+   "s_requiem",
+   "BOTTLE"
+  ],
+  "CL-2": [
+   "s_requiem",
+   "i_longshot"
+  ],
+  "CL-3": [
+   "s_requiem",
+   "SQ-23"
+  ],
+  "DT-1": [
+   "i_sword",
+   "i_shield"
+  ],
+  "DT-2": [
+   "i_sword",
+   "i_shield",
+   "i_sling"
+  ],
+  "DT-3": [
+   "i_sword",
+   "i_shield"
+  ],
+  "DT-4": [
+   "i_bombs",
+   "i_boomerang"
+  ],
+  "DC-1": [
+   "i_bracelet",
+   "i_sling"
+  ],
+  "DC-2": [
+   "i_bracelet"
+  ],
+  "DC-3": [
+   "i_bracelet"
+  ],
+  "DC-4": [
+   "i_bracelet",
+   [
+    "i_boomerang",
+    "i_hookshot"
+   ]
+  ],
+  "DC-5": [
+   "i_bracelet",
+   "i_hookshot",
+   "s_scare"
+  ],
+  "JB-1": [
+   "king",
+   "i_sling"
+  ],
+  "JB-2": [
+   "king",
+   "i_boomerang"
+  ],
+  "JB-3": [
+   "king",
+   "i_boomerang"
+  ],
+  "JB-4": [
+   "king"
+  ],
+  "FT-1": [
+   "@forest"
+  ],
+  "FT-2": [
+   "@forest"
+  ],
+  "FT-3": [
+   "@forest"
+  ],
+  "FT-4": [
+   "@forest"
+  ],
+  "FT-5": [
+   "@forest"
+  ],
+  "FIRE-1": [
+   "@fire"
+  ],
+  "FIRE-2": [
+   "@fire"
+  ],
+  "FIRE-3": [
+   "@fire",
+   "s_scare",
+   "i_hookshot"
+  ],
+  "FIRE-4": [
+   "@fire",
+   "s_scare",
+   "i_hookshot"
+  ],
+  "FIRE-5": [
+   "@fire",
+   "i_hammer"
+  ],
+  "WT-1": [
+   "@water",
+   "i_hookshot"
+  ],
+  "WT-2": [
+   "@water",
+   "i_longshot",
+   "i_ironboots"
+  ],
+  "WT-3": [
+   "@water",
+   "i_longshot"
+  ],
+  "WT-4": [
+   "@water",
+   "i_longshot"
+  ],
+  "WT-5": [
+   "@water",
+   "i_longshot"
+  ],
+  "ST-1": [
+   "@shadow"
+  ],
+  "ST-2": [
+   "@shadow"
+  ],
+  "ST-3": [
+   "@shadow"
+  ],
+  "ST-4": [
+   "@shadow",
+   "s_scare",
+   "i_longshot"
+  ],
+  "ST-5": [
+   "@shadow"
+  ],
+  "SP-1": [
+   "@spiritchild",
+   "i_boomerang"
+  ],
+  "SP-2": [
+   "@spiritchild",
+   "i_boomerang"
+  ],
+  "SP-3": [
+   "@spiritchild"
+  ],
+  "SP-4": [
+   "@spirit"
+  ],
+  "SP-5": [
+   "@spirit",
+   "s_scare",
+   [
+    "i_hookshot",
+    "i_longshot"
+   ]
+  ],
+  "BW-1": [
+   "@well",
+   "i_lens",
+   "i_boomerang"
+  ],
+  "BW-2": [
+   "@well",
+   "i_lens",
+   "i_boomerang"
+  ],
+  "BW-3": [
+   "@well",
+   "i_lens",
+   "i_boomerang"
+  ],
+  "IC-1": [
+   "@ice",
+   "i_hookshot"
+  ],
+  "IC-2": [
+   "@ice",
+   "i_hookshot",
+   "BOTTLE"
+  ],
+  "IC-3": [
+   "@ice",
+   "i_hookshot"
+  ],
+  "HP-1": [
+   "s_saria"
+  ],
+  "HP-2": [
+   "i_fairyoc"
+  ],
+  "HP-3": [
+   "i_fairyoc"
+  ],
+  "HP-4": [
+   "dodongo"
+  ],
+  "HP-5": [
+   "i_fairyoc"
+  ],
+  "HP-6": [
+   "i_bombs"
+  ],
+  "HP-7": [
+   "i_bombs",
+   [
+    "i_goldscale",
+    "i_ironboots"
+   ]
+  ],
+  "HP-8": [
+   "i_fairyoc"
+  ],
+  "HP-9": [
+   "i_fairyoc",
+   [
+    "i_bombs",
+    "i_hookshot"
+   ]
+  ],
+  "HP-10": [
+   [
+    "i_boomerang",
+    "i_hookshot"
+   ]
+  ],
+  "HP-11": [
+   "i_hookshot"
+  ],
+  "HP-12": [
+   "GS:50"
+  ],
+  "HP-13": [
+   "s_sun"
+  ],
+  "HP-14": [
+   "i_fairyoc"
+  ],
+  "HP-15": [
+   [
+    "SQ-23",
+    "i_hookshot"
+   ]
+  ],
+  "HP-16": [
+   "i_hookshot"
+  ],
+  "HP-17": [
+   "i_bracelet"
+  ],
+  "HP-18": [
+   "i_bracelet"
+  ],
+  "HP-19": [
+   "i_bombs"
+  ],
+  "HP-20": [
+   "s_bolero",
+   "SQ-23"
+  ],
+  "HP-37": [
+   "i_bombs"
+  ],
+  "HP-21": [
+   "i_bombs"
+  ],
+  "HP-22": [
+   "i_bombs"
+  ],
+  "HP-23": [
+   "s_storms"
+  ],
+  "HP-24": [
+   "s_storms",
+   "s_lullaby",
+   "s_saria",
+   "s_epona",
+   "s_sun",
+   "s_time"
+  ],
+  "HP-25": [
+   "zora"
+  ],
+  "HP-26": [
+   "i_fairyoc"
+  ],
+  "HP-27": [
+   "i_goldscale"
+  ],
+  "HP-28": [
+   [
+    "SQ-23",
+    "s_scare+i_hookshot"
+   ]
+  ],
+  "HP-29": [
+   "i_hookshot"
+  ],
+  "HP-30": [
+   "i_zora",
+   "i_ironboots"
+  ],
+  "HP-31": [
+   "@ice",
+   "BOTTLE"
+  ],
+  "HP-32": [
+   "i_fairyoc"
+  ],
+  "HP-33": [
+   "i_fairyoc"
+  ],
+  "HP-34": [
+   [
+    "i_longshot",
+    "s_scare+i_hookshot+SQ-28"
+   ]
+  ],
+  "HP-35": [
+   "i_card",
+   "SQ-28",
+   "i_bow"
+  ],
+  "HP-36": [
+   "s_requiem",
+   "SQ-23"
+  ],
+  "SQ-44": [
+   "i_fairyoc"
+  ],
+  "SQ-1": [
+   "s_saria"
+  ],
+  "SQ-2": [
+   "i_fairyoc"
+  ],
+  "SQ-3": [
+   "i_sling"
+  ],
+  "SQ-4": [
+   "i_fairyoc"
+  ],
+  "SQ-5": [
+   "i_fairyoc"
+  ],
+  "SQ-6": [
+   "i_fairyoc"
+  ],
+  "SQ-7": [
+   "i_sling",
+   "i_fairyoc"
+  ],
+  "SQ-8": [
+   "talon"
+  ],
+  "SQ-9": [
+   "talon"
+  ],
+  "SQ-10": [
+   "i_fairyoc"
+  ],
+  "SQ-11": [
+   "i_fairyoc"
+  ],
+  "SQ-12": [
+   "i_fairyoc"
+  ],
+  "SQ-13": [
+   "gate"
+  ],
+  "SQ-14": [
+   "t_keaton"
+  ],
+  "SQ-15": [
+   "t_truth"
+  ],
+  "SQ-16": [
+   "i_fairyoc"
+  ],
+  "SQ-17": [
+   "GS:1"
+  ],
+  "SQ-18": [
+   "i_bombs"
+  ],
+  "SQ-19": [
+   "i_bombs",
+   "s_lullaby"
+  ],
+  "SQ-20": [
+   "i_bombs",
+   "s_lullaby",
+   "i_magic"
+  ],
+  "SQ-21": [
+   "dodongo"
+  ],
+  "SQ-22": [
+   "i_bombs"
+  ],
+  "SQ-23": [
+   "i_bombs"
+  ],
+  "SQ-24": [
+   "zora"
+  ],
+  "SQ-25": [
+   "king",
+   "i_bombs"
+  ],
+  "SQ-26": [
+   "s_lullaby",
+   "s_epona",
+   "s_saria",
+   "s_sun",
+   "s_time",
+   "s_storms"
+  ],
+  "SQ-27": [],
+  "SQ-28": [
+   "s_epona"
+  ],
+  "SQ-29": [],
+  "SQ-30": [
+   "i_bombs"
+  ],
+  "SQ-31": [
+   "i_bombs"
+  ],
+  "SQ-32": [
+   [
+    "water",
+    "s_scare+i_hookshot"
+   ]
+  ],
+  "SQ-33": [
+   "SQ-28",
+   "i_bow",
+   "BOTTLE"
+  ],
+  "SQ-34": [
+   "i_bow"
+  ],
+  "SQ-35": [
+   "SQ-28"
+  ],
+  "SQ-36": [
+   [
+    "SQ-28",
+    "i_longshot"
+   ]
+  ],
+  "SQ-37": [
+   "i_card",
+   "SQ-28",
+   "i_bow"
+  ],
+  "SQ-38": [
+   "i_card",
+   "i_bow",
+   "i_hammer",
+   "i_longshot",
+   "i_ironboots",
+   "i_lens",
+   "s_time"
+  ],
+  "SQ-39": [
+   "SQ-36"
+  ],
+  "SQ-40": [
+   "i_hammer",
+   "i_goron"
+  ],
+  "SQ-41": [
+   "water",
+   "i_bow"
+  ],
+  "SQ-42": [
+   "i_card",
+   [
+    "i_hover",
+    "i_longshot"
+   ],
+   "i_lens",
+   "i_bombs"
+  ],
+  "SQ-43": [
+   "i_goldgaunt"
+  ]
+ },
+ "GATE_V": {
+  "sw2|HP-6": [
+   "i_bombs"
+  ],
+  "sw2|HP-7": [],
+  "sw2|HP-13": [
+   "i_fairyoc"
+  ],
+  "sw2|HP-17": [
+   [
+    "SQ-23",
+    "i_hover"
+   ]
+  ],
+  "sw2|GV-3": [
+   "i_hookshot",
+   [
+    "SQ-28",
+    "i_longshot"
+   ]
+  ],
+  "sw2|SQ-33": [
+   "SQ-28",
+   "BOTTLE"
+  ],
+  "sw2|HF-1": [
+   "i_fairyoc"
+  ],
+  "sw2|FT-3": [
+   "@forest",
+   "s_scare",
+   "i_hookshot"
+  ],
+  "sw2|HF-2": [
+   "i_bombs"
+  ],
+  "sw2|HF-3": [
+   "i_bombs",
+   [
+    "i_boomerang",
+    "i_sling"
+   ]
+  ],
+  "sw2|DC-4": [
+   "i_bracelet",
+   "i_bombs"
+  ],
+  "sw2|LLR-2": [
+   "i_boomerang"
+  ],
+  "sw2|DMT-1": [
+   "i_bracelet",
+   "BOTTLE"
+  ],
+  "sw2|LH-2": [
+   [
+    "i_boomerang",
+    "i_sling"
+   ]
+  ],
+  "sw2|SP-2": [
+   "@spiritchild"
+  ],
+  "sw2|BW-3": [
+   "@well",
+   "i_lens",
+   "i_boomerang"
+  ],
+  "sw2|BW-1": [
+   "@well",
+   "i_lens"
+  ],
+  "sw2|BW-2": [
+   "@well",
+   "i_lens"
+  ],
+  "sw2|DT-3": [
+   "i_sword",
+   "i_shield",
+   "i_sling"
+  ],
+  "sw2|CL-2": [
+   "s_requiem",
+   [
+    "i_hookshot",
+    "i_longshot"
+   ]
+  ],
+  "sw2|ZR-1": [
+   "BOTTLE"
+  ],
+  "sw2|ZR-2": [
+   "i_bombs"
+  ],
+  "sw2|DT-4": [
+   "i_sword",
+   "i_shield",
+   "i_sling"
+  ],
+  "sw2|SP-3": [
+   "@spiritchild",
+   "i_boomerang"
+  ],
+  "sw2|HP-10": [
+   "SQ-27"
+  ],
+  "sw2|HP-11": [
+   "i_fairyoc"
+  ],
+  "sw2|SQ-20": [
+   "i_bombs",
+   "s_lullaby"
+  ],
+  "sw2|WT-1": [
+   "@water",
+   "i_bombs"
+  ],
+  "sw2|WT-3": [
+   "@water",
+   "i_ironboots"
+  ],
+  "sw2|ST-3": [
+   "@shadow",
+   "i_hookshot"
+  ],
+  "sw2|ST-4": [
+   "@shadow",
+   "s_scare",
+   [
+    "i_hookshot",
+    "i_longshot"
+   ]
+  ],
+  "sw2|ST-5": [
+   "@shadow",
+   "i_bombs"
+  ],
+  "sw2|KAK-5": [
+   "i_fairyoc",
+   [
+    "i_boomerang",
+    "i_sling"
+   ]
+  ]
+ },
+ "BOTH": {
+  "LW-3": "Child: plant a Magic Bean in the soil. Adult: ride the sprout up and kill the spider.",
+  "CL-3": "Child: plant a Magic Bean in the soil beside the temple. Adult: ride the sprout to the mound and kill the spider.",
+  "DMC-2": "Adult: learn the Bolero of Fire. Child: warp in with it and release a bottled bug on the soil.",
+  "HP-15": "Child: plant a Magic Bean in the soft soil. Adult: ride the sprout up (or skip the bean with the Hookshot).",
+  "HP-20": "Child: warp in with the Bolero of Fire and plant a Magic Bean. Adult: ride the sprout to the top of the pillar.",
+  "HP-28": "Child: plant a Magic Bean outside the lab, or teach Pierre a song. Adult: ride the sprout, or Hookshot to Pierre.",
+  "HP-36": "Child: warp in with the Requiem of Spirit and plant a Magic Bean. Adult: ride the sprout and jump to the heart.",
+  "SQ-12": "Child first: at Lake Hylia, play Bonooru any eight-note tune of your own (not a song you already know). Adult second: play the same eight notes for him to learn the song. From then on, playing it calls Pierre for the Hookshot.",
+  "IT-69": "Child first: at Lake Hylia, play Bonooru any eight-note tune of your own (not a song you already know). Adult second: play the same eight notes for him to learn the song. From then on, playing it calls Pierre for the Hookshot.",
+  "CL-1": "Adult: learn the Requiem of Spirit at the Colossus. Child: warp back with it and release a bottled bug on the soil."
+ },
+ "BOTH_V": {
+  "sw2|HF-2": "Child first: bomb into the marsh grotto and kill the ordinary Skulltula. Adult second: come back and roll into the crate for the gold one.",
+  "sw2|HP-6": "Adult first: read the Fairy Note by the tree. Child second: buy the Piece of Heart.",
+  "sw2|HP-7": "Adult first: read the Fairy Note beside the chest. Child second: open the chest.",
+  "sw2|HP-17": "Child: plant a Magic Bean outside Dodongo's Cavern. Adult: ride the sprout up."
+ },
+ "LINKS_FINAL": [
+  [
+   "HP-1",
+   "SQ-1",
+   "full"
+  ],
+  [
+   "HP-2",
+   "SQ-2",
+   "full"
+  ],
+  [
+   "HP-3",
+   "SQ-6",
+   "full"
+  ],
+  [
+   "HP-4",
+   "SQ-21",
+   "up"
+  ],
+  [
+   "HP-5",
+   "SQ-16",
+   "full"
+  ],
+  [
+   "HP-14",
+   "SQ-11",
+   "full"
+  ],
+  [
+   "HP-16",
+   "SQ-27",
+   "full"
+  ],
+  [
+   "HP-23",
+   "SQ-26",
+   "full"
+  ],
+  [
+   "HP-24",
+   "SQ-26",
+   "full"
+  ],
+  [
+   "HP-26",
+   "SQ-10",
+   "full"
+  ],
+  [
+   "HP-35",
+   "SQ-37",
+   "up"
+  ],
+  [
+   "i_magic",
+   "SQ-19",
+   "full"
+  ],
+  [
+   "i_farore",
+   "SQ-25",
+   "full"
+  ],
+  [
+   "i_nayru",
+   "SQ-42",
+   "full"
+  ],
+  [
+   "i_magic2",
+   "SQ-40",
+   "full"
+  ],
+  [
+   "i_defense",
+   "SQ-43",
+   "full"
+  ],
+  [
+   "i_firearrows",
+   "SQ-41",
+   "full"
+  ],
+  [
+   "i_icearrows",
+   "SQ-38",
+   "full"
+  ],
+  [
+   "i_knife",
+   "SQ-30",
+   "full"
+  ],
+  [
+   "i_biggoron",
+   "SQ-29",
+   "full"
+  ],
+  [
+   "i_card",
+   "SQ-36",
+   "full"
+  ],
+  [
+   "i_hookshot",
+   "SQ-27",
+   "up"
+  ],
+  [
+   "b_anju",
+   "SQ-5",
+   "full"
+  ],
+  [
+   "b_talon",
+   "SQ-9",
+   "full"
+  ],
+  [
+   "b_poe",
+   "SQ-33",
+   "full",
+   [
+    "n64",
+    "3ds"
+   ]
+  ],
+  [
+   "b_poe",
+   "SQ-33",
+   "up",
+   [
+    "sw2"
+   ]
+  ],
+  [
+   "b_potion",
+   "SQ-44",
+   "full"
+  ],
+  [
+   "s_epona",
+   "SQ-8",
+   "full"
+  ],
+  [
+   "s_scare",
+   "SQ-12",
+   "full"
+  ],
+  [
+   "i_silverscale",
+   "SQ-24",
+   "full"
+  ],
+  [
+   "i_goldscale",
+   "SQ-32",
+   "full"
+  ],
+  [
+   "i_goron",
+   "SQ-31",
+   "full"
+  ],
+  [
+   "i_wallet2",
+   "hs10",
+   "full"
+  ],
+  [
+   "i_wallet3",
+   "hs30",
+   "full"
+  ],
+  [
+   "HP-12",
+   "hs50",
+   "full"
+  ],
+  [
+   "i_agony",
+   "hs20",
+   "full",
+   [
+    "n64"
+   ]
+  ],
+  [
+   "i_agony",
+   "hs20_3ds",
+   "full",
+   [
+    "3ds"
+   ]
+  ],
+  [
+   "i_agony",
+   "hs20_sw",
+   "full",
+   [
+    "sw2"
+   ]
+  ],
+  [
+   "i_dins",
+   "SQ-20",
+   "full",
+   [
+    "n64",
+    "3ds"
+   ]
+  ],
+  [
+   "i_spin",
+   "SQ-19",
+   "full",
+   [
+    "n64",
+    "3ds"
+   ]
+  ],
+  [
+   "i_dins",
+   "SQ-19",
+   "full",
+   [
+    "sw2"
+   ]
+  ],
+  [
+   "i_spin",
+   "SQ-20",
+   "full",
+   [
+    "sw2"
+   ]
+  ]
+ ],
+ "OV": {
+  "HP-6": {
+   "sw2": {
+    "where": "Hyrule Field: grotto on the castle side of the moat, right of the castle gate, beside a single tree",
+    "how": "Two visits. Bomb the cracked ground by the tree to open the grotto. As adult, read the Fairy Note by the tree to learn the shop password (Sell somethin', will ya?). The shop is sold out then. As child, go back, say the password to the Business Scrub and buy the Piece of Heart for 100 rupees",
+    "age": "Child",
+    "time": "Any",
+    "note": "A new password shop (100 rupees) replaces the 10-rupee scrub in the fenced square."
+   }
+  },
+  "HP-7": {
+   "sw2": {
+    "where": "Hyrule Field, Gerudo side: chest under the red rock outcropping near Gerudo Valley",
+    "how": "Two visits. As adult the chest is empty and a Fairy Note beside it explains why, so read it. Then come back as child and open the chest for the Piece of Heart. It stays locked as child until you have read the note",
+    "age": "Child",
+    "time": "Any",
+    "note": "A time-travel chest replaces the underwater grotto piece."
+   }
+  },
+  "HP-13": {
+   "sw2": {
+    "where": "Kakariko Graveyard: the top-right grave near the graveyard entrance, no longer the flowered one by the Royal Family's Tomb",
+    "how": "Pull the grave, drop into the grotto below and take the Piece of Heart. The Sun's Song is not needed. Guides disagree on which grave: one says top-right near the entrance, one says two graves to the left of the old spot, and one says near the tomb. Try those in turn",
+    "note": "A different grave than on N64, and the Sun's Song is not needed. Guides disagree on which grave it is; RPG Site's Switch 2 walkthrough says the south-east set of graves, at night."
+   }
+  },
+  "HP-14": {
+   "sw2": {
+    "note": "Quicker on Switch 2 (Damp\u00e9 follows you). Same 10-rupee price."
+   }
+  },
+  "HP-17": {
+   "sw2": {
+    "how": "Plant a Magic Bean in the soil outside Dodongo's Cavern as child, then ride the sprout up as adult. The child backflip shortcut no longer works",
+    "age": "Adult",
+    "note": "The early child shortcut is gone, so this one needs the bean and adult Link."
+   }
+  },
+  "HP-19": {
+   "sw2": {
+    "note": "Guides disagree on the route: one says Hookshot from Biggoron's entrance as adult, another says climb down the nets as either age."
+   }
+  },
+  "HP-21": {
+   "sw2": {
+    "how": "Carry the Cucco from the river entrance and flutter-jump to the vines halfway up, then climb them. Up there, get a second Cucco: Nintendo Life says bomb the cracked hole south of the highest island, Respec says it comes out of the fairy grotto in the long grass. Glide from that ledge to the pillar. Adult can still use the bean plant or the Hover Boots",
+    "note": "Changed on Switch 2: the old Cucco jump from the start no longer reaches it. Respec, RPG Site and Nintendo Life all route it through the vines and a second Cucco, but disagree on where that Cucco comes from."
+   }
+  },
+  "HP-33": {
+   "sw2": {
+    "where": "Chest on the cliff platform left of the bridge",
+    "how": "Child: grab the Cucco near the bridge and glide southwest to the platform, then open the chest. Adult: drop to the Hyrule Field side ledge and Longshot over",
+    "note": "Respec and Nintendo Life describe a chest here on Switch 2 (N64 and 3DS used a crate; RPG Site just says a ledge)."
+   }
+  },
+  "HP-26": {
+   "3ds": {
+    "note": "The pond is redesigned on 3DS and the Sinking Lure sits in a different spot (one wiki reports this and flags it as unverified)."
+   },
+   "sw2": {
+    "how": "Catch a fish 55 cm or longer, which hangs out by the log, and have the owner measure it",
+    "note": "Switch 2 measures fish in centimeters: 55 cm for the child prize (Respec)."
+   }
+  },
+  "HP-31": {
+   "sw2": {
+    "hide": true
+   }
+  },
+  "HP-37": {
+   "sw2": {
+    "note": "The Ice Cavern piece is gone on Switch 2 (HP-31 is not shown). This scrub takes its place. Three guides agree on the scrub."
+   }
+  },
+  "HF-1": {
+   "sw2": {
+    "where": "Lone tree at the end of the stream in the southeast of the field, near the Kokiri Forest entrance",
+    "how": "Roll into the tree so the spider drops, then kill it. Go at night: RPG Site says it only appears then. If you do not find it, check the other lone trees nearby, since guides differ on which one",
+    "age": "Child",
+    "time": "Night",
+    "note": "The N64 grotto near the Kakariko entrance is not listed in any Switch 2 guide. This tree is (VGC, RPG Site, Game8, TheGamer)."
+   }
+  },
+  "HF-2": {
+   "sw2": {
+    "where": "Cracked rock circle in the marsh in the southeast, near the Lake Hylia entrance",
+    "how": "Bomb the cracked spot in the marsh and drop into the grotto. As child, kill the ordinary Skulltula inside. Come back as adult and roll into the wooden crate: the Gold Skulltula comes out",
+    "age": "Both",
+    "time": "Any",
+    "note": "Needs both ages: the gold one only appears for adult Link after the ordinary Skulltula was killed there as child (VGC, Nintendo Life, Nintendo Insider, Vertical Slice). Replaces the web-covered grotto near Gerudo Valley."
+   }
+  },
+  "HF-3": {
+   "sw2": {
+    "where": "Grotto just west of the Lake Hylia entrance, beside the Deku Scrub woods and a rock wall",
+    "how": "Bomb the cracked spot, drop into the grotto and kill the spider with the Slingshot or the Boomerang. Use the Boomerang to fetch the token if it ends up out of reach",
+    "age": "Child",
+    "time": "Any",
+    "note": "A third field token that does not exist on N64. Four guides list it. Game8 and VGC say child Link, and Game8 lists the Boomerang, so the Slingshot or Boomerang is shown."
+   }
+  },
+  "KF-3": {
+   "sw2": {
+    "where": "Back side of the roof of the House of the Twins (the house with that name sign, not the one by the sword training area)",
+    "how": "As adult at night, walk round behind the House of the Twins and look up at the back of the roof. Hookshot the spider and the token comes back with the hook",
+    "note": "Confirmed in play: it sits on the back side of the roof. Easy to mix up with the house by the sword training area, so check the name sign."
+   }
+  },
+  "FT-3": {
+   "sw2": {
+    "where": "Northeast room with the stream (the east courtyard), up high above where you push the block down for the shortcut",
+    "how": "After pushing the block down to make the shortcut, turn round and look up: Navi marks a Pierre spot. Play the Scarecrow's Song and Hookshot up to Pierre, then kill the spider",
+    "note": "Needs the Scarecrow's Song on Switch 2 (VGC; confirmed in play). On N64/3DS you Hookshot the small chest on the island instead."
+   }
+  },
+  "FT-4": {
+   "sw2": {
+    "note": "VGC and RPG Site agree on the balcony after the Boss Key.",
+    "where": "Balcony in the northwest room where you land after the Boss Key drop, on the wall by the south ledge",
+    "how": "After taking the Boss Key you drop out onto the balcony. Go to the south ledge and Hookshot the spider on the wall"
+   }
+  },
+  "GV-3": {
+   "sw2": {
+    "how": "Hookshot or Longshot the spider. Cross the broken bridge with Epona first if the carpenters have not fixed it yet",
+    "note": "Confirmed in play: the regular Hookshot reaches it on Switch 2 (N64 needs the Longshot)."
+   }
+  },
+  "LLR-1": {
+   "sw2": {
+    "note": "Any time of day. VGC and RPG Site give no time for the tree (they mark the other two ranch spiders as night only), and FinalBoss lists it as any time."
+   }
+  },
+  "LLR-2": {
+   "sw2": {
+    "where": "Ruined tower in the southwest corner of the ranch, on the vines overhead",
+    "how": "Look up inside the tower, kill the spider and fetch the token with the Boomerang",
+    "age": "Child",
+    "time": "Night",
+    "note": "Four guides list only three tokens at the ranch. VGC calls this one the ruined building by the northeast edge of the racetrack, so look at the ruins at either end if you do not see it."
+   }
+  },
+  "LLR-4": {
+   "sw2": {
+    "hide": true
+   }
+  },
+  "ZR-1": {
+   "sw2": {
+    "where": "Soft soil in the bug hole beside the Magic Bean seller's spot",
+    "how": "Release a bottled bug next to the soil",
+    "age": "Child",
+    "time": "Any",
+    "note": "New on Switch 2: this hole had no token on N64. Game8 puts the soil before the boulders that need bombs, so no bombs are listed. The river-start tree token is not listed in any Switch 2 guide."
+   }
+  },
+  "ZR-2": {
+   "sw2": {
+    "where": "Far upstream end of the river, on the lowest level behind the stone column",
+    "how": "Drop down to the lowest level at the end of the river, look behind the column and kill the spider. VGC also says night, but other guides disagree, so come back after dark if it is missing",
+    "age": "Child",
+    "time": "Night",
+    "note": "Moved from the waterfall ladder on N64. VGC also puts it at the very bottom of the river near the Zora's Domain waterfall."
+   }
+  },
+  "LH-3": {
+   "sw2": {
+    "where": "Hidden cave in the cliffs at the far south of the lake",
+    "how": "Swim south past the islands to the cliffs and squeeze through the hole guarded by a Blue Tektite. Kill the spider inside",
+    "age": "Child",
+    "time": "Any",
+    "note": "Replaces the two-pillar island token. Four guides list this cave or tunnel instead and none lists the island. VGC puts it on a small outcrop at the southwest point of the lake."
+   }
+  },
+  "HC-1": {
+   "sw2": {
+    "time": "Night",
+    "nlabel": "Night first",
+    "note": "VGC lists this tree as night only, beside the hedge maze near the vine-covered building. N64 guides disagree, so try it at night first.",
+    "where": "Castle grounds, the tree beside the hedge maze and the vine-covered building (right of the vines up to the castle)"
+   }
+  },
+  "SQ-10": {
+   "3ds": {
+    "note": "The pond is redesigned on 3DS and the Sinking Lure sits in a different spot (one wiki reports this and flags it as unverified)."
+   },
+   "sw2": {
+    "guide": [
+     "Pay the owner and take a rod.",
+     "Catch a fish 55 cm (about 10 lb) or bigger.",
+     "Show the catch to the owner for the Heart Piece.",
+     "Do not use the Sinking Lure hidden in the pond. It disqualifies record catches."
+    ],
+    "note": "Guides give the Switch 2 target as 55 cm (Respec) or 10 lb (FinalBoss), so the game may show either unit. The adult target is 65 cm or 13 lb."
+   }
+  },
+  "SQ-32": {
+   "3ds": {
+    "note": "The pond is redesigned on 3DS and the Sinking Lure sits in a different spot (one wiki reports this and flags it as unverified)."
+   },
+   "sw2": {
+    "guide": [
+     "Pay the owner and take a rod.",
+     "Catch a fish over 65 cm (about 13 lb), bigger than the child target.",
+     "Show it to the owner for the Golden Scale.",
+     "Avoid the Sinking Lure, which does not count for record prizes."
+    ],
+    "note": "Guides give the Switch 2 target as 65 cm (Respec) or 13 lb (FinalBoss), so the game may show either unit."
+   }
+  },
+  "SQ-11": {
+   "sw2": {
+    "note": "Quicker on Switch 2. Same 10-rupee price per dig.",
+    "guide_add": [
+     "Switch 2: Damp\u00e9 follows you from spot to spot instead of you following him."
+    ]
+   }
+  },
+  "SQ-29": {
+   "3ds": {
+    "note": "Item descriptions tell you where to go next and the map marks the spot."
+   },
+   "sw2": {
+    "note": "One timed step gives you about a minute longer than on N64 (details in the spoiler guide).",
+    "guide_add": [
+     "Switch 2: the Odd Mushroom timer is about 4 minutes instead of 3, and you cannot Ocarina-warp while it runs."
+    ]
+   }
+  },
+  "SQ-13": {
+   "sw2": {
+    "note": "Adult Link can also wear masks on Switch 2. One guide reports a change to how one sale pays out (in the spoiler guide).",
+    "guide_add": [
+     "Switch 2 (Game8 only, unconfirmed): the Running Man pays a Gold Rupee for the Bunny Hood instead of filling your wallet, and you can talk to him during the day."
+    ]
+   }
+  },
+  "SQ-33": {
+   "sw2": {
+    "reward": "An Empty Bottle at 500 points (5 Big Poes), then a Gold Rupee worth 200 at 1,000 points (all 10). Each Big Poe pays 30 rupees and 100 points",
+    "note": "Changed on Switch 2: the bottle now comes at 500 points instead of 1,000 (FinalBoss, GrindNStrat), and the Fairy Bow is not needed (confirmed in play).",
+    "avail": "As adult, once you have Epona and an empty bottle. No Fairy Bow needed on Switch 2.",
+    "guide": [
+     "Ten Big Poes haunt specific spots in Hyrule Field. Most appear when you ride Epona past the spot.",
+     "Look for purple glowing lanterns and a purple haze around Epona's jump spots. They mark the Big Poe spawn points.",
+     "Defeat each Big Poe and catch its soul in an empty bottle. You do not need the Fairy Bow on Switch 2: the bottle and the Gold Rupee can both be won before the Forest Temple.",
+     "Take each soul to the Poe Collector. At 500 points (five Big Poes) you get the bottle; at 1,000 (all ten) a 200-rupee Gold Rupee.",
+     "Rough hotspots: near the Market signpost, the tree by the ranch entrance, bushes by the river west of the Market, and the fork toward Gerudo Valley. Six of the ten sit near Lon Lon Ranch."
+    ]
+   }
+  },
+  "SQ-44": {
+   "sw2": {
+    "reward": "A new Empty Bottle (new in the Switch 2 remake), then a Red Potion as thanks",
+    "guide": [
+     "Talk to the shopkeeper and agree to help (\"Leave it to me!\"). He hands you an empty bottle.",
+     "Equip the bottle. The loose bug is on the shop floor near the entrance; use the bottle right next to it.",
+     "Talk to him again. He gives you a Red Potion and you keep the bottle."
+    ],
+    "note": "New on Switch 2. FinalBoss and GrindNStrat both describe this errand."
+   }
+  },
+  "DC-4": {
+   "sw2": {
+    "age": "Child",
+    "where": "Second floor, center room, behind a rock",
+    "how": "Bomb the rock in the center room on the second floor and kill the spider behind it",
+    "note": "Game8 lists this one as a bombable rock in the second-floor center room with no Boomerang or Hookshot. The N64 token is the alcove at the top of the giant staircase, which needs the Boomerang or Hookshot, and no Switch 2 guide lists that one."
+   }
+  },
+  "HC-2": {
+   "sw2": {
+    "note": "TheGamer also lists the Boomerang for this one. Game8 does not, so only the Song of Storms and bombs are required. Bring the Boomerang if the token is out of reach.",
+    "where": "Castle grounds, the tree in the corner where Talon was asleep, facing Castle Town"
+   }
+  },
+  "ZR-3": {
+   "sw2": {
+    "note": "VGC lists this Zora's River token as a bean one: plant a Magic Bean as child, then ride the sprout as adult. If the ladder route does not work for you, use a bean."
+   }
+  },
+  "DT-4": {
+   "sw2": {
+    "how": "Burn the web with a Deku Stick, shoot the spider with the Slingshot and climb the vines. Nothing else is needed",
+    "note": "Switch 2 guides (VGC, Game8, TheGamer) need no bombs and no Boomerang here. The N64 route needs both, so this one can be done on your first visit.",
+    "where": "Torch room with the Gohma Larvae, behind the web in the passage on the left"
+   }
+  },
+  "SP-3": {
+   "sw2": {
+    "note": "Game8 and TheGamer list the Boomerang for this one, so it is shown as a requirement."
+   }
+  },
+  "SP-2": {
+   "sw2": {
+    "where": "Big statue room on the second floor, northeast corner by the statue",
+    "how": "Use a Bombchu to open the sun-marked wall, climb up, and kill the spider by the statue",
+    "note": "Game8, RPG Site and TheGamer put this token by the giant statue and need a Bombchu, not the Boomerang. The N64 spot is the Bombchu puzzle room."
+   }
+  },
+  "DMT-1": {
+   "sw2": {
+    "note": "Game8: first blow up the boulder at the Dodongo's Cavern entrance with a Bomb Flower, which needs the Goron's Bracelet. Then the soft soil is reachable."
+   }
+  },
+  "LH-2": {
+   "sw2": {
+    "how": "Kill it with the Boomerang or the Slingshot, then collect the token",
+    "note": "Game8 lists the Boomerang or the Slingshot for this one."
+   }
+  },
+  "BW-3": {
+   "sw2": {
+    "note": "Game8 lists the Boomerang and the Lens of Truth for this one, so the Boomerang is shown as a requirement.",
+    "how": "Find the hidden way east with the Lens of Truth, unlock the door, avoid the invisible pits, and get the spider behind the Like Like. Fetch the token with the Boomerang. You need a Small Key from this dungeon; some are in alcoves you only see with the Lens of Truth (keys are not tracked here)."
+   }
+  },
+  "DT-3": {
+   "sw2": {
+    "note": "Game8 lists the Slingshot for the basement tokens, so it is shown as a requirement."
+   }
+  },
+  "CL-2": {
+   "sw2": {
+    "where": "Wall near the temple entrance, in the northwest corner, with birds nearby",
+    "how": "Climb the wall, then kill the spider and take the token. Game8 lists the Hookshot or Longshot; other guides list no tool",
+    "age": "Adult",
+    "time": "Night",
+    "note": "Four Switch 2 guides (VGC, RPG Site, TheGamer, Game8) put a token on a wall near the temple entrance at night instead of on the palm tree. The N64 palm tree spot is not listed."
+   }
+  },
+  "HP-10": {
+   "sw2": {
+    "age": "Adult",
+    "time": "Any",
+    "how": "Finish Damp\u00e9's first race in the Graveyard (you win the Hookshot) and you come out in the windmill opposite the heart. Jump across the moving platforms and grab it",
+    "note": "On N64 a child can fetch it with the Boomerang. Game8 says Heart Pieces cannot be picked up with the Boomerang or Hookshot on Switch 2, and Respec lists only the adult way, so the child route is not shown."
+   }
+  },
+  "HP-11": {
+   "sw2": {
+    "age": "Either",
+    "how": "Child: carry a Cucco over the grate at the windmill entrance, climb the ladder behind the windmill, flutter-jump to the roof with a second Cucco and talk to the man. Adult: Hookshot or Longshot onto the roof's vines, then talk to the man",
+    "note": "Switch 2 gives child Link a real route with Cuccos (Respec, RPG Site). N64 needed the Hookshot as adult."
+   }
+  },
+  "HP-22": {
+   "sw2": {
+    "how": "Child: carry a Cucco and flutter-jump to the ledges. Adult: use the Hover Boots, or a Cucco as well",
+    "note": "The Boomerang does not pick up Heart Pieces on Switch 2 (Game8), so it is no longer listed here."
+   }
+  },
+  "SQ-19": {
+   "sw2": {
+    "reward": "Magic Meter and Din's Fire",
+    "avail": "After Dodongo's Cavern. You also need Zelda's Lullaby and about 25 rupees.",
+    "guide": [
+     "Reach the summit of Death Mountain Trail.",
+     "Bomb the wall next to the owl, Kaepora Gaebora, to open the fountain.",
+     "Stand on the Triforce mark in the fountain and play Zelda's Lullaby. The fairy asks for a 25-rupee offering and gives you the Magic Meter and Din's Fire."
+    ],
+    "note": "Switch 2 moved Din's Fire here from the Hyrule Castle fairy, and the spin attack moved there (Game8)."
+   }
+  },
+  "SQ-20": {
+   "sw2": {
+    "reward": "Improved Spin Attack",
+    "avail": "After you have bombs and Zelda's Lullaby, and about 50 rupees. Optional on Switch 2.",
+    "guide": [
+     "From the Market, climb the vines on the cliff beside the main path and jump past the gate.",
+     "Head right to the rocky alcove, bomb the boulder and crawl in.",
+     "Stand on the Triforce mark and play Zelda's Lullaby. The fairy asks for a 50-rupee offering and gives you the stronger spin attack."
+    ],
+    "note": "Switch 2 swapped the rewards: this fairy now gives the spin attack, and Din's Fire is at the Death Mountain Trail fairy. You do not need it to finish the game."
+   }
+  },
+  "SQ-25": {
+   "sw2": {
+    "note": "Switch 2: the fairy asks for a 100-rupee offering (Game8)."
+   }
+  },
+  "SQ-40": {
+   "sw2": {
+    "note": "Switch 2: the fairy asks for a 200-rupee offering (Game8)."
+   }
+  },
+  "SQ-42": {
+   "sw2": {
+    "note": "Switch 2: the fairy asks for a 300-rupee offering, and Game8 says you need the Lens of Truth to find the cracked wall (Game8)."
+   }
+  },
+  "SQ-43": {
+   "sw2": {
+    "note": "Switch 2: the fairy asks for a 500-rupee offering (Game8)."
+   }
+  },
+  "KF-2": {
+   "sw2": {
+    "where": "Soft soil behind the Kokiri Shop"
+   }
+  },
+  "DT-1": {
+   "sw2": {
+    "where": "Compass room, reached from the raised platforms (VGC: on the south wall)"
+   }
+  },
+  "FT-2": {
+   "sw2": {
+    "where": "Main hall, by the north door: look left as you reach it, on the back of the wall",
+    "note": "RPG Site: at the north door, look left. VGC: on the back of one of the north walls."
+   }
+  },
+  "KAK-1": {
+   "sw2": {
+    "where": "Lone tree in the middle of the village"
+   }
+  },
+  "KAK-5": {
+   "sw2": {
+    "how": "Kill it with the Boomerang (or the Slingshot), then climb the ladder for the token if it stays up"
+   }
+  },
+  "KAK-6": {
+   "sw2": {
+    "note": "RPG Site words it as behind the southernmost house, reached with the Hookshot; GameWith as its roof, via the House of Skulltula roof. Same house."
+   }
+  },
+  "GV-1": {
+   "sw2": {
+    "where": "Under the first small wooden bridge as you enter the valley"
+   }
+  },
+  "GF-1": {
+   "sw2": {
+    "where": "Outside wall at the far east of the fortress",
+    "note": "Checked against VGC and RPG Site (both Switch 2 guides)."
+   }
+  },
+  "DMT-3": {
+   "sw2": {
+    "where": "Red boulder just outside the Goron City entrance",
+    "note": "VGC and RPG Site both put this hammer boulder at the Goron City entrance, not above Dodongo's Cavern."
+   }
+  },
+  "GC-2": {
+   "sw2": {
+    "note": "RPG Site: top floor, behind the central rock. VGC: head north from the entrance and look up at the ceiling. Check both spots."
+   }
+  },
+  "IC-2": {
+   "sw2": {
+    "where": "End of the east corridor, in the Compass room, on the wall (there is no Piece of Heart here on Switch 2)"
+   }
+  },
+  "IC-3": {
+   "sw2": {
+    "where": "Sliding block room, up high near the entrance (VGC: on the ceiling)"
+   }
+  },
+  "JB-1": {
+   "sw2": {
+    "where": "Room with the water switches and the Dungeon Map chest, on the vines opposite the chest"
+   }
+  },
+  "JB-2": {
+   "sw2": {
+    "where": "Wall of the room you drop into after clearing the tentacles"
+   }
+  },
+  "JB-3": {
+   "sw2": {
+    "where": "A little further along the same path, on the ceiling"
+   }
+  },
+  "WT-1": {
+   "sw2": {
+    "where": "Blue-lit east room (Ruto's room), at the middle water level",
+    "how": "Set the water to the middle level, swim into the blue-lit east room, surface and bomb the cracked wall. The spider is inside",
+    "note": "Replaces the N64 token at the end of the south passage. Checked against VGC and RPG Site (both Switch 2 guides)."
+   }
+  },
+  "WT-3": {
+   "sw2": {
+    "where": "Inside the central pillar, in the basement under the floating block",
+    "how": "With the water at the middle level, sink inside the central pillar with the Iron Boots through the passage below the floating block and follow it to the spider (VGC says the highest level)",
+    "note": "Replaces the N64 token in the falling-platform waterfall room. Checked against VGC and RPG Site (both Switch 2 guides)."
+   }
+  },
+  "ST-3": {
+   "sw2": {
+    "where": "Fan corridor, just past the gap you Hookshot over",
+    "how": "Hookshot across the gap in the fan corridor, then turn round: the spider is behind you",
+    "note": "Replaces the N64 token behind the single giant skull pot. Checked against VGC and RPG Site (both Switch 2 guides)."
+   }
+  },
+  "ST-4": {
+   "sw2": {
+    "how": "At the boat dock, move the block on the left, play the Scarecrow's Song and Hookshot up to Pierre and the spider",
+    "note": "The plain Hookshot is enough on Switch 2 (VGC, RPG Site)."
+   }
+  },
+  "ST-5": {
+   "sw2": {
+    "where": "Far west room with the three skull pots",
+    "how": "Throw a bomb into each of the three skull pots and the spider appears",
+    "note": "Checked against VGC and RPG Site (both Switch 2 guides)."
+   }
+  },
+  "BW-1": {
+   "sw2": {
+    "where": "West locked room in the central area",
+    "how": "Unlock it with a Small Key. VGC says the spider hides in a coffin: burn it with a Deku Stick. You need a Small Key from this dungeon; some are in alcoves you only see with the Lens of Truth (keys are not tracked here).",
+    "note": "VGC and RPG Site both put a token in the west locked room."
+   }
+  },
+  "BW-2": {
+   "sw2": {
+    "note": "Switch 2 guides differ on this one: VGC says a locked room in the central area, RPG Site a door behind the safe path in the Beamos room. Both need the Lens of Truth to find the way.",
+    "how": "Unlock the room and use the Lens of Truth to find the way to the spider. You need a Small Key from this dungeon; some are in alcoves you only see with the Lens of Truth (keys are not tracked here)."
+   }
+  },
+  "HP-8": {
+   "sw2": {
+    "where": "Crumbling stone building in the back (southwest) corner of the ranch",
+    "how": "Move the crates away from the wall and crawl through the gap to the room with the heart",
+    "note": "RPG Site and games.gg both call it the crumbling building in the back/southwest corner."
+   }
+  },
+  "HP-25": {
+   "sw2": {
+    "note": "Din's Fire lights them all at once and is the quick way on Switch 2 (RPG Site, games.gg). A Deku Stick still works if you are fast."
+   }
+  },
+  "SQ-37": {
+   "sw2": {
+    "note": "Switch 2 guides split on the quiver score: GameWith and FinalBoss say 1,500 (as on N64), RPG Site and InGameNews say 1,400. Aim for 1,500 to be safe."
+   }
+  }
+ },
+ "ONLY": {
+  "HF-3": [
+   "sw2"
+  ],
+  "HP-37": [
+   "sw2"
+  ],
+  "SQ-44": [
+   "sw2"
+  ]
+ },
+ "ERA_ROWS": [
+  "BW-1",
+  "BW-2",
+  "BW-3",
+  "HC-2",
+  "HP-23",
+  "HP-24",
+  "IT-18",
+  "IT-30",
+  "SP-1",
+  "SP-2",
+  "SP-3",
+  "SQ-26"
+ ],
+ "AGESTEP_ROWS": [
+  "LW-3",
+  "HF-2",
+  "HC-2",
+  "BW-1",
+  "BW-2",
+  "BW-3",
+  "DMC-2",
+  "CL-1",
+  "CL-3",
+  "SP-1",
+  "SP-2",
+  "SP-3",
+  "HP-6",
+  "HP-7",
+  "HP-15",
+  "HP-17",
+  "HP-20",
+  "HP-23",
+  "HP-24",
+  "HP-28",
+  "HP-36",
+  "SQ-26",
+  "SQ-12",
+  "IT-18",
+  "IT-30",
+  "IT-69"
+ ],
+ "ERA": {
+  "n64|HC-2": [
+   "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one.",
+   [
+    "IT-70"
+   ]
+  ],
+  "n64|BW-1": [
+   "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one.",
+   [
+    "MQ-19"
+   ]
+  ],
+  "n64|BW-2": [
+   "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one.",
+   [
+    "MQ-19"
+   ]
+  ],
+  "n64|BW-3": [
+   "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one.",
+   [
+    "MQ-19"
+   ]
+  ],
+  "n64|SP-1": [
+   "Adult first: learn the Requiem of Spirit (Desert Colossus, once you cross the Haunted Wasteland). Child second: come back as child Link to collect this one.",
+   [
+    "MQ-33"
+   ]
+  ],
+  "n64|SP-2": [
+   "Adult first: learn the Requiem of Spirit (Desert Colossus, once you cross the Haunted Wasteland). Child second: come back as child Link to collect this one.",
+   [
+    "MQ-33"
+   ]
+  ],
+  "n64|SP-3": [
+   "Adult first: learn the Requiem of Spirit (Desert Colossus, once you cross the Haunted Wasteland). Child second: come back as child Link to collect this one.",
+   [
+    "MQ-33"
+   ]
+  ],
+  "n64|HP-23": [
+   "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one.",
+   [
+    "IT-70"
+   ]
+  ],
+  "n64|HP-24": [
+   "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one.",
+   [
+    "IT-70"
+   ]
+  ],
+  "n64|SQ-26": [
+   "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: do this quest as child Link.",
+   [
+    "IT-70"
+   ]
+  ],
+  "n64|IT-18": [
+   "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: you collect this one as child Link.",
+   [
+    "MQ-19"
+   ]
+  ],
+  "n64|IT-30": [
+   "Adult first: learn the Requiem of Spirit (Desert Colossus, once you cross the Haunted Wasteland). Child second: you collect this one as child Link.",
+   [
+    "MQ-33"
+   ]
+  ],
+  "3ds|HC-2": [
+   "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one.",
+   [
+    "IT-70"
+   ]
+  ],
+  "3ds|BW-1": [
+   "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one.",
+   [
+    "MQ-19"
+   ]
+  ],
+  "3ds|BW-2": [
+   "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one.",
+   [
+    "MQ-19"
+   ]
+  ],
+  "3ds|BW-3": [
+   "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one.",
+   [
+    "MQ-19"
+   ]
+  ],
+  "3ds|SP-1": [
+   "Adult first: learn the Requiem of Spirit (Desert Colossus, once you cross the Haunted Wasteland). Child second: come back as child Link to collect this one.",
+   [
+    "MQ-33"
+   ]
+  ],
+  "3ds|SP-2": [
+   "Adult first: learn the Requiem of Spirit (Desert Colossus, once you cross the Haunted Wasteland). Child second: come back as child Link to collect this one.",
+   [
+    "MQ-33"
+   ]
+  ],
+  "3ds|SP-3": [
+   "Adult first: learn the Requiem of Spirit (Desert Colossus, once you cross the Haunted Wasteland). Child second: come back as child Link to collect this one.",
+   [
+    "MQ-33"
+   ]
+  ],
+  "3ds|HP-23": [
+   "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one.",
+   [
+    "IT-70"
+   ]
+  ],
+  "3ds|HP-24": [
+   "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one.",
+   [
+    "IT-70"
+   ]
+  ],
+  "3ds|SQ-26": [
+   "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: do this quest as child Link.",
+   [
+    "IT-70"
+   ]
+  ],
+  "3ds|IT-18": [
+   "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: you collect this one as child Link.",
+   [
+    "MQ-19"
+   ]
+  ],
+  "3ds|IT-30": [
+   "Adult first: learn the Requiem of Spirit (Desert Colossus, once you cross the Haunted Wasteland). Child second: you collect this one as child Link.",
+   [
+    "MQ-33"
+   ]
+  ],
+  "sw2|HC-2": [
+   "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one.",
+   [
+    "IT-70"
+   ]
+  ],
+  "sw2|BW-1": [
+   "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one.",
+   [
+    "MQ-19"
+   ]
+  ],
+  "sw2|BW-2": [
+   "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one.",
+   [
+    "MQ-19"
+   ]
+  ],
+  "sw2|BW-3": [
+   "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one.",
+   [
+    "MQ-19"
+   ]
+  ],
+  "sw2|SP-1": [
+   "Adult first: learn the Requiem of Spirit (Desert Colossus, once you cross the Haunted Wasteland). Child second: come back as child Link to collect this one.",
+   [
+    "MQ-33"
+   ]
+  ],
+  "sw2|SP-2": [
+   "Adult first: learn the Requiem of Spirit (Desert Colossus, once you cross the Haunted Wasteland). Child second: come back as child Link to collect this one.",
+   [
+    "MQ-33"
+   ]
+  ],
+  "sw2|SP-3": [
+   "Adult first: learn the Requiem of Spirit (Desert Colossus, once you cross the Haunted Wasteland). Child second: come back as child Link to collect this one.",
+   [
+    "MQ-33"
+   ]
+  ],
+  "sw2|HP-23": [
+   "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one.",
+   [
+    "IT-70"
+   ]
+  ],
+  "sw2|HP-24": [
+   "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: come back as child Link to collect this one.",
+   [
+    "IT-70"
+   ]
+  ],
+  "sw2|SQ-26": [
+   "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: do this quest as child Link.",
+   [
+    "IT-70"
+   ]
+  ],
+  "sw2|IT-18": [
+   "Adult first: learn the Song of Storms (Kakariko Village windmill). Child second: you collect this one as child Link.",
+   [
+    "MQ-19"
+   ]
+  ],
+  "sw2|IT-30": [
+   "Adult first: learn the Requiem of Spirit (Desert Colossus, once you cross the Haunted Wasteland). Child second: you collect this one as child Link.",
+   [
+    "MQ-33"
+   ]
+  ]
+ },
+ "ITEMS": [
+  {
+   "key": "i_sword",
+   "id": "IT-1",
+   "name": "Kokiri Sword",
+   "age": "Child",
+   "time": "Any",
+   "req": [],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_mastersword",
+   "id": "IT-2",
+   "name": "Master Sword",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@ms"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_knife",
+   "id": "IT-3",
+   "name": "Giant's Knife",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "dodongo"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_biggoron",
+   "id": "IT-4",
+   "name": "Biggoron's Sword",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "t_claim"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_shield",
+   "id": "IT-5",
+   "name": "Deku Shield",
+   "age": "Child",
+   "time": "Any",
+   "req": [],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_hylian",
+   "id": "IT-6",
+   "name": "Hylian Shield",
+   "age": "Child",
+   "time": "Night",
+   "req": [
+    "oc"
+   ],
+   "v": {
+    "sw2": {
+     "start": "Kakariko Graveyard: the back row of five headstones in the southeast corner, just west of the Royal Family's Tomb. Bazaars also sell it for 80 rupees.",
+     "guide": [
+      "Go at night (the graveyard kid stops you pulling graves by day; the Sun's Song switches to night).",
+      "Pull back the second headstone from the left and drop into the hole.",
+      "A ReDead is inside. Get past it and open the chest at the far end.",
+      "If you would rather buy it, a Bazaar sells it for 80 rupees (60 with the Kakariko guard's discount)."
+     ],
+     "note": "Switch 2 guides agree it is still in the graveyard: GameRant, ScreenRant, Shacknews and GamerHour describe the back-row grave with a ReDead inside."
+    }
+   },
+   "only": null
+  },
+  {
+   "key": "i_mirror",
+   "id": "IT-7",
+   "name": "Mirror Shield",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@spirit"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_goron",
+   "id": "IT-8",
+   "name": "Goron Tunic",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@gorontunic"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_zora",
+   "id": "IT-9",
+   "name": "Zora Tunic",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@zoratunic"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_ironboots",
+   "id": "IT-10",
+   "name": "Iron Boots",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@ice"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_hover",
+   "id": "IT-11",
+   "name": "Hover Boots",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@shadow"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_sling",
+   "id": "IT-12",
+   "name": "Fairy Slingshot",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "@deku"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_bow",
+   "id": "IT-13",
+   "name": "Fairy Bow",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@forest"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_boomerang",
+   "id": "IT-14",
+   "name": "Boomerang",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "@jabu"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_hammer",
+   "id": "IT-15",
+   "name": "Megaton Hammer",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@fire"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_hookshot",
+   "id": "IT-16",
+   "name": "Hookshot",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@hookshot"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_longshot",
+   "id": "IT-17",
+   "name": "Longshot",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@water"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_lens",
+   "id": "IT-18",
+   "name": "Lens of Truth",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "@well"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_fairyoc",
+   "id": "IT-19",
+   "name": "Fairy Ocarina",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "@ocarina"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_ocarinatime",
+   "id": "IT-20",
+   "name": "Ocarina of Time",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "@time"
+   ],
+   "v": {
+    "sw2": {
+     "note": "You keep the Fairy Ocarina as well on Switch 2."
+    }
+   },
+   "only": null
+  },
+  {
+   "key": "i_magic",
+   "id": "IT-21",
+   "name": "Magic Meter",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "i_bombs",
+    "s_lullaby"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_dins",
+   "id": "IT-22",
+   "name": "Din's Fire",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "i_bombs",
+    "s_lullaby",
+    "i_magic"
+   ],
+   "v": {
+    "sw2": {
+     "start": "Great Fairy on Death Mountain Trail, beside the owl near the summit. On Switch 2 it is the same fairy that gives the Magic Meter.",
+     "avail": "After Dodongo's Cavern and Zelda's Lullaby",
+     "guide": [
+      "Bomb the wall next to the owl at the summit, step on the Triforce mark and play Zelda's Lullaby.",
+      "Switch 2: the fairy asks for a rupee offering (25) and gives you Din's Fire together with the Magic Meter."
+     ],
+     "_req": [
+      "i_bombs",
+      "s_lullaby"
+     ],
+     "note": "Switch 2 moved Din's Fire to the Death Mountain Trail fairy. The Hyrule Castle fairy now gives the stronger spin attack instead."
+    }
+   },
+   "only": null
+  },
+  {
+   "key": "i_spin",
+   "id": "IT-77",
+   "name": "Improved Spin Attack",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "i_bombs",
+    "s_lullaby"
+   ],
+   "v": {
+    "sw2": {
+     "start": "Great Fairy on the path to Hyrule Castle. From the Market, climb the vines beside the main path and jump past the gate.",
+     "reward": "A stronger charged spin attack. Optional on Switch 2",
+     "guide": [
+      "From the Market, climb the vines on the cliff beside the main path and jump past the gate.",
+      "Head right to the rocky alcove, bomb the boulder and crawl in.",
+      "Stand on the Triforce mark and play Zelda's Lullaby. Switch 2: the fairy asks for a rupee offering (50)."
+     ],
+     "_req": [
+      "i_bombs",
+      "s_lullaby"
+     ],
+     "note": "On N64 and 3DS the Death Mountain Trail fairy gives this together with the Magic Meter. On Switch 2 the Hyrule Castle fairy gives it, and Din's Fire comes from the Death Mountain Trail fairy."
+    }
+   },
+   "only": null
+  },
+  {
+   "key": "i_farore",
+   "id": "IT-23",
+   "name": "Farore's Wind",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "king",
+    "i_magic"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_nayru",
+   "id": "IT-24",
+   "name": "Nayru's Love",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@colossus",
+    "i_magic"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_magic2",
+   "id": "IT-25",
+   "name": "Double Magic",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "i_hammer",
+    "i_goron",
+    "i_magic"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_firearrows",
+   "id": "IT-26",
+   "name": "Fire Arrows",
+   "age": "Adult",
+   "time": "Day",
+   "req": [
+    "water",
+    "i_bow"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_icearrows",
+   "id": "IT-27",
+   "name": "Ice Arrows",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "i_card",
+    "i_bow",
+    "i_hammer",
+    "i_longshot",
+    "i_ironboots",
+    "i_lens",
+    "s_time"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_lightarrows",
+   "id": "IT-28",
+   "name": "Light Arrows",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@lightarrows"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_bracelet",
+   "id": "IT-29",
+   "name": "Goron's Bracelet",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "@bracelet"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_silvergaunt",
+   "id": "IT-30",
+   "name": "Silver Gauntlets",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "@spiritchild"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_goldgaunt",
+   "id": "IT-31",
+   "name": "Golden Gauntlets",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@trials"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_silverscale",
+   "id": "IT-32",
+   "name": "Silver Scale",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "@letter"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_goldscale",
+   "id": "IT-33",
+   "name": "Golden Scale",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    [
+     "water",
+     "s_scare+i_hookshot"
+    ]
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_defense",
+   "id": "IT-34",
+   "name": "Double Defense",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "i_goldgaunt"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_bombs",
+   "id": "IT-35",
+   "name": "Bomb Bag (holds 20)",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "@dodongo"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_bomb2",
+   "id": "IT-36",
+   "name": "Big Bomb Bag (holds 30)",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "i_bombs"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_bomb3",
+   "id": "IT-37",
+   "name": "Biggest Bomb Bag (holds 40)",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "i_bombs"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_bullet2",
+   "id": "IT-38",
+   "name": "Big Deku Seed Bag (holds 40)",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "i_sling"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_bullet3",
+   "id": "IT-39",
+   "name": "Biggest Deku Seed Bag (holds 50)",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "i_sling"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_quiver2",
+   "id": "IT-40",
+   "name": "Big Quiver (holds 40)",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "i_bow"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_quiver3",
+   "id": "IT-41",
+   "name": "Biggest Quiver (holds 50)",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "i_bow",
+    "i_card",
+    "SQ-28"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_stick2",
+   "id": "IT-42",
+   "name": "Big Deku Stick Bag (holds 20)",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "i_fairyoc"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_stick3",
+   "id": "IT-43",
+   "name": "Biggest Deku Stick Bag (holds 30)",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "i_fairyoc",
+    "t_keaton"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_nut2",
+   "id": "IT-44",
+   "name": "Big Deku Nut Bag (holds 30)",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "i_bombs"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_nut3",
+   "id": "IT-45",
+   "name": "Biggest Deku Nut Bag (holds 40)",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "i_bombs",
+    "t_truth"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_wallet2",
+   "id": "IT-46",
+   "name": "Adult's Wallet (holds 200)",
+   "age": "Either",
+   "time": "Any",
+   "req": [
+    "GS:10"
+   ],
+   "v": {
+    "sw2": {
+     "name": "Adult's Wallet (holds 500)",
+     "reward": "Carry 500 rupees",
+     "note": "Your starting wallet already holds 200 rupees on Switch 2, so the upgrades are bigger. Respec and How To Video Game list 500 here and 1,000 for the Giant's Wallet. RPG Site lists the Adult's Wallet differently, which looks like a copy of the N64 size."
+    }
+   },
+   "only": null
+  },
+  {
+   "key": "i_wallet3",
+   "id": "IT-47",
+   "name": "Giant's Wallet (holds 500)",
+   "age": "Either",
+   "time": "Any",
+   "req": [
+    "GS:30"
+   ],
+   "v": {
+    "sw2": {
+     "name": "Giant's Wallet (holds 1,000)",
+     "reward": "Carry 1,000 rupees",
+     "note": "Your starting wallet already holds 200 rupees on Switch 2, so the upgrades are bigger. Respec and How To Video Game list 500 for the Adult's Wallet and 1,000 here."
+    }
+   },
+   "only": null
+  },
+  {
+   "key": "b_ruto",
+   "id": "IT-48",
+   "name": "Bottle with Ruto's Letter",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "@letter"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "b_anju",
+   "id": "IT-49",
+   "name": "Bottle from the Cucco Lady",
+   "age": "Child",
+   "time": "Day",
+   "req": [
+    "oc"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "b_talon",
+   "id": "IT-50",
+   "name": "Bottle of milk from Talon",
+   "age": "Child",
+   "time": "Day",
+   "req": [
+    "talon"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "b_poe",
+   "id": "IT-51",
+   "name": "Bottle from the Poe Collector",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "SQ-33"
+   ],
+   "v": {
+    "sw2": {
+     "_req": [
+      "SQ-28",
+      [
+       "b_ruto",
+       "b_anju",
+       "b_talon",
+       "b_potion"
+      ]
+     ],
+     "guide": [
+      "Bring him five Big Poes (500 points). The other five earn a Gold Rupee."
+     ]
+    }
+   },
+   "only": null
+  },
+  {
+   "key": "b_potion",
+   "id": "IT-52",
+   "name": "Bottle from the Potion Shop",
+   "age": "Child",
+   "time": "Day",
+   "req": [
+    "oc"
+   ],
+   "v": null,
+   "only": [
+    "sw2"
+   ]
+  },
+  {
+   "key": "i_card",
+   "id": "IT-53",
+   "name": "Gerudo's Membership Card",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@card",
+    [
+     "SQ-28",
+     "i_longshot"
+    ]
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "i_agony",
+   "id": "IT-54",
+   "name": "Stone of Agony",
+   "age": "Either",
+   "time": "Any",
+   "req": [
+    "GS:20"
+   ],
+   "v": {
+    "3ds": {
+     "name": "Shard of Agony",
+     "reward": "Shows hidden grottos nearby. It chimes and flashes on screen, so no Rumble Pak is needed",
+     "guide": [
+      "Collect 20 tokens and talk to the villager."
+     ]
+    },
+    "sw2": {
+     "name": "Echo Gem",
+     "reward": "Replaces the Stone of Agony. You equip it from the menu and it chimes and glows near Gold Skulltulas and hidden grottos",
+     "guide": [
+      "Collect 20 tokens and talk to the villager."
+     ]
+    }
+   },
+   "only": null
+  },
+  {
+   "key": "k_emerald",
+   "id": "IT-55",
+   "name": "Kokiri's Emerald",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "@deku"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "k_ruby",
+   "id": "IT-56",
+   "name": "Goron's Ruby",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "@dodongo"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "k_sapphire",
+   "id": "IT-57",
+   "name": "Zora's Sapphire",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "@jabu"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "m_forest",
+   "id": "IT-58",
+   "name": "Forest Medallion",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@forest"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "m_fire",
+   "id": "IT-59",
+   "name": "Fire Medallion",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@fire"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "m_water",
+   "id": "IT-60",
+   "name": "Water Medallion",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@water"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "m_shadow",
+   "id": "IT-61",
+   "name": "Shadow Medallion",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@shadow"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "m_spirit",
+   "id": "IT-62",
+   "name": "Spirit Medallion",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@spirit"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "m_light",
+   "id": "IT-63",
+   "name": "Light Medallion",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@lightarrows"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "s_lullaby",
+   "id": "IT-64",
+   "name": "Zelda's Lullaby",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "@zelda"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "s_saria",
+   "id": "IT-65",
+   "name": "Saria's Song",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "@saria"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "s_epona",
+   "id": "IT-66",
+   "name": "Epona's Song",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "talon"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "s_sun",
+   "id": "IT-67",
+   "name": "Sun's Song",
+   "age": "Either",
+   "time": "Any",
+   "req": [
+    "zelda"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "s_time",
+   "id": "IT-68",
+   "name": "Song of Time",
+   "age": "Child",
+   "time": "Any",
+   "req": [
+    "@time"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "s_scare",
+   "id": "IT-69",
+   "name": "Scarecrow's Song",
+   "age": "Either",
+   "time": "Any",
+   "req": [
+    "ocarina"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "s_storms",
+   "id": "IT-70",
+   "name": "Song of Storms",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@storms"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "s_minuet",
+   "id": "IT-71",
+   "name": "Minuet of Forest",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@minuet"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "s_bolero",
+   "id": "IT-72",
+   "name": "Bolero of Fire",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@bolero"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "s_serenade",
+   "id": "IT-73",
+   "name": "Serenade of Water",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@ice"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "s_nocturne",
+   "id": "IT-74",
+   "name": "Nocturne of Shadow",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@nocturne"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "s_requiem",
+   "id": "IT-75",
+   "name": "Requiem of Spirit",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@colossus"
+   ],
+   "v": null,
+   "only": null
+  },
+  {
+   "key": "s_prelude",
+   "id": "IT-76",
+   "name": "Prelude of Light",
+   "age": "Adult",
+   "time": "Any",
+   "req": [
+    "@prelude"
+   ],
+   "v": null,
+   "only": null
+  }
+ ],
+ "STEPS": [
+  {
+   "key": "sword",
+   "id": "MQ-1",
+   "after": [],
+   "gives": [
+    "i_sword"
+   ],
+   "needs": [],
+   "age": "Child",
+   "v": null
+  },
+  {
+   "key": "shield",
+   "id": "MQ-2",
+   "after": [],
+   "gives": [
+    "i_shield"
+   ],
+   "needs": [],
+   "age": "Child",
+   "v": null
+  },
+  {
+   "key": "deku",
+   "id": "MQ-3",
+   "after": [
+    "sword",
+    "shield"
+   ],
+   "gives": [
+    "i_sling",
+    "k_emerald"
+   ],
+   "needs": [],
+   "age": "Child",
+   "v": null
+  },
+  {
+   "key": "ocarina",
+   "id": "MQ-4",
+   "after": [
+    "deku"
+   ],
+   "gives": [
+    "i_fairyoc"
+   ],
+   "needs": [],
+   "age": "Child",
+   "v": null
+  },
+  {
+   "key": "talon",
+   "id": "MQ-5",
+   "after": [
+    "ocarina"
+   ],
+   "gives": [],
+   "needs": [],
+   "age": "Child",
+   "v": null
+  },
+  {
+   "key": "zelda",
+   "id": "MQ-6",
+   "after": [
+    "talon"
+   ],
+   "gives": [
+    "s_lullaby"
+   ],
+   "needs": [],
+   "age": "Child",
+   "v": null
+  },
+  {
+   "key": "saria",
+   "id": "MQ-7",
+   "after": [
+    "zelda"
+   ],
+   "gives": [
+    "s_saria"
+   ],
+   "needs": [],
+   "age": "Child",
+   "v": null
+  },
+  {
+   "key": "gate",
+   "id": "MQ-8",
+   "after": [
+    "zelda"
+   ],
+   "gives": [],
+   "needs": [],
+   "age": "Child",
+   "v": null
+  },
+  {
+   "key": "bracelet",
+   "id": "MQ-9",
+   "after": [
+    "gate",
+    "saria"
+   ],
+   "gives": [
+    "i_bracelet"
+   ],
+   "needs": [],
+   "age": "Child",
+   "v": null
+  },
+  {
+   "key": "dodongo",
+   "id": "MQ-10",
+   "after": [
+    "bracelet"
+   ],
+   "gives": [
+    "i_bombs",
+    "k_ruby"
+   ],
+   "needs": [],
+   "age": "Child",
+   "v": null
+  },
+  {
+   "key": "zora",
+   "id": "MQ-11",
+   "after": [
+    "dodongo",
+    "zelda"
+   ],
+   "gives": [],
+   "needs": [],
+   "age": "Child",
+   "v": null
+  },
+  {
+   "key": "letter",
+   "id": "MQ-12",
+   "after": [
+    "zora"
+   ],
+   "gives": [
+    "i_silverscale",
+    "b_ruto"
+   ],
+   "needs": [],
+   "age": "Child",
+   "v": null
+  },
+  {
+   "key": "king",
+   "id": "MQ-13",
+   "after": [
+    "letter"
+   ],
+   "gives": [],
+   "needs": [],
+   "age": "Child",
+   "v": null
+  },
+  {
+   "key": "jabu",
+   "id": "MQ-15",
+   "after": [
+    "king"
+   ],
+   "gives": [
+    "i_boomerang",
+    "k_sapphire"
+   ],
+   "needs": [],
+   "age": "Child",
+   "v": null
+  },
+  {
+   "key": "time",
+   "id": "MQ-16",
+   "after": [
+    "deku",
+    "dodongo",
+    "jabu"
+   ],
+   "gives": [
+    "s_time",
+    "i_ocarinatime"
+   ],
+   "needs": [],
+   "age": "Child",
+   "v": null
+  },
+  {
+   "key": "ms",
+   "id": "MQ-17",
+   "after": [
+    "time"
+   ],
+   "gives": [
+    "i_mastersword"
+   ],
+   "needs": [],
+   "age": "Child",
+   "v": null
+  },
+  {
+   "key": "hookshot",
+   "id": "MQ-18",
+   "after": [
+    "ms"
+   ],
+   "gives": [
+    "i_hookshot"
+   ],
+   "needs": [],
+   "age": "Adult",
+   "v": null
+  },
+  {
+   "key": "storms",
+   "id": "MQ-19",
+   "after": [
+    "ms"
+   ],
+   "gives": [
+    "s_storms"
+   ],
+   "needs": [],
+   "age": "Adult",
+   "v": null
+  },
+  {
+   "key": "minuet",
+   "id": "MQ-20",
+   "after": [
+    "ms",
+    "saria"
+   ],
+   "gives": [
+    "s_minuet"
+   ],
+   "needs": [],
+   "age": "Adult",
+   "v": null
+  },
+  {
+   "key": "forest",
+   "id": "MQ-21",
+   "after": [
+    "minuet",
+    "hookshot"
+   ],
+   "gives": [
+    "i_bow",
+    "m_forest"
+   ],
+   "needs": [],
+   "age": "Adult",
+   "v": {
+    "sw2": {
+     "start": "Sacred Forest Meadow. Hookshot the target above the temple door.",
+     "guide": [
+      "Hookshot the target above the front door (Switch 2 swapped the old tree branch for a target), then go through the door.",
+      "This is the first dungeon with Small Keys and a Boss Key. The Fairy Bow is inside.",
+      "Boss: Phantom Ganon. Shoot or reflect his energy balls, then slash him when he is revealed.",
+      "Saria becomes the Sage of Forest and gives you the Forest Medallion. On Switch 2 there are new cutscenes and a lift in the northwest room."
+     ],
+     "note": "The entrance changed: there is now a Hookshot target above the door instead of the tree branch (FinalBoss)."
+    }
+   }
+  },
+  {
+   "key": "prelude",
+   "id": "MQ-22",
+   "after": [
+    "forest"
+   ],
+   "gives": [
+    "s_prelude"
+   ],
+   "needs": [],
+   "age": "Adult",
+   "v": null
+  },
+  {
+   "key": "gorontunic",
+   "id": "MQ-23",
+   "after": [
+    "ms"
+   ],
+   "gives": [
+    "i_goron"
+   ],
+   "needs": [],
+   "age": "Adult",
+   "v": null
+  },
+  {
+   "key": "bolero",
+   "id": "MQ-24",
+   "after": [
+    "gorontunic",
+    "hookshot"
+   ],
+   "gives": [
+    "s_bolero"
+   ],
+   "needs": [],
+   "age": "Adult",
+   "v": null
+  },
+  {
+   "key": "fire",
+   "id": "MQ-25",
+   "after": [
+    "bolero"
+   ],
+   "gives": [
+    "i_hammer",
+    "m_fire"
+   ],
+   "needs": [],
+   "age": "Adult",
+   "v": null
+  },
+  {
+   "key": "ice",
+   "id": "MQ-26",
+   "after": [
+    "ms",
+    "king"
+   ],
+   "gives": [
+    "i_ironboots",
+    "s_serenade"
+   ],
+   "needs": [],
+   "age": "Adult",
+   "v": null
+  },
+  {
+   "key": "zoratunic",
+   "id": "MQ-27",
+   "after": [
+    "ms",
+    "king"
+   ],
+   "gives": [
+    "i_zora"
+   ],
+   "needs": [],
+   "age": "Adult",
+   "v": null
+  },
+  {
+   "key": "water",
+   "id": "MQ-28",
+   "after": [
+    "ice",
+    "zoratunic",
+    "hookshot"
+   ],
+   "gives": [
+    "i_longshot",
+    "m_water"
+   ],
+   "needs": [],
+   "age": "Adult",
+   "v": null
+  },
+  {
+   "key": "nocturne",
+   "id": "MQ-29",
+   "after": [
+    "forest",
+    "fire",
+    "water"
+   ],
+   "gives": [
+    "s_nocturne"
+   ],
+   "needs": [],
+   "age": "Adult",
+   "v": null
+  },
+  {
+   "key": "well",
+   "id": "MQ-30",
+   "after": [
+    "storms"
+   ],
+   "gives": [
+    "i_lens"
+   ],
+   "needs": [],
+   "age": "Child",
+   "v": null
+  },
+  {
+   "key": "shadow",
+   "id": "MQ-31",
+   "after": [
+    "nocturne",
+    "well"
+   ],
+   "gives": [
+    "i_hover",
+    "m_shadow"
+   ],
+   "needs": [
+    "i_magic",
+    "i_dins"
+   ],
+   "age": "Adult",
+   "v": null
+  },
+  {
+   "key": "card",
+   "id": "MQ-32",
+   "after": [
+    "ms"
+   ],
+   "gives": [
+    "i_card",
+    "SQ-36"
+   ],
+   "needs": [],
+   "age": "Adult",
+   "v": null
+  },
+  {
+   "key": "colossus",
+   "id": "MQ-33",
+   "after": [
+    "card",
+    "water",
+    "well"
+   ],
+   "gives": [
+    "s_requiem"
+   ],
+   "needs": [],
+   "age": "Adult",
+   "v": null
+  },
+  {
+   "key": "spiritchild",
+   "id": "MQ-34",
+   "after": [
+    "colossus"
+   ],
+   "gives": [
+    "i_silvergaunt"
+   ],
+   "needs": [],
+   "age": "Child",
+   "v": null
+  },
+  {
+   "key": "spirit",
+   "id": "MQ-35",
+   "after": [
+    "spiritchild"
+   ],
+   "gives": [
+    "i_mirror",
+    "m_spirit"
+   ],
+   "needs": [],
+   "age": "Adult",
+   "v": null
+  },
+  {
+   "key": "firearrows",
+   "id": "MQ-36",
+   "after": [
+    "water",
+    "forest"
+   ],
+   "gives": [
+    "SQ-41"
+   ],
+   "needs": [],
+   "age": "Adult",
+   "v": null
+  },
+  {
+   "key": "lightarrows",
+   "id": "MQ-37",
+   "after": [
+    "shadow",
+    "spirit"
+   ],
+   "gives": [
+    "i_lightarrows",
+    "m_light"
+   ],
+   "needs": [],
+   "age": "Adult",
+   "v": null
+  },
+  {
+   "key": "castle",
+   "id": "MQ-38",
+   "after": [
+    "lightarrows"
+   ],
+   "gives": [],
+   "needs": [],
+   "age": "Adult",
+   "v": null
+  },
+  {
+   "key": "trials",
+   "id": "MQ-39",
+   "after": [
+    "castle",
+    "firearrows"
+   ],
+   "gives": [
+    "i_goldgaunt"
+   ],
+   "needs": [],
+   "age": "Adult",
+   "v": null
+  },
+  {
+   "key": "tower",
+   "id": "MQ-40",
+   "after": [
+    "trials"
+   ],
+   "gives": [],
+   "needs": [],
+   "age": "Adult",
+   "v": null
+  },
+  {
+   "key": "ganon",
+   "id": "MQ-41",
+   "after": [
+    "tower"
+   ],
+   "gives": [],
+   "needs": [],
+   "age": "Adult",
+   "v": null
+  }
+ ],
+ "pristine": {
+  "gate": {
+   "GATE": {
+    "KF-1": [
+     "i_sword"
+    ],
+    "KF-2": [
+     "BOTTLE"
+    ],
+    "KF-3": [
+     "i_hookshot"
+    ],
+    "LW-1": [
+     "BOTTLE"
+    ],
+    "LW-2": [
+     "BOTTLE"
+    ],
+    "LW-3": [
+     "SQ-23"
+    ],
+    "SFM-1": [
+     "i_hookshot",
+     "s_saria"
+    ],
+    "HF-1": [
+     "i_bombs",
+     [
+      "i_boomerang",
+      "i_hookshot"
+     ]
+    ],
+    "HF-2": [
+     "i_bombs",
+     "i_dins"
+    ],
+    "HF-3": [
+     "i_bombs"
+    ],
+    "LLR-1": [
+     "i_fairyoc"
+    ],
+    "LLR-2": [
+     "i_fairyoc"
+    ],
+    "LLR-3": [
+     "i_boomerang"
+    ],
+    "LLR-4": [
+     "i_boomerang"
+    ],
+    "MKT-1": [
+     "i_fairyoc"
+    ],
+    "HC-1": [
+     "i_fairyoc"
+    ],
+    "HC-2": [
+     "s_storms",
+     "i_bombs"
+    ],
+    "GAN-1": [
+     "castle"
+    ],
+    "KAK-1": [
+     "i_fairyoc"
+    ],
+    "KAK-2": [
+     "i_fairyoc"
+    ],
+    "KAK-3": [
+     "i_fairyoc"
+    ],
+    "KAK-4": [
+     "i_fairyoc"
+    ],
+    "KAK-5": [
+     "i_fairyoc"
+    ],
+    "KAK-6": [
+     "i_hookshot"
+    ],
+    "GY-1": [
+     "i_fairyoc",
+     "BOTTLE"
+    ],
+    "GY-2": [
+     "i_boomerang"
+    ],
+    "DMT-1": [
+     "gate",
+     "BOTTLE"
+    ],
+    "DMT-2": [
+     "i_bombs"
+    ],
+    "DMT-3": [
+     "i_hammer"
+    ],
+    "DMT-4": [
+     "i_hammer"
+    ],
+    "GC-1": [
+     "i_bombs"
+    ],
+    "GC-2": [
+     "i_hookshot"
+    ],
+    "DMC-1": [
+     "i_bombs"
+    ],
+    "DMC-2": [
+     "s_bolero",
+     "BOTTLE"
+    ],
+    "ZR-1": [
+     "i_bombs"
+    ],
+    "ZR-2": [
+     "i_bombs"
+    ],
+    "ZR-3": [
+     "i_hookshot"
+    ],
+    "ZR-4": [
+     "i_hookshot"
+    ],
+    "ZD-1": [
+     "i_hookshot"
+    ],
+    "ZF-1": [
+     "king"
+    ],
+    "ZF-2": [
+     "i_boomerang"
+    ],
+    "ZF-3": [
+     "i_silvergaunt",
+     "i_lens"
+    ],
+    "LH-1": [
+     "i_fairyoc",
+     "BOTTLE"
+    ],
+    "LH-2": [
+     "i_boomerang"
+    ],
+    "LH-3": [
+     "i_fairyoc"
+    ],
+    "LH-4": [
+     "i_zora",
+     "i_ironboots",
+     "i_hookshot"
+    ],
+    "LH-5": [
+     "i_longshot"
+    ],
+    "GV-1": [
+     "i_boomerang"
+    ],
+    "GV-2": [
+     "i_fairyoc",
+     "BOTTLE"
+    ],
+    "GV-3": [
+     "i_longshot"
+    ],
+    "GV-4": [
+     "i_hookshot",
+     [
+      "SQ-28",
+      "i_longshot"
+     ]
+    ],
+    "GF-1": [
+     "i_hookshot",
+     [
+      "SQ-28",
+      "i_longshot"
+     ]
+    ],
+    "GF-2": [
+     "i_longshot"
+    ],
+    "HW-1": [
+     "i_card",
+     "i_hover",
+     "i_lens"
+    ],
+    "CL-1": [
+     "s_requiem",
+     "BOTTLE"
+    ],
+    "CL-2": [
+     "s_requiem",
+     "i_longshot"
+    ],
+    "CL-3": [
+     "s_requiem",
+     "SQ-23"
+    ],
+    "DT-1": [
+     "i_sword",
+     "i_shield"
+    ],
+    "DT-2": [
+     "i_sword",
+     "i_shield"
+    ],
+    "DT-3": [
+     "i_sword",
+     "i_shield"
+    ],
+    "DT-4": [
+     "i_bombs",
+     "i_boomerang"
+    ],
+    "DC-1": [
+     "i_bracelet"
+    ],
+    "DC-2": [
+     "i_bracelet"
+    ],
+    "DC-3": [
+     "i_bracelet"
+    ],
+    "DC-4": [
+     "i_bracelet",
+     [
+      "i_boomerang",
+      "i_hookshot"
+     ]
+    ],
+    "DC-5": [
+     "i_bracelet",
+     "i_hookshot",
+     "s_scare"
+    ],
+    "JB-1": [
+     "king"
+    ],
+    "JB-2": [
+     "king"
+    ],
+    "JB-3": [
+     "king"
+    ],
+    "JB-4": [
+     "king"
+    ],
+    "FT-1": [
+     "@forest"
+    ],
+    "FT-2": [
+     "@forest"
+    ],
+    "FT-3": [
+     "@forest"
+    ],
+    "FT-4": [
+     "@forest"
+    ],
+    "FT-5": [
+     "@forest"
+    ],
+    "FIRE-1": [
+     "@fire"
+    ],
+    "FIRE-2": [
+     "@fire"
+    ],
+    "FIRE-3": [
+     "@fire",
+     "s_scare"
+    ],
+    "FIRE-4": [
+     "@fire",
+     "s_scare"
+    ],
+    "FIRE-5": [
+     "@fire"
+    ],
+    "WT-1": [
+     "@water"
+    ],
+    "WT-2": [
+     "@water"
+    ],
+    "WT-3": [
+     "@water"
+    ],
+    "WT-4": [
+     "@water"
+    ],
+    "WT-5": [
+     "@water"
+    ],
+    "ST-1": [
+     "@shadow"
+    ],
+    "ST-2": [
+     "@shadow"
+    ],
+    "ST-3": [
+     "@shadow"
+    ],
+    "ST-4": [
+     "@shadow",
+     "s_scare"
+    ],
+    "ST-5": [
+     "@shadow"
+    ],
+    "SP-1": [
+     "@spiritchild"
+    ],
+    "SP-2": [
+     "@spiritchild"
+    ],
+    "SP-3": [
+     "@spiritchild"
+    ],
+    "SP-4": [
+     "@spirit"
+    ],
+    "SP-5": [
+     "@spirit",
+     "s_scare"
+    ],
+    "BW-1": [
+     "@well",
+     "i_lens",
+     "i_boomerang"
+    ],
+    "BW-2": [
+     "@well",
+     "i_lens",
+     "i_boomerang"
+    ],
+    "BW-3": [
+     "@well",
+     "i_lens",
+     "i_boomerang"
+    ],
+    "IC-1": [
+     "@ice",
+     "i_hookshot"
+    ],
+    "IC-2": [
+     "@ice",
+     "i_hookshot",
+     "BOTTLE"
+    ],
+    "IC-3": [
+     "@ice",
+     "i_hookshot"
+    ],
+    "HP-1": [
+     "s_saria"
+    ],
+    "HP-2": [
+     "i_fairyoc"
+    ],
+    "HP-3": [
+     "i_fairyoc"
+    ],
+    "HP-4": [
+     "dodongo"
+    ],
+    "HP-5": [
+     "i_fairyoc"
+    ],
+    "HP-6": [
+     "i_bombs"
+    ],
+    "HP-7": [
+     "i_bombs",
+     [
+      "i_goldscale",
+      "i_ironboots"
+     ]
+    ],
+    "HP-8": [
+     "i_fairyoc"
+    ],
+    "HP-9": [
+     "i_fairyoc",
+     [
+      "i_bombs",
+      "i_hookshot"
+     ]
+    ],
+    "HP-10": [
+     [
+      "i_boomerang",
+      "i_hookshot"
+     ]
+    ],
+    "HP-11": [
+     "i_hookshot"
+    ],
+    "HP-12": [
+     "GS:50"
+    ],
+    "HP-13": [
+     "s_sun"
+    ],
+    "HP-14": [
+     "i_fairyoc"
+    ],
+    "HP-15": [
+     [
+      "SQ-23",
+      "i_hookshot"
+     ]
+    ],
+    "HP-16": [
+     "i_hookshot"
+    ],
+    "HP-17": [
+     "i_bracelet"
+    ],
+    "HP-18": [
+     "i_bracelet"
+    ],
+    "HP-19": [
+     "i_bombs"
+    ],
+    "HP-20": [
+     "s_bolero",
+     "SQ-23"
+    ],
+    "HP-37": [
+     "i_bombs"
+    ],
+    "HP-21": [
+     "i_bombs"
+    ],
+    "HP-22": [
+     "i_bombs"
+    ],
+    "HP-23": [
+     "s_storms"
+    ],
+    "HP-24": [
+     "s_storms",
+     "s_epona",
+     "s_sun"
+    ],
+    "HP-25": [
+     "zora"
+    ],
+    "HP-26": [
+     "i_fairyoc"
+    ],
+    "HP-27": [
+     "i_goldscale"
+    ],
+    "HP-28": [
+     [
+      "SQ-23",
+      "s_scare+i_hookshot"
+     ]
+    ],
+    "HP-29": [
+     "i_hookshot"
+    ],
+    "HP-30": [
+     "i_zora",
+     "i_ironboots"
+    ],
+    "HP-31": [
+     "@ice",
+     "BOTTLE"
+    ],
+    "HP-32": [
+     "i_fairyoc"
+    ],
+    "HP-33": [
+     "i_fairyoc"
+    ],
+    "HP-34": [
+     [
+      "i_longshot",
+      "s_scare+i_hookshot+SQ-28"
+     ]
+    ],
+    "HP-35": [
+     "i_card",
+     "SQ-28",
+     "i_bow"
+    ],
+    "HP-36": [
+     "s_requiem",
+     "SQ-23"
+    ],
+    "SQ-44": [
+     "i_fairyoc"
+    ],
+    "SQ-1": [
+     "s_saria"
+    ],
+    "SQ-2": [
+     "i_fairyoc"
+    ],
+    "SQ-3": [
+     "i_sling"
+    ],
+    "SQ-4": [
+     "i_fairyoc"
+    ],
+    "SQ-5": [
+     "i_fairyoc"
+    ],
+    "SQ-6": [
+     "i_fairyoc"
+    ],
+    "SQ-7": [
+     "i_sling",
+     "i_fairyoc"
+    ],
+    "SQ-8": [
+     "talon"
+    ],
+    "SQ-9": [
+     "talon"
+    ],
+    "SQ-10": [
+     "i_fairyoc"
+    ],
+    "SQ-11": [
+     "i_fairyoc"
+    ],
+    "SQ-12": [
+     "i_fairyoc"
+    ],
+    "SQ-13": [
+     "gate"
+    ],
+    "SQ-14": [
+     "t_keaton"
+    ],
+    "SQ-15": [
+     "t_truth"
+    ],
+    "SQ-16": [
+     "i_fairyoc"
+    ],
+    "SQ-17": [
+     "GS:1"
+    ],
+    "SQ-18": [
+     "i_bombs"
+    ],
+    "SQ-19": [
+     "i_bombs",
+     "s_lullaby"
+    ],
+    "SQ-20": [
+     "i_bombs",
+     "s_lullaby",
+     "i_magic"
+    ],
+    "SQ-21": [
+     "dodongo"
+    ],
+    "SQ-22": [
+     "i_bombs"
+    ],
+    "SQ-23": [
+     "i_bombs"
+    ],
+    "SQ-24": [
+     "zora"
+    ],
+    "SQ-25": [
+     "king",
+     "i_bombs"
+    ],
+    "SQ-26": [
+     "i_bombs"
+    ],
+    "SQ-27": [],
+    "SQ-28": [
+     "s_epona"
+    ],
+    "SQ-29": [],
+    "SQ-30": [
+     "i_bombs"
+    ],
+    "SQ-31": [
+     "i_bombs"
+    ],
+    "SQ-32": [
+     [
+      "water",
+      "s_scare+i_hookshot"
+     ]
+    ],
+    "SQ-33": [
+     "SQ-28",
+     "i_bow",
+     "BOTTLE"
+    ],
+    "SQ-34": [
+     "i_bow"
+    ],
+    "SQ-35": [
+     "SQ-28"
+    ],
+    "SQ-36": [
+     [
+      "SQ-28",
+      "i_longshot"
+     ]
+    ],
+    "SQ-37": [
+     "i_card",
+     "SQ-28",
+     "i_bow"
+    ],
+    "SQ-38": [
+     "i_card",
+     "i_bow",
+     "i_hammer",
+     "i_longshot",
+     "i_ironboots",
+     "i_lens",
+     "s_time"
+    ],
+    "SQ-39": [
+     "SQ-36"
+    ],
+    "SQ-40": [
+     "i_hammer",
+     "i_goron"
+    ],
+    "SQ-41": [
+     "water",
+     "i_bow"
+    ],
+    "SQ-42": [
+     "i_card",
+     [
+      "i_hover",
+      "i_longshot"
+     ],
+     "i_lens",
+     "i_bombs"
+    ],
+    "SQ-43": [
+     "i_goldgaunt"
+    ]
+   },
+   "GATE_V": {
+    "sw2|HP-6": [
+     "i_bombs",
+     "i_mastersword"
+    ],
+    "sw2|HP-7": [
+     "i_mastersword"
+    ],
+    "sw2|HP-13": [
+     "i_fairyoc"
+    ],
+    "sw2|HP-17": [
+     [
+      "SQ-23",
+      "i_hover"
+     ]
+    ]
+   },
+   "ALIAS": {
+    "oc": "ocarina",
+    "brace": "bracelet",
+    "hook": "hookshot",
+    "ztunic": "zoratunic",
+    "gtunic": "gorontunic",
+    "farrow": "firearrows",
+    "larrow": "lightarrows",
+    "sgaunt": "spiritchild"
+   },
+   "BOTTLE": [
+    "b_ruto",
+    "b_anju",
+    "b_talon",
+    "b_poe",
+    "b_potion"
+   ],
+   "ADULT": "i_mastersword"
+  },
+  "links": {
+   "BOTH": {
+    "LW-3": "Child: plant a Magic Bean in the soil. Adult: ride the sprout up and kill the spider.",
+    "CL-3": "Child: plant a Magic Bean in the soil beside the temple. Adult: ride the sprout to the mound and kill the spider.",
+    "DMC-2": "Adult: learn the Bolero of Fire. Child: warp in with it and release a bottled bug on the soil.",
+    "HP-15": "Child: plant a Magic Bean in the soft soil. Adult: ride the sprout up (or skip the bean with the Hookshot).",
+    "HP-20": "Child: warp in with the Bolero of Fire and plant a Magic Bean. Adult: ride the sprout to the top of the pillar.",
+    "HP-28": "Child: plant a Magic Bean outside the lab, or teach Pierre a song. Adult: ride the sprout, or Hookshot to Pierre.",
+    "HP-36": "Child: warp in with the Requiem of Spirit and plant a Magic Bean. Adult: ride the sprout and jump to the heart."
+   },
+   "BOTH_V": {
+    "sw2|HF-2": "Child first: bomb into the marsh grotto and kill the ordinary Skulltula. Adult second: come back and roll into the crate for the gold one.",
+    "sw2|HP-6": "Adult first: read the Fairy Note by the tree. Child second: buy the Piece of Heart.",
+    "sw2|HP-7": "Adult first: read the Fairy Note beside the chest. Child second: open the chest.",
+    "sw2|HP-17": "Child: plant a Magic Bean outside Dodongo's Cavern. Adult: ride the sprout up."
+   },
+   "LINKS": [
+    [
+     "HP-1",
+     "SQ-1",
+     "full"
+    ],
+    [
+     "HP-2",
+     "SQ-2",
+     "full"
+    ],
+    [
+     "HP-3",
+     "SQ-6",
+     "full"
+    ],
+    [
+     "HP-4",
+     "SQ-21",
+     "up"
+    ],
+    [
+     "HP-5",
+     "SQ-16",
+     "full"
+    ],
+    [
+     "HP-14",
+     "SQ-11",
+     "full"
+    ],
+    [
+     "HP-16",
+     "SQ-27",
+     "full"
+    ],
+    [
+     "HP-23",
+     "SQ-26",
+     "full"
+    ],
+    [
+     "HP-24",
+     "SQ-26",
+     "full"
+    ],
+    [
+     "HP-26",
+     "SQ-10",
+     "full"
+    ],
+    [
+     "HP-35",
+     "SQ-37",
+     "up"
+    ],
+    [
+     "i_magic",
+     "SQ-19",
+     "full"
+    ],
+    [
+     "i_dins",
+     "SQ-20",
+     "full"
+    ],
+    [
+     "i_farore",
+     "SQ-25",
+     "full"
+    ],
+    [
+     "i_nayru",
+     "SQ-42",
+     "full"
+    ],
+    [
+     "i_magic2",
+     "SQ-40",
+     "full"
+    ],
+    [
+     "i_defense",
+     "SQ-43",
+     "full"
+    ],
+    [
+     "i_firearrows",
+     "SQ-41",
+     "full"
+    ],
+    [
+     "i_icearrows",
+     "SQ-38",
+     "full"
+    ],
+    [
+     "i_knife",
+     "SQ-30",
+     "full"
+    ],
+    [
+     "i_biggoron",
+     "SQ-29",
+     "full"
+    ],
+    [
+     "i_card",
+     "SQ-36",
+     "full"
+    ],
+    [
+     "i_hookshot",
+     "SQ-27",
+     "up"
+    ],
+    [
+     "b_anju",
+     "SQ-5",
+     "full"
+    ],
+    [
+     "b_talon",
+     "SQ-9",
+     "full"
+    ],
+    [
+     "b_poe",
+     "SQ-33",
+     "full",
+     [
+      "n64",
+      "3ds"
+     ]
+    ],
+    [
+     "b_poe",
+     "SQ-33",
+     "up",
+     [
+      "sw2"
+     ]
+    ],
+    [
+     "b_potion",
+     "SQ-44",
+     "full"
+    ],
+    [
+     "s_epona",
+     "SQ-8",
+     "full"
+    ],
+    [
+     "s_scare",
+     "SQ-12",
+     "full"
+    ],
+    [
+     "i_silverscale",
+     "SQ-24",
+     "full"
+    ],
+    [
+     "i_goldscale",
+     "SQ-32",
+     "full"
+    ],
+    [
+     "i_goron",
+     "SQ-31",
+     "full"
+    ],
+    [
+     "i_wallet2",
+     "hs10",
+     "full"
+    ],
+    [
+     "i_wallet3",
+     "hs30",
+     "full"
+    ],
+    [
+     "HP-12",
+     "hs50",
+     "full"
+    ],
+    [
+     "i_agony",
+     "hs20",
+     "full",
+     [
+      "n64"
+     ]
+    ],
+    [
+     "i_agony",
+     "hs20_3ds",
+     "full",
+     [
+      "3ds"
+     ]
+    ],
+    [
+     "i_agony",
+     "hs20_sw",
+     "full",
+     [
+      "sw2"
+     ]
+    ]
+   ]
+  }
+ },
+ "stdout": "era-derived both-Link rows: ['BW-1', 'BW-2', 'BW-3', 'HC-2', 'HP-23', 'HP-24', 'IT-18', 'IT-30', 'SP-1', 'SP-2', 'SP-3', 'SQ-26']\ntwo-Link checklists: 26 ['LW-3', 'HF-2', 'HC-2', 'BW-1', 'BW-2', 'BW-3', 'DMC-2', 'CL-1', 'CL-3', 'SP-1', 'SP-2', 'SP-3', 'HP-6', 'HP-7', 'HP-15', 'HP-17', 'HP-20', 'HP-23', 'HP-24', 'HP-28', 'HP-36', 'SQ-26', 'SQ-12', 'IT-18', 'IT-30', 'IT-69']\nno automatic source: ['IT-6 Hylian Shield', \"IT-67 Sun's Song\"]\nok {'main': 40, 'skull': 101, 'heart': 37, 'side': 44, 'items': 77} {'n64': 326, '3ds': 326, 'sw2': 328} {'index.html': 416034, 'themed.html': 477486, 'themed2.html': 743471}\n"
+}

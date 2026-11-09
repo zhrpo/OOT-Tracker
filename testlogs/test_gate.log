@@ -1,0 +1,49 @@
+PASS five tabs
+PASS starts on main
+PASS main shows only the first group
+PASS later block shown
+PASS later text spoiler free (no Ganon in DOM)
+PASS next up lists sword
+PASS most skulltulas locked at start
+PASS KF-1 locked and says sword
+PASS ready count in sumtext
+PASS KF-1 unlocked after sword
+MQ-27 = Thaw King Zora: Zora TunicItem
+PASS toast says marked and has undo
+PASS steps up to MQ-27 ticked
+PASS gives ticked items (hookshot item?)
+PASS undo restores
+PASS ticking a step ticks its prerequisites
+PASS unticking a step unticks later steps that need it
+PASS no separate quest-hearts dropdown
+PASS quest-prize hearts sit in their own location groups
+PASS HP-24 is tagged as a quest prize
+PASS HP-24 links to its quest
+PASS HP-23 alone does not finish SQ-26
+PASS both frog hearts finish SQ-26
+PASS unticking a heart reopens quest
+PASS HP-14 ticks SQ-11
+PASS HP-12 (up link) does not tick SQ-17
+PASS chip jumps to side tab
+PASS SQ-11 row visible
+PASS SQ-11 shows Gives chip back
+PASS unticking SQ-11 unticks HP-14
+PASS sw2 SQ-20 ticks the Spin Attack item
+PASS sw2 SQ-20 does NOT tick Din's Fire
+PASS sw2 SQ-19 ticks Din's Fire
+PASS sw2 SQ-19 ticks Magic Meter
+PASS sw2 unticking SQ-19 unticks Din's Fire
+PASS sw2 SQ-20 stays ticked
+PASS LW-3 shows Child + Adult tag and callout
+PASS n64 skull rows 100
+PASS n64 starts empty of sw2 progress
+PASS persists after reload
+PASS ready filter shows no locked rows
+PASS lock off removes locks
+PASS items rows present (sw2 77)
+PASS infer banner shown
+PASS infer ticked steps
+PASS FT-1 stays checked
+errors: []
+PASS no console errors
+FAILS: []

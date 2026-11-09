@@ -1,0 +1,16 @@
+nav items: 31 | first: Kokiri Forest 0/3
+after nav click -> active: Kakariko Village | section top: 216 | header: 86
+after scroll -> active: Bottom of the Well | fab shown: True
+back to top -> scrollY: 689 | active: Lost Woods
+rail top/bottom while scrolled: [86, 900] | viewport h 900
+n64 count after tick: 1 of 100
+code: OOT1.WyJuNjQ6RFQtMSIsInN3MjpEVC0xIiwic3c ... len 125
+after wipe: 0 of 100
+bad code msg: That does not look like a progress code.
+apply msg: Added 8 checkmarks.
+n64 count after import: 1 of 100
+sw2 count after import: 7 of 100
+re-apply msg: Nothing new in that code.
+dimmed nav items (no adult rows): 5
+collapsed rows: 58 | button: Collapse all
+errors: []

@@ -1,0 +1,707 @@
+[
+ {
+  "test": "n64 S1a later step ticks all of its prerequisite steps",
+  "behavior": "tickOn ancestor propagation",
+  "initial": "empty",
+  "action": "tick MQ-41",
+  "expected": "every ANCL ancestor ticked",
+  "actual": [],
+  "result": "PASS",
+  "refs": "app.js tickOn L291-304, ANCL L60-69"
+ },
+ {
+  "test": "n64 S1b finishing the game (or the child Spirit Temple) does not leave child rows locked",
+  "behavior": "BACK rule vs story ancestors",
+  "initial": "empty",
+  "action": "tick MQ-41; check KF-1. tick MQ-34; check MQ-22",
+  "expected": "KF-1 not locked; MQ-34 implies MQ-22 (going back to child needs the Prelude)",
+  "actual": {
+   "child_row_lock_after_finishing": [
+    [
+     [
+      "MQ-22"
+     ]
+    ]
+   ],
+   "child_spirit_implies_prelude": false
+  },
+  "result": "FAIL",
+  "refs": "reqOf L209-213 BACK=MQ-22; main.py after-lists of well/spiritchild"
+ },
+ {
+  "test": "n64 S2 Forest Temple gives Fairy Bow and Forest Medallion",
+  "behavior": "gives propagation",
+  "initial": "empty",
+  "action": "tick MQ-21",
+  "expected": "IT-13, IT-58 ticked",
+  "actual": [],
+  "result": "PASS",
+  "refs": "tickOn L307"
+ },
+ {
+  "test": "n64 S3 linked rows: full both ways, up one way",
+  "behavior": "link propagation",
+  "initial": "empty",
+  "action": "tick HP-1; tick SQ-1; tick IT-16; tick SQ-27",
+  "expected": "[true,true,false,true]",
+  "actual": [
+   true,
+   true,
+   false,
+   true
+  ],
+  "result": "PASS",
+  "refs": "tickOn L310, L334-338"
+ },
+ {
+  "test": "n64 S4/S5 checklist steps <-> parent",
+  "behavior": "SUBS/SUBOF propagation, version-filtered",
+  "initial": "empty",
+  "action": "tick every step; then tick parent",
+  "expected": "parent ticked; all version steps ticked; no other-version step stored",
+  "actual": {
+   "SQ-13": [
+    true,
+    true,
+    0
+   ],
+   "SQ-29": [
+    true,
+    true,
+    0
+   ],
+   "SQ-17": [
+    true,
+    true,
+    0
+   ],
+   "MQ-3": [
+    true,
+    true,
+    0
+   ],
+   "MQ-21": [
+    true,
+    true,
+    0
+   ]
+  },
+  "result": "PASS",
+  "refs": "tickOn L312-313, subsV L54"
+ },
+ {
+  "test": "n64 S6 unticking a step unticks every step after it",
+  "behavior": "tickOff DESC",
+  "initial": "story finished",
+  "action": "untick MQ-17",
+  "expected": "no later step ticked",
+  "actual": [],
+  "result": "PASS",
+  "refs": "tickOff L359"
+ },
+ {
+  "test": "n64 S7 unticking an unrelated row removes nothing else",
+  "behavior": "tickOff scope",
+  "initial": "MQ-21 + KF-1,KF-2,HP-1",
+  "action": "untick KF-1",
+  "expected": "only KF-1 removed",
+  "actual": true,
+  "result": "PASS",
+  "refs": "tickOff"
+ },
+ {
+  "test": "n64 S10 locked row refuses a tick even if the checkbox is forced",
+  "behavior": "UI lock guard",
+  "initial": "empty, locks on",
+  "action": "force change event on FT-1",
+  "expected": "[true,false]",
+  "actual": [
+   true,
+   false
+  ],
+  "result": "PASS",
+  "refs": "change handler L1241-1248"
+ },
+ {
+  "test": "n64 S17 version isolation",
+  "behavior": "keys are ver:ID; tick/untick use state.ver",
+  "initial": "MQ-10 ticked in all versions",
+  "action": "tick/untick in n64",
+  "expected": "other versions unchanged",
+  "actual": true,
+  "result": "PASS",
+  "refs": "key() L183, setOn L290"
+ },
+ {
+  "test": "n64 S18 child row locked while stuck as adult, open after Prelude",
+  "behavior": "reqOf BACK rule",
+  "initial": "MQ-17 ticked",
+  "action": "check KF-1, then tick MQ-22",
+  "expected": "[true,false]",
+  "actual": [
+   true,
+   false
+  ],
+  "result": "PASS",
+  "refs": "reqOf L209-213, stuckAdult L208"
+ },
+ {
+  "test": "n64 S19 rapid tick/untick churn",
+  "behavior": "idempotence",
+  "initial": "MQ-10",
+  "action": "60x tick/untick SQ-21, IT-36",
+  "expected": "state back to MQ-10 only; invariants hold",
+  "actual": [
+   true,
+   []
+  ],
+  "result": "PASS",
+  "refs": "tickOn/tickOff"
+ },
+ {
+  "test": "n64 R random sequences keep invariants (40 seeds x 120 actions)",
+  "behavior": "I1 ancestors, I2 checklist parity, I4 full-link parity, tick/untick effect",
+  "initial": "empty",
+  "action": "random lock-respecting ticks (70%%) and unticks (30%%), seed = seed*7919+len(ver)",
+  "expected": "no invariant broken",
+  "actual": [],
+  "result": "PASS",
+  "refs": "tickOn, tickOff"
+ },
+ {
+  "test": "n64 no page errors during tests",
+  "behavior": "runtime errors",
+  "initial": "-",
+  "action": "all of the above",
+  "expected": "none",
+  "actual": [],
+  "result": "PASS",
+  "refs": "app.js"
+ },
+ {
+  "test": "3ds S1a later step ticks all of its prerequisite steps",
+  "behavior": "tickOn ancestor propagation",
+  "initial": "empty",
+  "action": "tick MQ-41",
+  "expected": "every ANCL ancestor ticked",
+  "actual": [],
+  "result": "PASS",
+  "refs": "app.js tickOn L291-304, ANCL L60-69"
+ },
+ {
+  "test": "3ds S1b finishing the game (or the child Spirit Temple) does not leave child rows locked",
+  "behavior": "BACK rule vs story ancestors",
+  "initial": "empty",
+  "action": "tick MQ-41; check KF-1. tick MQ-34; check MQ-22",
+  "expected": "KF-1 not locked; MQ-34 implies MQ-22 (going back to child needs the Prelude)",
+  "actual": {
+   "child_row_lock_after_finishing": [
+    [
+     [
+      "MQ-22"
+     ]
+    ]
+   ],
+   "child_spirit_implies_prelude": false
+  },
+  "result": "FAIL",
+  "refs": "reqOf L209-213 BACK=MQ-22; main.py after-lists of well/spiritchild"
+ },
+ {
+  "test": "3ds S2 Forest Temple gives Fairy Bow and Forest Medallion",
+  "behavior": "gives propagation",
+  "initial": "empty",
+  "action": "tick MQ-21",
+  "expected": "IT-13, IT-58 ticked",
+  "actual": [],
+  "result": "PASS",
+  "refs": "tickOn L307"
+ },
+ {
+  "test": "3ds S3 linked rows: full both ways, up one way",
+  "behavior": "link propagation",
+  "initial": "empty",
+  "action": "tick HP-1; tick SQ-1; tick IT-16; tick SQ-27",
+  "expected": "[true,true,false,true]",
+  "actual": [
+   true,
+   true,
+   false,
+   true
+  ],
+  "result": "PASS",
+  "refs": "tickOn L310, L334-338"
+ },
+ {
+  "test": "3ds S4/S5 checklist steps <-> parent",
+  "behavior": "SUBS/SUBOF propagation, version-filtered",
+  "initial": "empty",
+  "action": "tick every step; then tick parent",
+  "expected": "parent ticked; all version steps ticked; no other-version step stored",
+  "actual": {
+   "SQ-13": [
+    true,
+    true,
+    0
+   ],
+   "SQ-29": [
+    true,
+    true,
+    0
+   ],
+   "SQ-17": [
+    true,
+    true,
+    0
+   ],
+   "MQ-3": [
+    true,
+    true,
+    0
+   ],
+   "MQ-21": [
+    true,
+    true,
+    0
+   ]
+  },
+  "result": "PASS",
+  "refs": "tickOn L312-313, subsV L54"
+ },
+ {
+  "test": "3ds S6 unticking a step unticks every step after it",
+  "behavior": "tickOff DESC",
+  "initial": "story finished",
+  "action": "untick MQ-17",
+  "expected": "no later step ticked",
+  "actual": [],
+  "result": "PASS",
+  "refs": "tickOff L359"
+ },
+ {
+  "test": "3ds S7 unticking an unrelated row removes nothing else",
+  "behavior": "tickOff scope",
+  "initial": "MQ-21 + KF-1,KF-2,HP-1",
+  "action": "untick KF-1",
+  "expected": "only KF-1 removed",
+  "actual": true,
+  "result": "PASS",
+  "refs": "tickOff"
+ },
+ {
+  "test": "3ds S10 locked row refuses a tick even if the checkbox is forced",
+  "behavior": "UI lock guard",
+  "initial": "empty, locks on",
+  "action": "force change event on FT-1",
+  "expected": "[true,false]",
+  "actual": [
+   true,
+   false
+  ],
+  "result": "PASS",
+  "refs": "change handler L1241-1248"
+ },
+ {
+  "test": "3ds S17 version isolation",
+  "behavior": "keys are ver:ID; tick/untick use state.ver",
+  "initial": "MQ-10 ticked in all versions",
+  "action": "tick/untick in 3ds",
+  "expected": "other versions unchanged",
+  "actual": true,
+  "result": "PASS",
+  "refs": "key() L183, setOn L290"
+ },
+ {
+  "test": "3ds S18 child row locked while stuck as adult, open after Prelude",
+  "behavior": "reqOf BACK rule",
+  "initial": "MQ-17 ticked",
+  "action": "check KF-1, then tick MQ-22",
+  "expected": "[true,false]",
+  "actual": [
+   true,
+   false
+  ],
+  "result": "PASS",
+  "refs": "reqOf L209-213, stuckAdult L208"
+ },
+ {
+  "test": "3ds S19 rapid tick/untick churn",
+  "behavior": "idempotence",
+  "initial": "MQ-10",
+  "action": "60x tick/untick SQ-21, IT-36",
+  "expected": "state back to MQ-10 only; invariants hold",
+  "actual": [
+   true,
+   []
+  ],
+  "result": "PASS",
+  "refs": "tickOn/tickOff"
+ },
+ {
+  "test": "3ds R random sequences keep invariants (40 seeds x 120 actions)",
+  "behavior": "I1 ancestors, I2 checklist parity, I4 full-link parity, tick/untick effect",
+  "initial": "empty",
+  "action": "random lock-respecting ticks (70%%) and unticks (30%%), seed = seed*7919+len(ver)",
+  "expected": "no invariant broken",
+  "actual": [],
+  "result": "PASS",
+  "refs": "tickOn, tickOff"
+ },
+ {
+  "test": "3ds no page errors during tests",
+  "behavior": "runtime errors",
+  "initial": "-",
+  "action": "all of the above",
+  "expected": "none",
+  "actual": [],
+  "result": "PASS",
+  "refs": "app.js"
+ },
+ {
+  "test": "sw2 S1a later step ticks all of its prerequisite steps",
+  "behavior": "tickOn ancestor propagation",
+  "initial": "empty",
+  "action": "tick MQ-41",
+  "expected": "every ANCL ancestor ticked",
+  "actual": [],
+  "result": "PASS",
+  "refs": "app.js tickOn L291-304, ANCL L60-69"
+ },
+ {
+  "test": "sw2 S1b finishing the game (or the child Spirit Temple) does not leave child rows locked",
+  "behavior": "BACK rule vs story ancestors",
+  "initial": "empty",
+  "action": "tick MQ-41; check KF-1. tick MQ-34; check MQ-22",
+  "expected": "KF-1 not locked; MQ-34 implies MQ-22 (going back to child needs the Prelude)",
+  "actual": {
+   "child_row_lock_after_finishing": [
+    [
+     [
+      "MQ-22"
+     ]
+    ]
+   ],
+   "child_spirit_implies_prelude": false
+  },
+  "result": "FAIL",
+  "refs": "reqOf L209-213 BACK=MQ-22; main.py after-lists of well/spiritchild"
+ },
+ {
+  "test": "sw2 S2 Forest Temple gives Fairy Bow and Forest Medallion",
+  "behavior": "gives propagation",
+  "initial": "empty",
+  "action": "tick MQ-21",
+  "expected": "IT-13, IT-58 ticked",
+  "actual": [],
+  "result": "PASS",
+  "refs": "tickOn L307"
+ },
+ {
+  "test": "sw2 S3 linked rows: full both ways, up one way",
+  "behavior": "link propagation",
+  "initial": "empty",
+  "action": "tick HP-1; tick SQ-1; tick IT-16; tick SQ-27",
+  "expected": "[true,true,false,true]",
+  "actual": [
+   true,
+   true,
+   false,
+   true
+  ],
+  "result": "PASS",
+  "refs": "tickOn L310, L334-338"
+ },
+ {
+  "test": "sw2 S4/S5 checklist steps <-> parent",
+  "behavior": "SUBS/SUBOF propagation, version-filtered",
+  "initial": "empty",
+  "action": "tick every step; then tick parent",
+  "expected": "parent ticked; all version steps ticked; no other-version step stored",
+  "actual": {
+   "SQ-13": [
+    true,
+    true,
+    0
+   ],
+   "SQ-29": [
+    true,
+    true,
+    0
+   ],
+   "SQ-17": [
+    true,
+    true,
+    0
+   ],
+   "MQ-3": [
+    true,
+    true,
+    0
+   ],
+   "MQ-21": [
+    true,
+    true,
+    0
+   ],
+   "HF-2": [
+    true,
+    true,
+    0
+   ]
+  },
+  "result": "PASS",
+  "refs": "tickOn L312-313, subsV L54"
+ },
+ {
+  "test": "sw2 S6 unticking a step unticks every step after it",
+  "behavior": "tickOff DESC",
+  "initial": "story finished",
+  "action": "untick MQ-17",
+  "expected": "no later step ticked",
+  "actual": [],
+  "result": "PASS",
+  "refs": "tickOff L359"
+ },
+ {
+  "test": "sw2 S7 unticking an unrelated row removes nothing else",
+  "behavior": "tickOff scope",
+  "initial": "MQ-21 + KF-1,KF-2,HP-1",
+  "action": "untick KF-1",
+  "expected": "only KF-1 removed",
+  "actual": true,
+  "result": "PASS",
+  "refs": "tickOff"
+ },
+ {
+  "test": "sw2 S10 locked row refuses a tick even if the checkbox is forced",
+  "behavior": "UI lock guard",
+  "initial": "empty, locks on",
+  "action": "force change event on FT-1",
+  "expected": "[true,false]",
+  "actual": [
+   true,
+   false
+  ],
+  "result": "PASS",
+  "refs": "change handler L1241-1248"
+ },
+ {
+  "test": "sw2 S17 version isolation",
+  "behavior": "keys are ver:ID; tick/untick use state.ver",
+  "initial": "MQ-10 ticked in all versions",
+  "action": "tick/untick in sw2",
+  "expected": "other versions unchanged",
+  "actual": true,
+  "result": "PASS",
+  "refs": "key() L183, setOn L290"
+ },
+ {
+  "test": "sw2 S18 child row locked while stuck as adult, open after Prelude",
+  "behavior": "reqOf BACK rule",
+  "initial": "MQ-17 ticked",
+  "action": "check KF-1, then tick MQ-22",
+  "expected": "[true,false]",
+  "actual": [
+   true,
+   false
+  ],
+  "result": "PASS",
+  "refs": "reqOf L209-213, stuckAdult L208"
+ },
+ {
+  "test": "sw2 S19 rapid tick/untick churn",
+  "behavior": "idempotence",
+  "initial": "MQ-10",
+  "action": "60x tick/untick SQ-21, IT-36",
+  "expected": "state back to MQ-10 only; invariants hold",
+  "actual": [
+   true,
+   []
+  ],
+  "result": "PASS",
+  "refs": "tickOn/tickOff"
+ },
+ {
+  "test": "sw2 R random sequences keep invariants (40 seeds x 120 actions)",
+  "behavior": "I1 ancestors, I2 checklist parity, I4 full-link parity, tick/untick effect",
+  "initial": "empty",
+  "action": "random lock-respecting ticks (70%%) and unticks (30%%), seed = seed*7919+len(ver)",
+  "expected": "no invariant broken",
+  "actual": [],
+  "result": "PASS",
+  "refs": "tickOn, tickOff"
+ },
+ {
+  "test": "sw2 no page errors during tests",
+  "behavior": "runtime errors",
+  "initial": "-",
+  "action": "all of the above",
+  "expected": "none",
+  "actual": [],
+  "result": "PASS",
+  "refs": "app.js"
+ },
+ {
+  "test": "sw2 N1 an \"up\" prize stays as tickOn left it after a reload",
+  "behavior": "normalize link catch-up vs tickOn reqMet",
+  "initial": "sw2: Forest Temple, Epona, no bottle",
+  "action": "tick SQ-33 (Big Poes); reload",
+  "expected": "IT-51 same before and after reload",
+  "actual": {
+   "before_reload": true,
+   "after_reload": true
+  },
+  "result": "PASS",
+  "refs": "tickOn L310 vs normalize L468-473"
+ },
+ {
+  "test": "sw2 N1b reload does not add a prize that tickOn withheld",
+  "behavior": "normalize up-link catch-up ignores reqMet",
+  "initial": "empty, Locks off (o.tick bypasses locks)",
+  "action": "tick SQ-27; reload",
+  "expected": "IT-16 identical before and after reload",
+  "actual": {
+   "before_reload": false,
+   "after_reload": true
+  },
+  "result": "FAIL",
+  "refs": "tickOn L310 (reqMet) vs normalize L472 (unconditional)"
+ },
+ {
+  "test": "sw2 D1 (design) untick Fairy Bow after finishing: step stays, bow goes",
+  "behavior": "tickOff GIVER rule L386-390",
+  "initial": "story finished",
+  "action": "untick IT-13",
+  "expected": "recorded as observed (design: later steps lean on MQ-21)",
+  "actual": {
+   "forest": true,
+   "bow": false,
+   "fireArrowsStep": true
+  },
+  "result": "PASS",
+  "refs": "tickOff L386-390"
+ },
+ {
+  "test": "N2 settings survive a load that migrates old progress",
+  "behavior": "normalize() save at L489",
+  "initial": "saved: lock off, status todo, tab skull, MQ-3 walkthrough open, plus retired MQ-14",
+  "action": "load page (normalize drops MQ-14 and saves), then reload",
+  "expected": "stored save still holds lock, status, tab and walkthrough settings",
+  "actual": {
+   "stored_after_first_load_keys": [
+    "got",
+    "ver"
+   ],
+   "state_after_reload": {
+    "lock": true,
+    "status": "all",
+    "dg": {},
+    "tab": "main"
+   }
+  },
+  "result": "FAIL",
+  "refs": "app.js L489 vs saveLocal L1126"
+ },
+ {
+  "test": "N3 start-up with malformed save: not json",
+  "behavior": "load path L116-136",
+  "initial": "{oops",
+  "action": "load",
+  "expected": "page renders, no page error",
+  "actual": {
+   "groups": 1,
+   "errors": []
+  },
+  "result": "PASS",
+  "refs": "app.js L116-136"
+ },
+ {
+  "test": "N3 start-up with malformed save: got not array",
+  "behavior": "load path L116-136",
+  "initial": "{\"got\": \"x\"}",
+  "action": "load",
+  "expected": "page renders, no page error",
+  "actual": {
+   "groups": 1,
+   "errors": []
+  },
+  "result": "PASS",
+  "refs": "app.js L116-136"
+ },
+ {
+  "test": "N3 start-up with malformed save: got objects",
+  "behavior": "load path L116-136",
+  "initial": "{\"got\": [{\"a\": 1}, 5, null, \"sw2:KF-1\"]}",
+  "action": "load",
+  "expected": "page renders, no page error",
+  "actual": {
+   "groups": 1,
+   "errors": []
+  },
+  "result": "PASS",
+  "refs": "app.js L116-136"
+ },
+ {
+  "test": "N3 start-up with malformed save: unknown ids",
+  "behavior": "load path L116-136",
+  "initial": "{\"got\": [\"sw2:ZZ-999\", \"nope\", \"sw2:MQ-1\"], \"ver\": \"sw2\"}",
+  "action": "load",
+  "expected": "page renders, no page error",
+  "actual": {
+   "groups": 1,
+   "errors": []
+  },
+  "result": "PASS",
+  "refs": "app.js L116-136"
+ },
+ {
+  "test": "N3 start-up with malformed save: bad ver/tab",
+  "behavior": "load path L116-136",
+  "initial": "{\"got\": [], \"ver\": \"x\", \"tab\": \"<b>\"}",
+  "action": "load",
+  "expected": "page renders, no page error",
+  "actual": {
+   "groups": 1,
+   "errors": []
+  },
+  "result": "PASS",
+  "refs": "app.js L116-136"
+ },
+ {
+  "test": "N4 a brand-new user starts with nothing ticked",
+  "behavior": "D.defaults at L136",
+  "initial": "no saved data",
+  "action": "first load",
+  "expected": "no checkmarks, no prompt",
+  "actual": {
+   "legacy": [
+    "DT-1",
+    "DT-2",
+    "DT-3",
+    "MKT-1"
+   ],
+   "banner": true
+  },
+  "result": "FAIL",
+  "refs": "app.js L136, build defaults"
+ },
+ {
+  "test": "N5 progress code import validation",
+  "behavior": "xapply handler L1526-1541",
+  "initial": "empty",
+  "action": "import 5 codes",
+  "expected": "invalid rejected, html rejected, valid added",
+  "actual": {
+   "messages": {
+    "not a code": "That does not look like a progress code.",
+    "bad base64": "That code could not be read.",
+    "not array": "That code could not be read.",
+    "html id": "Nothing new in that code.",
+    "valid": "Added 2 checkmarks."
+   },
+   "errors": []
+  },
+  "result": "PASS",
+  "refs": "app.js L1526-1541"
+ }
+]

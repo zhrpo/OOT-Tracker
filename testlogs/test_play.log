@@ -1,0 +1,22 @@
+n64 rows first ready: 274 age issues: [] never: ['HP-16', 'SQ-7', 'TR-26', 'IT-51'] []
+3ds rows first ready: 274 age issues: [] never: ['HP-16', 'SQ-7', 'TR-26', 'IT-51'] []
+sw2 rows first ready: 277 age issues: [] never: ['HP-16', 'SQ-7', 'TR-27'] []
+PASS n64: nothing ready for the wrong age at any point 
+PASS n64: every row becomes ready at some point 
+PASS n64: Mask of Truth nut bag waits for the three stones 
+PASS n64: Running Man race waits for the carpenters 
+PASS n64: Biggoron Sword waits for King Zora 
+PASS n64: nothing outside the forest before leaving it 
+PASS 3ds: nothing ready for the wrong age at any point 
+PASS 3ds: every row becomes ready at some point 
+PASS 3ds: Mask of Truth nut bag waits for the three stones 
+PASS 3ds: Running Man race waits for the carpenters 
+PASS 3ds: Biggoron Sword waits for King Zora 
+PASS 3ds: nothing outside the forest before leaving it 
+PASS sw2: nothing ready for the wrong age at any point 
+PASS sw2: every row becomes ready at some point 
+PASS sw2: Mask of Truth nut bag waits for the three stones 
+PASS sw2: Running Man race waits for the carpenters 
+PASS sw2: Biggoron Sword waits for King Zora 
+PASS sw2: nothing outside the forest before leaving it 
+FAILS: []

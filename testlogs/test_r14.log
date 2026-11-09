@@ -1,0 +1,28 @@
+PASS second step waits for the first 
+PASS the row itself can still be ticked in one go 
+PASS first step ticks alone 
+PASS both steps and the row are ticked 
+PASS unticking the first step undoes the row 
+PASS card shows the child part as done 
+PASS second step is locked until adult 
+PASS a locked row with a doable first step says so 
+PASS Ready filter keeps the half-ready row 
+PASS learning the Song of Storms ticks every 'learn it' first step 
+PASS ...but not the rows themselves 
+PASS ticking a 'learn the song' step ticks the song 
+PASS ticking the row ticks both steps and the song 
+PASS Scarecrow quest step 1 ticks the song's step 1 
+PASS and unticks it again 
+PASS frog song game stays locked without the Song of Storms 
+PASS the Storms frog heart does not tick the song-game heart 
+PASS biggest nut bag ticks the Forest Stage quest 
+PASS middle nut bag with both quests open guesses nothing 
+PASS adult before the Forest Temple cannot do child steps 
+PASS after the Prelude of Light child steps open again 
+PASS a child who never grew up is not blocked 
+PASS N64 HF-2 has no two-Link steps 
+PASS N64 LW-3 keeps them 
+PASS progress code carries step ticks 
+PASS step ticks survive a reload 
+PASS no page errors 
+FAILS: []

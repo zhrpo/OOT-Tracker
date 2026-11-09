@@ -1,0 +1,66 @@
+PASS n64 12 quest-prize hearts are tagged
+PASS n64 no 'Earned through side quests' group
+PASS n64 Lost Woods group is back
+PASS n64 36 hearts in total
+PASS n64 prize heart has a link to its quest
+PASS n64 ticking the heart ticks the quest
+PASS n64 unticking the heart unticks the quest
+PASS n64 link opens the quests tab
+PASS n64 quest row is on screen
+PASS n64 ticking the quest ticks the heart
+PASS n64 no console errors
+PASS 3ds 12 quest-prize hearts are tagged
+PASS 3ds no 'Earned through side quests' group
+PASS 3ds Lost Woods group is back
+PASS 3ds 36 hearts in total
+PASS 3ds prize heart has a link to its quest
+PASS 3ds ticking the heart ticks the quest
+PASS 3ds unticking the heart unticks the quest
+PASS 3ds link opens the quests tab
+PASS 3ds quest row is on screen
+PASS 3ds ticking the quest ticks the heart
+PASS 3ds no console errors
+PASS sw2 12 quest-prize hearts are tagged
+PASS sw2 no 'Earned through side quests' group
+PASS sw2 Lost Woods group is back
+PASS sw2 36 hearts in total
+PASS sw2 prize heart has a link to its quest
+PASS sw2 ticking the heart ticks the quest
+PASS sw2 unticking the heart unticks the quest
+PASS sw2 link opens the quests tab
+PASS sw2 quest row is on screen
+PASS sw2 ticking the quest ticks the heart
+PASS sw2 no console errors
+PASS n64 test hook for the Master Sword exists
+PASS n64 main icon changes to the adult picture
+PASS n64 heart icon changes to the adult picture
+PASS n64 side icon changes to the adult picture
+PASS n64 items icon changes to the adult picture
+PASS n64 skulltula icon stays the same
+PASS n64 every icon is a real drawing
+PASS n64 no console errors
+PASS 3ds test hook for the Master Sword exists
+PASS 3ds main icon changes to the adult picture
+PASS 3ds heart icon changes to the adult picture
+PASS 3ds side icon changes to the adult picture
+PASS 3ds items icon changes to the adult picture
+PASS 3ds skulltula icon stays the same
+PASS 3ds every icon is a real drawing
+PASS 3ds no console errors
+PASS sw2 test hook for the Master Sword exists
+PASS sw2 main icon changes to the adult picture
+PASS sw2 heart icon changes to the adult picture
+PASS sw2 side icon changes to the adult picture
+PASS sw2 items icon changes to the adult picture
+PASS sw2 skulltula icon stays the same
+PASS sw2 every icon is a real drawing
+PASS sw2 no console errors
+PASS later steps showing after the tap
+PASS a bar appears where the hidden steps begin
+PASS and a chip near the top
+PASS tapping the bar hides them again
+PASS the show button is back
+PASS n64 card clip-path cut corners
+PASS 3ds card clip-path none
+PASS sw2 card clip-path none
+FAILS: []

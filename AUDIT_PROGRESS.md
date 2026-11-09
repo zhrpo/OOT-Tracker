@@ -188,3 +188,10 @@ Audit E (sync) is blocked on nothing but setup, and F-013 is the largest open ri
 
 ## (superseded) Next recommended action (session 2)
 Audit B, part 1: read `app.js` in full and trace `eff`, `touch`, `reqOf`, `unmetAny`, `stepReady`, `rowReady`, `nextStep`, `tickOn`, `tickOff`, `normalize` and the persistence/sync functions with their callers; record the execution model in AUDIT_FINDINGS.md before writing new property tests.
+
+## Session 5 final status (2026-11-09 evening)
+- **Session 5 complete.** Owner stopped the game-data source-checking at a defined cutoff (F-036 stays open, Informational). Findings F-001..F-045 preserved; next ID **F-046**.
+- Delivered: game-data screens (F-029..F-036, F-042..F-045), security (F-040), accessibility (F-039, F-041), legacy-suite correction (24/26), consolidated remediation plan (REMEDIATION_PLAN.md §8), Session 6 handoff (NEXT_SESSION.md).
+- Not verified (explicit): REMEDIATION_PLAN.md §8.8. Q5 was not exercised; no test artifact exists.
+- No production, live-tracker, database or saved-progress change; nothing published or deployed.
+- Next: wait for the owner's approval before Session 6 (implementation).

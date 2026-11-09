@@ -131,3 +131,11 @@ Production safety (session 5): the live artifact was not touched; no database re
 | Dungeon steps, internal consistency | Checked; wording vs source **unverified** | F-045, F-036 |
 | Trade chain order and timers | Verified | F-037 |
 | Side-quest text and rewards | **Unverified** (no source read) | F-036 |
+
+## Session 5 final: not verified, stated explicitly (owner stopping point, 2026-11-09)
+Nothing in this list is claimed verified. Full list: REMEDIATION_PLAN.md §8.8.
+- Game data (F-036, open, Informational): 176 dungeon-step descriptions; 44 side-quest descriptions; remaining prices/timers; 19 Heart Piece rows with no randomizer mapping; Switch 2 data not independently verified (F-035).
+- 37 token differences were judged benign on the available evidence; they are not independently verified.
+- Accessibility (F-041): real screen reader; browser zoom; body-text contrast; day/night filter (F-028); high-contrast mode; touch.
+- Security (F-040/F-021): real sync-provider rules; cross-account isolation; host CSP.
+- Tests: 24 of 26 legacy scripts pass when run individually from `proj/` without `-I`; the earlier `-I` parallel results are invalid. A unified runner is recommended (REMEDIATION_PLAN §6.1), not built.

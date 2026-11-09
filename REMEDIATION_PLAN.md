@@ -209,4 +209,102 @@ F-044: remove `IT-16` from HP-29 (all versions). F-045: add `IT-22` and `IT-21` 
 F-038 (validate ids against known + retired ids, cap length) belongs in §1 with the sync redesign. F-039 (polite live region for `#sync`, distinct failed-save text) belongs with F-019 (§2). Existing-suite fixes (F-001/F-002) are release-process work. A unified runner **is appropriate**: a new `scripts/run_all.py` that (a) runs each audit script and each legacy script as a subprocess from the right directory with a per-test timeout (longest is `test_overflow.py`, 119 s), (b) treats a non-zero exit, a timeout, or a printed `FAILS:` list that is not empty/0 as failure, (c) lists scripts that print no verdict (8 today) as "unchecked" rather than passing, and (d) removes the dependency on the `/home/claude/audit` path. Replace `test.py` and `test_contrast.py` (stale), leave the others unchanged until an implementation session is opened.
 
 ### 7.4 Consolidated plan
-Deferred by the owner until the remaining audit areas are complete (C part 2, F, G, Security). Sections 1–4 and 6 are the inputs.
+Written at the end of Session 5: see **§8**. Sections 1–4 and 6 remain the detailed designs.
+
+---
+## 8. Consolidated remediation plan (Sessions 1–5)
+
+Status: **plan only, nothing implemented.** Written at the end of Session 5 (2026-11-09) on the owner's instruction. Inputs: AUDIT_FINDINGS.md (F-001…F-045), §1–§7 above, owner decisions Q3–Q5 and the Session 5 cutoff decision (§8.8). All sources are at sha256 `d9f96a34…16a9ac`. Implementation needs the owner's explicit approval (a Session 6 implementation session).
+
+### 8.1 Confirmed and probable defects, and what to do with each
+
+"Release blocker" is the audit's recommendation; the owner decides. Detailed designs: §1 (sync), §3 (F-009), §4 (F-012), §6 (data).
+
+| ID | Defect | Severity | Release blocker | Fix (section) | Depends on |
+|---|---|---|---|---|---|
+| F-013 | Sync: last-writer-wins, no retry, first load replaces local progress | High | **Yes** | Sync redesign, per-key LWW + tombstones + HLC (§1, Q3 §7.1) | F-002 runner; Q3 clock check; F-012; F-021 for sign-off |
+| F-022 | First sync with no account document never uploads; second device erases | High | **Yes** | Same redesign (§1) | as F-013 |
+| F-009 | Child rows locked after finishing the game | High | **Yes** | `well.after += prelude` (data only, §3) | F-011 first or together |
+| F-019 | "Saved to your account" after loss | Medium | **Yes** (with F-013) | Honest status states + retry (§2, §1) | F-013 |
+| F-012 | New player starts with four ticks, uploaded unprefixed | Medium | **Yes** | Empty defaults; optional guarded cleanup (§4, Q4 §7.2) | before the sync redesign (it must not upload new unprefixed ids) |
+| F-021 | Real-provider sync and cross-account isolation unverified | Info (risk) | **Release gate** | Test artifact run (§7.3, Q5) | F-013 fix built |
+| F-045 | Shadow Temple does not require Din's Fire / Magic Meter | Medium | No (data batch; recommend shipping with F-009) | Add `IT-22`, `IT-21` to `MQ-31` (§6.0) | data batch |
+| F-029 | Light Medallion gated on the last two temples | Medium | No (data batch) | §6 | data batch |
+| F-032 | Four N64/3DS tokens over-locked (ZR-1, GV-3, GF-2, CL-2) | Medium | No (data batch) | §6 | data batch |
+| F-002 | Tests never fail the exit status | Medium | No (release-process gate) | Unified runner (§6.1) | none; do first |
+| F-011 | Migrating load drops saved settings | Low | No (fix with F-009) | One `saveLocal()` at L489 | none |
+| F-010 | Reload adds a withheld "up" prize (locks off) | Low | No | Plan in session 3/4 notes | none |
+| F-020 | Out-of-order snapshots applied (provider-dependent, suspected) | Low | No | Removed by the §1 design | F-013; real provider (F-021) |
+| F-030 | GAN-1 waits for the Rainbow Bridge | Low | No | §6 | data batch |
+| F-031 | Five rows unlock early / miss a tool (DMT-1, HF-2, HC-2, IC-3, HP-15) | Low | No | §6 (HC-2 Medium confidence) | data batch |
+| F-044 | HP-29 locked behind the Hookshot | Low | No | Remove `IT-16` (§6.0) | data batch |
+| F-042 | ZF-3 lists no tool for a Hookshot spider | Low, **probable** | No | Re-verify with a second source, then §6.0 | data batch |
+| F-038 | Account document not validated, junk ids persist | Low | No | Validate against known + retired ids, cap length (§6.1) | with sync redesign |
+| F-039 | Sync status not a live region | Low | No | `aria-live="polite"` + failed-save text (§6.1) | with F-019 |
+| F-024 | Contradictory ages for three Switch 2 hearts in the sources | Low | No | Source conflict; output already correct | none |
+| F-001 | Two stale tests crash (`test.py`, `test_contrast.py`) | Low | No | Replace (§6.1) | runner |
+
+### 8.2 Improvements, information and unverified items (no defect to fix)
+
+- **Recommended improvements:** F-033 (Magic Meter twin rows; owner decision, §6), F-023 (build accepts override mistakes), F-004 (no version control; this repo is the audit copy, the project itself still needs a repository before implementation), F-003 (two unshipped pages, awaits Q2), F-005 (chained placeholder replacement), F-006 (real save in a test; not shipped), F-014, F-016 (test hooks, now five), F-025 (dead code), F-028 (day/night filter only on Quests).
+- **Verified correct / informational:** F-007, F-008, F-015 (locks advisory, by design), F-017, F-018, F-026→F-034 (resolved), F-027, F-037 (partial), F-040, F-041.
+- **Unverified / source disagreement (not defects):** F-035 (Switch 2 secondary guides, 8 disputed rows), F-036 (see §8.8), F-043 (source disagreements and unlisted alternatives).
+
+### 8.3 Dependencies between fixes
+1. Runner first: F-002 (and replacing F-001's two scripts) gates everything else; without it a "pass" is not trustworthy.
+2. **F-011 before or with F-009.** F-009 makes `normalize()` add `MQ-22` to saves past `MQ-30`, which is a migrating load that today drops settings.
+3. **One data rebuild** for F-009, F-029, F-030, F-031, F-032, F-044, F-045 (and F-042 once verified; F-033 once decided). F-029 and F-045 add prerequisites to story rows, so players with later steps ticked gain earlier rows through ancestor catch-up (`normalize()`); this is correct but must be shown with a before/after save fixture and mentioned in release notes. Use the `f009_probe.py` method to show that only the intended rows change, in all three versions.
+4. **F-012 before the sync redesign**, so the redesign does not carry new unprefixed ids into the per-key map. The Q4 cleanup (guarded, backed up, reversible) is its own migration and must run before or inside the v3 data-format migration, never after.
+5. **Sync redesign is one unit:** F-013, F-022, F-019, F-020, F-038, F-039 share the same code (`initRemote`, `flush`, status text). Do not fix one alone.
+6. **F-021 (real provider) follows the redesign** and cannot be done on the stand-in alone. It needs the Q5 test artifact and the isolation proof first.
+7. The Q3 clock choice depends on a provider fact not yet checked: whether the database offers a server revision / compare-and-set. If yes, use it with merge on conflict; if not, use the hybrid logical clock. Check with `describe_capabilities` before coding.
+
+### 8.4 Recommended implementation order
+| Phase | Work | Exit criterion |
+|---|---|---|
+| 0 Preparation | Put the project source in a repository (F-004); branch; rebuild and confirm hash `d9f96a34…`; build the unified runner (F-002), replace the two stale tests (F-001) | Runner exits non-zero on any failing, timed-out or verdict-less script; known-failing scripts listed as expected |
+| 1 Data and small fixes | F-011, F-009, then data batch F-029/030/031/032/044/045 (+F-042, F-033 if cleared) in one rebuild | `data_audit_s5.py` 16/16, `data_audit_s5b.py` and `data_audit_s5c.py` exit 0 after their reviewed lists are updated; `test_engine.py` S1b PASS; rebuild diff shows only intended rows |
+| 2 New-player state | F-012 (and Q4 cleanup if accepted) | `test_engine.py` N4 PASS; `test_sync_s4.py` H2 PASS; banner tests |
+| 3 Sync redesign | F-013, F-022, F-019, F-020, F-038, F-039 on the stand-in, both delivery models | Regression suite §1.5 items 1–10 green under M1 and M2 |
+| 4 Real-provider verification | Q5 test artifact, isolation proof, repeat §1.5 items 1–6 and Z1 against the real database; two independent accounts if available | F-021 closed or still marked unverified with reasons; production save metadata unchanged |
+| 5 Release | Full suite, rebuild hash recorded, owner publishes (not the audit), read-only post-release check of the live file list | Owner sign-off |
+| 6 Hygiene (optional, any time after 0) | F-010, F-023, F-005, F-003 (Q2), F-014, F-016, F-025, F-028 | Per item |
+
+### 8.5 Required regression tests
+- **Sync (Phase 3):** every item in §1.5 (1–11); B4, I1, R1, R2, O1, M1-v2, Z1 (seeded randomized convergence, 3 devices × 200 ops), S1 (status text); Q3 cases: tick-then-untick across devices, simultaneous untick/tick, out-of-order snapshot, device clock ±1 h, restart with pending writes.
+- **Engine/data (Phases 1–2):** `test_engine.py` (50 checks, S1b and N4 must flip), `test_progression_s4.py` P1–P5, `graph_check.py`, `build_audit.py` B1–B8, `build_mutation.py`, plus the F-009 migration fixture (a save with `sw2:MQ-41` and no `MQ-22` gains it and keeps its settings), new fixtures for F-029/F-045 catch-up, and for each data fix a test row that proves the old state was wrong (e.g. HP-29 ready without a Hookshot; MQ-31 not ready without Din's Fire).
+- **Data audit scripts:** `data_audit_s5.py` (expects 16/16 after the batch), `data_audit_s5b.py` and `data_audit_s5c.py` (update their `*_reviewed.json` files in the same change; a fix must remove its row from the open-defect classes).
+- **Security/accessibility (any phase):** `security_s5.py` (S1, S1b, S2 must stay PASS; S3 must flip once F-038 is fixed), `a11y_s5.py`/`a11y_s5b.py`/`a11y_s5c.py` (F-039: `#sync` gets a live region).
+- **Legacy suite:** the 24 passing old scripts keep passing (record counts before changing anything); the runner reports the 8 measurement-only scripts as "unchecked".
+
+### 8.6 Owner decisions needed
+1. Approve an implementation session (Session 6) and the order in §8.4, or change it.
+2. **F-033:** which Magic Meter rule for the prize/quest twin rows (`IT-23`/`SQ-25`, `IT-25`/`SQ-40`, `IT-21`/`SQ-19`, `IT-22`/`SQ-20`).
+3. **Q2:** are `index.html` and `themed.html` still wanted (F-003)?
+4. **Q3 follow-through:** accept "server revision if the provider offers it, otherwise hybrid logical clock" (needs a capability check first), including the bound on clock skew.
+5. **Q4 follow-through:** approve the exact migration rule, backup location and restore path (§7.2) before it is built.
+6. **Q5 follow-through:** when to run the test artifact (Phase 4), and whether two genuinely independent accounts will be available; otherwise cross-account isolation stays unverified.
+7. **F-042 / F-043:** whether to spend a second source on each row before the batch, or ship the batch without them (recommended: ship F-044, F-045 and the confirmed items; leave F-042 and F-043 rows for later).
+8. **F-045 and F-029 save impact:** accept that players past `MQ-31` / `MQ-17` gain earlier rows through catch-up, with a release note.
+9. **F-004:** where the project's source repository will live (this repo is the audit copy).
+10. **F-016:** remove the five test hooks from the release build, or keep them for tests only behind a flag.
+11. **F-028:** show the day/night filter on every tab, or document it as Quests-only.
+12. **Publishing:** every publish is the owner's action; the audit never publishes.
+
+### 8.7 Must be verified on the real provider before release (F-021)
+- Sync regression items 1–6 and Z1 against the real database, in a separate test artifact with proven isolation (§7.3).
+- Whether snapshots can arrive out of order or duplicated (F-020), whether the first snapshot can be from cache, and what `hasPendingWrites` and writes do across a reload (delivery models M1/M2 were assumptions).
+- Whether the database offers a server revision / compare-and-set (§8.3 item 7); document size limits; offline behaviour; error codes on failed writes.
+- Database security rules: that a signed-in account cannot read or write another account's `data/users/<id>/oot_tracker`. **Cross-account isolation needs two independent authenticated accounts**; with only the owner's identity it stays "unverified".
+- That the test artifact cannot read or write the production save; production metadata (version, size) recorded before and unchanged after.
+- Host Content-Security-Policy and any host-side restrictions (not examined, F-040).
+
+### 8.8 Audit limitations at the stopping point (owner decision, 2026-11-09 16:55 CT)
+The owner stopped the game-data source-checking so that it does not run on without end. Nothing below is claimed as verified.
+- **F-036 stays open (Informational).** Unverified against sources: the wording and accuracy of the 176 dungeon steps (DG-42..221); the 44 side-quest descriptions, rewards and requirements; prices and timers not listed in F-037; the 19 Heart Piece rows with no randomizer mapping; the Switch 2 data in all of these (F-035: secondary guides only, no first-hand source); main-quest prerequisites beyond the Shadow Temple, Spirit Temple and Ganon's Castle points already recorded.
+- The **37 token differences judged benign** (24 region, 10 story-implied, 3 alternative) were judged from the randomizer rules and the tracker's story order. They were **not** independently source-checked.
+- Token and dungeon comparisons are screens, not source checks (`data_audit_s5b.py`, `data_audit_s5c.py`); the randomizer models N64 only.
+- **Accessibility (F-041) not verified:** real screen-reader testing; browser zoom (only 200% text size and narrow widths were emulated); body-text contrast (existing pixel tests cover group titles and some dark-mode pages; tab labels checked by an approximation); the day/night filter (F-028); high-contrast mode and touch use.
+- **Security (F-040) not verified:** real sync-provider rules and cross-account isolation; host Content-Security-Policy; only the stand-in provider was used. Build supply chain was checked by grep only.
+- **Tests (F-001/F-002):** 24 of 26 old scripts pass when run individually; ten of them print a `FAILS:` list with no exit code and eight print measurements only. The first Session 5 run (`python3 -I`, parallel) is invalid. Ten scripts were not tested with an injected failure.
+- Not read in full: `theme2.js`, `scenes3.js`, and the remaining data modules.

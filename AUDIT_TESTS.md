@@ -246,3 +246,9 @@ Limits: the 10 `FAILS`-printing tests with no exit statement were not run with a
 | `scripts/data_audit_s5b.py` | 100 token requirement sets vs randomizer location + one level of region rules (tools only; tricks stripped; age-filtered); every difference must be in `testlogs/data_audit_s5b_reviewed.json` | exit 1 by design while defects are open (F-030/031/032/042); 48 rows match, 52 triaged |
 | `scripts/data_audit_s5c.py` | 176 dungeon steps x 3 versions, internal consistency (tool named in text must be held at that step); reviewed list `data_audit_s5c_reviewed.json` | exit 1 by design while F-045 is open; 15 steps triaged |
 Limits: both are screens, not source checks. S5b ignores region rules deeper than one level and non-tool conditions (keys, night, magic); the trick-stripping regex drops whole parenthesised groups, which hides alternatives inside them. S5c cannot see text that contradicts a source. Triage classes are my judgment and are recorded with a reason per row.
+
+## 9. Session 5 final status (2026-11-09)
+- Legacy suite, corrected: 24/26 pass (`test.py`, `test_contrast.py` fail: F-001). Run from `proj/` WITHOUT `-I` (they `import pwpatch`), serially. All `-I` results, including `testlogs/existing_suite_s5.txt`, are invalid.
+- Unified runner (F-002): recommended in REMEDIATION_PLAN §6.1 and §8.4 Phase 0; **not built**.
+- Expected exit codes for Session 5 scripts: `data_audit_s5.py` 1 (7/16), `data_audit_s5b.py` 1, `data_audit_s5c.py` 1 (all while F-029..F-032/F-045 open), `security_s5.py` 0, `a11y_s5c.py` 0, `a11y_s5.py` / `a11y_s5b.py` record only.
+- After any legacy test run: `git clean -fq -- 'proj/*.png'`.

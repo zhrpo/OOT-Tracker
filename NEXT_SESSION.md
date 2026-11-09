@@ -1,4 +1,4 @@
-# NEXT_SESSION.md — handoff (updated end of Session 5)
+# NEXT_SESSION.md — handoff for Session 6 (written at the end of Session 5, 2026-11-09)
 
 Written 2026-11-09, at the end of Session 4. A new conversation cannot see earlier chats or their workspaces. Everything needed is in the GitHub repo **`zhrpo/oot-tracker`** (private). From Session 5 on, the repo replaces the handoff zips. Attach it, clone it, and follow `CLAUDE.md`.
 
@@ -61,20 +61,22 @@ Written 2026-11-09, at the end of Session 4. A new conversation cannot see earli
 - Every test must have a pass/fail result and a nonzero exit code on failure.
 - Test harness seeding: guard on "no save exists", not on `sessionStorage` (AUDIT_TESTS.md §7.3, L-3).
 
-## State at end of Session 5
-- Session 5 did audit C part 1 only (see AUDIT_PROGRESS.md). New script `scripts/data_audit_s5.py`: exit 1, 7/16 pass (expected while F-029…F-032 are open). Other scripts unchanged: same expected exit codes as the table above.
-- New findings F-029…F-036 (data defects are Medium/Low; none is release-blocking by itself). The release-blocking list is unchanged (F-013, F-022, F-009, F-019, F-012, gate F-021).
-- Session 5 part 2 added F-037…F-045 (F-045, Shadow Temple needs Din's Fire, is Medium; the rest Low/Info); first batch F-037…F-041 (all Low/Info; none release-blocking). Next new ID: **F-046**.
-- Remaining before the consolidated remediation plan: C part 2 (F-036: dungeon steps DG-42..221, side/trade text, remaining prices, heart tools, other token rule sets), per-script root cause of the 19 failing legacy tests and the single suite runner (G), accessibility with a screen reader/contrast/other tabs (F), security items needing the Q5 test artifact (real provider, cross-account; E/Security), remaining data modules.
+## State at end of Session 5 (final)
+- **Sessions 1–5 complete. Session 6 is the implementation session and must not start without the owner's explicit approval.** Findings F-001..F-045; next new ID **F-046**.
+- Read `REMEDIATION_PLAN.md` §8 first: confirmed defects with severity, release blockers, dependencies, order, regression tests, owner decisions (§8.6), real-provider items (§8.7), audit limitations (§8.8).
+- Release blockers (audit recommendation): F-013, F-022, F-009, F-019, F-012; release gate F-021. Recommended order: Phase 0 runner/repo → 1 F-011+F-009+data batch → 2 F-012 → 3 sync redesign → 4 real-provider test (Q5) → 5 owner publishes.
+- **Expected exit codes on unchanged sources** (the Session 4 table still applies to its scripts):
 
-## (older) Recommended Session 5 objectives (the owner chooses)
-- **Option A — start implementation** (separate implementation session, on a git repository per F-004): follow REMEDIATION_PLAN.md §5.
-  1. F-011 + F-009 (data), re-run all suites.
-  2. F-012.
-  3. Sync redesign with regression suite §1.5.
-  4. Real-provider verification (needs Q5).
-- **Option B — continue the audit:**
-  1. Audit C game data, starting with the 32 F-026 pairs and the Switch 2 overrides in `fix4.py`, with cited version-specific sources.
-  2. Audit F UX/accessibility at the eight widths (keyboard, focus, ARIA; `#sync` live region).
-  3. Audit G per-script evaluation of the 27 existing tests and a single suite runner (F-002).
-  4. Read the remaining data modules in full (`data.py`, `side.py`, `extra.py`, `dungeons.py`, `vers.py`, `vnew.py`).
+  | Script | Exit | Result |
+  |---|---|---|
+  | `data_audit_s5.py` | 1 | 7/16 (F-029..F-032 open) |
+  | `data_audit_s5b.py` | 1 | open defects F-030/31/32/42 |
+  | `data_audit_s5c.py` | 1 | F-045 open |
+  | `security_s5.py` | 0 | — |
+  | `a11y_s5c.py` | 0 | min contrast 7.58 |
+  | `a11y_s5.py`, `a11y_s5b.py` | record only | DOM contrast numbers unreliable |
+- **Legacy tests** (`proj/test*.py`): run from `proj/`, WITHOUT `-I` (they `import pwpatch`), serially. 24/26 pass; `test.py` and `test_contrast.py` fail (F-001). Any `-I` result is invalid. Afterwards: `git clean -fq -- 'proj/*.png'`. Unified runner recommended, not built.
+- **Not verified (explicit; do not describe as verified):** F-036 (176 dungeon steps, 44 side quests, remaining prices, 19 unmapped Heart Pieces, Switch 2 data; 37 benign token differences were judged, not verified); real screen reader, browser zoom, body-text contrast, day/night filter (F-041); real sync-provider rules, cross-account isolation, host CSP (F-040/F-021).
+- **Owner decisions still open:** Q2; F-033 rule; clock mechanism confirmation; Q4 migration rule; Q5 timing; F-042/F-043 handling; F-045/F-029 save-impact release note; F-004 repo location; F-016; F-028 (full list §8.6).
+- Q3/Q4/Q5 answered earlier (AUDIT_PROGRESS.md, REMEDIATION_PLAN §7). Q5 not exercised; no test artifact exists.
+- Production: untouched in Session 5 (no DB read/write, no publish).

@@ -57,14 +57,14 @@ Written 2026-11-09, at the end of Session 4. A new conversation cannot see earli
 - Do not read the owner's progress into tests. Use synthetic data only.
 - Do not publish anything, and do not modify the live artifact. Exception: only if the owner explicitly approves Q5, publish a *new* test artifact; never the production slug.
 - Implement no fixes during audit sessions. Fixes start only when the owner opens an implementation session.
-- Preserve finding IDs; next new ID is **F-042**. Item IDs never renumber. DG/TR ids are append-only; DG-1..41 are retired.
+- Preserve finding IDs; next new ID is **F-046**. Item IDs never renumber. DG/TR ids are append-only; DG-1..41 are retired.
 - Every test must have a pass/fail result and a nonzero exit code on failure.
 - Test harness seeding: guard on "no save exists", not on `sessionStorage` (AUDIT_TESTS.md §7.3, L-3).
 
 ## State at end of Session 5
 - Session 5 did audit C part 1 only (see AUDIT_PROGRESS.md). New script `scripts/data_audit_s5.py`: exit 1, 7/16 pass (expected while F-029…F-032 are open). Other scripts unchanged: same expected exit codes as the table above.
 - New findings F-029…F-036 (data defects are Medium/Low; none is release-blocking by itself). The release-blocking list is unchanged (F-013, F-022, F-009, F-019, F-012, gate F-021).
-- Session 5 part 2 added F-037…F-041 (all Low/Info; none release-blocking). Next new ID: **F-042**.
+- Session 5 part 2 added F-037…F-045 (F-045, Shadow Temple needs Din's Fire, is Medium; the rest Low/Info); first batch F-037…F-041 (all Low/Info; none release-blocking). Next new ID: **F-046**.
 - Remaining before the consolidated remediation plan: C part 2 (F-036: dungeon steps DG-42..221, side/trade text, remaining prices, heart tools, other token rule sets), per-script root cause of the 19 failing legacy tests and the single suite runner (G), accessibility with a screen reader/contrast/other tabs (F), security items needing the Q5 test artifact (real provider, cross-account; E/Security), remaining data modules.
 
 ## (older) Recommended Session 5 objectives (the owner chooses)

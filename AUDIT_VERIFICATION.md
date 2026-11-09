@@ -126,3 +126,8 @@ Production safety (session 5): the live artifact was not touched; no database re
 | Real provider rules, cross-account, CSP | **Unverified** | F-021, F-040 |
 | Accessibility structure, keyboard focus, overflow | Verified (limited) | F-041 |
 | Screen reader, contrast, zoom, other tabs | **Unverified** | F-041 |
+| Token requirement sets, N64/3DS (tools vs randomizer) | Compared (screen); 37 differences judged benign without a source | F-036, F-042, F-043 |
+| Heart Piece tools | 17 compared, 36 read; HP-29 defect | F-044 |
+| Dungeon steps, internal consistency | Checked; wording vs source **unverified** | F-045, F-036 |
+| Trade chain order and timers | Verified | F-037 |
+| Side-quest text and rewards | **Unverified** (no source read) | F-036 |

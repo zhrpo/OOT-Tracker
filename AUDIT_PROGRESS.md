@@ -144,11 +144,11 @@ Backups (70), screenshots (143), scratch/diagnostic scripts (`dbg*.py`, `diag_ja
 |---|---|
 | A Architecture & code quality | app.js (s2) and the requirement compiler (s4) read; theme2.js, scenes3.js, data modules (main, data, side, extra, dungeons, vers, vnew) not read in full |
 | B Progression / dependency engine | **Complete** (s2 engine, s4 compiler + OR + day/night + runtime = generated). Open defect: F-009 |
-| C Game-data accuracy | **Partial (s5).** F-026 resolved; tokens/hearts cross-checked (F-029…F-035); dungeon/side/trade text and prices unverified (F-036) |
+| C Game-data accuracy | **Partial (s5).** F-026 resolved; tokens/hearts cross-checked (F-029…F-035, F-042…F-045); dungeon step wording, side-quest text and most prices still unverified against sources (F-036, owner decision needed) |
 | D Version-specific correctness | Logic verified for all three versions (s2 S17, s4 B1–B8, P1–P5). Version game data not verified (part of C) |
 | E Saving / sync / integrity | App-side logic tested against stand-in (s3 + s4 H-scenarios): F-013, F-019, F-020, F-022. Remediation designed (REMEDIATION_PLAN.md). Real provider + cross-account unverified (F-021) |
 | F UX & accessibility | **Mostly done (s5).** All tabs, versions, schemes, 200 % text, accessibility tree (F-039, F-041). Not done: real screen reader, browser zoom, body-text contrast, day/night filter |
-| G Testing & edge cases | **Partial (s5).** Existing suite run (26 scripts, exit-code evidence in F-001/F-002); per-script root causes and suite runner pending |
+| G Testing & edge cases | **Done for the audit (s5).** All 26 legacy scripts run individually: 24 pass, 2 stale (F-001); 10 print FAILS without an exit code, 8 print only measurements (F-002); unified runner recommended (REMEDIATION_PLAN 6.1), not built |
 | H Build & release integrity | Build reproducible (re-confirmed s4); build guards weak (F-023) |
 | Security & privacy | **Partial (s5).** Browser code and stand-in sync: F-038, F-040. Real provider, server rules, cross-account, CSP unverified |
 

@@ -1,3 +1,4 @@
+INVALID RUN - see existing_suite_s5_serial.txt. Cause: python3 -I (breaks "import pwpatch") plus 6-way parallel load.
 test.py rc=1 exitmech=0 failwords=3
 test_cards.py rc=124 exitmech=0 failwords=0
 test_contrast.py rc=1 exitmech=0 failwords=3

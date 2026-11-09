@@ -1,0 +1,10 @@
+Session 5 part 2 - existing proj/test*.py run one at a time from proj/, plain `python3 file.py` (no -I), exit code and wall time.
+test.py            rc=1 32s  TimeoutError: Locator.check input[data-id='KF-1'] (row not open on the default tab)   [F-001]
+test_contrast.py   rc=1 31s  TimeoutError: wait_for_selector .row                                                   [F-001]
+test_overflow.py   rc=0 119s "checked 375 states; failing 0"  (needs > 100 s; the earlier 'timeout' was my 45/100 s limit)
+test_cards.py      rc=0 50s  "BELOW 4.5: 0"   (earlier 'timeout' = my 45 s limit)
+test_paths.py      rc=0 16s  FAILS: []
+test_dg, test_final, test_gate, test_play, test_r12, test_r14, test_r3, test_r6, test_r7, test_r8, test_r9, test_two, test_tools: rc=0, FAILS: [] / 0
+test_contrast2, test_db, test_desk, test_resp, test_side, test_t2, test_ui, test_ver: rc=0, print measurements only (no pass/fail statement)
+Earlier run (testlogs/existing_suite_s5.txt) used `python3 -I` and 6 in parallel: -I removes the script directory from the import path, so
+`import pwpatch` raised ModuleNotFoundError (confirmed on test_db.py) and 17 scripts "failed"; that run is INVALID for classification.

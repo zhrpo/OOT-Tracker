@@ -239,5 +239,5 @@ The 180 dungeon steps' text; prices and timers; sync and UI (no change since s4)
 |---|---|---|
 | `scripts/security_s5.py` | S1 hostile ids/hash execute nothing, S2 hostile ver/tab ignored, S3 junk ids written back (observation, expected defect F-038), S4 200k-id load time, S5 hook present. Same isolated stand-in as `test_sync.py`; synthetic ids only | exit 0; S1, S1b, S2 pass; S3 reproduces; S4 1.7 s |
 | `scripts/a11y_s5.py` | structure, names, live region, hit size, overflow at 4 widths, 25 keyboard stops, per version | records only (exits non-zero only if a probe cannot run); F-039, F-041 |
-| `testlogs/existing_suite_s5.txt` | each `proj/test*.py` run once, 45 s limit, 6 in parallel, no `-I` ambiguity (rerun without `-I` for 14 of them gave the same classes) | 19 exit 1, 5 exit 0 (no exit mechanism), 2 timeouts |
-Limits: the suite run was parallel, so the two timeouts are not conclusive; causes of exit 1 were read for `test.py` (waits for a row that is not open) and `test_contrast.py` (selector timeout) only. The a11y probe sees only the skull tab with the groups that open by default.
+| `testlogs/existing_suite_s5_serial.txt` | each `proj/test*.py` run alone from `proj/` | 24 exit 0, 2 exit 1 (`test.py`, `test_contrast.py`). The earlier `existing_suite_s5.txt` is INVALID (`-I` broke imports) |
+Limits: the 10 `FAILS`-printing tests with no exit statement were not run with an injected failure (not allowed: existing tests unchanged). The a11y probe sees only the skull tab with the groups that open by default.

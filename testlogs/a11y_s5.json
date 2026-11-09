@@ -1,0 +1,83 @@
+{
+ "n64": {
+  "lang": "en",
+  "viewport": "width=device-width, initial-scale=1",
+  "syncLive": null,
+  "unnamedButtons": 0,
+  "unlabelledInputs": 0,
+  "checkboxes": 0,
+  "smallHitTargets": 0,
+  "duplicateIds": [],
+  "tabs": 11,
+  "tabsNoSelected": 0,
+  "tablist": 3,
+  "h1": 1,
+  "landmarks": 3,
+  "reducedMotionRule": true,
+  "focusOutlineNone": 0,
+  "focusVisibleRules": 11,
+  "overflowPx": {
+   "320": 0,
+   "390": 0,
+   "768": 0,
+   "1280": 0
+  },
+  "pageErrors": [],
+  "tabStops": 25,
+  "tabStopsWithoutRing": 0
+ },
+ "3ds": {
+  "lang": "en",
+  "viewport": "width=device-width, initial-scale=1",
+  "syncLive": null,
+  "unnamedButtons": 0,
+  "unlabelledInputs": 0,
+  "checkboxes": 0,
+  "smallHitTargets": 0,
+  "duplicateIds": [],
+  "tabs": 11,
+  "tabsNoSelected": 0,
+  "tablist": 3,
+  "h1": 1,
+  "landmarks": 3,
+  "reducedMotionRule": true,
+  "focusOutlineNone": 0,
+  "focusVisibleRules": 11,
+  "overflowPx": {
+   "320": 0,
+   "390": 0,
+   "768": 0,
+   "1280": 0
+  },
+  "pageErrors": [],
+  "tabStops": 25,
+  "tabStopsWithoutRing": 0
+ },
+ "sw2": {
+  "lang": "en",
+  "viewport": "width=device-width, initial-scale=1",
+  "syncLive": null,
+  "unnamedButtons": 0,
+  "unlabelledInputs": 0,
+  "checkboxes": 0,
+  "smallHitTargets": 0,
+  "duplicateIds": [],
+  "tabs": 11,
+  "tabsNoSelected": 0,
+  "tablist": 3,
+  "h1": 1,
+  "landmarks": 3,
+  "reducedMotionRule": true,
+  "focusOutlineNone": 0,
+  "focusVisibleRules": 11,
+  "overflowPx": {
+   "320": 0,
+   "390": 0,
+   "768": 0,
+   "1280": 0
+  },
+  "pageErrors": [],
+  "tabStops": 25,
+  "tabStopsWithoutRing": 0
+ }
+}

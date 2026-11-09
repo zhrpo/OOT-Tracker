@@ -116,3 +116,13 @@ Production safety (session 4): the live artifact was read only with `get_artifac
 | 3DS differences | Unverified (assumed same as N64 as the tracker states) | — |
 
 Production safety (session 5): the live artifact was not touched; no database read or write; nothing published. All work ran on the audit copy and on public web pages. Q5 (test artifact) was approved by the owner but not exercised in this session.
+
+## Session 5 part 2 additions
+| Area | Status | Finding |
+|---|---|---|
+| Trade timers (3/3/4 min), Big Poe values N64 and Switch 2 | Verified against several guides | F-037 |
+| All other prices, Switch 2 Odd Mushroom 4 min, wallet sizes, Dampé window | **Unverified** | F-036 |
+| XSS/injection paths in browser code | Verified (stand-in provider) | F-040 |
+| Real provider rules, cross-account, CSP | **Unverified** | F-021, F-040 |
+| Accessibility structure, keyboard focus, overflow | Verified (limited) | F-041 |
+| Screen reader, contrast, zoom, other tabs | **Unverified** | F-041 |

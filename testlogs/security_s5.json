@@ -1,0 +1,35 @@
+{
+ "S1 hostile ids in account document: no script, no injected element, no page error": {
+  "result": "PASS",
+  "pwned": null,
+  "injected": 0,
+  "errors": []
+ },
+ "S2 hostile ver/tab ignored": {
+  "result": "PASS",
+  "state": {
+   "ver": "sw2",
+   "tab": "skull"
+  }
+ },
+ "S3 junk ids written back": {
+  "observed": true,
+  "kept": [
+   "\"><script>window.__pwned=2</script>",
+   "');window.__pwned=3;('",
+   "sw2:<img src=x onerror=window.__pwned=1>"
+  ],
+  "expected_defect": true
+ },
+ "S4 200k-id document": {
+  "seconds": 1.76
+ },
+ "S1b hostile URL hash: no script": {
+  "result": "PASS"
+ },
+ "S5 hooks": {
+  "present": [
+   "__oot"
+  ]
+ }
+}

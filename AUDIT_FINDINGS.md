@@ -325,8 +325,38 @@ Method and limits are in AUDIT_TESTS.md §8 and AUDIT_VERIFICATION.md. Sources a
 - Category: C · Severity: Informational · Classification: Unverified
 - The 180 dungeon walkthrough steps (`DG-42`…`DG-221`) and the side-quest and trade-item guide text were read but not checked step by step against a source. Prices, rupee amounts and timers in text were not checked (a few Switch 2 values are cited in `vnotes`). Heart Piece requirements were checked only for age (check C7, 17 rows); their tools were not compared with the randomizer except HP-15. Main-quest `after`/`gives` order was read and is consistent with the dependency map (F-018) but not source-checked.
 
+### F-037 — Prices and timers: spot-checked entries agree with sources; the rest remain unverified
+- Category: C · Severity: Informational · Classification: Verified (partial) · Confidence: High for the entries listed, n/a for the rest
+- Method: all 67 distinct price/timer strings in the payload were extracted (side, heart, item lists). Checked against several independent sources (searches in session 5): Odd Mushroom 3 min, Eyeball Frog 3 min, World's Finest Eye Drops 4 min (consensus of ~8 guides; one page, ZeldaDungeon "Eye Drops", says the frog lasts 4 min - a single outlier, not adopted); no warp songs during the timers; N64 Big Poe 50 rupees + 100 points, Bottle at 1,000 points; Switch 2 Big Poe 30 rupees, bottle at 500, Gold Rupee (200) at 1,000 (FinalBoss, a secondary guide). The tracker text matches all of these.
+- **Not verified** (no source consulted): every other price (shops, 10/20/30/50 rupee game fees, bean prices, Dampé/Epona fees), the claim that the Switch 2 Odd Mushroom timer is about 4 minutes, the Switch 2 wallet sizes, and the 6-9 PM Dampé window. They stay under F-036.
+
+### F-038 — The account document is trusted without validation: junk ids are kept and written back
+- Category: Security / E · Severity: Low · Classification: Confirmed defect (hardening) · Confidence: High · Versions: all
+- Evidence: `scripts/security_s5.py` check S3. A synthetic document whose `got` holds strings such as `"><script>...` and `sw2:<img onerror>` is accepted by `initRemote()` (only `typeof x === 'string'` is tested, app.js L1177); the strings stay in the set and are sent back on the next tick. They never reach HTML (see F-040), only the "not tied to a game" count and storage. `ver` and `tab` are whitelisted (S2). A 200,000-id document loads in 1.7 s (S4), so size is not a practical problem today.
+- Impact: only the owner's own document can carry such values, so this is hygiene: unknown ids accumulate forever and the legacy banner can be triggered by them.
+- Recommendation (for the sync redesign, REMEDIATION_PLAN §1): validate ids against the known row ids plus the retired list; cap the array length.
+
+### F-039 — The sync status line is not announced to screen readers
+- Category: F · Severity: Low · Classification: Confirmed defect · Confidence: High · Versions: all
+- Evidence: `scripts/a11y_s5.py`, `testlogs/a11y_s5.json`: `#sync` is a plain `<span>` with no `aria-live` and no live ancestor (all three versions). The toast has `role="status" aria-live="polite"`, so undo messages are announced, but "Saved on this device only" / "Saved to your account" are not. This matters more once F-013/F-019 are fixed, because the status is then the only signal of a failed save.
+- Recommendation: make the status line a polite live region (and a distinct message for a failed save).
+
+### F-040 — Security review of the browser code: no injection path found
+- Category: Security · Severity: Informational · Classification: Verified (within the stated limits) · Confidence: High
+- Checked: (1) the JSON data blob contains no `</`, `<!--` or `<script` (306,854 chars); (2) 0 inline event handlers; (3) every string shown through `innerHTML` is passed through `esc()` or is a fixed literal; row ids built into selectors come from the static data, not from storage; (4) hostile ids in the account document, a hostile `ver`/`tab`, and a hostile URL hash execute no script and inject no element (`security_s5.py` S1, S1b, S2, all PASS; exit 0); (5) the only external links are the source links, `target="_blank" rel="noopener"`, all https; (6) no network request is made by the page (F-008). `esc()` does not escape `'`, but no attribute is built with single quotes.
+- Also: besides `window.__oot` (F-016), four more test hooks ship: `__ootDefVer`, `__ootNoAsk`, `__ootNoVeil`, `__ootOpen`. Severity unchanged (Informational): same-origin script is already the player's own.
+- Limits: no CSP is set by the page (the host controls it; not examined). The `claude.use('db')`/`user` provider was stubbed, so server-side rules and cross-account isolation stay unverified (F-021). Build process: the Python modules contain no subprocess, eval, network or exec calls (grep); their placeholder replacement is F-005/F-023. Dependency supply chain: the page has no third-party code.
+
+### F-041 — Accessibility spot-check: structure sound; touch targets small; coverage limited
+- Category: F · Severity: Informational · Classification: Verified (limited) · Confidence: Medium
+- Measured on the skull tab in all three versions (`a11y_s5.py`): `lang="en"`, zoom not locked, one `<h1>`, tablists with `aria-selected`, 0 unnamed buttons, 0 unlabelled inputs, no duplicate ids, no horizontal overflow at 320/390/768/1280 px, `prefers-reduced-motion` rule present, 25 keyboard stops all show a focus ring, no page errors. Checkboxes are 30x30 px: passes WCAG 2.2 AA target size (24 px), not the 44 px AAA guideline.
+- Not covered: real screen-reader use, colour contrast (the old contrast tests crash, F-001; not re-run), other tabs, zoom/text-size at 200%, the day/night filter (F-028).
+
 ### Updates to earlier findings (session 5)
 - F-026: Resolved by F-034.
+- F-016: four further test hooks ship (see F-040); severity unchanged.
+- F-001/F-002 (existing suite, session 5 run, `testlogs/existing_suite_s5.txt`): of 26 `proj/test*.py`, only 4 (`test_final`, `test_r12`, `test_r8`, `test_r9`) contain any `assert`/`sys.exit`; 22 have no exit mechanism. In one parallel run, 19 exited 1 (a crash or timeout, e.g. `test.py` waits for a row that is not open), 5 exited 0 by construction after printing a `FAILS:` list (`test_dg`, `test_r14`, `test_r6`, `test_tools`, `test_two`), and 2 timed out (`test_cards`, `test_paths`; run 6-wide, so the timeouts may be load; not re-run alone). Causes of the exit-1 cases were examined for two scripts only. Classification unchanged; evidence extended.
+- F-036: narrowed: the price/timer part is partly resolved by F-037.
 - F-012 and F-013: owner decisions recorded (see AUDIT_PROGRESS.md, REMEDIATION_PLAN.md §7). No change of classification.
 
 ---
@@ -341,6 +371,11 @@ Method and limits are in AUDIT_TESTS.md §8 and AUDIT_VERIFICATION.md. Sources a
 | F-033 | Great Fairy prize/quest twins disagree on Magic Meter | Recommended improvement | Low | No | Consistency |
 | F-034 | F-026 resolved (32 pairs) | Verified | Info | No | — |
 | F-035 | Switch 2 data from secondary guides; 8 rows disputed | Unverified | Info (risk) | No | Re-check later |
-| F-036 | Dungeon/side/trade text not source-checked | Unverified | Info | No | Remaining audit C work |
+| F-036 | Dungeon steps, side/trade text, most prices, heart tools beyond HP-15, other 91 token rule sets not source-checked | Unverified | Info | No | Remaining audit C work |
+| F-037 | Prices/timers: trade timers and Big Poe values verified, rest not | Verified (partial) | Info | No | - |
+| F-038 | Account document not validated; junk ids persist | Confirmed defect (hardening) | Low | No | Fold into sync redesign |
+| F-039 | Sync status not a live region | Confirmed defect | Low | No | Needed once failed saves are surfaced |
+| F-040 | Security review: no injection path | Verified (limited) | Info | No | - |
+| F-041 | Accessibility spot-check | Verified (limited) | Info | No | - |
 
-Next new ID: **F-037**.
+Next new ID: **F-042**.

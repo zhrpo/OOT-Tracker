@@ -233,3 +233,11 @@ Two first-draft checks were wrong and removed: a "KAK-1 not night on Switch 2" c
 
 ### 8.3 Not tested in session 5
 The 180 dungeon steps' text; prices and timers; sync and UI (no change since s4).
+
+### 8.4 Session 5, part 2 scripts
+| Script | What | Result |
+|---|---|---|
+| `scripts/security_s5.py` | S1 hostile ids/hash execute nothing, S2 hostile ver/tab ignored, S3 junk ids written back (observation, expected defect F-038), S4 200k-id load time, S5 hook present. Same isolated stand-in as `test_sync.py`; synthetic ids only | exit 0; S1, S1b, S2 pass; S3 reproduces; S4 1.7 s |
+| `scripts/a11y_s5.py` | structure, names, live region, hit size, overflow at 4 widths, 25 keyboard stops, per version | records only (exits non-zero only if a probe cannot run); F-039, F-041 |
+| `testlogs/existing_suite_s5.txt` | each `proj/test*.py` run once, 45 s limit, 6 in parallel, no `-I` ambiguity (rerun without `-I` for 14 of them gave the same classes) | 19 exit 1, 5 exit 0 (no exit mechanism), 2 timeouts |
+Limits: the suite run was parallel, so the two timeouts are not conclusive; causes of exit 1 were read for `test.py` (waits for a row that is not open) and `test_contrast.py` (selector timeout) only. The a11y probe sees only the skull tab with the groups that open by default.

@@ -202,5 +202,8 @@ The owner authorizes removal only where the four ids can be **confidently** iden
 ### 7.3 Q5 — separate test artifact (applies to §5 step 4, the F-021 gate)
 Approved only under isolation proof. Procedure for the implementation or sync-verification session: (a) publish a new artifact with a new ID; never the production slug; (b) before any write, show that the test page's database paths resolve inside the test artifact, that a read of the production path through it returns nothing, and record the production document's `version` and `updatedAt`; (c) synthetic progress only; (d) exercise the §1.5 scenarios; (e) re-check production metadata unchanged; (f) if (b) cannot be shown, stop and keep sync "Unverified". Cross-account isolation remains **unverified** unless two genuinely independent authenticated accounts are available.
 
+### 6.1 Further small items from session 5 part 2 (draft)
+F-038 (validate ids against known + retired ids, cap length) belongs in §1 with the sync redesign. F-039 (polite live region for `#sync`, distinct failed-save text) belongs with F-019 (§2). Existing-suite fixes (F-001/F-002: one runner, non-zero exit on any failure) are release-process work.
+
 ### 7.4 Consolidated plan
 Deferred by the owner until the remaining audit areas are complete (C part 2, F, G, Security). Sections 1–4 and 6 are the inputs.

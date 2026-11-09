@@ -85,6 +85,8 @@ Done:
 Not done (still open in audit C): the 180 dungeon steps and side-quest/trade text were not checked against a source; Heart Piece tools beyond HP-15; prices/timers (F-036). Audits F (UX/accessibility), G (per-script evaluation, suite runner) and Security were not started, and the consolidated remediation plan the owner asked for is **not yet written**: it waits for those audits.
 No fix implemented; `proj/` unchanged. Production: live artifact, database and the owner's save untouched. Q5 not exercised.
 
+Session 5, part 2 (resumed after the Part 1 verification; verification found nothing to correct): done: security review of the browser code with a runnable probe (`scripts/security_s5.py`, F-038, F-040); accessibility spot-check (`scripts/a11y_s5.py`, F-039, F-041); evaluation of the existing suite by running all 26 `proj/test*.py` (F-001/F-002 evidence extended, `testlogs/existing_suite_s5.txt`); price/timer extraction and partial source check (F-037). Not done: dungeon steps (DG-42..221), side-quest/trade text beyond prices/timers, heart tools beyond HP-15, other 91 token rule sets (all F-036), the per-script root-cause of each failing legacy test (two examined), a single suite runner, colour contrast re-run, screen-reader testing, other tabs for accessibility. No fix implemented, no publish, production untouched.
+
 Session 5 counts: sources read: 3 repo doc sets, ~14 web pages; tests: 1 script, 16 checks, 7 pass, 9 fail; findings 8 new.
 
 #### Owner decisions recorded in session 5 (2026-11-09 16:11 CT message)
@@ -145,10 +147,10 @@ Backups (70), screenshots (143), scratch/diagnostic scripts (`dbg*.py`, `diag_ja
 | C Game-data accuracy | **Partial (s5).** F-026 resolved; tokens/hearts cross-checked (F-029…F-035); dungeon/side/trade text and prices unverified (F-036) |
 | D Version-specific correctness | Logic verified for all three versions (s2 S17, s4 B1–B8, P1–P5). Version game data not verified (part of C) |
 | E Saving / sync / integrity | App-side logic tested against stand-in (s3 + s4 H-scenarios): F-013, F-019, F-020, F-022. Remediation designed (REMEDIATION_PLAN.md). Real provider + cross-account unverified (F-021) |
-| F UX & accessibility | Not started (F-028 noted) |
-| G Testing & edge cases | Baseline + audit suites; per-script evaluation of the 27 existing tests pending |
+| F UX & accessibility | **Partial (s5).** Spot-check F-041, F-039; screen reader, contrast, other tabs not done |
+| G Testing & edge cases | **Partial (s5).** Existing suite run (26 scripts, exit-code evidence in F-001/F-002); per-script root causes and suite runner pending |
 | H Build & release integrity | Build reproducible (re-confirmed s4); build guards weak (F-023) |
-| Security & privacy | Not started (F-016, F-006 noted) |
+| Security & privacy | **Partial (s5).** Browser code and stand-in sync: F-038, F-040. Real provider, server rules, cross-account, CSP unverified |
 
 ## Files: inspection status
 - Fully inspected: `app.js` (s2), `build.py`, `gate.py`, `fix4.py`, `links.py`, `era.py`, `regroup.py` (s4).

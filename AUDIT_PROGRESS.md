@@ -147,7 +147,7 @@ Backups (70), screenshots (143), scratch/diagnostic scripts (`dbg*.py`, `diag_ja
 | C Game-data accuracy | **Partial (s5).** F-026 resolved; tokens/hearts cross-checked (F-029…F-035); dungeon/side/trade text and prices unverified (F-036) |
 | D Version-specific correctness | Logic verified for all three versions (s2 S17, s4 B1–B8, P1–P5). Version game data not verified (part of C) |
 | E Saving / sync / integrity | App-side logic tested against stand-in (s3 + s4 H-scenarios): F-013, F-019, F-020, F-022. Remediation designed (REMEDIATION_PLAN.md). Real provider + cross-account unverified (F-021) |
-| F UX & accessibility | **Partial (s5).** Spot-check F-041, F-039; screen reader, contrast, other tabs not done |
+| F UX & accessibility | **Mostly done (s5).** All tabs, versions, schemes, 200 % text, accessibility tree (F-039, F-041). Not done: real screen reader, browser zoom, body-text contrast, day/night filter |
 | G Testing & edge cases | **Partial (s5).** Existing suite run (26 scripts, exit-code evidence in F-001/F-002); per-script root causes and suite runner pending |
 | H Build & release integrity | Build reproducible (re-confirmed s4); build guards weak (F-023) |
 | Security & privacy | **Partial (s5).** Browser code and stand-in sync: F-038, F-040. Real provider, server rules, cross-account, CSP unverified |

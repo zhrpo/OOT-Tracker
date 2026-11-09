@@ -241,3 +241,5 @@ The 180 dungeon steps' text; prices and timers; sync and UI (no change since s4)
 | `scripts/a11y_s5.py` | structure, names, live region, hit size, overflow at 4 widths, 25 keyboard stops, per version | records only (exits non-zero only if a probe cannot run); F-039, F-041 |
 | `testlogs/existing_suite_s5_serial.txt` | each `proj/test*.py` run alone from `proj/` | 24 exit 0, 2 exit 1 (`test.py`, `test_contrast.py`). The earlier `existing_suite_s5.txt` is INVALID (`-I` broke imports) |
 Limits: the 10 `FAILS`-printing tests with no exit statement were not run with an injected failure (not allowed: existing tests unchanged). The a11y probe sees only the skull tab with the groups that open by default.
+| `scripts/a11y_s5b.py` | all 5 tabs x 3 versions x light/dark: checkbox sizes, accessibility-tree names, 200 % text, (DOM contrast numbers recorded but unreliable, see F-041) | records; exit 1 only if the probe cannot run |
+| `scripts/a11y_s5c.py` | pixel contrast of tab labels, dominant background approximation | exit 0 (min 7.58) |

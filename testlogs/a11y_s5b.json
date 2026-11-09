@@ -1,0 +1,1604 @@
+{
+ "n64/main/light": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 4,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 4,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Done Get the Kokiri Sword",
+   "Done Buy the Deku Shield"
+  ],
+  "ax_button": 38,
+  "ax_button_unnamed": 0,
+  "ax_link": 10,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 117,
+   "skipped_image_bg": 25,
+   "below": 11,
+   "worst": [
+    {
+     "t": "Skulls",
+     "ratio": 3.03,
+     "need": 4.5,
+     "cls": "ts"
+    },
+    {
+     "t": "Hearts",
+     "ratio": 3.03,
+     "need": 4.5,
+     "cls": "ts"
+    },
+    {
+     "t": "Quests",
+     "ratio": 3.03,
+     "need": 4.5,
+     "cls": "ts"
+    },
+    {
+     "t": "Items",
+     "ratio": 3.03,
+     "need": 4.5,
+     "cls": "ts"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "n64/main/dark": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 4,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 4,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Done Get the Kokiri Sword",
+   "Done Buy the Deku Shield"
+  ],
+  "ax_button": 38,
+  "ax_button_unnamed": 0,
+  "ax_link": 10,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 117,
+   "skipped_image_bg": 25,
+   "below": 16,
+   "worst": [
+    {
+     "t": "Kokiri Forest and the Great De",
+     "ratio": 1.52,
+     "need": 4.5,
+     "cls": "gname"
+    },
+    {
+     "t": "Main",
+     "ratio": 3.61,
+     "need": 4.5,
+     "cls": "ts"
+    },
+    {
+     "t": "Nintendo 64",
+     "ratio": 3.61,
+     "need": 4.5,
+     "cls": "vn1"
+    },
+    {
+     "t": "All",
+     "ratio": 3.61,
+     "need": 4.5,
+     "cls": "BUTTON"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "n64/skull/light": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 3,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 3,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Collected KF-1 (locked)",
+   "Collected KF-2 (locked)"
+  ],
+  "ax_button": 50,
+  "ax_button_unnamed": 0,
+  "ax_link": 8,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 127,
+   "skipped_image_bg": 21,
+   "below": 11,
+   "worst": [
+    {
+     "t": "Main",
+     "ratio": 3.03,
+     "need": 4.5,
+     "cls": "ts"
+    },
+    {
+     "t": "Hearts",
+     "ratio": 3.03,
+     "need": 4.5,
+     "cls": "ts"
+    },
+    {
+     "t": "Quests",
+     "ratio": 3.03,
+     "need": 4.5,
+     "cls": "ts"
+    },
+    {
+     "t": "Items",
+     "ratio": 3.03,
+     "need": 4.5,
+     "cls": "ts"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "n64/skull/dark": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 3,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 3,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Collected KF-1 (locked)",
+   "Collected KF-2 (locked)"
+  ],
+  "ax_button": 50,
+  "ax_button_unnamed": 0,
+  "ax_link": 8,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 127,
+   "skipped_image_bg": 21,
+   "below": 46,
+   "worst": [
+    {
+     "t": "Great Deku Tree",
+     "ratio": 1.52,
+     "need": 3,
+     "cls": "gname"
+    },
+    {
+     "t": "Hyrule Field",
+     "ratio": 1.55,
+     "need": 3,
+     "cls": "gname"
+    },
+    {
+     "t": "Kokiri Forest",
+     "ratio": 1.57,
+     "need": 3,
+     "cls": "gname"
+    },
+    {
+     "t": "Forest Temple",
+     "ratio": 1.59,
+     "need": 3,
+     "cls": "gname"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "n64/heart/light": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 4,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 4,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Done Get the Kokiri Sword",
+   "Done Buy the Deku Shield"
+  ],
+  "ax_button": 38,
+  "ax_button_unnamed": 0,
+  "ax_link": 10,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 117,
+   "skipped_image_bg": 25,
+   "below": 11,
+   "worst": [
+    {
+     "t": "Skulls",
+     "ratio": 3.03,
+     "need": 4.5,
+     "cls": "ts"
+    },
+    {
+     "t": "Hearts",
+     "ratio": 3.03,
+     "need": 4.5,
+     "cls": "ts"
+    },
+    {
+     "t": "Quests",
+     "ratio": 3.03,
+     "need": 4.5,
+     "cls": "ts"
+    },
+    {
+     "t": "Items",
+     "ratio": 3.03,
+     "need": 4.5,
+     "cls": "ts"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "n64/heart/dark": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 4,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 4,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Done Get the Kokiri Sword",
+   "Done Buy the Deku Shield"
+  ],
+  "ax_button": 38,
+  "ax_button_unnamed": 0,
+  "ax_link": 10,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 117,
+   "skipped_image_bg": 25,
+   "below": 16,
+   "worst": [
+    {
+     "t": "Kokiri Forest and the Great De",
+     "ratio": 1.52,
+     "need": 4.5,
+     "cls": "gname"
+    },
+    {
+     "t": "Main",
+     "ratio": 3.61,
+     "need": 4.5,
+     "cls": "ts"
+    },
+    {
+     "t": "Nintendo 64",
+     "ratio": 3.61,
+     "need": 4.5,
+     "cls": "vn1"
+    },
+    {
+     "t": "All",
+     "ratio": 3.61,
+     "need": 4.5,
+     "cls": "BUTTON"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "n64/side/light": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 7,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 7,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Done Skull Kid duet (locked)",
+   "Done Skull Kids' memory game (locked)"
+  ],
+  "ax_button": 62,
+  "ax_button_unnamed": 0,
+  "ax_link": 12,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 238,
+   "skipped_image_bg": 30,
+   "below": 13,
+   "worst": [
+    {
+     "t": "Main",
+     "ratio": 3.03,
+     "need": 4.5,
+     "cls": "ts"
+    },
+    {
+     "t": "Skulls",
+     "ratio": 3.03,
+     "need": 4.5,
+     "cls": "ts"
+    },
+    {
+     "t": "Hearts",
+     "ratio": 3.03,
+     "need": 4.5,
+     "cls": "ts"
+    },
+    {
+     "t": "Items",
+     "ratio": 3.03,
+     "need": 4.5,
+     "cls": "ts"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "n64/side/dark": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 7,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 7,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Done Skull Kid duet (locked)",
+   "Done Skull Kids' memory game (locked)"
+  ],
+  "ax_button": 62,
+  "ax_button_unnamed": 0,
+  "ax_link": 12,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 238,
+   "skipped_image_bg": 30,
+   "below": 35,
+   "worst": [
+    {
+     "t": "Desert Colossus",
+     "ratio": 1.59,
+     "need": 3,
+     "cls": "gname"
+    },
+    {
+     "t": "Lost Woods",
+     "ratio": 1.6,
+     "need": 3,
+     "cls": "gname"
+    },
+    {
+     "t": "Zora's River",
+     "ratio": 1.62,
+     "need": 3,
+     "cls": "gname"
+    },
+    {
+     "t": "Lon Lon Ranch",
+     "ratio": 1.65,
+     "need": 3,
+     "cls": "gname"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "n64/items/light": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 7,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 7,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Done Kokiri Sword",
+   "Done Master Sword (locked)"
+  ],
+  "ax_button": 44,
+  "ax_button_unnamed": 0,
+  "ax_link": 10,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 187,
+   "skipped_image_bg": 26,
+   "below": 11,
+   "worst": [
+    {
+     "t": "Main",
+     "ratio": 3.03,
+     "need": 4.5,
+     "cls": "ts"
+    },
+    {
+     "t": "Skulls",
+     "ratio": 3.03,
+     "need": 4.5,
+     "cls": "ts"
+    },
+    {
+     "t": "Hearts",
+     "ratio": 3.03,
+     "need": 4.5,
+     "cls": "ts"
+    },
+    {
+     "t": "Quests",
+     "ratio": 3.03,
+     "need": 4.5,
+     "cls": "ts"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "n64/items/dark": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 7,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 7,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Done Kokiri Sword",
+   "Done Master Sword (locked)"
+  ],
+  "ax_button": 44,
+  "ax_button_unnamed": 0,
+  "ax_link": 10,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 187,
+   "skipped_image_bg": 26,
+   "below": 25,
+   "worst": [
+    {
+     "t": "Songs you learn as a child",
+     "ratio": 1.57,
+     "need": 3,
+     "cls": "gname"
+    },
+    {
+     "t": "Strength, swimming and defense",
+     "ratio": 1.64,
+     "need": 4.5,
+     "cls": "gname"
+    },
+    {
+     "t": "Bags, quivers and wallets",
+     "ratio": 1.72,
+     "need": 3,
+     "cls": "gname"
+    },
+    {
+     "t": "Bottles",
+     "ratio": 1.8,
+     "need": 3,
+     "cls": "gname"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "3ds/main/light": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 4,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 4,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Done Get the Kokiri Sword",
+   "Done Buy the Deku Shield"
+  ],
+  "ax_button": 38,
+  "ax_button_unnamed": 0,
+  "ax_link": 13,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 110,
+   "skipped_image_bg": 43,
+   "below": 1,
+   "worst": [
+    {
+     "t": "Nintendo 64",
+     "ratio": 2.56,
+     "need": 4.5,
+     "cls": "vn1"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "3ds/main/dark": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 4,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 4,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Done Get the Kokiri Sword",
+   "Done Buy the Deku Shield"
+  ],
+  "ax_button": 38,
+  "ax_button_unnamed": 0,
+  "ax_link": 13,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 110,
+   "skipped_image_bg": 43,
+   "below": 2,
+   "worst": [
+    {
+     "t": "Kokiri Forest and the Great De",
+     "ratio": 1.52,
+     "need": 4.5,
+     "cls": "gname"
+    },
+    {
+     "t": "Nintendo 64",
+     "ratio": 4.25,
+     "need": 4.5,
+     "cls": "vn1"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "3ds/skull/light": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 3,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 3,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Collected KF-1 (locked)",
+   "Collected KF-2 (locked)"
+  ],
+  "ax_button": 50,
+  "ax_button_unnamed": 0,
+  "ax_link": 11,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 135,
+   "skipped_image_bg": 24,
+   "below": 1,
+   "worst": [
+    {
+     "t": "Nintendo 64",
+     "ratio": 2.56,
+     "need": 4.5,
+     "cls": "vn1"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "3ds/skull/dark": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 3,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 3,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Collected KF-1 (locked)",
+   "Collected KF-2 (locked)"
+  ],
+  "ax_button": 50,
+  "ax_button_unnamed": 0,
+  "ax_link": 11,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 135,
+   "skipped_image_bg": 24,
+   "below": 32,
+   "worst": [
+    {
+     "t": "Great Deku Tree",
+     "ratio": 1.52,
+     "need": 3,
+     "cls": "gname"
+    },
+    {
+     "t": "Hyrule Field",
+     "ratio": 1.55,
+     "need": 3,
+     "cls": "gname"
+    },
+    {
+     "t": "Kokiri Forest",
+     "ratio": 1.57,
+     "need": 3,
+     "cls": "gname"
+    },
+    {
+     "t": "Forest Temple",
+     "ratio": 1.59,
+     "need": 3,
+     "cls": "gname"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "3ds/heart/light": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 4,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 4,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Done Get the Kokiri Sword",
+   "Done Buy the Deku Shield"
+  ],
+  "ax_button": 38,
+  "ax_button_unnamed": 0,
+  "ax_link": 13,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 110,
+   "skipped_image_bg": 43,
+   "below": 1,
+   "worst": [
+    {
+     "t": "Nintendo 64",
+     "ratio": 2.56,
+     "need": 4.5,
+     "cls": "vn1"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "3ds/heart/dark": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 4,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 4,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Done Get the Kokiri Sword",
+   "Done Buy the Deku Shield"
+  ],
+  "ax_button": 38,
+  "ax_button_unnamed": 0,
+  "ax_link": 13,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 110,
+   "skipped_image_bg": 43,
+   "below": 2,
+   "worst": [
+    {
+     "t": "Kokiri Forest and the Great De",
+     "ratio": 1.52,
+     "need": 4.5,
+     "cls": "gname"
+    },
+    {
+     "t": "Nintendo 64",
+     "ratio": 4.25,
+     "need": 4.5,
+     "cls": "vn1"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "3ds/side/light": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 7,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 7,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Done Skull Kid duet (locked)",
+   "Done Skull Kids' memory game (locked)"
+  ],
+  "ax_button": 62,
+  "ax_button_unnamed": 0,
+  "ax_link": 15,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 205,
+   "skipped_image_bg": 74,
+   "below": 1,
+   "worst": [
+    {
+     "t": "Nintendo 64",
+     "ratio": 2.56,
+     "need": 4.5,
+     "cls": "vn1"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "3ds/side/dark": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 7,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 7,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Done Skull Kid duet (locked)",
+   "Done Skull Kids' memory game (locked)"
+  ],
+  "ax_button": 62,
+  "ax_button_unnamed": 0,
+  "ax_link": 15,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 205,
+   "skipped_image_bg": 74,
+   "below": 18,
+   "worst": [
+    {
+     "t": "Desert Colossus",
+     "ratio": 1.59,
+     "need": 3,
+     "cls": "gname"
+    },
+    {
+     "t": "Lost Woods",
+     "ratio": 1.6,
+     "need": 3,
+     "cls": "gname"
+    },
+    {
+     "t": "Zora's River",
+     "ratio": 1.62,
+     "need": 3,
+     "cls": "gname"
+    },
+    {
+     "t": "Lon Lon Ranch",
+     "ratio": 1.65,
+     "need": 3,
+     "cls": "gname"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "3ds/items/light": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 7,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 7,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Done Kokiri Sword",
+   "Done Master Sword (locked)"
+  ],
+  "ax_button": 44,
+  "ax_button_unnamed": 0,
+  "ax_link": 13,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 153,
+   "skipped_image_bg": 70,
+   "below": 1,
+   "worst": [
+    {
+     "t": "Nintendo 64",
+     "ratio": 2.56,
+     "need": 4.5,
+     "cls": "vn1"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "3ds/items/dark": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 7,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 7,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Done Kokiri Sword",
+   "Done Master Sword (locked)"
+  ],
+  "ax_button": 44,
+  "ax_button_unnamed": 0,
+  "ax_link": 13,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 153,
+   "skipped_image_bg": 70,
+   "below": 11,
+   "worst": [
+    {
+     "t": "Songs you learn as a child",
+     "ratio": 1.57,
+     "need": 3,
+     "cls": "gname"
+    },
+    {
+     "t": "Strength, swimming and defense",
+     "ratio": 1.64,
+     "need": 4.5,
+     "cls": "gname"
+    },
+    {
+     "t": "Bags, quivers and wallets",
+     "ratio": 1.72,
+     "need": 3,
+     "cls": "gname"
+    },
+    {
+     "t": "Bottles",
+     "ratio": 1.8,
+     "need": 3,
+     "cls": "gname"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "sw2/main/light": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 4,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 4,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Done Get the Kokiri Sword",
+   "Done Buy the Deku Shield"
+  ],
+  "ax_button": 38,
+  "ax_button_unnamed": 0,
+  "ax_link": 23,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 173,
+   "skipped_image_bg": 2,
+   "below": 1,
+   "worst": [
+    {
+     "t": "Nintendo 64",
+     "ratio": 2.56,
+     "need": 4.5,
+     "cls": "vn1"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "sw2/main/dark": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 4,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 4,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Done Get the Kokiri Sword",
+   "Done Buy the Deku Shield"
+  ],
+  "ax_button": 38,
+  "ax_button_unnamed": 0,
+  "ax_link": 23,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 173,
+   "skipped_image_bg": 2,
+   "below": 2,
+   "worst": [
+    {
+     "t": "Kokiri Forest and the Great De",
+     "ratio": 1.52,
+     "need": 4.5,
+     "cls": "gname"
+    },
+    {
+     "t": "Nintendo 64",
+     "ratio": 4.25,
+     "need": 4.5,
+     "cls": "vn1"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "sw2/skull/light": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 3,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 3,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Collected KF-1 (locked)",
+   "Collected KF-2 (locked)"
+  ],
+  "ax_button": 50,
+  "ax_button_unnamed": 0,
+  "ax_link": 21,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 180,
+   "skipped_image_bg": 2,
+   "below": 1,
+   "worst": [
+    {
+     "t": "Nintendo 64",
+     "ratio": 2.56,
+     "need": 4.5,
+     "cls": "vn1"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "sw2/skull/dark": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 3,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 3,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Collected KF-1 (locked)",
+   "Collected KF-2 (locked)"
+  ],
+  "ax_button": 50,
+  "ax_button_unnamed": 0,
+  "ax_link": 21,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 180,
+   "skipped_image_bg": 2,
+   "below": 32,
+   "worst": [
+    {
+     "t": "Great Deku Tree",
+     "ratio": 1.52,
+     "need": 3,
+     "cls": "gname"
+    },
+    {
+     "t": "Hyrule Field",
+     "ratio": 1.55,
+     "need": 3,
+     "cls": "gname"
+    },
+    {
+     "t": "Kokiri Forest",
+     "ratio": 1.57,
+     "need": 3,
+     "cls": "gname"
+    },
+    {
+     "t": "Forest Temple",
+     "ratio": 1.59,
+     "need": 3,
+     "cls": "gname"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "sw2/heart/light": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 4,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 4,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Done Get the Kokiri Sword",
+   "Done Buy the Deku Shield"
+  ],
+  "ax_button": 38,
+  "ax_button_unnamed": 0,
+  "ax_link": 23,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 173,
+   "skipped_image_bg": 2,
+   "below": 1,
+   "worst": [
+    {
+     "t": "Nintendo 64",
+     "ratio": 2.56,
+     "need": 4.5,
+     "cls": "vn1"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "sw2/heart/dark": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 4,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 4,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Done Get the Kokiri Sword",
+   "Done Buy the Deku Shield"
+  ],
+  "ax_button": 38,
+  "ax_button_unnamed": 0,
+  "ax_link": 23,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 173,
+   "skipped_image_bg": 2,
+   "below": 2,
+   "worst": [
+    {
+     "t": "Kokiri Forest and the Great De",
+     "ratio": 1.52,
+     "need": 4.5,
+     "cls": "gname"
+    },
+    {
+     "t": "Nintendo 64",
+     "ratio": 4.25,
+     "need": 4.5,
+     "cls": "vn1"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "sw2/side/light": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 7,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 7,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Done Skull Kid duet (locked)",
+   "Done Skull Kids' memory game (locked)"
+  ],
+  "ax_button": 62,
+  "ax_button_unnamed": 0,
+  "ax_link": 25,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 301,
+   "skipped_image_bg": 2,
+   "below": 1,
+   "worst": [
+    {
+     "t": "Nintendo 64",
+     "ratio": 2.56,
+     "need": 4.5,
+     "cls": "vn1"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "sw2/side/dark": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 7,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 7,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Done Skull Kid duet (locked)",
+   "Done Skull Kids' memory game (locked)"
+  ],
+  "ax_button": 62,
+  "ax_button_unnamed": 0,
+  "ax_link": 25,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 301,
+   "skipped_image_bg": 2,
+   "below": 18,
+   "worst": [
+    {
+     "t": "Desert Colossus",
+     "ratio": 1.59,
+     "need": 3,
+     "cls": "gname"
+    },
+    {
+     "t": "Lost Woods",
+     "ratio": 1.6,
+     "need": 3,
+     "cls": "gname"
+    },
+    {
+     "t": "Zora's River",
+     "ratio": 1.62,
+     "need": 3,
+     "cls": "gname"
+    },
+    {
+     "t": "Lon Lon Ranch",
+     "ratio": 1.65,
+     "need": 3,
+     "cls": "gname"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "sw2/items/light": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 7,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 7,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Done Kokiri Sword",
+   "Done Master Sword (locked)"
+  ],
+  "ax_button": 44,
+  "ax_button_unnamed": 0,
+  "ax_link": 23,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 243,
+   "skipped_image_bg": 2,
+   "below": 1,
+   "worst": [
+    {
+     "t": "Nintendo 64",
+     "ratio": 2.56,
+     "need": 4.5,
+     "cls": "vn1"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ },
+ "sw2/items/dark": {
+  "pageErrors": [],
+  "checkboxes": {
+   "n": 7,
+   "minBox": 30,
+   "minLabel": 31
+  },
+  "axCheckboxes": 7,
+  "axCheckboxesUnnamed": 0,
+  "axSampleNames": [
+   "Done Kokiri Sword",
+   "Done Master Sword (locked)"
+  ],
+  "ax_button": 44,
+  "ax_button_unnamed": 0,
+  "ax_link": 23,
+  "ax_link_unnamed": 0,
+  "ax_tab": 8,
+  "ax_tab_unnamed": 0,
+  "contrast": {
+   "texts": 243,
+   "skipped_image_bg": 2,
+   "below": 11,
+   "worst": [
+    {
+     "t": "Songs you learn as a child",
+     "ratio": 1.57,
+     "need": 3,
+     "cls": "gname"
+    },
+    {
+     "t": "Strength, swimming and defense",
+     "ratio": 1.64,
+     "need": 4.5,
+     "cls": "gname"
+    },
+    {
+     "t": "Bags, quivers and wallets",
+     "ratio": 1.72,
+     "need": 3,
+     "cls": "gname"
+    },
+    {
+     "t": "Bottles",
+     "ratio": 1.8,
+     "need": 3,
+     "cls": "gname"
+    }
+   ]
+  },
+  "text200": {
+   "640": {
+    "overflow": 0,
+    "clipped": 0
+   },
+   "320": {
+    "overflow": 0,
+    "clipped": 0
+   }
+  }
+ }
+}

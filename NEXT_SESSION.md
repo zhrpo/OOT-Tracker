@@ -57,7 +57,7 @@ Written 2026-11-09, at the end of Session 4. A new conversation cannot see earli
 - Do not read the owner's progress into tests. Use synthetic data only.
 - Do not publish anything, and do not modify the live artifact. Exception: only if the owner explicitly approves Q5, publish a *new* test artifact; never the production slug.
 - Implement no fixes during audit sessions. Fixes start only when the owner opens an implementation session.
-- Preserve finding IDs; next new ID is **F-037**. Item IDs never renumber. DG/TR ids are append-only; DG-1..41 are retired.
+- Preserve finding IDs; next new ID is **F-042**. Item IDs never renumber. DG/TR ids are append-only; DG-1..41 are retired.
 - Every test must have a pass/fail result and a nonzero exit code on failure.
 - Test harness seeding: guard on "no save exists", not on `sessionStorage` (AUDIT_TESTS.md §7.3, L-3).
 

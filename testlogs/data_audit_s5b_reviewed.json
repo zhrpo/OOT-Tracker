@@ -1,0 +1,210 @@
+{
+ "CL-2": {
+  "class": "known_defect",
+  "why": "F-032 (over-locked / unneeded tool)"
+ },
+ "GF-2": {
+  "class": "known_defect",
+  "why": "F-032 (over-locked / unneeded tool)"
+ },
+ "GV-3": {
+  "class": "known_defect",
+  "why": "F-032 (over-locked / unneeded tool)"
+ },
+ "ZR-1": {
+  "class": "known_defect",
+  "why": "F-032 (over-locked / unneeded tool)"
+ },
+ "DMT-1": {
+  "class": "known_defect",
+  "why": "F-031 (missing tool or early unlock)"
+ },
+ "HF-2": {
+  "class": "known_defect",
+  "why": "F-031 (missing tool or early unlock)"
+ },
+ "HC-2": {
+  "class": "known_defect",
+  "why": "F-031 (missing tool or early unlock)"
+ },
+ "IC-3": {
+  "class": "known_defect",
+  "why": "F-031 (missing tool or early unlock)"
+ },
+ "GAN-1": {
+  "class": "known_defect",
+  "why": "F-030 (GAN-1 waits for the Rainbow Bridge)"
+ },
+ "ZF-3": {
+  "class": "probable_defect",
+  "why": "F-042: rule needs Hookshot to kill the spider; tracker lists only Silver Gauntlets/Lens (Medium confidence)"
+ },
+ "GC-2": {
+  "class": "source_disagreement",
+  "why": "F-043: randomizer rule/region needs no such tool, tracker lists Hookshot; guides not conclusive"
+ },
+ "GF-1": {
+  "class": "source_disagreement",
+  "why": "F-043: randomizer rule/region needs no such tool, tracker lists Hookshot; guides not conclusive"
+ },
+ "LH-4": {
+  "class": "source_disagreement",
+  "why": "F-043: Zora Tunic listed by Thonky, not by other guides or the randomizer"
+ },
+ "ZD-1": {
+  "class": "alternative_not_listed",
+  "why": "F-043: game also accepts another tool (Bow); tracker lists the Hookshot only"
+ },
+ "BW-1": {
+  "class": "benign_region",
+  "why": "tool comes from the region/entrance rule the tracker models with story ancestors or area text"
+ },
+ "BW-2": {
+  "class": "benign_region",
+  "why": "tool comes from the region/entrance rule the tracker models with story ancestors or area text"
+ },
+ "BW-3": {
+  "class": "benign_region",
+  "why": "tool comes from the region/entrance rule the tracker models with story ancestors or area text"
+ },
+ "DC-1": {
+  "class": "benign_region",
+  "why": "tool comes from the region/entrance rule the tracker models with story ancestors or area text"
+ },
+ "DC-2": {
+  "class": "benign_region",
+  "why": "tool comes from the region/entrance rule the tracker models with story ancestors or area text"
+ },
+ "DC-3": {
+  "class": "benign_region",
+  "why": "tool comes from the region/entrance rule the tracker models with story ancestors or area text"
+ },
+ "DC-4": {
+  "class": "benign_region",
+  "why": "tool comes from the region/entrance rule the tracker models with story ancestors or area text"
+ },
+ "DC-5": {
+  "class": "benign_region",
+  "why": "tool comes from the region/entrance rule the tracker models with story ancestors or area text"
+ },
+ "DMC-1": {
+  "class": "benign_region",
+  "why": "tool comes from the region/entrance rule the tracker models with story ancestors or area text"
+ },
+ "DMT-2": {
+  "class": "benign_region",
+  "why": "tool comes from the region/entrance rule the tracker models with story ancestors or area text"
+ },
+ "DMT-3": {
+  "class": "benign_region",
+  "why": "tool comes from the region/entrance rule the tracker models with story ancestors or area text"
+ },
+ "DMT-4": {
+  "class": "benign_region",
+  "why": "tool comes from the region/entrance rule the tracker models with story ancestors or area text"
+ },
+ "FIRE-3": {
+  "class": "benign_region",
+  "why": "tool comes from the region/entrance rule the tracker models with story ancestors or area text"
+ },
+ "FIRE-4": {
+  "class": "benign_region",
+  "why": "tool comes from the region/entrance rule the tracker models with story ancestors or area text"
+ },
+ "HF-1": {
+  "class": "benign_region",
+  "why": "tool comes from the region/entrance rule the tracker models with story ancestors or area text"
+ },
+ "HW-1": {
+  "class": "benign_region",
+  "why": "tool comes from the region/entrance rule the tracker models with story ancestors or area text"
+ },
+ "JB-1": {
+  "class": "benign_region",
+  "why": "tool comes from the region/entrance rule the tracker models with story ancestors or area text"
+ },
+ "KF-3": {
+  "class": "benign_region",
+  "why": "tool comes from the region/entrance rule the tracker models with story ancestors or area text"
+ },
+ "WT-2": {
+  "class": "benign_region",
+  "why": "tool comes from the region/entrance rule the tracker models with story ancestors or area text"
+ },
+ "WT-3": {
+  "class": "benign_region",
+  "why": "tool comes from the region/entrance rule the tracker models with story ancestors or area text"
+ },
+ "WT-4": {
+  "class": "benign_region",
+  "why": "tool comes from the region/entrance rule the tracker models with story ancestors or area text"
+ },
+ "SP-5": {
+  "class": "benign_region",
+  "why": "tool comes from the region/entrance rule the tracker models with story ancestors or area text"
+ },
+ "CL-3": {
+  "class": "benign_region",
+  "why": "tool comes from the region/entrance rule the tracker models with story ancestors or area text"
+ },
+ "LW-3": {
+  "class": "benign_region",
+  "why": "tool comes from the region/entrance rule the tracker models with story ancestors or area text"
+ },
+ "FT-1": {
+  "class": "benign_story_implied",
+  "why": "dungeon row: tool is implied by the story step that opens that part of the dungeon (F-026 verdict \"implied by MQ-xx\")"
+ },
+ "FT-2": {
+  "class": "benign_story_implied",
+  "why": "dungeon row: tool is implied by the story step that opens that part of the dungeon (F-026 verdict \"implied by MQ-xx\")"
+ },
+ "FT-3": {
+  "class": "benign_story_implied",
+  "why": "dungeon row: tool is implied by the story step that opens that part of the dungeon (F-026 verdict \"implied by MQ-xx\")"
+ },
+ "FT-4": {
+  "class": "benign_story_implied",
+  "why": "dungeon row: tool is implied by the story step that opens that part of the dungeon (F-026 verdict \"implied by MQ-xx\")"
+ },
+ "FT-5": {
+  "class": "benign_story_implied",
+  "why": "dungeon row: tool is implied by the story step that opens that part of the dungeon (F-026 verdict \"implied by MQ-xx\")"
+ },
+ "FIRE-2": {
+  "class": "benign_story_implied",
+  "why": "dungeon row: tool is implied by the story step that opens that part of the dungeon (F-026 verdict \"implied by MQ-xx\")"
+ },
+ "ST-2": {
+  "class": "benign_story_implied",
+  "why": "dungeon row: tool is implied by the story step that opens that part of the dungeon (F-026 verdict \"implied by MQ-xx\")"
+ },
+ "JB-4": {
+  "class": "benign_story_implied",
+  "why": "dungeon row: tool is implied by the story step that opens that part of the dungeon (F-026 verdict \"implied by MQ-xx\")"
+ },
+ "DT-2": {
+  "class": "benign_story_implied",
+  "why": "dungeon row: tool is implied by the story step that opens that part of the dungeon (F-026 verdict \"implied by MQ-xx\")"
+ },
+ "DT-4": {
+  "class": "benign_story_implied",
+  "why": "dungeon row: tool is implied by the story step that opens that part of the dungeon (F-026 verdict \"implied by MQ-xx\")"
+ },
+ "SP-1": {
+  "class": "benign_alternative",
+  "why": "tracker lists one canonical tool of several the rule allows (age-filtered), none required"
+ },
+ "SP-2": {
+  "class": "benign_alternative",
+  "why": "tracker lists one canonical tool of several the rule allows (age-filtered), none required"
+ },
+ "SP-3": {
+  "class": "benign_alternative",
+  "why": "tracker lists one canonical tool of several the rule allows (age-filtered), none required"
+ },
+ "ZR-2": {
+  "class": "source_disagreement",
+  "why": "F-043: tracker lists Slingshot; ZeldaDungeon says shoot it, GamesRadar/Thonky name no tool, randomizer needs only a child attack (also a disputed Switch 2 row, F-035)"
+ }
+}

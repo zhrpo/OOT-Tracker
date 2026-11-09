@@ -1,0 +1,62 @@
+{
+ "DG-166": {
+  "class": "defect",
+  "why": "F-045: Shadow Temple entrance needs Din's Fire (and the Magic Meter); MQ-31/DG-166 do not require it. Sources: GameWith, Jegged, ZeldaDungeon, Thonky, OoT Randomizer wiki (Vanilla Dungeon Requirements), FinalBoss (Switch 2)"
+ },
+ "DG-179": {
+  "class": "depends_on_F-045",
+  "why": "Din's Fire is needed for the Shadow Temple entrance anyway, so it is held by the time of this step once F-045 is fixed (Shadow boss-key spikes; Spirit Anubis torches: Din's Fire/Fire Arrows alternative)"
+ },
+ "DG-187": {
+  "class": "depends_on_F-045",
+  "why": "Din's Fire is needed for the Shadow Temple entrance anyway, so it is held by the time of this step once F-045 is fixed (Shadow boss-key spikes; Spirit Anubis torches: Din's Fire/Fire Arrows alternative)"
+ },
+ "DG-196": {
+  "class": "source_disagreement",
+  "why": "F-043: Spirit Temple adult rusty switch: guides (Thonky, GamerTag Mythras, FinalBoss Switch 2) use the Megaton Hammer; a ZeldaDungeon forum post says the regular quest does not need it to finish. Tracker MQ-35 does not require the Hammer"
+ },
+ "DG-207": {
+  "class": "alternative_not_listed",
+  "why": "F-043: Ganon's Castle trials: Fire Arrows or Din's Fire both work (OoTR wiki); tracker MQ-39 requires Fire Arrows only"
+ },
+ "DG-208": {
+  "class": "alternative_not_listed",
+  "why": "F-043: Ganon's Castle trials: Fire Arrows or Din's Fire both work (OoTR wiki); tracker MQ-39 requires Fire Arrows only"
+ },
+ "DG-212": {
+  "class": "alternative_not_listed",
+  "why": "F-043: Ganon's Castle trials: Fire Arrows or Din's Fire both work (OoTR wiki); tracker MQ-39 requires Fire Arrows only"
+ },
+ "DG-118": {
+  "class": "benign_text",
+  "why": "text names an optional/alternative tool or an item obtained by an earlier step of the same dungeon sequence (not a requirement); not verified against a source"
+ },
+ "DG-142": {
+  "class": "benign_text",
+  "why": "text names an optional/alternative tool or an item obtained by an earlier step of the same dungeon sequence (not a requirement); not verified against a source"
+ },
+ "DG-150": {
+  "class": "benign_text",
+  "why": "text names an optional/alternative tool or an item obtained by an earlier step of the same dungeon sequence (not a requirement); not verified against a source"
+ },
+ "DG-182": {
+  "class": "benign_text",
+  "why": "text names an optional/alternative tool or an item obtained by an earlier step of the same dungeon sequence (not a requirement); not verified against a source"
+ },
+ "DG-193": {
+  "class": "benign_text",
+  "why": "text names an optional/alternative tool or an item obtained by an earlier step of the same dungeon sequence (not a requirement); not verified against a source"
+ },
+ "DG-197": {
+  "class": "benign_text",
+  "why": "text names an optional/alternative tool or an item obtained by an earlier step of the same dungeon sequence (not a requirement); not verified against a source"
+ },
+ "DG-210": {
+  "class": "benign_text",
+  "why": "text names an optional/alternative tool or an item obtained by an earlier step of the same dungeon sequence (not a requirement); not verified against a source"
+ },
+ "DG-211": {
+  "class": "benign_text",
+  "why": "text names an optional/alternative tool or an item obtained by an earlier step of the same dungeon sequence (not a requirement); not verified against a source"
+ }
+}

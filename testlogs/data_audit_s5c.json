@@ -1,0 +1,191 @@
+{
+ "rows_checked": {
+  "n64": 176,
+  "3ds": 176,
+  "sw2": 176
+ },
+ "hits": {
+  "DG-118": {
+   "items": [
+    "IT-13"
+   ],
+   "vers": [
+    "3ds",
+    "n64",
+    "sw2"
+   ],
+   "parent": "MQ-25",
+   "text": "Dungeon Map Past the maze's locked door. Dungeon Map Unlock the door and hit the eye switch across the narrow bridge (Hookshot or Bow). The side door opens on t"
+  },
+  "DG-142": {
+   "items": [
+    "IT-26"
+   ],
+   "vers": [
+    "3ds",
+    "n64",
+    "sw2"
+   ],
+   "parent": "MQ-28",
+   "text": "Shell Blades The low floor, the room with unlit torches. Small Key Light the torches (a Fire Arrow, or an arrow shot through a lit torch). Beat the Shell Blades"
+  },
+  "DG-150": {
+   "items": [
+    "IT-15",
+    "IT-22"
+   ],
+   "vers": [
+    "3ds",
+    "n64",
+    "sw2"
+   ],
+   "parent": "MQ-28",
+   "text": "Dark Link The misty room with a single tree.  Grab the Hookshot target over the spikes, beat the Like Like and step into the misty room. Dark Link copies your s"
+  },
+  "DG-166": {
+   "items": [
+    "IT-22"
+   ],
+   "vers": [
+    "3ds",
+    "n64",
+    "sw2"
+   ],
+   "parent": "MQ-31",
+   "text": "Into the temple Kakariko Graveyard, the ledge at the top.  Play the Nocturne of Shadow and light the torches around the entrance with Din's Fire to open it. Lon"
+  },
+  "DG-179": {
+   "items": [
+    "IT-22"
+   ],
+   "vers": [
+    "3ds",
+    "n64",
+    "sw2"
+   ],
+   "parent": "MQ-31",
+   "text": "Boss Key The rooms past the boat. Boss Key Cross the invisible walls with the Lens. Beat the invisible Floormaster for a key. Burn the wooden spiked walls with "
+  },
+  "DG-182": {
+   "items": [
+    "IT-30"
+   ],
+   "vers": [
+    "3ds",
+    "n64",
+    "sw2"
+   ],
+   "parent": "MQ-34",
+   "text": "Nabooru The temple entrance at the Desert Colossus.  As child Link, talk to Nabooru. She asks you to fetch the Silver Gauntlets. Crawl through the small hole. "
+  },
+  "DG-187": {
+   "items": [
+    "IT-22"
+   ],
+   "vers": [
+    "3ds",
+    "n64",
+    "sw2"
+   ],
+   "parent": "MQ-34",
+   "text": "Dungeon Map The big statue room. Dungeon Map Push the statue off the ledge onto the blue switch. Light the torch at the statue's feet (Din's Fire) for the Dunge"
+  },
+  "DG-193": {
+   "items": [
+    "IT-11"
+   ],
+   "vers": [
+    "3ds",
+    "n64",
+    "sw2"
+   ],
+   "parent": "MQ-35",
+   "text": "Boulders and silver rupees The northeast path. Small Key Collect the silver rupees while dodging the boulders (the Hover Boots get the floating one). Move the b"
+  },
+  "DG-196": {
+   "items": [
+    "IT-15"
+   ],
+   "vers": [
+    "3ds",
+    "n64",
+    "sw2"
+   ],
+   "parent": "MQ-35",
+   "text": "The rusty switch The north platform of the statue room.  Longshot to the north platform and smash the rusty switch with the Megaton Hammer. It opens a shortcut."
+  },
+  "DG-197": {
+   "items": [
+    "IT-26"
+   ],
+   "vers": [
+    "3ds",
+    "n64",
+    "sw2"
+   ],
+   "parent": "MQ-35",
+   "text": "Anubis and the Armos The east locked door.  Bomb the Beamos and burn the Anubis with Fire Arrows. Shoot the far Armos so it walks onto the blue switch, and run "
+  },
+  "DG-207": {
+   "items": [
+    "IT-26"
+   ],
+   "vers": [
+    "3ds",
+    "n64",
+    "sw2"
+   ],
+   "parent": "MQ-39",
+   "text": "Shadow Trial The purple door. Golden Gauntlets Do this one first: the Golden Gauntlets are here, and the Fire and Light trials need them. Light the torch with a"
+  },
+  "DG-208": {
+   "items": [
+    "IT-22",
+    "IT-26"
+   ],
+   "vers": [
+    "3ds",
+    "n64",
+    "sw2"
+   ],
+   "parent": "MQ-39",
+   "text": "Forest Trial The green door.  Beat the Wolfos. Light the torches with Din's Fire and the one above the door with a Fire Arrow. Collect the silver rupees in the "
+  },
+  "DG-210": {
+   "items": [
+    "IT-31"
+   ],
+   "vers": [
+    "3ds",
+    "n64",
+    "sw2"
+   ],
+   "parent": "MQ-39",
+   "text": "Fire Trial The red door.  Wear the Goron Tunic. Collect the silver rupees from the sinking platforms; lift the big pillar with the Golden Gauntlets. Longshot to"
+  },
+  "DG-211": {
+   "items": [
+    "IT-31"
+   ],
+   "vers": [
+    "3ds",
+    "n64",
+    "sw2"
+   ],
+   "parent": "MQ-39",
+   "text": "Light Trial Behind the golden pillar.  Lift the pillar with the Golden Gauntlets. Beat the hidden enemies (Lens) for a key; play Zelda's Lullaby on the Triforce"
+  },
+  "DG-212": {
+   "items": [
+    "IT-26"
+   ],
+   "vers": [
+    "3ds",
+    "n64",
+    "sw2"
+   ],
+   "parent": "MQ-39",
+   "text": "Spirit Trial The orange door.  Bomb the Beamos and Longshot down to the silver rupees. Send a Bombchu up the wall to the crystal switch. Burn the cobwebs on the"
+  }
+ }
+}

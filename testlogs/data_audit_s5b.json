@@ -1,0 +1,1696 @@
+{
+ "rows": {
+  "KF-1": {
+   "loc": "KF GS Know It All House",
+   "rule": "is_child and can_child_attack and (at_night or gold_skulls_ignore_daytime) and (had_night_start or can_leave_forest or can_play(Suns_Song) or gold_skulls_ignore",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Child",
+   "region": "Kokiri Forest",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "KF-2": {
+   "loc": "KF GS Bean Patch",
+   "rule": "can_plant_bugs and can_child_attack",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Child",
+   "region": "Kokiri Forest",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "KF-3": {
+   "loc": "KF GS House of Twins",
+   "rule": "is_adult and (at_night or gold_skulls_ignore_daytime) and (Hookshot or (logic_adult_kokiri_gs_hovers and Hover_Boots) or logic_adult_kokiri_gs_nothing)",
+   "rule_tools": [],
+   "tracker_tools": [
+    "Hookshot"
+   ],
+   "age": "Adult",
+   "region": "Kokiri Forest",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": [
+    "Hookshot"
+   ]
+  },
+  "LW-1": {
+   "loc": "LW GS Bean Patch Near Bridge",
+   "rule": "can_plant_bugs and can_child_attack",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Child",
+   "region": "Lost Woods",
+   "region_tools": [
+    "Longshot"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "LW-2": {
+   "loc": "LW GS Bean Patch Near Theater",
+   "rule": "can_plant_bugs and (can_child_attack or (shuffle_scrubs == 'off' and Deku_Shield))",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Child",
+   "region": "LW Beyond Mido",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "LW-3": {
+   "loc": "LW GS Above Theater",
+   "rule": "is_adult and (at_night or gold_skulls_ignore_daytime) and (here(can_plant_bean) or (logic_lost_woods_gs_bean and Hookshot and (Longshot or Bow or has_bombchus o",
+   "rule_tools": [
+    "Bow",
+    "Dins",
+    "Hookshot",
+    "Longshot"
+   ],
+   "tracker_tools": [],
+   "age": "Both",
+   "region": "LW Beyond Mido",
+   "region_tools": [],
+   "only_in_rule": [
+    "Bow",
+    "Dins",
+    "Hookshot",
+    "Longshot"
+   ],
+   "only_in_tracker": []
+  },
+  "SFM-1": {
+   "loc": "SFM GS",
+   "rule": "can_use(Hookshot) and (at_night or gold_skulls_ignore_daytime)",
+   "rule_tools": [
+    "Hookshot"
+   ],
+   "tracker_tools": [
+    "Hookshot"
+   ],
+   "age": "Adult",
+   "region": "Sacred Forest Meadow",
+   "region_tools": [
+    "Dins",
+    "Slingshot"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "DT-1": {
+   "loc": "Deku Tree GS Compass Room",
+   "rule": "is_adult or can_child_attack",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Child",
+   "region": "Deku Tree Lobby",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "DT-2": {
+   "loc": "Deku Tree GS Basement Vines",
+   "rule": "can_use_projectile or can_use(Dins_Fire) or (logic_deku_basement_gs and (is_adult or Sticks or Kokiri_Sword))",
+   "rule_tools": [
+    "Dins"
+   ],
+   "tracker_tools": [
+    "Slingshot"
+   ],
+   "age": "Child",
+   "region": "Deku Tree Basement",
+   "region_tools": [],
+   "only_in_rule": [
+    "Dins"
+   ],
+   "only_in_tracker": [
+    "Slingshot"
+   ]
+  },
+  "DT-3": {
+   "loc": "Deku Tree GS Basement Gate",
+   "rule": "is_adult or can_child_attack",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Child",
+   "region": "Deku Tree Basement",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "DT-4": {
+   "loc": "Deku Tree GS Basement Back Room",
+   "rule": "here(has_fire_source_with_torch or can_use(Bow)) and here(can_blast_or_smash) and (can_use(Boomerang) or can_use(Hookshot))",
+   "rule_tools": [
+    "Boomerang"
+   ],
+   "tracker_tools": [
+    "Bombs",
+    "Boomerang"
+   ],
+   "age": "Child",
+   "region": "Deku Tree Basement Back Room",
+   "region_tools": [
+    "Bow",
+    "Slingshot"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": [
+    "Bombs"
+   ]
+  },
+  "FT-1": {
+   "loc": "Forest Temple GS First Room",
+   "rule": "(is_adult and (Hookshot or Bow or Bombs)) or (is_child and (Boomerang or Slingshot)) or has_bombchus or can_use(Dins_Fire) or (logic_forest_first_gs and (Bombs ",
+   "rule_tools": [
+    "Bombs",
+    "Bow",
+    "Dins",
+    "Hookshot"
+   ],
+   "tracker_tools": [],
+   "age": "Adult",
+   "region": "Forest Temple Lobby",
+   "region_tools": [],
+   "only_in_rule": [
+    "Bombs",
+    "Bow",
+    "Dins",
+    "Hookshot"
+   ],
+   "only_in_tracker": []
+  },
+  "FT-2": {
+   "loc": "Forest Temple GS Lobby",
+   "rule": "can_use(Hookshot) or can_use(Boomerang)",
+   "rule_tools": [
+    "Hookshot"
+   ],
+   "tracker_tools": [],
+   "age": "Adult",
+   "region": "Forest Temple Central Area",
+   "region_tools": [],
+   "only_in_rule": [
+    "Hookshot"
+   ],
+   "only_in_tracker": []
+  },
+  "FT-3": {
+   "loc": "Forest Temple GS Raised Island Courtyard",
+   "rule": "can_use(Hookshot) or (logic_forest_outdoor_east_gs and can_use(Boomerang)) or at('Forest Temple Falling Room', can_use(Bow) or can_use(Dins_Fire) or has_explosi",
+   "rule_tools": [
+    "Bombs",
+    "Bow",
+    "Dins",
+    "Hookshot"
+   ],
+   "tracker_tools": [],
+   "age": "Adult",
+   "region": "Forest Temple NE Outdoors",
+   "region_tools": [
+    "Bow",
+    "Scale",
+    "Slingshot"
+   ],
+   "only_in_rule": [
+    "Bombs",
+    "Bow",
+    "Dins",
+    "Hookshot"
+   ],
+   "only_in_tracker": []
+  },
+  "FT-4": {
+   "loc": "Forest Temple GS Level Island Courtyard",
+   "rule": "can_use(Longshot) or at('Forest Temple Outside Upper Ledge', can_use(Hookshot) or can_use(Boomerang))",
+   "rule_tools": [
+    "Hookshot",
+    "Longshot"
+   ],
+   "tracker_tools": [],
+   "age": "Adult",
+   "region": "Forest Temple NW Outdoors",
+   "region_tools": [
+    "IronBoots",
+    "Scale"
+   ],
+   "only_in_rule": [
+    "Hookshot",
+    "Longshot"
+   ],
+   "only_in_tracker": []
+  },
+  "FT-5": {
+   "loc": "Forest Temple GS Basement",
+   "rule": "can_use(Hookshot) or can_use(Boomerang)",
+   "rule_tools": [
+    "Hookshot"
+   ],
+   "tracker_tools": [],
+   "age": "Adult",
+   "region": "Forest Temple Basement",
+   "region_tools": [],
+   "only_in_rule": [
+    "Hookshot"
+   ],
+   "only_in_tracker": []
+  },
+  "HF-1": {
+   "loc": "HF GS Near Kak Grotto",
+   "rule": "can_use(Boomerang) or can_use(Hookshot)",
+   "rule_tools": [
+    "Boomerang",
+    "Hookshot"
+   ],
+   "tracker_tools": [
+    "Bombs",
+    "Boomerang",
+    "Hookshot"
+   ],
+   "age": "Either",
+   "region": "HF Near Kak Grotto",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": [
+    "Bombs"
+   ]
+  },
+  "HF-2": {
+   "loc": "HF GS Cow Grotto",
+   "rule": "has_fire_source and (can_use(Hookshot) or can_use(Boomerang))",
+   "rule_tools": [
+    "Boomerang",
+    "Hookshot"
+   ],
+   "tracker_tools": [
+    "Bombs",
+    "Dins"
+   ],
+   "age": "Either",
+   "region": "HF Cow Grotto",
+   "region_tools": [
+    "Hammer"
+   ],
+   "only_in_rule": [
+    "Boomerang",
+    "Hookshot"
+   ],
+   "only_in_tracker": [
+    "Bombs",
+    "Dins"
+   ]
+  },
+  "LLR-1": {
+   "loc": "LLR GS Tree",
+   "rule": "is_child and can_bonk",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Child",
+   "region": "Lon Lon Ranch",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "LLR-2": {
+   "loc": "LLR GS Rain Shed",
+   "rule": "is_child and (at_night or gold_skulls_ignore_daytime)",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Child",
+   "region": "Lon Lon Ranch",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "LLR-3": {
+   "loc": "LLR GS House Window",
+   "rule": "can_use(Boomerang) and (at_night or gold_skulls_ignore_daytime)",
+   "rule_tools": [
+    "Boomerang"
+   ],
+   "tracker_tools": [
+    "Boomerang"
+   ],
+   "age": "Child",
+   "region": "Lon Lon Ranch",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "LLR-4": {
+   "loc": "LLR GS Back Wall",
+   "rule": "can_use(Boomerang) and (at_night or gold_skulls_ignore_daytime)",
+   "rule_tools": [
+    "Boomerang"
+   ],
+   "tracker_tools": [
+    "Boomerang"
+   ],
+   "age": "Child",
+   "region": "Lon Lon Ranch",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "MKT-1": {
+   "loc": "Market GS Guard House",
+   "rule": "is_child and can_break_crate",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Child",
+   "region": "Market Guard House",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "HC-1": {
+   "loc": "HC GS Tree",
+   "rule": "can_child_attack and can_bonk",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Child",
+   "region": "Hyrule Castle Grounds",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "HC-2": {
+   "loc": "HC GS Storms Grotto",
+   "rule": "(can_blast_or_smash or (is_child and logic_castle_storms_gs)) and (can_use(Boomerang) or can_use(Hookshot))",
+   "rule_tools": [
+    "Boomerang",
+    "Hookshot"
+   ],
+   "tracker_tools": [
+    "Bombs"
+   ],
+   "age": "Both",
+   "region": "HC Storms Grotto",
+   "region_tools": [],
+   "only_in_rule": [
+    "Boomerang",
+    "Hookshot"
+   ],
+   "only_in_tracker": [
+    "Bombs"
+   ]
+  },
+  "KAK-1": {
+   "loc": "Kak GS Tree",
+   "rule": "is_child and (at_night or gold_skulls_ignore_daytime) and can_bonk",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Child",
+   "region": "Kakariko Village",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "KAK-2": {
+   "loc": "Kak GS Skulltula House",
+   "rule": "is_child and (at_night or gold_skulls_ignore_daytime)",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Child",
+   "region": "Kakariko Village",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "KAK-3": {
+   "loc": "Kak GS House Under Construction",
+   "rule": "is_child and (at_night or gold_skulls_ignore_daytime)",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Child",
+   "region": "Kakariko Village",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "KAK-4": {
+   "loc": "Kak GS Near Gate Guard",
+   "rule": "is_child and (at_night or gold_skulls_ignore_daytime)",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Child",
+   "region": "Kakariko Village",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "KAK-5": {
+   "loc": "Kak GS Watchtower",
+   "rule": "is_child and (at_night or gold_skulls_ignore_daytime) and (Slingshot or has_bombchus or (logic_kakariko_tower_gs and (Sticks or Kokiri_Sword)))",
+   "rule_tools": [
+    "Slingshot"
+   ],
+   "tracker_tools": [
+    "Slingshot"
+   ],
+   "age": "Child",
+   "region": "Kakariko Village",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "KAK-6": {
+   "loc": "Kak GS Above Impas House",
+   "rule": "is_adult and (at_night or gold_skulls_ignore_daytime)",
+   "rule_tools": [],
+   "tracker_tools": [
+    "Hookshot"
+   ],
+   "age": "Adult",
+   "region": "Kak Impas Rooftop",
+   "region_tools": [
+    "Hookshot",
+    "HoverBoots"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "GY-1": {
+   "loc": "Graveyard GS Bean Patch",
+   "rule": "can_plant_bugs and can_child_attack",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Child",
+   "region": "Graveyard",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "GY-2": {
+   "loc": "Graveyard GS Wall",
+   "rule": "can_use(Boomerang) and (at_night or gold_skulls_ignore_daytime)",
+   "rule_tools": [
+    "Boomerang"
+   ],
+   "tracker_tools": [
+    "Boomerang"
+   ],
+   "age": "Child",
+   "region": "Graveyard",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "BW-1": {
+   "loc": "Bottom of the Well GS West Inner Room",
+   "rule": "Boomerang",
+   "rule_tools": [
+    "Boomerang"
+   ],
+   "tracker_tools": [
+    "Boomerang",
+    "Lens"
+   ],
+   "age": "Both",
+   "region": "Bottom of the Well Behind Locked Doors",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": [
+    "Lens"
+   ]
+  },
+  "BW-2": {
+   "loc": "Bottom of the Well GS East Inner Room",
+   "rule": "Boomerang",
+   "rule_tools": [
+    "Boomerang"
+   ],
+   "tracker_tools": [
+    "Boomerang",
+    "Lens"
+   ],
+   "age": "Both",
+   "region": "Bottom of the Well Behind Locked Doors",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": [
+    "Lens"
+   ]
+  },
+  "BW-3": {
+   "loc": "Bottom of the Well GS Like Like Cage",
+   "rule": "Boomerang",
+   "rule_tools": [
+    "Boomerang"
+   ],
+   "tracker_tools": [
+    "Boomerang",
+    "Lens"
+   ],
+   "age": "Both",
+   "region": "Bottom of the Well Behind Locked Doors",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": [
+    "Lens"
+   ]
+  },
+  "ST-1": {
+   "loc": "Shadow Temple GS Invisible Blades Room",
+   "rule": "True",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Adult",
+   "region": "Shadow Temple Huge Pit",
+   "region_tools": [
+    "Bombs",
+    "Lens"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "ST-2": {
+   "loc": "Shadow Temple GS Falling Spikes Room",
+   "rule": "logic_shadow_umbrella_gs or Hookshot",
+   "rule_tools": [
+    "Hookshot"
+   ],
+   "tracker_tools": [],
+   "age": "Adult",
+   "region": "Shadow Temple Falling Spikes",
+   "region_tools": [],
+   "only_in_rule": [
+    "Hookshot"
+   ],
+   "only_in_tracker": []
+  },
+  "ST-3": {
+   "loc": "Shadow Temple GS Single Giant Pot",
+   "rule": "(Silver_Rupee_Shadow_Temple_Invisible_Spikes, 5)",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Adult",
+   "region": "Shadow Temple Invisible Spikes",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "ST-4": {
+   "loc": "Shadow Temple GS Near Ship",
+   "rule": "Longshot",
+   "rule_tools": [
+    "Longshot"
+   ],
+   "tracker_tools": [
+    "Longshot"
+   ],
+   "age": "Adult",
+   "region": "Shadow Temple Boat",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "ST-5": {
+   "loc": "Shadow Temple GS Triple Giant Pot",
+   "rule": "True",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Adult",
+   "region": "Shadow Temple Beyond Boat",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "DMT-1": {
+   "loc": "DMT GS Bean Patch",
+   "rule": "can_plant_bugs and can_child_attack and (has_explosives or Progressive_Strength_Upgrade or (logic_dmt_soil_gs and can_use(Boomerang)))",
+   "rule_tools": [
+    "Bombs",
+    "Boomerang",
+    "Strength"
+   ],
+   "tracker_tools": [],
+   "age": "Child",
+   "region": "Death Mountain",
+   "region_tools": [],
+   "only_in_rule": [
+    "Bombs",
+    "Boomerang"
+   ],
+   "only_in_tracker": []
+  },
+  "DMT-2": {
+   "loc": "DMT GS Near Kak",
+   "rule": "can_blast_or_smash",
+   "rule_tools": [],
+   "tracker_tools": [
+    "Bombs"
+   ],
+   "age": "Either",
+   "region": "Death Mountain",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": [
+    "Bombs"
+   ]
+  },
+  "DMT-3": {
+   "loc": "DMT GS Above Dodongos Cavern",
+   "rule": "is_adult and (at_night or gold_skulls_ignore_daytime) and (Megaton_Hammer or logic_trail_gs_lower)",
+   "rule_tools": [],
+   "tracker_tools": [
+    "Hammer"
+   ],
+   "age": "Adult",
+   "region": "Death Mountain",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": [
+    "Hammer"
+   ]
+  },
+  "DMT-4": {
+   "loc": "DMT GS Falling Rocks Path",
+   "rule": "is_adult and (at_night or gold_skulls_ignore_daytime) and (Megaton_Hammer or logic_trail_gs_upper)",
+   "rule_tools": [],
+   "tracker_tools": [
+    "Hammer"
+   ],
+   "age": "Adult",
+   "region": "Death Mountain Summit",
+   "region_tools": [
+    "HoverBoots",
+    "Strength"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": [
+    "Hammer"
+   ]
+  },
+  "GC-1": {
+   "loc": "GC GS Boulder Maze",
+   "rule": "is_child and has_explosives",
+   "rule_tools": [
+    "Bombs"
+   ],
+   "tracker_tools": [
+    "Bombs"
+   ],
+   "age": "Child",
+   "region": "Goron City",
+   "region_tools": [
+    "GoronTunic",
+    "Longshot"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "GC-2": {
+   "loc": "GC GS Center Platform",
+   "rule": "is_adult",
+   "rule_tools": [],
+   "tracker_tools": [
+    "Hookshot"
+   ],
+   "age": "Adult",
+   "region": "Goron City",
+   "region_tools": [
+    "GoronTunic",
+    "Longshot"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": [
+    "Hookshot"
+   ]
+  },
+  "DC-1": {
+   "loc": "Dodongos Cavern GS Vines Above Stairs",
+   "rule": "at('Dodongos Cavern Climb', True) or (logic_dc_vines_gs and can_use(Longshot))",
+   "rule_tools": [],
+   "tracker_tools": [
+    "Bracelet",
+    "Slingshot"
+   ],
+   "age": "Child",
+   "region": "Dodongos Cavern Staircase Room",
+   "region_tools": [
+    "Dins"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": [
+    "Bracelet",
+    "Slingshot"
+   ]
+  },
+  "DC-2": {
+   "loc": "Dodongos Cavern GS Side Room Near Lower Lizalfos",
+   "rule": "is_adult or has_explosives or Sticks or Slingshot or Boomerang or Kokiri_Sword",
+   "rule_tools": [
+    "Bombs",
+    "Boomerang",
+    "Slingshot"
+   ],
+   "tracker_tools": [
+    "Bracelet"
+   ],
+   "age": "Child",
+   "region": "Dodongos Cavern Lower Right Side",
+   "region_tools": [
+    "Bombs",
+    "Strength"
+   ],
+   "only_in_rule": [
+    "Bombs",
+    "Boomerang",
+    "Slingshot"
+   ],
+   "only_in_tracker": [
+    "Bracelet"
+   ]
+  },
+  "DC-3": {
+   "loc": "Dodongos Cavern GS Back Room",
+   "rule": "can_blast_or_smash",
+   "rule_tools": [],
+   "tracker_tools": [
+    "Bracelet"
+   ],
+   "age": "Child",
+   "region": "Dodongos Cavern Mouth",
+   "region_tools": [
+    "Bombs"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": [
+    "Bracelet"
+   ]
+  },
+  "DC-4": {
+   "loc": "Dodongos Cavern GS Alcove Above Stairs",
+   "rule": "can_use(Hookshot) or can_use(Boomerang)",
+   "rule_tools": [
+    "Boomerang",
+    "Hookshot"
+   ],
+   "tracker_tools": [
+    "Boomerang",
+    "Bracelet",
+    "Hookshot"
+   ],
+   "age": "Either",
+   "region": "Dodongos Cavern Far Bridge",
+   "region_tools": [
+    "Bombs",
+    "Slingshot"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": [
+    "Bracelet"
+   ]
+  },
+  "DC-5": {
+   "loc": "Dodongos Cavern GS Scarecrow",
+   "rule": "can_use(Scarecrow) or can_use(Longshot) or (logic_dc_scarecrow_gs and (is_adult or can_child_attack))",
+   "rule_tools": [
+    "Longshot"
+   ],
+   "tracker_tools": [
+    "Bracelet",
+    "Hookshot"
+   ],
+   "age": "Adult",
+   "region": "Dodongos Cavern Lower Right Side",
+   "region_tools": [
+    "Bombs",
+    "Strength"
+   ],
+   "only_in_rule": [
+    "Longshot"
+   ],
+   "only_in_tracker": [
+    "Bracelet",
+    "Hookshot"
+   ]
+  },
+  "DMC-1": {
+   "loc": "DMC GS Crate",
+   "rule": "is_child and can_child_attack and can_break_heated_crate",
+   "rule_tools": [],
+   "tracker_tools": [
+    "Bombs"
+   ],
+   "age": "Child",
+   "region": "DMC Upper Local",
+   "region_tools": [
+    "GoronTunic"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": [
+    "Bombs"
+   ]
+  },
+  "DMC-2": {
+   "loc": "DMC GS Bean Patch",
+   "rule": "can_plant_bugs and can_child_attack",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Both",
+   "region": "DMC Central Local",
+   "region_tools": [
+    "GoronTunic"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "FIRE-1": {
+   "loc": "Fire Temple GS Song of Time Room",
+   "rule": "is_adult and (can_play(Song_of_Time) or logic_fire_song_of_time)",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Adult",
+   "region": "Fire Temple Big Lava Room",
+   "region_tools": [
+    "GoronTunic"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "FIRE-2": {
+   "loc": "Fire Temple GS Boulder Maze",
+   "rule": "has_explosives",
+   "rule_tools": [
+    "Bombs"
+   ],
+   "tracker_tools": [],
+   "age": "Adult",
+   "region": "Fire Temple Boulder Maze Lower",
+   "region_tools": [
+    "Bombs",
+    "Bow",
+    "Hookshot"
+   ],
+   "only_in_rule": [
+    "Bombs"
+   ],
+   "only_in_tracker": []
+  },
+  "FIRE-3": {
+   "loc": "Fire Temple GS Scarecrow Climb",
+   "rule": "can_use(Scarecrow) or (logic_fire_scarecrow and Longshot)",
+   "rule_tools": [],
+   "tracker_tools": [
+    "Hookshot"
+   ],
+   "age": "Adult",
+   "region": "Fire Temple Boulder Maze Upper",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": [
+    "Hookshot"
+   ]
+  },
+  "FIRE-4": {
+   "loc": "Fire Temple GS Scarecrow Top",
+   "rule": "can_use(Scarecrow) or (logic_fire_scarecrow and Longshot)",
+   "rule_tools": [],
+   "tracker_tools": [
+    "Hookshot"
+   ],
+   "age": "Adult",
+   "region": "Fire Temple Boulder Maze Upper",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": [
+    "Hookshot"
+   ]
+  },
+  "FIRE-5": {
+   "loc": "Fire Temple GS Boss Key Loop",
+   "rule": "True",
+   "rule_tools": [],
+   "tracker_tools": [
+    "Hammer"
+   ],
+   "age": "Adult",
+   "region": "Fire Temple Lower Locked Door",
+   "region_tools": [
+    "Hammer"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "ZR-1": {
+   "loc": "ZR GS Tree",
+   "rule": "is_child and can_child_attack and can_bonk",
+   "rule_tools": [],
+   "tracker_tools": [
+    "Bombs"
+   ],
+   "age": "Child",
+   "region": "ZR Front",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": [
+    "Bombs"
+   ]
+  },
+  "ZR-2": {
+   "loc": "ZR GS Ladder",
+   "rule": "is_child and (at_night or gold_skulls_ignore_daytime) and can_child_attack",
+   "rule_tools": [],
+   "tracker_tools": [
+    "Bombs",
+    "Slingshot"
+   ],
+   "age": "Child",
+   "region": "Zora River",
+   "region_tools": [
+    "Bombs",
+    "IronBoots"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": [
+    "Slingshot"
+   ]
+  },
+  "ZR-3": {
+   "loc": "ZR GS Near Raised Grottos",
+   "rule": "can_use(Hookshot) and (at_night or gold_skulls_ignore_daytime)",
+   "rule_tools": [
+    "Hookshot"
+   ],
+   "tracker_tools": [
+    "Hookshot"
+   ],
+   "age": "Adult",
+   "region": "Zora River",
+   "region_tools": [
+    "Bombs",
+    "IronBoots"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "ZR-4": {
+   "loc": "ZR GS Above Bridge",
+   "rule": "can_use(Hookshot) and (at_night or gold_skulls_ignore_daytime)",
+   "rule_tools": [
+    "Hookshot"
+   ],
+   "tracker_tools": [
+    "Hookshot"
+   ],
+   "age": "Adult",
+   "region": "Zora River",
+   "region_tools": [
+    "Bombs",
+    "IronBoots"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "ZD-1": {
+   "loc": "ZD GS Frozen Waterfall",
+   "rule": "is_adult and (at_night or gold_skulls_ignore_daytime) and (Hookshot or Bow or Magic_Meter or logic_domain_gs)",
+   "rule_tools": [],
+   "tracker_tools": [
+    "Hookshot"
+   ],
+   "age": "Adult",
+   "region": "Zoras Domain",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": [
+    "Hookshot"
+   ]
+  },
+  "JB-1": {
+   "loc": "Jabu Jabus Belly GS Water Switch Room",
+   "rule": "True",
+   "rule_tools": [],
+   "tracker_tools": [
+    "Slingshot"
+   ],
+   "age": "Child",
+   "region": "Jabu Jabus Belly Main",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": [
+    "Slingshot"
+   ]
+  },
+  "JB-2": {
+   "loc": "Jabu Jabus Belly GS Lobby Basement Lower",
+   "rule": "can_use(Boomerang) or can_use(Hookshot)",
+   "rule_tools": [
+    "Boomerang"
+   ],
+   "tracker_tools": [
+    "Boomerang"
+   ],
+   "age": "Child",
+   "region": "Jabu Jabus Belly Main",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "JB-3": {
+   "loc": "Jabu Jabus Belly GS Lobby Basement Upper",
+   "rule": "can_use(Boomerang) or can_use(Hookshot)",
+   "rule_tools": [
+    "Boomerang"
+   ],
+   "tracker_tools": [
+    "Boomerang"
+   ],
+   "age": "Child",
+   "region": "Jabu Jabus Belly Main",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "JB-4": {
+   "loc": "Jabu Jabus Belly GS Near Boss",
+   "rule": "can_use_projectile or can_use(Dins_Fire)",
+   "rule_tools": [
+    "Dins"
+   ],
+   "tracker_tools": [],
+   "age": "Child",
+   "region": "Jabu Jabus Belly Before Boss",
+   "region_tools": [
+    "HoverBoots"
+   ],
+   "only_in_rule": [
+    "Dins"
+   ],
+   "only_in_tracker": []
+  },
+  "ZF-1": {
+   "loc": "ZF GS Tree",
+   "rule": "is_child and can_bonk",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Child",
+   "region": "Zoras Fountain",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "ZF-2": {
+   "loc": "ZF GS Above the Log",
+   "rule": "can_use(Boomerang) and (at_night or gold_skulls_ignore_daytime)",
+   "rule_tools": [
+    "Boomerang"
+   ],
+   "tracker_tools": [
+    "Boomerang"
+   ],
+   "age": "Child",
+   "region": "Zoras Fountain",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "ZF-3": {
+   "loc": "ZF GS Hidden Cave",
+   "rule": "Hookshot and (at_night or gold_skulls_ignore_daytime)",
+   "rule_tools": [
+    "Hookshot"
+   ],
+   "tracker_tools": [
+    "Lens",
+    "SilverGauntlets"
+   ],
+   "age": "Adult",
+   "region": "ZF Hidden Cave",
+   "region_tools": [],
+   "only_in_rule": [
+    "Hookshot"
+   ],
+   "only_in_tracker": [
+    "Lens",
+    "SilverGauntlets"
+   ]
+  },
+  "IC-1": {
+   "loc": "Ice Cavern GS Spinning Scythe Room",
+   "rule": "can_use(Hookshot) or can_use(Boomerang)",
+   "rule_tools": [
+    "Hookshot"
+   ],
+   "tracker_tools": [
+    "Hookshot"
+   ],
+   "age": "Adult",
+   "region": "Ice Cavern Spinning Scythe Room",
+   "region_tools": [
+    "Bombs",
+    "Dins"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "IC-2": {
+   "loc": "Ice Cavern GS Heart Piece Room",
+   "rule": "can_use(Hookshot) or can_use(Boomerang)",
+   "rule_tools": [
+    "Hookshot"
+   ],
+   "tracker_tools": [
+    "Hookshot"
+   ],
+   "age": "Adult",
+   "region": "Ice Cavern Behind Ice Walls",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "IC-3": {
+   "loc": "Ice Cavern GS Push Block Room",
+   "rule": "can_use(Hookshot) or can_use(Boomerang) or (logic_ice_block_gs and can_use(Hover_Boots))",
+   "rule_tools": [
+    "Hookshot",
+    "HoverBoots"
+   ],
+   "tracker_tools": [
+    "Hookshot"
+   ],
+   "age": "Adult",
+   "region": "Ice Cavern Behind Ice Walls",
+   "region_tools": [],
+   "only_in_rule": [
+    "HoverBoots"
+   ],
+   "only_in_tracker": []
+  },
+  "LH-1": {
+   "loc": "LH GS Bean Patch",
+   "rule": "can_plant_bugs and can_child_attack",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Child",
+   "region": "Lake Hylia",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "LH-2": {
+   "loc": "LH GS Lab Wall",
+   "rule": "is_child and (at_night or gold_skulls_ignore_daytime) and (Boomerang or (logic_lab_wall_gs and (Sticks or Kokiri_Sword)))",
+   "rule_tools": [
+    "Boomerang"
+   ],
+   "tracker_tools": [
+    "Boomerang"
+   ],
+   "age": "Child",
+   "region": "Lake Hylia",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "LH-3": {
+   "loc": "LH GS Small Island",
+   "rule": "is_child and can_child_attack and (at_night or gold_skulls_ignore_daytime)",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Child",
+   "region": "Lake Hylia",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "LH-4": {
+   "loc": "LH GS Lab Crate",
+   "rule": "Iron_Boots and can_use(Hookshot) and (deadly_bonks != 'ohko' or Fairy or (can_use(Nayrus_Love) and not shuffle_interior_entrances))",
+   "rule_tools": [
+    "Hookshot",
+    "IronBoots"
+   ],
+   "tracker_tools": [
+    "Hookshot",
+    "IronBoots",
+    "ZoraTunic"
+   ],
+   "age": "Adult",
+   "region": "LH Lab",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": [
+    "ZoraTunic"
+   ]
+  },
+  "LH-5": {
+   "loc": "LH GS Tree",
+   "rule": "can_use(Longshot) and (at_night or gold_skulls_ignore_daytime)",
+   "rule_tools": [
+    "Longshot"
+   ],
+   "tracker_tools": [
+    "Longshot"
+   ],
+   "age": "Adult",
+   "region": "Lake Hylia",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "WT-1": {
+   "loc": "Water Temple GS Behind Gate",
+   "rule": "True",
+   "rule_tools": [],
+   "tracker_tools": [
+    "Hookshot"
+   ],
+   "age": "Adult",
+   "region": "Water Temple South Basement",
+   "region_tools": [
+    "Bombs",
+    "Hookshot",
+    "HoverBoots",
+    "IronBoots"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "WT-2": {
+   "loc": "Water Temple GS River",
+   "rule": "(Iron_Boots and (Zora_Tunic or logic_fewer_tunic_requirements)) or (logic_water_river_gs and Longshot and (Bow or has_bombchus))",
+   "rule_tools": [
+    "Bow",
+    "IronBoots",
+    "Longshot"
+   ],
+   "tracker_tools": [
+    "IronBoots",
+    "Longshot"
+   ],
+   "age": "Adult",
+   "region": "Water Temple River",
+   "region_tools": [],
+   "only_in_rule": [
+    "Bow"
+   ],
+   "only_in_tracker": []
+  },
+  "WT-3": {
+   "loc": "Water Temple GS Falling Platform Room",
+   "rule": "can_use(Longshot) or (logic_water_falling_platform_gs_hookshot and can_use(Hookshot)) or (logic_water_falling_platform_gs_boomerang and can_use(Boomerang))",
+   "rule_tools": [
+    "Hookshot",
+    "Longshot"
+   ],
+   "tracker_tools": [
+    "Longshot"
+   ],
+   "age": "Adult",
+   "region": "Water Temple Falling Platform Room",
+   "region_tools": [],
+   "only_in_rule": [
+    "Hookshot"
+   ],
+   "only_in_tracker": []
+  },
+  "WT-4": {
+   "loc": "Water Temple GS Central Pillar",
+   "rule": "((Longshot or (logic_water_central_gs_fw and Hookshot and can_use(Farores_Wind))) and ((Small_Key_Water_Temple, 5) or Bow or can_use(Dins_Fire))) or (logic_wate",
+   "rule_tools": [
+    "Bow",
+    "Dins",
+    "Hookshot",
+    "IronBoots",
+    "Longshot"
+   ],
+   "tracker_tools": [
+    "Longshot"
+   ],
+   "age": "Adult",
+   "region": "Water Temple Lowered Water Levels",
+   "region_tools": [],
+   "only_in_rule": [
+    "Bow",
+    "Dins",
+    "Hookshot",
+    "IronBoots"
+   ],
+   "only_in_tracker": []
+  },
+  "WT-5": {
+   "loc": "Water Temple GS Near Boss Key Chest",
+   "rule": "True",
+   "rule_tools": [],
+   "tracker_tools": [
+    "Longshot"
+   ],
+   "age": "Adult",
+   "region": "Water Temple North Basement",
+   "region_tools": [
+    "IronBoots",
+    "Longshot"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "GV-1": {
+   "loc": "GV GS Small Bridge",
+   "rule": "can_use(Boomerang) and (at_night or gold_skulls_ignore_daytime)",
+   "rule_tools": [
+    "Boomerang"
+   ],
+   "tracker_tools": [
+    "Boomerang"
+   ],
+   "age": "Child",
+   "region": "Gerudo Valley",
+   "region_tools": [
+    "Longshot"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "GV-2": {
+   "loc": "GV GS Bean Patch",
+   "rule": "can_plant_bugs and can_child_attack",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Child",
+   "region": "GV Upper Stream",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "GV-3": {
+   "loc": "GV GS Behind Tent",
+   "rule": "can_use(Hookshot) and (at_night or gold_skulls_ignore_daytime)",
+   "rule_tools": [
+    "Hookshot"
+   ],
+   "tracker_tools": [
+    "Longshot"
+   ],
+   "age": "Adult",
+   "region": "GV Fortress Side",
+   "region_tools": [
+    "Longshot"
+   ],
+   "only_in_rule": [
+    "Hookshot"
+   ],
+   "only_in_tracker": []
+  },
+  "GV-4": {
+   "loc": "GV GS Pillar",
+   "rule": "can_use(Hookshot) and (at_night or gold_skulls_ignore_daytime)",
+   "rule_tools": [
+    "Hookshot"
+   ],
+   "tracker_tools": [
+    "Hookshot",
+    "Longshot"
+   ],
+   "age": "Adult",
+   "region": "GV Fortress Side",
+   "region_tools": [
+    "Longshot"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "GF-1": {
+   "loc": "GF GS Top Floor",
+   "rule": "is_adult and (at_night or gold_skulls_ignore_daytime)",
+   "rule_tools": [],
+   "tracker_tools": [
+    "Hookshot",
+    "Longshot"
+   ],
+   "age": "Adult",
+   "region": "GF Roof Gold Skulltula",
+   "region_tools": [
+    "Longshot"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": [
+    "Hookshot"
+   ]
+  },
+  "GF-2": {
+   "loc": "GF GS Archery Range",
+   "rule": "can_use(Hookshot) and Gerudo_Membership_Card and (at_night or gold_skulls_ignore_daytime)",
+   "rule_tools": [
+    "Hookshot"
+   ],
+   "tracker_tools": [
+    "Longshot"
+   ],
+   "age": "Adult",
+   "region": "Gerudo Fortress",
+   "region_tools": [],
+   "only_in_rule": [
+    "Hookshot"
+   ],
+   "only_in_tracker": [
+    "Longshot"
+   ]
+  },
+  "HW-1": {
+   "loc": "Wasteland GS",
+   "rule": "can_use(Hookshot) or can_use(Boomerang)",
+   "rule_tools": [
+    "Hookshot"
+   ],
+   "tracker_tools": [
+    "Hookshot",
+    "HoverBoots",
+    "Lens",
+    "Longshot"
+   ],
+   "age": "Adult",
+   "region": "Haunted Wasteland",
+   "region_tools": [
+    "HoverBoots",
+    "Longshot"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": [
+    "Lens"
+   ]
+  },
+  "CL-1": {
+   "loc": "Colossus GS Bean Patch",
+   "rule": "can_plant_bugs and can_child_attack",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Both",
+   "region": "Desert Colossus",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "CL-2": {
+   "loc": "Colossus GS Tree",
+   "rule": "can_use(Hookshot) and (at_night or gold_skulls_ignore_daytime)",
+   "rule_tools": [
+    "Hookshot"
+   ],
+   "tracker_tools": [
+    "Longshot"
+   ],
+   "age": "Adult",
+   "region": "Desert Colossus",
+   "region_tools": [],
+   "only_in_rule": [
+    "Hookshot"
+   ],
+   "only_in_tracker": [
+    "Longshot"
+   ]
+  },
+  "CL-3": {
+   "loc": "Colossus GS Hill",
+   "rule": "is_adult and (at_night or gold_skulls_ignore_daytime) and (here(can_plant_bean) or Longshot or (logic_colossus_gs and Hookshot))",
+   "rule_tools": [
+    "Longshot"
+   ],
+   "tracker_tools": [],
+   "age": "Both",
+   "region": "Desert Colossus",
+   "region_tools": [],
+   "only_in_rule": [
+    "Longshot"
+   ],
+   "only_in_tracker": []
+  },
+  "SP-1": {
+   "loc": "Spirit Temple GS Metal Fence",
+   "rule": "Boomerang or (logic_spirit_fence_gs and Kokiri_Sword) or (((Silver_Rupee_Spirit_Temple_Child_Early_Torches, 5) or logic_spirit_fence_gs) and (Sticks or has_expl",
+   "rule_tools": [
+    "Bombs",
+    "Boomerang",
+    "Dins",
+    "Slingshot"
+   ],
+   "tracker_tools": [
+    "Boomerang"
+   ],
+   "age": "Both",
+   "region": "Child Spirit Temple Beyond Metal Bridges",
+   "region_tools": [
+    "Bombs",
+    "Boomerang",
+    "Slingshot"
+   ],
+   "only_in_rule": [
+    "Bombs",
+    "Dins",
+    "Slingshot"
+   ],
+   "only_in_tracker": []
+  },
+  "SP-2": {
+   "loc": "Spirit Temple GS Sun on Floor Room",
+   "rule": "(is_child and has_projectile(child) and (Small_Key_Spirit_Temple, 5)) or (is_adult and (has_projectile(adult) or can_take_damage) and ((Small_Key_Spirit_Temple,",
+   "rule_tools": [
+    "Dins"
+   ],
+   "tracker_tools": [
+    "Boomerang"
+   ],
+   "age": "Both",
+   "region": "Child Spirit Temple Climb",
+   "region_tools": [],
+   "only_in_rule": [
+    "Dins"
+   ],
+   "only_in_tracker": [
+    "Boomerang"
+   ]
+  },
+  "SP-3": {
+   "loc": "Spirit Temple GS Hall After Sun Block Room",
+   "rule": "(is_child and Boomerang and (Small_Key_Spirit_Temple, 5)) or (is_adult and Hookshot and ((Small_Key_Spirit_Temple, 3) or spirit_temple_shortcuts)) or (Boomerang",
+   "rule_tools": [
+    "Bombs",
+    "Boomerang",
+    "Hookshot"
+   ],
+   "tracker_tools": [],
+   "age": "Both",
+   "region": "Spirit Temple Central Chamber",
+   "region_tools": [
+    "Bombs"
+   ],
+   "only_in_rule": [
+    "Bombs",
+    "Boomerang",
+    "Hookshot"
+   ],
+   "only_in_tracker": []
+  },
+  "SP-4": {
+   "loc": "Spirit Temple GS Boulder Room",
+   "rule": "can_play(Song_of_Time)",
+   "rule_tools": [],
+   "tracker_tools": [],
+   "age": "Adult",
+   "region": "Spirit Temple Boulder Room",
+   "region_tools": [
+    "Bow",
+    "Hookshot"
+   ],
+   "only_in_rule": [],
+   "only_in_tracker": []
+  },
+  "SP-5": {
+   "loc": "Spirit Temple GS Lobby",
+   "rule": "(is_child and logic_spirit_lobby_gs and Boomerang and (Small_Key_Spirit_Temple, 5)) or (is_adult and (Hookshot or Hover_Boots or logic_spirit_lobby_jump) and ((",
+   "rule_tools": [
+    "Bombs"
+   ],
+   "tracker_tools": [
+    "Hookshot",
+    "Longshot"
+   ],
+   "age": "Adult",
+   "region": "Spirit Temple Central Chamber",
+   "region_tools": [
+    "Bombs"
+   ],
+   "only_in_rule": [
+    "Bombs"
+   ],
+   "only_in_tracker": [
+    "Hookshot",
+    "Longshot"
+   ]
+  },
+  "GAN-1": {
+   "loc": "OGC GS",
+   "rule": "True",
+   "rule_tools": [],
+   "tracker_tools": [
+    "Hookshot"
+   ],
+   "age": "Adult",
+   "region": "Ganons Castle Grounds",
+   "region_tools": [],
+   "only_in_rule": [],
+   "only_in_tracker": [
+    "Hookshot"
+   ]
+  }
+ },
+ "mismatches": [
+  "BW-1",
+  "BW-2",
+  "BW-3",
+  "CL-2",
+  "CL-3",
+  "DC-1",
+  "DC-2",
+  "DC-3",
+  "DC-4",
+  "DC-5",
+  "DMC-1",
+  "DMT-1",
+  "DMT-2",
+  "DMT-3",
+  "DMT-4",
+  "DT-2",
+  "DT-4",
+  "FIRE-2",
+  "FIRE-3",
+  "FIRE-4",
+  "FT-1",
+  "FT-2",
+  "FT-3",
+  "FT-4",
+  "FT-5",
+  "GAN-1",
+  "GC-2",
+  "GF-1",
+  "GF-2",
+  "GV-3",
+  "HC-2",
+  "HF-1",
+  "HF-2",
+  "HW-1",
+  "IC-3",
+  "JB-1",
+  "JB-4",
+  "KF-3",
+  "LH-4",
+  "LW-3",
+  "SP-1",
+  "SP-2",
+  "SP-3",
+  "SP-5",
+  "ST-2",
+  "WT-2",
+  "WT-3",
+  "WT-4",
+  "ZD-1",
+  "ZF-3",
+  "ZR-1",
+  "ZR-2"
+ ]
+}

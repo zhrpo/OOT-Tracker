@@ -321,14 +321,16 @@ Method and limits are in AUDIT_TESTS.md §8 and AUDIT_VERIFICATION.md. Sources a
 - The Switch 2 remake was released 2026-11-05; no source reachable here is the game itself. The 100-token count and the nine region-group counts match Questfern's Switch 2 list (check C5). Rows whose own note says the guides disagree: `BW-2`, `HC-1`, `HF-1`, `HP-13`, `HP-19`, `HP-21`, `HP-4`, `ZR-2`. Also noted, not defects: `KAK-1` is night-first on Switch 2 by documented policy (Game8 says any time); `SP-5` needs the Scarecrow's Song per Game8, RPG Site and Questfern although the randomizer logic does not; `ST-4` on N64 needs the Longshot (randomizer agrees).
 - Recommendation: keep the "trust the in-game map" notes; re-check these rows in a few weeks.
 
-### F-036 — Not verified in session 5
-- Category: C · Severity: Informational · Classification: Unverified
-- The 180 dungeon walkthrough steps (`DG-42`…`DG-221`) and the side-quest and trade-item guide text were read but not checked step by step against a source. Prices, rupee amounts and timers in text were not checked (a few Switch 2 values are cited in `vnotes`). Heart Piece requirements were checked only for age (check C7, 17 rows); their tools were not compared with the randomizer except HP-15. Main-quest `after`/`gives` order was read and is consistent with the dependency map (F-018) but not source-checked.
+### F-036 — Not verified in session 5 (status after session 5 part 2)
+- Category: C · Severity: Informational · Classification: Unverified (partly resolved; not closed)
+- **Done in part 2:** (6) all 100 token requirement sets compared with the randomizer location rules and region rules (`scripts/data_audit_s5b.py`, `testlogs/data_audit_s5b.json`): 48 match, 52 differ, of which 9 are already F-030/F-031/F-032, 1 probable defect (F-042), 5 source disagreements (F-043), 37 judged benign (tool comes from the region rule, implied by the story step, or an alternative); these 37 are judgments, not source checks. (5) Heart Piece tools: all 36 rows read, 17 compared with randomizer rules/regions; found HP-29 (F-044); the Bomb Bag on HP-19/21/22 is justified for child Link by the randomizer region rule (summit and river-entrance boulders need explosives) but over-locks adults. (1) Dungeon steps: all 176 per version checked for **internal** consistency only (`scripts/data_audit_s5c.py`): 15 steps name a tool not yet held; one is a confirmed defect (F-045), 3 depend on it, 1 and 3 are source disagreements/alternatives (F-043), 8 benign. (3) Trade chain order, timers: verified (F-037). (4) Prices/timers: partly (F-037).
+- **Still unverified:** the wording and accuracy of the 176 dungeon steps against a step-by-step source; side-quest descriptions, rewards and requirements (44 rows; no row was found whose text names a tool missing from its requirements, F-026, but no source was read for them); the other prices listed in F-037; heart rows not mapped to a randomizer location (19 of 36) beyond reading; main-quest row prerequisites other than the Shadow Temple, Spirit Temple and Ganon's Castle points above; Switch 2 versions of all of these (F-035).
+- Owner decision needed: whether to continue source-checking these (a large reading task: ~176 steps + 44 side quests; the sources reachable here are limited, several guide sites are blocked from the fetch tool) or to accept the limitation and let the fix batch go ahead on the confirmed defects.
 
 ### F-037 — Prices and timers: spot-checked entries agree with sources; the rest remain unverified
 - Category: C · Severity: Informational · Classification: Verified (partial) · Confidence: High for the entries listed, n/a for the rest
 - Method: all 67 distinct price/timer strings in the payload were extracted (side, heart, item lists). Checked against several independent sources (searches in session 5): Odd Mushroom 3 min, Eyeball Frog 3 min, World's Finest Eye Drops 4 min (consensus of ~8 guides; one page, ZeldaDungeon "Eye Drops", says the frog lasts 4 min - a single outlier, not adopted); no warp songs during the timers; N64 Big Poe 50 rupees + 100 points, Bottle at 1,000 points; Switch 2 Big Poe 30 rupees, bottle at 500, Gold Rupee (200) at 1,000 (FinalBoss, a secondary guide). The tracker text matches all of these.
-- **Not verified** (no source consulted): every other price (shops, 10/20/30/50 rupee game fees, bean prices, Dampé/Epona fees), the claim that the Switch 2 Odd Mushroom timer is about 4 minutes, the Switch 2 wallet sizes, and the 6-9 PM Dampé window. They stay under F-036.
+- Trade chain also checked: the 12-step order (Pocket Egg, Pocket Cucco, Cojiro, Odd Mushroom, Odd Potion, Poacher's Saw, Broken Goron's Sword, Prescription, Eyeball Frog, Eye Drops, Claim Check, Biggoron's Sword; `TR-6..TR-17`) matches ZeldaDungeon, StrategyWiki, VGC and GamerTag Mythras; the Prescription-to-frog step needs King Zora freed (`MQ-27`) as in the sources; the Claim Check three-day wait is in the sources (Flying Omelette, Zelda Wiki). Not checked: the claim that the Poacher's Saw makes the Forest Stage Deku Nut upgrade missable on N64.\n- **Not verified** (no source consulted): every other price (shops, 10/20/30/50 rupee game fees, bean prices, Dampé/Epona fees), the claim that the Switch 2 Odd Mushroom timer is about 4 minutes, the Switch 2 wallet sizes, and the 6-9 PM Dampé window. They stay under F-036.
 
 ### F-038 — The account document is trusted without validation: junk ids are kept and written back
 - Category: Security / E · Severity: Low · Classification: Confirmed defect (hardening) · Confidence: High · Versions: all
@@ -357,6 +359,28 @@ Method and limits are in AUDIT_TESTS.md §8 and AUDIT_VERIFICATION.md. Sources a
   - *Contrast:* existing pixel-based tests pass when run alone (`test_cards.py`: lowest group-title ratio 4.96, 0 below 4.5; `test_contrast2.py`: none below 4.5 in dark Switch 2 items). My own DOM-colour probe is **not reliable** on this themed page (it reads the button's CSS colour, but themed panels are drawn over it) and flagged false positives that screenshots disproved; its numbers are not used. A pixel probe for the 10.5 px tab labels (dominant-background approximation, 22 measurable states; 8 states have no visible label) gives a minimum of 7.58:1. Body text, rows, banners, toasts and disabled/locked styles: **not measured**.
   - *Still unverified:* real assistive technology (NVDA/VoiceOver), browser zoom itself (only text-size and narrow-width emulation), keyboard order beyond the first 25 stops, the story-step veil/unveil flow with a keyboard, the day/night filter (F-028), touch use, high-contrast mode.
 
+### F-042 — ZF-3 (Zora's Fountain, hidden cave) lists no tool for the spider the randomizer says needs the Hookshot
+- Category: C / B · Severity: Low · Classification: Probable defect · Confidence: Medium (OoT Randomizer rule `Hookshot and night`, plus one guide, Jegged, that uses the Longshot on the last spider; GamesRadar and VGC name no tool) · Versions: N64, 3DS (Switch 2 not checked)
+- Evidence: `scripts/data_audit_s5b.py`, row ZF-3: the tracker requires Silver Gauntlets or Lens of Truth (`IT-30` / `IT-18` as alternatives), the row text says only "climb the far ladder to the spider on the outer wall". Reproduce: `python3 scripts/data_audit_s5b.py` (ZF-3 listed as `probable_defect`).
+- Why not Confirmed: the Silver Gauntlets/Lens clauses are alternatives in the data (an OR), which is itself unusual (the guides need the Gauntlets to enter and the Lens to see the invisible spiders); that may be an additional defect or a modelling shortcut. Needs one more independent source before it is fixed.
+
+### F-043 — Source disagreements and unlisted alternative tools (not defects until a source settles them)
+- Category: C · Severity: Informational · Classification: Unverified / guide disagreement · Confidence: n/a
+- `LH-4` lists the Zora Tunic: Thonky says Iron Boots and Zora Tunic; GamesRadar, GameWith, Jegged, VGC and the randomizer name only the Iron Boots (and the Hookshot). `GC-2`, `GF-1`: the tracker requires the Hookshot, the randomizer location/region rule needs no item (adult only); guides not checked. `ZR-2`: tracker lists the Slingshot; ZeldaDungeon says shoot it, GamesRadar/Thonky name no tool. `ZD-1`: tracker lists the Hookshot; the randomizer also accepts the Bow (alternative not accepted by the tracker). Spirit Temple (`DG-196`/MQ-35): Thonky, GamerTag Mythras and FinalBoss (Switch 2) use the Megaton Hammer for the rusty switch; a ZeldaDungeon forum post says the regular quest does not need it; the tracker does not require the Hammer. Ganon's Castle trials (`DG-207/208/212`, MQ-39): the tracker requires Fire Arrows, the OoT Randomizer wiki says Fire Arrows or Din's Fire.
+- Recommendation: do not change until a second independent source is read for each row; these are the rows to re-check first.
+
+### F-044 — HP-29 (Zora's Fountain iceberg Heart Piece) is locked behind the Hookshot
+- Category: C / B · Severity: Low · Classification: Confirmed defect · Confidence: High · Versions: all three (same requirement in n64 and sw2; 3DS inherits n64)
+- Evidence: the row's own text says only "Jump across the spinning ice blocks to the farthest one" but `q` requires `IT-16` (Hookshot) (also `gate.py` L69 `"HP-29": ["i_hookshot"]`). The OoT Randomizer rule for this piece is `is_adult` only; SuperCheats ("Adult Link; None"), ZeldaCentral, Thonky, StrategyWiki and GamesRadar describe jumping across with no item.
+- Impact: an adult player who reaches the Fountain before the Hookshot sees the row as locked/not ready (with Locks on it cannot be ticked).
+- Reproduce: `scripts/data_audit_s5.py` helpers (`opts(T,'HP-29')`) or read `out/themed2.html` payload row HP-29.
+
+### F-045 — The Shadow Temple does not require Din's Fire (or the Magic Meter)
+- Category: C / B · Severity: Medium · Classification: Confirmed defect · Confidence: High · Versions: all three
+- Evidence: `scripts/data_audit_s5c.py`, step `DG-166` ("Play the Nocturne of Shadow and light the torches"): `MQ-31` (Shadow Temple) is `after` Nocturne of Shadow and Lens of Truth only; Din's Fire (`IT-22`) is not in its closure. Sources: GameWith, Jegged, ZeldaDungeon (Din's Fire "is the only spell required to complete the game"), Thonky, ZeldaWiki, the OoT Randomizer wiki ("Magic Meter and Din's Fire: necessary to open entrance"), and FinalBoss's Switch 2 dungeon list. The tracker shows the Shadow Temple (and `MQ-37`, which follows it) as ready to a player who cannot open the entrance.
+- Related: Shadow Temple boss-key room (`DG-179`) and Spirit Temple Anubis room (`DG-187`) name Din's Fire; they stop being an issue once the entrance requires it.
+- Recommendation: add `IT-22` (and `IT-21`) to `MQ-31` (REMEDIATION_PLAN §6).
+
 ### Updates to earlier findings (session 5)
 - F-026: Resolved by F-034.
 - F-016: four further test hooks ship (see F-040); severity unchanged.
@@ -382,5 +406,9 @@ Method and limits are in AUDIT_TESTS.md §8 and AUDIT_VERIFICATION.md. Sources a
 | F-039 | Sync status not a live region | Confirmed defect | Low | No | Needed once failed saves are surfaced |
 | F-040 | Security review: no injection path | Verified (limited) | Info | No | - |
 | F-041 | Accessibility spot-check | Verified (limited) | Info | No | - |
+| F-042 | ZF-3 lists no tool for a Hookshot spider | Probable defect | Low | No | Medium confidence |
+| F-043 | Source disagreements / alternative tools (LH-4, GC-2, GF-1, ZR-2, ZD-1, Spirit Hammer, Ganon trials) | Unverified | Info | No | Re-check first |
+| F-044 | HP-29 locked behind the Hookshot | Confirmed defect | Low | No | Data fix batch |
+| F-045 | Shadow Temple does not require Din's Fire | Confirmed defect | Medium | No (data fix batch) | Ready before the entrance can open |
 
-Next new ID: **F-042**.
+Next new ID: **F-046**.

@@ -1,4 +1,5 @@
-import sys,os,json; sys.path.insert(0,'/home/claude/build'); os.environ['OPEN']='0'
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
+import sys,os,json; sys.path.insert(0,_env.PROJ); os.environ['OPEN']='0'
 import pwpatch
 from playwright.sync_api import sync_playwright
 JS=r"""(v)=>{
@@ -34,15 +35,15 @@ JS=r"""(v)=>{
 }"""
 out={}
 with sync_playwright() as p:
-    b=p.chromium.launch(executable_path="/usr/bin/google-chrome",args=["--no-sandbox"])
+    b=p.chromium.launch(executable_path=_env.CHROME,args=["--no-sandbox"])
     for v in ('n64','3ds','sw2'):
         pg=b.new_page(); errs=[]; pg.on("pageerror",lambda e: errs.append(str(e)))
-        pg.goto("file:///home/claude/audit/out/themed2.html#skull-"+v); pg.wait_for_selector(".grp")
+        pg.goto(_env.OUT_URL + "/themed2.html#skull-"+v); pg.wait_for_selector(".grp")
         if not pg.evaluate("__oot.state.lock"): pg.click("#lockon")
         r=pg.evaluate(JS, v); out[v]=r
         print(v, 'rows first ready:', len(r['first']), 'age issues:', r['ageIssues'], 'never:', r['never'], errs[:2])
     b.close()
-json.dump(out,open('/tmp/play.json','w'))
+json.dump(out,open(_env.TMP + '/play.json','w'))
 F=[]
 def chk(n,ok,x=''):
     print(('PASS ' if ok else 'FAIL ')+n, '' if ok else x)

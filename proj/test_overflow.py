@@ -1,8 +1,9 @@
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
 import pwpatch
 import os, sys, json
 from playwright.sync_api import sync_playwright
 F = os.environ.get("F", "themed2.html")
-URL = "file:///home/claude/audit/out/" + F
+URL = _env.OUT_URL + "/" + F
 WIDTHS = [int(x) for x in os.environ.get("W", "280,320,360,390,430,480,540,560,561,600,640,680,720,760,800,860,920,1000,1019,1020,1080,1180,1280,1440,1920").split(",")]
 HEIGHTS = [int(x) for x in os.environ.get("H", "900").split(",")]
 VERS = os.environ.get("V", "n64,3ds,sw2").split(",")
@@ -70,7 +71,7 @@ JS = r"""
 """
 fails = 0; total = 0
 with sync_playwright() as p:
-    b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+    b = p.chromium.launch(executable_path=_env.CHROME, args=["--no-sandbox"])
     for H in HEIGHTS:
       for W in WIDTHS:
         ctx = b.new_context(viewport={"width": W, "height": H})

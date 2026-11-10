@@ -1,15 +1,16 @@
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
 import pwpatch
 import os, json, sys
 from playwright.sync_api import sync_playwright
-F = os.environ.get("F", "index.html")
-URL = "file:///home/claude/audit/out/" + F
+F = os.environ.get("F", "themed2.html")
+URL = _env.OUT_URL + "/" + F
 fails = []
 def check(name, cond, info=""):
     print(("PASS " if cond else "FAIL ") + name + (" " + str(info) if info and not cond else ""))
     if not cond: fails.append(name)
 
 with sync_playwright() as p:
-    b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+    b = p.chromium.launch(executable_path=_env.CHROME, args=["--no-sandbox"])
     ctx = b.new_context(viewport={"width": 390, "height": 844}, device_scale_factor=1)
     pg = ctx.new_page()
     errs = []
@@ -136,13 +137,13 @@ with sync_playwright() as p:
     # items tab
     pg.click("#tab-items"); pg.wait_for_selector(".row")
     check("items rows present (sw2 77)", pg.evaluate("Object.values(__oot.rowMap()).filter(r=>r.id.startsWith('IT-') && !r.step).length") == 77)
-    pg.screenshot(path="/home/claude/build/g_items_phone.png")
+    pg.screenshot(path=_env.SCRATCH + "/g_items_phone.png")
     pg.click("#tab-side"); pg.wait_for_selector(".row")
-    pg.screenshot(path="/home/claude/build/g_side_phone.png")
+    pg.screenshot(path=_env.SCRATCH + "/g_side_phone.png")
     pg.click("#tab-main"); pg.wait_for_selector(".row")
-    pg.screenshot(path="/home/claude/build/g_main_phone.png")
+    pg.screenshot(path=_env.SCRATCH + "/g_main_phone.png")
     pg.click("#tab-heart"); pg.wait_for_selector(".row")
-    pg.screenshot(path="/home/claude/build/g_heart_phone.png")
+    pg.screenshot(path=_env.SCRATCH + "/g_heart_phone.png")
 
     # infer banner on a fresh context with old-style progress
     ctx2 = b.new_context(viewport={"width": 390, "height": 844})
@@ -161,9 +162,9 @@ with sync_playwright() as p:
     ctx3 = b.new_context(viewport={"width": 1280, "height": 900})
     p3 = ctx3.new_page()
     p3.goto(URL); p3.wait_for_selector(".row")
-    p3.screenshot(path="/home/claude/build/g_main_desk.png")
+    p3.screenshot(path=_env.SCRATCH + "/g_main_desk.png")
     p3.click("#tab-side"); p3.wait_for_selector(".row")
-    p3.screenshot(path="/home/claude/build/g_side_desk.png")
+    p3.screenshot(path=_env.SCRATCH + "/g_side_desk.png")
     print("errors:", errs)
     check("no console errors", not errs, errs)
     b.close()

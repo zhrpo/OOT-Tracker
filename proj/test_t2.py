@@ -1,12 +1,13 @@
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
 import pwpatch
 import os
 from playwright.sync_api import sync_playwright
 F = os.environ.get("F", "themed2.html")
-URL = "file:///home/claude/audit/out/" + F
+URL = _env.OUT_URL + "/" + F
 TABS = ["mainquest", "skulltulas", "hearts", "sidequests", "items"]
 out = []
 with sync_playwright() as p:
-    b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+    b = p.chromium.launch(executable_path=_env.CHROME, args=["--no-sandbox"])
     for (w, h) in [(360, 740), (390, 844), (820, 1000), (1440, 900)]:
         for scheme in ("light", "dark"):
             ctx = b.new_context(viewport={"width": w, "height": h}, color_scheme=scheme)

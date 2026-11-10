@@ -1,15 +1,16 @@
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
 # Round 9: Din's Fire step folded into the Shadow Temple, per-console tab hover, icon hover effects, banner life by console
 import os
 os.environ.setdefault("OPEN", "1")
 import pwpatch  # noqa
 from playwright.sync_api import sync_playwright
-URL = "file:///home/claude/audit/out/" + os.environ.get("F", "themed2.html")
+URL = _env.OUT_URL + "/" + os.environ.get("F", "themed2.html")
 fails = []
 def check(name, cond, info=""):
     print(("PASS " if cond else "FAIL ") + name + (" " + str(info) if info and not cond else ""))
     if not cond: fails.append(name)
 with sync_playwright() as p:
-    b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+    b = p.chromium.launch(executable_path=_env.CHROME, args=["--no-sandbox"])
     # a save that still holds the retired step
     ctx = b.new_context(viewport={"width": 1280, "height": 900})
     ctx.add_init_script("try{ if(!sessionStorage.getItem('seeded')){ localStorage.setItem('oot-tracker-v1', JSON.stringify({got:['sw2:MQ-1','sw2:MQ-14','sw2:MQ-15'], ver:'sw2'})); sessionStorage.setItem('seeded','1'); } }catch(e){}")

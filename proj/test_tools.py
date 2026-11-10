@@ -1,7 +1,8 @@
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
 # Consistency checks across all three games: tool chips vs age vs text.
 import os, json
 from playwright.sync_api import sync_playwright
-URL = "file:///home/claude/audit/out/" + os.environ.get("F", "index.html")
+URL = _env.OUT_URL + "/" + os.environ.get("F", "themed2.html")
 JS = """
 (ver) => {
   __oot.state.ver = ver;
@@ -25,7 +26,7 @@ def bad(v, id, msg):
     fails.append((v, id, msg)); print("FAIL", v, id, msg)
 
 with sync_playwright() as p:
-    b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+    b = p.chromium.launch(executable_path=_env.CHROME, args=["--no-sandbox"])
     pg = b.new_page()
     pg.goto(URL); pg.wait_for_selector(".row")
     for v in ("n64", "3ds", "sw2"):

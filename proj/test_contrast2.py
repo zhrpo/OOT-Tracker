@@ -1,6 +1,7 @@
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
 import pwpatch
 from playwright.sync_api import sync_playwright
-URL = "file:///home/claude/audit/out/themed2.html"
+URL = _env.OUT_URL + "/themed2.html"
 JS = r"""
 () => {
   function parse(c){ const m=c.match(/rgba?\(([^)]+)\)/); if(!m) return null; const p=m[1].split(/[ ,\/]+/).filter(Boolean).map(Number); return {r:p[0],g:p[1],b:p[2],a:p.length>3?p[3]:1}; }
@@ -40,7 +41,7 @@ JS = r"""
 }
 """
 with sync_playwright() as p:
-    b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+    b = p.chromium.launch(executable_path=_env.CHROME, args=["--no-sandbox"])
     low = []
     for scheme in ("light", "dark"):
         ctx = b.new_context(viewport={"width": 1440, "height": 900}, color_scheme=scheme)

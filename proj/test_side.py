@@ -1,12 +1,13 @@
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
 import pwpatch
 from playwright.sync_api import sync_playwright
 
-URL = "file:///home/claude/audit/out/" + __import__("os").environ.get("F", "index.html") + ""
+URL = _env.OUT_URL + "/" + __import__("os").environ.get("F", "themed2.html") + ""
 SECRET = "Pay Ingo 10 rupees for a ride"          # a guide-only phrase (SQ-28)
 SECRET2 = "Climb onto the empty stump across from him"  # guide-only phrase (SQ-1)
 
 with sync_playwright() as p:
-    b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+    b = p.chromium.launch(executable_path=_env.CHROME, args=["--no-sandbox"])
     ctx = b.new_context(viewport={"width": 390, "height": 844}, device_scale_factor=2)
     pg = ctx.new_page()
     errs = []
@@ -106,21 +107,21 @@ with sync_playwright() as p:
     # screenshots
     pg.evaluate("window.scrollTo(0,0)")
     pg.locator("button[data-reveal='SQ-6']").click()
-    pg.screenshot(path="/home/claude/build/shot_side_mobile.png")
+    pg.screenshot(path=_env.SCRATCH + "/shot_side_mobile.png")
     pg.locator("#g2").scroll_into_view_if_needed()
-    pg.screenshot(path="/home/claude/build/shot_side_mobile2.png")
+    pg.screenshot(path=_env.SCRATCH + "/shot_side_mobile2.png")
 
     pg2 = b.new_context(viewport={"width": 1100, "height": 900}).new_page()
     pg2.goto(URL + "#sidequests")
     pg2.wait_for_selector(".row.sq")
     pg2.locator("button[data-reveal='SQ-28']").click()
-    pg2.screenshot(path="/home/claude/build/shot_side_desktop.png")
+    pg2.screenshot(path=_env.SCRATCH + "/shot_side_desktop.png")
 
     # dark mode look
     pg3 = b.new_context(viewport={"width": 390, "height": 844}, color_scheme="dark", device_scale_factor=2).new_page()
     pg3.goto(URL + "#sidequests")
     pg3.wait_for_selector(".row.sq")
-    pg3.screenshot(path="/home/claude/build/shot_side_dark.png")
+    pg3.screenshot(path=_env.SCRATCH + "/shot_side_dark.png")
 
     print("errors:", errs)
     b.close()

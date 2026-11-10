@@ -1,13 +1,14 @@
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
 import pwpatch
 import sys
 from playwright.sync_api import sync_playwright
-FILE = sys.argv[1] if len(sys.argv) > 1 else "index.html"
-URL = "file:///home/claude/audit/out/" + FILE
+FILE = sys.argv[1] if len(sys.argv) > 1 else "themed2.html"
+URL = _env.OUT_URL + "/" + FILE
 TAG = FILE.split(".")[0]
 errs = []
 SIZES = {"phone": (390, 844), "tablet": (820, 1100), "laptop": (1100, 760), "desktop": (1440, 900), "wide": (1920, 1080)}
 with sync_playwright() as p:
-    b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+    b = p.chromium.launch(executable_path=_env.CHROME, args=["--no-sandbox"])
     for name, (w, h) in SIZES.items():
         for scheme in ("light", "dark"):
             ctx = b.new_context(viewport={"width": w, "height": h}, device_scale_factor=1 if w > 800 else 2, color_scheme=scheme)

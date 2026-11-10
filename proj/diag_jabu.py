@@ -1,10 +1,11 @@
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
 import json
 from playwright.sync_api import sync_playwright
-got = json.loads(open("/tmp/got.json").read())
+got = json.loads(open(_env.TMP + "/got.json").read())
 with sync_playwright() as p:
-    b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+    b = p.chromium.launch(executable_path=_env.CHROME, args=["--no-sandbox"])
     pg = b.new_page(viewport={"width": 390, "height": 844})
-    pg.goto("file:///home/claude/audit/out/themed2.html#items/sw2"); pg.wait_for_selector(".row")
+    pg.goto(_env.OUT_URL + "/themed2.html#items/sw2"); pg.wait_for_selector(".row")
     pg.evaluate("(g) => { localStorage.setItem('oot-tracker-v1', JSON.stringify({got: g, ver: 'sw2'})); }", got)
     pg.reload(); pg.wait_for_selector(".row")
     r = pg.evaluate("""() => {

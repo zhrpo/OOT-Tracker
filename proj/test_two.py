@@ -1,3 +1,4 @@
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
 """Every two-Link row, every version: at each age stage, which half is open (age-wise) and what the card says."""
 import sys, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); os.environ.setdefault('OPEN', '0')
@@ -26,9 +27,9 @@ JS = r"""() => {
 }"""
 F = []
 with sync_playwright() as p:
-    b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+    b = p.chromium.launch(executable_path=_env.CHROME, args=["--no-sandbox"])
     for v in ('n64', '3ds', 'sw2'):
-        pg = b.new_page(); pg.goto("file:///home/claude/audit/out/themed2.html#skull-" + v); pg.wait_for_selector(".grp")
+        pg = b.new_page(); pg.goto(_env.OUT_URL + "/themed2.html#skull-" + v); pg.wait_for_selector(".grp")
         r = pg.evaluate(JS)
         firsts = {}
         for i, x in r['out'].items(): firsts.setdefault(x['first'], []).append(i)

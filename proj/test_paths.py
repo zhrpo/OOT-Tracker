@@ -1,3 +1,4 @@
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
 """Many random playthroughs per version. After every action, check that the Ready list only holds things that can
 really be done at that moment, and that two-Link rows behave (child part, adult part, the locked stretch as adult)."""
 import sys, os, json
@@ -61,10 +62,10 @@ JS = r"""([v, runs]) => {
 }"""
 F = []
 with sync_playwright() as p:
-    b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+    b = p.chromium.launch(executable_path=_env.CHROME, args=["--no-sandbox"])
     for v in ('n64', '3ds', 'sw2'):
         pg = b.new_page(); errs = []; pg.on("pageerror", lambda e: errs.append(str(e)))
-        pg.goto("file:///home/claude/audit/out/themed2.html#skull-" + v); pg.wait_for_selector(".grp")
+        pg.goto(_env.OUT_URL + "/themed2.html#skull-" + v); pg.wait_for_selector(".grp")
         if not pg.evaluate("__oot.state.lock"): pg.click("#lockon")
         r = pg.evaluate(JS, [v, RUNS])
         print(v, 'states checked:', r['states'])

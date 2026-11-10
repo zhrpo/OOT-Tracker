@@ -1,15 +1,16 @@
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
 # Round 6: collapsed-by-default cards, art stays visible, landing page + last tab, locked rows cannot be ticked, area order
 import os, json
 from playwright.sync_api import sync_playwright
 F = os.environ.get("F", "themed2.html")
-URL = "file:///home/claude/audit/out/" + F
+URL = _env.OUT_URL + "/" + F
 fails = []
 def check(name, cond, info=""):
     print(("PASS " if cond else "FAIL ") + name + (" " + str(info) if info and not cond else ""))
     if not cond: fails.append(name)
 ORDER = ['Kokiri Forest','Lost Woods','Sacred Forest Meadow','Great Deku Tree','Forest Temple','Hyrule Field','Lon Lon Ranch','Hyrule Castle Town','Hyrule Castle','Kakariko Village','Kakariko Graveyard','Bottom of the Well','Shadow Temple','Death Mountain Trail','Goron City',"Dodongo's Cavern",'Death Mountain Crater','Fire Temple',"Zora's River","Zora's Domain","Jabu-Jabu's Belly","Zora's Fountain",'Ice Cavern','Lake Hylia','Water Temple','Gerudo Valley','Gerudo Fortress','Haunted Wasteland','Desert Colossus','Spirit Temple',"Ganon's Castle"]
 with sync_playwright() as p:
-    b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+    b = p.chromium.launch(executable_path=_env.CHROME, args=["--no-sandbox"])
     def page(w=390, h=844, scheme="light"):
         ctx = b.new_context(viewport={"width": w, "height": h}, color_scheme=scheme)
         pg = ctx.new_page(); pg.errs = []

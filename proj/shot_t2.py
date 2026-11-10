@@ -1,12 +1,13 @@
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
 import sys, os
 from playwright.sync_api import sync_playwright
 FILE = os.environ.get("F", "themed2.html"); PFX = os.environ.get("P", "n")
-URL = "file:///home/claude/audit/out/" + FILE
+URL = _env.OUT_URL + "/" + FILE
 JOBS = os.environ.get("J", "n64:phone:light:mainquest,3ds:phone:light:hearts,sw2:phone:light:sidequests,sw2:desktop:dark:items,3ds:desktop:light:skulltulas,n64:desktop:light:hearts").split(",")
 SZ = {"phone": (390, 844, 2), "tablet": (820, 1000, 1), "desktop": (1440, 900, 1)}
 errs = []
 with sync_playwright() as p:
-    b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+    b = p.chromium.launch(executable_path=_env.CHROME, args=["--no-sandbox"])
     for j in JOBS:
         v, size, scheme, tab = j.split(":")
         w, h, dsf = SZ[size]

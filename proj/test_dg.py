@@ -1,3 +1,4 @@
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
 """Dungeon walkthroughs (Round 22): per-version step lists, ticking in order, the row finishing with its last step,
 unticking, the per-dungeon toggle in the dropdown, and no global pill."""
 import sys, os
@@ -30,11 +31,11 @@ JS = r"""(v) => {
 }"""
 F = []
 with sync_playwright() as p:
-    b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+    b = p.chromium.launch(executable_path=_env.CHROME, args=["--no-sandbox"])
     for v in ('n64', '3ds', 'sw2'):
         pg = b.new_page(); errs = []
         pg.on("pageerror", lambda e: errs.append(str(e)))
-        pg.goto("file:///home/claude/audit/out/themed2.html#main-" + v); pg.wait_for_selector(".grp")
+        pg.goto(_env.OUT_URL + "/themed2.html#main-" + v); pg.wait_for_selector(".grp")
         r = pg.evaluate(JS, v)
         print(v, 'dungeons:', len(r['info']), 'steps:', sum(r['info'].values()), r['info'].get('MQ-3'), r['info'].get('MQ-21'))
         if r['pill']: r['bad'].append('global pill still there')

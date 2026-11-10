@@ -1,3 +1,4 @@
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
 # builds the art preview page: every dropdown scene at N64 / 3DS / Switch 2, plus the tab icons
 import json, re
 js = open('theme2.js').read()
@@ -9,7 +10,7 @@ js = js.replace(mark, icons3 + '\n' + mark)
 css = open('theme2.css').read() + open('scenes3.css').read()
 # the banner timing rules key off the page's console; the preview shows all three at once
 extra = '\n'.join(l.replace('body[data-ver="3ds"]', '.cv-3ds').replace('body[data-ver="n64"]', '.cv-n64') for l in css.split('\n') if ('body[data-ver="3ds"] .banner' in l or 'body[data-ver="n64"] .banner' in l))
-names = json.load(open('/tmp/names.json'))
+names = json.load(open(_env.TMP + '/names.json'))
 html = '''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Ocarina tracker: art preview</title><style>''' + css + extra + '''
 body{margin:0;background:#15171c;color:#eef0f4;font:15px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif}
@@ -50,5 +51,5 @@ var ic = document.getElementById('ic'), ks = [['main','Main'],['skull','Skulls']
 var h2 = document.createElement('h2'); h2.textContent = 'Tab icons (child art, then adult art)'; ic.appendChild(h2);
 V.forEach(function(v){ [0,1].forEach(function(ad){ var w = document.createElement('div'); w.className = 'icrow cv-' + v[0]; w.innerHTML = '<h3>' + v[1] + (ad ? ', adult' : ', child') + '</h3><div class="icons">' + ks.map(function(k){ return '<div class="tic">' + OOTTheme.icon(k[0], v[0], ad) + k[1] + '</div>'; }).join('') + '</div>'; ic.appendChild(w); }); });
 </script></body></html>'''
-open('/home/claude/audit/out/preview.html', 'w').write(html)
+open(_env.OUT + '/preview.html', 'w').write(html)
 print(len(html))

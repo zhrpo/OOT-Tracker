@@ -1,8 +1,9 @@
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
 # contrast of the white title and count on the area art (worst case = the lightest pixel behind the text, shadows ignored)
 import io, os
 from playwright.sync_api import sync_playwright
 from PIL import Image
-URL = "file:///home/claude/audit/out/" + os.environ.get("F", "themed2.html")
+URL = _env.OUT_URL + "/" + os.environ.get("F", "themed2.html")
 def lum(c):
     r = []
     for v in c[:3]:
@@ -11,7 +12,7 @@ def lum(c):
     return .2126 * r[0] + .7152 * r[1] + .0722 * r[2]
 fails = []; worst = {}
 with sync_playwright() as p:
-    b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+    b = p.chromium.launch(executable_path=_env.CHROME, args=["--no-sandbox"])
     for ver in ("n64", "3ds", "sw2"):
         pg = b.new_context(viewport={"width": 390, "height": 900}, color_scheme="light", device_scale_factor=1).new_page()
         for tab in ("mainquest", "skulltulas", "hearts", "sidequests", "items"):

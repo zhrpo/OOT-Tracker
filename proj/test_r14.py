@@ -1,16 +1,17 @@
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
 """Round 14: two-Link checklists, upgrade items ticking their quests, frog song game."""
 import os, sys, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 os.environ.setdefault("OPEN", "1"); os.environ["ASK"] = "1"
 import pwpatch
 from playwright.sync_api import sync_playwright
-URL = "file:///home/claude/audit/out/themed2.html"
+URL = _env.OUT_URL + "/themed2.html"
 F = []
 def check(n, ok, extra=""):
     print(("PASS " if ok else "FAIL ") + n, "" if ok else extra)
     if not ok: F.append(n)
 with sync_playwright() as p:
-    b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+    b = p.chromium.launch(executable_path=_env.CHROME, args=["--no-sandbox"])
     ctx = b.new_context(viewport={"width": 390, "height": 844}, has_touch=True, is_mobile=True)
     pg = ctx.new_page(); errs = []; pg.on("pageerror", lambda e: errs.append(str(e)))
     pg.goto(URL + "#skull-sw2"); pg.wait_for_selector(".grp")

@@ -668,7 +668,7 @@ def render(title, css="", js=""):
     return h.replace("__DATA__", blob)
 
 
-outdir = "/home/claude/audit/out"
+outdir = os.environ.get("OOT_OUT") or os.path.join(os.path.dirname(here), "out")
 os.makedirs(outdir, exist_ok=True)
 
 
@@ -677,8 +677,7 @@ def read(p):
 
 
 outs = {}
-outs["index.html"] = render("Ocarina of Time tracker: story, Skulltulas, Hearts, Side Quests and Items")
-outs["themed.html"] = render("Ocarina of Time tracker: the adventure edition (old version)", read("theme.css"), read("theme.js"))
+# Phase 0 (D-6): index.html and themed.html are no longer built; only themed2.html ships.
 if os.path.exists(os.path.join(here, "theme2.css")) and os.path.exists(os.path.join(here, "theme2.js")):
     _mark = "/* ---------- public API ---------- */"
     _t2 = read("theme2.js")
@@ -686,7 +685,7 @@ if os.path.exists(os.path.join(here, "theme2.css")) and os.path.exists(os.path.j
     _t2 = _t2.replace(_mark, read("scenes3.js") + "\n" + read("models5_toolkit.js") + "\n" + read("models5_items.js") + "\n" + _mark)
     outs["themed2.html"] = render("Ocarina of Time tracker: the adventure edition", read("theme2.css") + read("scenes3.css"), _t2)
 for k, v in outs.items():
-    with open(os.path.join(outdir, k), "w", encoding="utf-8") as f:
+    with open(os.path.join(outdir, k), "w", encoding="utf-8", newline="\n") as f:  # LF on every OS (Windows text mode would write CRLF and change the hash)
         f.write(v)
 print("no automatic source:", NO_SOURCE)
 print("ok", n, reach, {k: len(v) for k, v in outs.items()})

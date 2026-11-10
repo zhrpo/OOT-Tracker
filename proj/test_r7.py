@@ -1,17 +1,18 @@
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
 # Round 7: quest-prize hearts live in their location groups, age-aware tab art, hide-later bar, N64 notched cards
 import os, re
 os.environ.setdefault("OPEN", "1")
 import pwpatch  # noqa: opens every card so rows are reachable
 from playwright.sync_api import sync_playwright
 F = os.environ.get("F", "themed2.html")
-URL = "file:///home/claude/audit/out/" + F
+URL = _env.OUT_URL + "/" + F
 fails = []
 def check(name, cond, info=""):
     print(("PASS " if cond else "FAIL ") + name + (" " + str(info) if info and not cond else ""))
     if not cond: fails.append(name)
 def norm(s): return re.sub(r"ic\d+_", "ic_", s or "")
 with sync_playwright() as p:
-    b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+    b = p.chromium.launch(executable_path=_env.CHROME, args=["--no-sandbox"])
     def page(w=390, h=844, scheme="light"):
         ctx = b.new_context(viewport={"width": w, "height": h}, color_scheme=scheme)
         pg = ctx.new_page(); pg.errs = []

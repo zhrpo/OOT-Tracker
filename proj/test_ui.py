@@ -1,9 +1,10 @@
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
 import pwpatch
 from playwright.sync_api import sync_playwright
-URL = "file:///home/claude/audit/out/" + __import__("os").environ.get("F", "index.html") + ""
+URL = _env.OUT_URL + "/" + __import__("os").environ.get("F", "themed2.html") + ""
 errs = []
 with sync_playwright() as p:
-    b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+    b = p.chromium.launch(executable_path=_env.CHROME, args=["--no-sandbox"])
     ctx = b.new_context(viewport={"width": 390, "height": 844}, device_scale_factor=2)
     pg = ctx.new_page()
     pg.on("pageerror", lambda e: errs.append(str(e)))

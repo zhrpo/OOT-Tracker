@@ -1,8 +1,9 @@
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
 import pwpatch
 import os, json
 from playwright.sync_api import sync_playwright
 F = os.environ.get("F", "themed2.html")
-URL = "file:///home/claude/audit/out/" + F
+URL = _env.OUT_URL + "/" + F
 fails = []
 def check(name, cond, info=""):
     print(("PASS " if cond else "FAIL ") + name + (" " + str(info)[:300] if info and not cond else ""))
@@ -11,7 +12,7 @@ def check(name, cond, info=""):
 FIND = "(n)=>{const r=Object.values(__oot.rowMap()).find(r=>r.id.startsWith('IT-')&&r.name===n);return r?r.id:null}"
 
 with sync_playwright() as p:
-    b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+    b = p.chromium.launch(executable_path=_env.CHROME, args=["--no-sandbox"])
     def fresh(got=None, ver="sw2", w=390):
         ctx = b.new_context(viewport={"width": w, "height": 844})
         pg = ctx.new_page()
@@ -65,7 +66,7 @@ with sync_playwright() as p:
     ctx.close()
 
     # ---- the user's own progress: the Jabu bug
-    mine = json.load(open("/tmp/mig.json")) if os.path.exists("/tmp/mig.json") else None
+    mine = json.load(open(_env.TMP + "/mig.json")) if os.path.exists(_env.TMP + "/mig.json") else None
     if mine:
         ctx, pg = fresh(mine)
         inf = pg.evaluate("__oot.inferSteps()")
@@ -134,7 +135,7 @@ with sync_playwright() as p:
     g = got(pg)
     item = idof(pg, "Biggoron's Sword")
     check("last Biggoron step ticks the quest and the sword item", ("sw2:" + sq29) in g and ("sw2:" + item) in g and all(("sw2:" + s) in g for s in bs))
-    pg.screenshot(path="/home/claude/build/r3_side_sub.png")
+    pg.screenshot(path=_env.SCRATCH + "/r3_side_sub.png")
     ctx.close()
 
     # ---- chips
@@ -157,7 +158,7 @@ with sync_playwright() as p:
     pg.click("#tab-side"); pg.wait_for_selector(".row")
     q = sq("Great Fairy: Death Mountain Trail")
     check("quest shows item chips", "Magic Meter" in pg.locator("[data-row='%s']" % q).inner_text())
-    pg.screenshot(path="/home/claude/build/r3_side_chips.png")
+    pg.screenshot(path=_env.SCRATCH + "/r3_side_chips.png")
     ctx.close()
     print("errors:", [])
     b.close()

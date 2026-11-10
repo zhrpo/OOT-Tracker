@@ -1,5 +1,10 @@
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
+# F-001 (Session 6, Phase 0): this script used to target themed.html (the old theme, no longer shipped) and crashed on a missing .row.
+# It now checks the shipped page (themed2.html) with the area-opening harness and exits 1 when any text is below 4.5:1.
+# Group names/counts sit on the art and are measured pixel by pixel in test_cards.py. test_contrast2.py is kept unchanged (prints only).
+import pwpatch
 from playwright.sync_api import sync_playwright
-URL = "file:///home/claude/audit/out/themed.html"
+URL = _env.OUT_URL + "/themed2.html"
 JS = r"""
 () => {
   function parse(c){ const m=c.match(/rgba?\(([^)]+)\)/); if(!m) return null; const p=m[1].split(/[ ,\/]+/).filter(Boolean).map(Number); return {r:p[0],g:p[1],b:p[2],a:p.length>3?p[3]:1}; }
@@ -29,8 +34,7 @@ JS = r"""
   }
   document.querySelectorAll('.grp').forEach(g=>{
     const h2=g.querySelector('h2');
-    check('group name', g.querySelector('.gname'), h2);
-    check('group count', g.querySelector('.cnt'), h2);
+    // group name and count sit on the art: measured pixel by pixel in test_cards.py
     check('group note', g.querySelector('.note'), g);
     const row=g.querySelector('.row');
     if(row){ check('row id', row.querySelector('.id'), row); check('row where/name', row.querySelector('.where, .name'), row); check('row how', row.querySelector('.how, .meta'), row); }
@@ -40,13 +44,13 @@ JS = r"""
 }
 """
 with sync_playwright() as p:
-    b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+    b = p.chromium.launch(executable_path=_env.CHROME, args=["--no-sandbox"])
     low = []
     for scheme in ("light", "dark"):
         ctx = b.new_context(viewport={"width": 1440, "height": 900}, color_scheme=scheme)
         pg = ctx.new_page()
         for ver in ("n64", "3ds", "sw2"):
-            for tab in ("skulltulas", "hearts", "sidequests"):
+            for tab in ("mainquest", "skulltulas", "hearts", "sidequests", "items"):
                 pg.goto(URL + "#%s/%s" % (tab, ver)); pg.wait_for_selector(".row")
                 res = pg.evaluate(JS)
                 for k, v in res.items():
@@ -57,3 +61,5 @@ with sync_playwright() as p:
         ctx.close()
     print("BELOW 4.5:", low)
     b.close()
+import sys
+sys.exit(1 if low else 0)

@@ -1,12 +1,13 @@
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
 import sys
 from playwright.sync_api import sync_playwright
 keys = None
 start = int(sys.argv[1]) if len(sys.argv) > 1 else 0
 count = int(sys.argv[2]) if len(sys.argv) > 2 else 8
 out = sys.argv[3] if len(sys.argv) > 3 else "contact.png"
-js = open("/home/claude/build/theme.js", encoding="utf-8").read()
+js = open(_env.PROJ + "/theme.js", encoding="utf-8").read()
 with sync_playwright() as p:
-    b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+    b = p.chromium.launch(executable_path=_env.CHROME, args=["--no-sandbox"])
     pg = b.new_context(viewport={"width": 1800, "height": 900}).new_page()
     errs = []
     pg.on("pageerror", lambda e: errs.append(str(e)))

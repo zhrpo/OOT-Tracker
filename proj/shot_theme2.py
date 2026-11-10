@@ -1,5 +1,6 @@
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
 from playwright.sync_api import sync_playwright
-URL = "file:///home/claude/audit/out/themed.html"
+URL = _env.OUT_URL + "/themed2.html"
 errs = []
 shots = [
   ("hearts_n64_desktop", "hearts/n64", 1440, 900, 1, "light", 900),
@@ -11,7 +12,7 @@ shots = [
   ("hearts_n64_tablet", "hearts/n64", 820, 1100, 1, "light", 600),
 ]
 with sync_playwright() as p:
-    b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+    b = p.chromium.launch(executable_path=_env.CHROME, args=["--no-sandbox"])
     for name, hsh, w, h, dsf, scheme, sy in shots:
         ctx = b.new_context(viewport={"width": w, "height": h}, device_scale_factor=dsf, color_scheme=scheme)
         pg = ctx.new_page()

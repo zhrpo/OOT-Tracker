@@ -1,6 +1,7 @@
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
 import json, re, sys
 from playwright.sync_api import sync_playwright
-F = "file:///home/claude/audit/out/themed2.html"
+F = _env.OUT_URL + "/themed2.html"
 JS = r"""
 (ver) => {
   const O = window.__oot; O.state.ver = ver; const m = O.rowMap(); const out = [];
@@ -14,7 +15,7 @@ JS = r"""
 c = re.compile(r"(as a child|child link|young link|\bchild:|as child)", re.I)
 a = re.compile(r"(as an adult|adult link|\badult:|as adult|grown-up)", re.I)
 with sync_playwright() as p:
-    b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+    b = p.chromium.launch(executable_path=_env.CHROME, args=["--no-sandbox"])
     pg = b.new_context(viewport={"width": 1000, "height": 800}).new_page()
     pg.goto(F + "#skulltulas/sw2"); pg.wait_for_selector(".row")
     pg.evaluate("localStorage.clear()"); pg.reload(); pg.wait_for_selector(".row")

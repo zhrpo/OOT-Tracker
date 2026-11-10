@@ -1,3 +1,4 @@
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'audit', 'lib')); import oot_env as _env  # Phase 0: repo-relative paths
 # Round 8: unticking mirrors ticking, "tick the earlier steps?" prompt, themed hover/fonts/animation
 import os, re
 os.environ.setdefault("OPEN", "1")
@@ -5,13 +6,13 @@ os.environ["ASK"] = "1"   # the confirm prompt is live in this suite
 import pwpatch  # noqa
 from playwright.sync_api import sync_playwright
 F = os.environ.get("F", "themed2.html")
-URL = "file:///home/claude/audit/out/" + F
+URL = _env.OUT_URL + "/" + F
 fails = []
 def check(name, cond, info=""):
     print(("PASS " if cond else "FAIL ") + name + (" " + str(info) if info and not cond else ""))
     if not cond: fails.append(name)
 with sync_playwright() as p:
-    b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+    b = p.chromium.launch(executable_path=_env.CHROME, args=["--no-sandbox"])
     def page(w=390, h=844, scheme="light"):
         ctx = b.new_context(viewport={"width": w, "height": h}, color_scheme=scheme)
         pg = ctx.new_page(); pg.errs = []

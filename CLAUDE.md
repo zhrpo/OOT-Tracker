@@ -10,8 +10,26 @@ This repository (`zhrpo/OOT-Tracker`) is the **permanent source repository** for
 | `audit/` | The audit: findings, progress, tests, verification, remediation plan, scope documents, `scripts/` (audit tests and `run_all.py`), `testlogs/` (committed evidence), `fixtures/` (synthetic data only), `lib/oot_env.py` (path helper) |
 | `.venv/`, `.scratch/` | Local only, git-ignored (Python environment; screenshots, scratch copies, runner output) |
 
+## Audit governance (permanent; applies to every audit or remediation session)
+The owner's original Comprehensive Pre-Release Audit (`audit/MASTER_AUDIT_SPEC.md`) is the ultimate standard for whether the application is ready for public release. Nothing in the remediation plan, any phase or any report supersedes it.
+
+Before doing any work, in this order:
+1. Read `audit/README.md` (document hierarchy and reading rules).
+2. Read `audit/MASTER_AUDIT_SPEC.md`.
+3. Read `audit/APPROVED_REMEDIATION_PLAN.md` (what is authorised, deferred, awaiting approval, prohibited).
+4. Read `audit/AUDIT_TRACEABILITY.md` (what has actually been verified).
+5. Read the relevant parts of `audit/AUDIT_PROGRESS.md`, `audit/AUDIT_FINDINGS.md`, `audit/AUDIT_VERIFICATION.md`, `audit/AUDIT_TESTS.md` (and `audit/NEXT_SESSION.md`, noting its outdated parts listed in the README).
+6. Confirm the current branch, commit and project state (`git branch --show-current`, `git rev-parse HEAD`, `git status`, the remote head).
+7. State the exact authorised task before beginning. If it is not in the approved plan or the owner's current instruction, stop and ask.
+
+When work is completed, update the appropriate audit records and the affected `audit/AUDIT_TRACEABILITY.md` rows (evidence, related findings, remaining work), then report.
+
+Never treat completion of an implementation phase as automatic completion of the master audit requirements it touches. Implementation is not verification: a requirement rises in the matrix only after the corrected behaviour has been tested against the relevant scenarios and the evidence is recorded. Never mark a requirement Verified because a fix was made, a test passed, a file was inventoried, a topic was discussed or no defect was found. Never alter `MASTER_AUDIT_SPEC.md` (its integrity hash is in `audit/README.md`).
+
+Two different permissions must not be confused. The master specification makes the **initial investigation strictly read-only**; that restriction still governs all audit examination. The owner's **remediation authorisation** (Session 6 Scope v3, recorded in `audit/APPROVED_REMEDIATION_PLAN.md`) permits only the listed changes, one phase at a time, each started by the owner's explicit approval. Remediation does not end the investigation, and the investigation's read-only rule does not forbid the approved remediation.
+
 ## Start of every session
-1. Read `audit/NEXT_SESSION.md` first, then `audit/AUDIT_PROGRESS.md`, `audit/AUDIT_FINDINGS.md`, `audit/AUDIT_TESTS.md`, `audit/AUDIT_VERIFICATION.md`, and the current scope document (`audit/SESSION_6_IMPLEMENTATION_SCOPE.md`). They are the source of truth; earlier chats are not available.
+1. Do the audit-governance reading above first. `audit/SESSION_6_IMPLEMENTATION_SCOPE.md` is the long form of the Session 6 decisions.
 2. Environment (Windows, tested): Python 3.11 (`"C:\Program Files\Python311\python.exe" -m venv .venv`), `.venv\Scripts\python.exe -m pip install -r requirements.txt`, and an installed Chrome (or set `OOT_CHROME`). Use `PYTHONUTF8=1`. The `python3` command on Windows is the Store stub: do not use it.
 3. Build and hash: `cd proj && ..\.venv\Scripts\python.exe build.py`, then check `out/themed2.html` against the recorded hash (`audit/scripts/run_all.py` does this).
 4. Run `audit/scripts/run_all.py` before and after any change; record the result.

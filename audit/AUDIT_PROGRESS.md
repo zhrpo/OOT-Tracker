@@ -1,5 +1,7 @@
 # Audit progress — Ocarina of Time Tracker: The Adventure Edition
 
+> **Governance (Session 6, 2026-11-09):** the authoritative audit definition is `audit/MASTER_AUDIT_SPEC.md`; the authorised remediation scope is `audit/APPROVED_REMEDIATION_PLAN.md`; requirement-by-requirement status is `audit/AUDIT_TRACEABILITY.md`; `audit/README.md` explains the hierarchy and lists known inconsistencies in these records. This file stays the session log; its category status words describe examination, not verified requirements.
+
 > **Session 6, Phase 0 (2026-11-09):** repository promoted to the permanent source; history purged of two real-progress files; audit material moved under `audit/`;
 > unified runner and privacy guard added; F-001 and F-002 addressed. See `audit/PHASE_0_REPORT.md`. No tracker behaviour was changed.
 

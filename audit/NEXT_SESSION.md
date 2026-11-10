@@ -1,5 +1,7 @@
 # NEXT_SESSION.md — handoff for Session 6 (written at the end of Session 5, 2026-11-09)
 
+> **Governance (Session 6):** read `audit/README.md`, `audit/MASTER_AUDIT_SPEC.md`, `audit/APPROVED_REMEDIATION_PLAN.md` and `audit/AUDIT_TRACEABILITY.md` before this file. They take precedence over the older statements below (see the README's list of known inconsistencies).
+
 > **Layout change, Session 6 Phase 0 (2026-11-09).** The audit documents, `scripts/`, `testlogs/` and `DEPENDENCY_MAP.*` now live under `audit/`
 > (paths in these documents were updated; older sessions' text still says `/home/claude/audit`, which is the old Linux workspace).
 > Application source stays in `proj/`; the one shipped page is `out/themed2.html` (the two unshipped pages are no longer built).

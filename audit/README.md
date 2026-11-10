@@ -4,14 +4,22 @@ This folder is the permanent audit of "Ocarina of Time Tracker: The Adventure Ed
 
 ## Hierarchy
 
-1. **`MASTER_AUDIT_SPEC.md`: the authoritative definition of the audit.** The owner's original "Comprehensive Pre-Release Audit", preserved verbatim. It defines the ultimate objective, the examination requirements, the evidence standards, the required deliverables and the standard for release readiness. It is the overarching authority for the whole project, however many remediation sessions or implementation phases are completed. Nothing below supersedes, reduces or reinterprets it, and it is edited only on the owner's explicit written instruction.
-2. **`APPROVED_REMEDIATION_PLAN.md`: the authorised scope of implementation and remediation work.** Records, per item, what is authorised, deferred, awaiting further approval or prohibited. It says what may be changed; it does not say whether the application is ready, and it does not lower any requirement in the master specification.
-3. **`AUDIT_TRACEABILITY.md`: the requirement-by-requirement accounting.** Every requirement of the master specification as an individual row with its status, evidence, related findings and remaining work. This, not any phase report, says what has actually been examined, verified, deferred or left outstanding.
-4. **The audit execution records** (detailed evidence and history):
-   - `AUDIT_PROGRESS.md`: session log, files inspected, category status, unresolved questions, next action.
-   - `AUDIT_FINDINGS.md`: the findings register F-001 to F-045 (classification, severity, confidence, evidence).
-   - `AUDIT_VERIFICATION.md`: game-data and behaviour verification matrices and source references.
-   - `AUDIT_TESTS.md`: test execution records, recommendations and results.
+If two documents disagree, the one higher in this list governs. The disagreement is written down (see "Known historical inconsistencies"), never silently corrected.
+
+1. **`MASTER_AUDIT_SPEC.md`: original, authoritative audit requirements.** The owner's original "Comprehensive Pre-Release Audit". It defines the ultimate objective, the examination requirements, the evidence standards, the required deliverables and the standard for release readiness. It is the overarching authority for the whole project, however many remediation sessions or implementation phases are completed. Nothing below supersedes, reduces or reinterprets it. It is edited only on the owner's explicit written instruction. (It is a transcription that has not been machine-compared with the original message; see "Integrity" below.)
+2. **`APPROVED_REMEDIATION_PLAN.md`: approved remediation scope and decisions.** Records per item what is authorised, deferred, awaiting further approval or prohibited. It says what may be changed; it does not say whether the application is ready, and it does not lower any requirement in the master specification.
+3. **`AUDIT_TRACEABILITY.md`: requirement-level status and evidence.** Every requirement of the master specification as an individual row with its status, stage, evidence, related findings and remaining work. This, not any phase report, says what has actually been investigated, remediated, verified, deferred or left outstanding.
+4. **`AUDIT_FINDINGS.md`: the findings register** F-001 to F-045 (classification, severity, confidence, evidence).
+5. **`AUDIT_PROGRESS.md`, `AUDIT_VERIFICATION.md`, `AUDIT_TESTS.md`: historical and ongoing evidence.** Session log and category status; the game-data and behaviour verification matrices with sources; test execution records and results.
+6. **Phase reports** (`PHASE_0_REPORT.md` and every future phase report): records of how an individual phase was executed. They are not substitutes for the master audit and cannot change a requirement's status.
+
+### Investigated, remediated, verified, independently verified
+
+These four are kept apart everywhere in these documents.
+- **Investigated:** the source, behaviour or requirement was examined (read, traced, run, screened). A defect found by investigating does not show the requirement is satisfied.
+- **Remediated:** an approved implementation change was completed (so far only Phase 0 changes to layout, tooling, tests, files and history; no tracker behaviour).
+- **Verified:** evidence establishes that the specific requirement is satisfied over its whole scope. Reading a file, tracing a function, running a narrower test, making a fix or finding no defect is not verification.
+- **Independently verified after remediation:** a separate verification effort, not the implementing session, confirms the fix. None exists yet.
 
 ## Other documents in this folder
 
@@ -30,7 +38,7 @@ This folder is the permanent audit of "Ocarina of Time Tracker: The Adventure Ed
 
 ## How phase reports and later reports relate to these records
 
-A report such as `PHASE_0_REPORT.md`, and every future `PHASE_n_REPORT.md`, describes **what was done in that phase**: files changed, commands run, results, limits, what was left alone. It is an execution record that belongs under item 4 of the hierarchy. It is not a verification record and cannot change a requirement's status by itself. At the end of a phase:
+A report such as `PHASE_0_REPORT.md`, and every future `PHASE_n_REPORT.md`, describes **what was done in that phase**: files changed, commands run, results, limits, what was left alone. It is level 6 of the hierarchy: an execution record, not a verification record and cannot change a requirement's status by itself. At the end of a phase:
 1. add the evidence it produced to `AUDIT_TESTS.md` (and `AUDIT_VERIFICATION.md` or `AUDIT_FINDINGS.md` where relevant);
 2. update the affected rows of `AUDIT_TRACEABILITY.md`, raising a status only when the corrected behaviour was tested against the relevant scenarios, and saying whether the verification was independent of the implementing session;
 3. update `AUDIT_PROGRESS.md` and the status of any finding in the way the findings rules allow, without rewriting history.
@@ -47,6 +55,8 @@ Completing a phase never completes the matching master audit requirements. For e
 7. State the exact task that is authorised before beginning work.
 
 ## Integrity of the master specification
+
+**Limitation (stated plainly):** `MASTER_AUDIT_SPEC.md` was typed into the repository from the text the owner pasted in the Session 6 conversation. That message could not be machine-compared with the file, so **character-for-character fidelity has not been verified**. Only structural checks were made: the BEGIN and END markers appear once each, all 14 section titles are present, the framing text is outside the markers, and nothing was intentionally summarised. The hash below protects against later edits, not against a transcription error made at creation. The owner's original governs; a diff of the original against the text between the markers is the check that remains to be done.
 
 SHA-256 of the exact specification text between the `BEGIN ORIGINAL SPECIFICATION` and `END ORIGINAL SPECIFICATION` markers in `MASTER_AUDIT_SPEC.md` (UTF-8, LF line endings, from the first character after the BEGIN line to the last character before the END line, excluding the line break after BEGIN and before END): `70f7830b3a87e4c4057176aade408fa631de48498fb24723d294dd8dd7befea7` (25,011 characters, 800 lines). If a check gives a different value, the specification was altered; stop and tell the owner.
 
@@ -71,3 +81,7 @@ The historical record is preserved; these notes say where it no longer matches t
 8. **`PHASE_0_REPORT.md`:** its list of unreconciled documentation is the same set recorded here.
 9. **The master specification itself:** it speaks of "Phase 1" as the read-only investigation phase and of "27" test scripts; the project later used "Phase 0 to 5" for remediation phases. These are different uses of "phase"; matrix rows keep the specification's wording and note the difference.
 10. **Counts:** Session 1 records 322 files in the original working folder; the repository had 196 tracked files at the end of Phase 0 (sources only, by design: screenshots, `.bak` files and the real-save script were excluded).
+
+11. **`AUDIT_TRACEABILITY.md` itself:** the first version (commit `199a1d4`) marked 78 rows Verified and reported 191 rows as "not yet verified", a figure that left out the Partially Verified rows. The governance review of the same day lowered 61 Verified rows (reading, tracing, narrow or sampled tests, results limited to the local stand-in, checks made only at earlier sessions, and records not yet assembled into the required reports), raised one, lowered 33 Partially Verified rows to In Progress, and replaced the count by defined categories that reconcile to 464 (see the matrix and its review log). The first version stays in git history.
+12. **Findings register wording:** classification uses "Probable defect" for F-042 and short forms ("Unverified", "Verified (limited)") for ten findings, none exactly one of the five classes in the specification; five findings (F-021, F-026, F-035, F-036, F-043) carry no High/Medium/Low confidence and no finding carries Low. Recorded here; not edited.
+13. **Exposure of real progress:** two files containing real progress were readable in this repository while it was public, until the Session 6 history purge (proposed F-046, not registered). Earlier audit text says synthetic data only; in fact the Session 1 baseline also executed `check_user.py`, which embeds a real save snapshot (F-006). Copies made while the repository was public cannot be recalled.

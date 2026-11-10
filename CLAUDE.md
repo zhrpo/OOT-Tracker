@@ -22,7 +22,11 @@ Before doing any work, in this order:
 6. Confirm the current branch, commit and project state (`git branch --show-current`, `git rev-parse HEAD`, `git status`, the remote head).
 7. State the exact authorised task before beginning. If it is not in the approved plan or the owner's current instruction, stop and ask.
 
-When work is completed, update the appropriate audit records and the affected `audit/AUDIT_TRACEABILITY.md` rows (evidence, related findings, remaining work), then report.
+Order of authority (higher governs; conflicts are recorded in `audit/README.md`, never silently resolved): 1 `MASTER_AUDIT_SPEC.md`; 2 `APPROVED_REMEDIATION_PLAN.md`; 3 `AUDIT_TRACEABILITY.md`; 4 `AUDIT_FINDINGS.md`; 5 `AUDIT_PROGRESS.md`, `AUDIT_VERIFICATION.md`, `AUDIT_TESTS.md`; 6 phase reports (execution records, not substitutes for the master audit).
+
+Keep four things separate: **investigated** (examined), **remediated** (an approved change was made), **verified** (evidence establishes the specific requirement over its whole scope) and **independently verified after remediation** (a separate verification effort, not the implementing session, confirmed it). Reading a file, tracing a function, a narrower or sampled test, a defect found, a fix made or no defect found never makes a requirement Verified. Use only the seven statuses in the matrix; do not invent others.
+
+When work is completed, update the appropriate audit records and the affected `audit/AUDIT_TRACEABILITY.md` rows (evidence, related findings, remaining work, and status only with new evidence), then report.
 
 Never treat completion of an implementation phase as automatic completion of the master audit requirements it touches. Implementation is not verification: a requirement rises in the matrix only after the corrected behaviour has been tested against the relevant scenarios and the evidence is recorded. Never mark a requirement Verified because a fix was made, a test passed, a file was inventoried, a topic was discussed or no defect was found. Never alter `MASTER_AUDIT_SPEC.md` (its integrity hash is in `audit/README.md`).
 
